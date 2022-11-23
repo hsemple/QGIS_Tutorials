@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Loading Data into QGIS &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Map Projections" href="map_projections.html" />
+    <link rel="prev" title="2. Thematic Mapping" href="thematic_mapping.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Loading Data into QGIS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loading-shapefiles">3.1. Loading Shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-a-digital-elevation-model">3.2. Loading a Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-an-aerial-photograph">3.3. Loading an Aerial Photograph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-google-satellite-imagery">3.4. Adding Google Satellite Imagery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-landsat-imagery">3.5. Add Landsat Imagery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importing-csv-files">3.6. Importing CSV files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-gps-data">3.7. Loading GPS data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-spatial-data-stored-in-a-postgresql-postgis-database">3.8. Loading Spatial Data Stored in a PostgreSQL/PostGIS Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-wms-layer">3.9. Loading WMS Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-wfs-layer">3.10. Loading WFS Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-a-naip-rest-service-from-the-usda">3.11. Adding a NAIP REST Service from the USDA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Terrain Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">8. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">9. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">10. Geoprocessing Spatial Data</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Loading Data into QGIS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/spatial_data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="loading-data-into-qgis">
+<h1><span class="section-number">3. </span>Loading Data into QGIS<a class="headerlink" href="#loading-data-into-qgis" title="Permalink to this heading"></a></h1>
+<p>In GIS, spatial data refers to the points, lines, and area features that are drawn on maps to represent the geographic location of natural and human phenomena, such as mountains, rivers, roads, bridges, homicides, etc.  In general, spatial data is any data that can be mapped.</p>
+<p>The points, lines and polygons that represent map features can be drawn using precise coordinates (vector data) or they can be represented by one or more contiguous cells  on a grid (raster data).</p>
+<p>Popular vector products include shapefiles and geodatabases, which are sets of files used to represents points, lines, and polygons. Popular raster products include digital elevation models, satellite imagery, thematic rasters, orthophotos, and digital topographic maps.</p>
+<p>With QGIS, we can  easily load the various types of spatial data mentioned above into the software.  The method of loading data varies depending on the type of spatial data. The sections below describe how to load different types of spatial data into QGIS.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="loading-shapefiles">
+<h2><span class="section-number">3.1. </span>Loading Shapefiles<a class="headerlink" href="#loading-shapefiles" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>ESRI’s shapefile is one of the most common vector data file formats. One way of loading a shapefile into QGIS is to click on Layer | Add Layer | Add Vector Layer, as shown below.</p></li>
+</ol>
+<img alt="Loading Vector Layer into QGIS" src="_images/load_vectorlayer.png" />
+<ol class="arabic simple" start="2">
+<li><p>A second method is to click on the Data Source Manager button (or press the Ctrl + Shift + V keyboard shortcut) to bring up the Data Source Manager dialog, which can be used to open different types of Layers.</p></li>
+</ol>
+<img alt="Data Source Manager" src="_images/accessing_data_source_manager.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loading-a-digital-elevation-model">
+<h2><span class="section-number">3.2. </span>Loading a Digital Elevation Model<a class="headerlink" href="#loading-a-digital-elevation-model" title="Permalink to this heading"></a></h2>
+<p>1 To display a DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/.</p>
+<ol class="arabic simple" start="2">
+<li><p>Select the file named w001001.adf,  Make sure it is the adf file with large file size.</p></li>
+<li><p>If the DEM is loaded and doesn’t show up, simply right click on it and select Zoom to Layer.</p></li>
+</ol>
+<img alt="Digital Elevation Model" src="_images/wayne_dem.png" />
+<ol class="arabic simple" start="4">
+<li><p>The numbers below the name of the DEM in the Table of Content refer to elevation in ft.  If you click on the Identify button then click anywhere on the map, it will return the elevation at that location.</p></li>
+<li><p>To change the color of the DEM, double click on its name in the Table of Content and select Symbology. Change the Render Type from SingleBand Gray to SingleBand Psuedocolor.</p></li>
+<li><p>Select a color ramp that suits your taste. Make sure the color ramp does justice in showing the subtle variations in elevation.</p></li>
+</ol>
+<img alt="Digital Elevation Model" src="_images/dem_symbology.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loading-an-aerial-photograph">
+<h2><span class="section-number">3.3. </span>Loading an Aerial Photograph<a class="headerlink" href="#loading-an-aerial-photograph" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Download the orthophoto and unzip it to a folder that you can easily locate.</p></li>
+<li><p>Display the orthophoto in QGIS by clicking on Layers | Add Raster Layer and navigating to the folder where the file is stored.</p></li>
+</ol>
+<img alt="Loading Orthophoto" src="_images/ann_arbor_east.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="adding-google-satellite-imagery">
+<h2><span class="section-number">3.4. </span>Adding Google Satellite Imagery<a class="headerlink" href="#adding-google-satellite-imagery" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click undefinedbutton in the toolba</p></li>
+<li><p>Right click on XYZ Tiles &gt; New Connection…</p></li>
+<li><p>In the dialog that appears, type “Google” in the Name textbox.</p></li>
+<li><p>In the URL, copy and paste the address below, then click OK.
+<a class="reference external" href="http://mt0.google.com/vt">http://mt0.google.com/vt</a>/lyrs=y&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}&amp;s=Ga</p></li>
+</ol>
+<img alt="Loading Google Earth Imagery" src="_images/google_earth_connection.png" />
+<ol class="arabic simple" start="5">
+<li><p>To view the imagery, drag the “Google Earth” button you created to the Table of Content.</p></li>
+<li><p>Additional Google Map Tiles Links</p></li>
+</ol>
+<blockquote>
+<div><p>Google Maps   <a class="reference external" href="https://mt1.google.com/vt">https://mt1.google.com/vt</a>/lyrs=r&amp;x={x}&amp;y={y}&amp;z={z}
+Google Satellite      <a class="reference external" href="https://www.google.cn/maps/vt">https://www.google.cn/maps/vt</a><a class="reference external" href="mailto:?lyrs=s&#37;&#52;&#48;189&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z">?lyrs=s<span>&#64;</span>189&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z</a>}
+Google Satellite Hybrid       <a class="reference external" href="https://mt1.google.com/vt">https://mt1.google.com/vt</a>/lyrs=y&amp;x={x}&amp;y={y}&amp;z={z}
+Google Terrain        <a class="reference external" href="https://mt1.google.com/vt">https://mt1.google.com/vt</a>/lyrs=t&amp;x={x}&amp;y={y}&amp;z={z}
+Google Roads  <a class="reference external" href="https://mt1.google.com/vt">https://mt1.google.com/vt</a>/lyrs=h&amp;x={x}&amp;y={y}&amp;z={z}</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="add-landsat-imagery">
+<h2><span class="section-number">3.5. </span>Add Landsat Imagery<a class="headerlink" href="#add-landsat-imagery" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="importing-csv-files">
+<h2><span class="section-number">3.6. </span>Importing CSV files<a class="headerlink" href="#importing-csv-files" title="Permalink to this heading"></a></h2>
+<p>To add ta csv file to QGIS, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Click on Layer | Add Layer | Add Delimited Text Layer.</p></li>
+<li><p>Browse to the CSV file.</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>fill out the dialog. If the CSV files contains latitude/longittude data, ensure that you define the X field and Y field that contains Longitude and Latitude values.</p></li>
+<li><p>When you are done filling out the dialog, click Ok. QGIS will read and load the CSV file. Also, the points associated with the coordinates will appear on the screen.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loading-gps-data">
+<h2><span class="section-number">3.7. </span>Loading GPS data<a class="headerlink" href="#loading-gps-data" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Data downloaded from GPS receivers is often available in GPX (GPS eXchange) format.</p></li>
+<li><p>To load GPX data into QGIS, first click on the Data Source Manager button, then click on GPS.</p></li>
+<li><p>Navigate to the GPX file and load it into QGIS.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loading-spatial-data-stored-in-a-postgresql-postgis-database">
+<h2><span class="section-number">3.8. </span>Loading Spatial Data Stored in a PostgreSQL/PostGIS Database<a class="headerlink" href="#loading-spatial-data-stored-in-a-postgresql-postgis-database" title="Permalink to this heading"></a></h2>
+<p>To visualize datasets in PostgreSQl/PostGIS from within QGIS, follow the steps below:</p>
+<ol class="arabic simple">
+<li><p>Open QGIS, select Layer -&gt; Add layer -&gt; Add PostGIS layers, it should open the interface to connect a PostGIS table.</p></li>
+<li><p>In the dialog that appears, click “New”, it should open the dialog to configure the PostGIS server, and database. Enter relevant information in Step 3, click Ok</p></li>
+<li><p>Back to the dialog, click “Connect”, you shall be able to see all tables in the database. You may select any table, click “Add”, then you can load it into the QGIS.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loading-wms-layer">
+<h2><span class="section-number">3.9. </span>Loading WMS Layer<a class="headerlink" href="#loading-wms-layer" title="Permalink to this heading"></a></h2>
+<p>To Add a WMS Layer</p>
+<ol class="arabic simple">
+<li><p>Select New in the ‘Add Layer(s) from a Server’ dialogue box.</p></li>
+<li><p>In the ‘Create a new WMS connection’ dialogue box, enter a name for the conection and the appropriate URL. (e.g. <a class="reference external" href="https://services.ga.gov.au/gis/services/Earthquake_Hazard_WM/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS">https://services.ga.gov.au/gis/services/Earthquake_Hazard_WM/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS</a>)</p></li>
+<li><p>Select OK.</p></li>
+<li><p>In the ‘Add Layer(s) from a Server’ dialogue box, select Connect and then Add. THe WMS should now be added.</p></li>
+<li><p>Select Close.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loading-wfs-layer">
+<h2><span class="section-number">3.10. </span>Loading WFS Layer<a class="headerlink" href="#loading-wfs-layer" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Select New in the ‘Add WFS Layer from a Server’ dialogue box.</p></li>
+<li><p>In the ‘Create a new WFS connection’ dialogue box, enter a name for the connection and the appropriate URL. (e.g. <a class="reference external" href="https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS">https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS</a>)</p></li>
+<li><p>Select OK.</p></li>
+<li><p>In the ‘Add WFS Layer from a Server’ dialogue box, select Connect and then Apply. NB - loading the WFS data may take a while.</p></li>
+<li><p>Select Close.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="adding-a-naip-rest-service-from-the-usda">
+<h2><span class="section-number">3.11. </span>Adding a NAIP REST Service from the USDA<a class="headerlink" href="#adding-a-naip-rest-service-from-the-usda" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda">https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="thematic_mapping.html" class="btn btn-neutral float-left" title="2. Thematic Mapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="map_projections.html" class="btn btn-neutral float-right" title="4. Map Projections" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

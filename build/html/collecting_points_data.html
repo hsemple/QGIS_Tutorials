@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Collecting Points Data &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="6. Terrain Mapping" href="terrain_mapping.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Terrain Mapping</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Collecting Points Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generating-x-y-coordinates-from-google-maps">7.1. Generating X,Y Coordinates from Google Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generating-points-data-by-geocoding">7.2. Generating Points Data by Geocoding</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Collecting Points Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/collecting_points_data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="collecting-points-data">
+<h1><span class="section-number">7. </span>Collecting Points Data<a class="headerlink" href="#collecting-points-data" title="Permalink to this heading"></a></h1>
+<p>In thhis module, we will examine the collection of points data using the different methods, i.e., extraction from Google Maps, GPS and Geocoding.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="generating-x-y-coordinates-from-google-maps">
+<h2><span class="section-number">7.1. </span>Generating X,Y Coordinates from Google Maps<a class="headerlink" href="#generating-x-y-coordinates-from-google-maps" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open Google maps with a web browser at maps.google.com</p></li>
+<li><p>Use the Search field to find your selected location of interest.</p></li>
+<li><p>Zoom in, move the map, and then click on the specific location you identify as your most accurate data point.</p></li>
+<li><dl class="simple">
+<dt>Generate latitude and longitude information, using one of these methods:</dt><dd><ol class="loweralpha simple">
+<li><p>Click on a select location, to open a small box with location details, or</p></li>
+<li><p>Control/right-click on a spot to open a menu, select “What’s here?”, or</p></li>
+<li><p>Click on a red location marker, select “What’s here?” if needed.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Click on the latitude and longitude data that appears in decimal degrees in the location information box at the bottom. These latitude and longitude details will appear in the Google Search field.</p></li>
+<li><p>Highlight and Copy both the latitude and longitude data together from the Search field. (Do not copy the version with the hemispheric initials, i.e.  N,W,E,S).</p></li>
+<li><p>In Excel or Google Sheets, create a new workbook. Name the workbook and save it on your local drive. Title the first three columns, “Name,” “Latitude” and “Longitude.”</p></li>
+<li><p>Paste the copied latitude and longitude data into the respective columns.</p></li>
+<li><p>You are ready to import the geographic data into software, such as ArcGIS Pro, ArcGIS Online, Carto, Datawrapper, or ArcGIS, to create maps for data analysis and visualization.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="generating-points-data-by-geocoding">
+<h2><span class="section-number">7.2. </span>Generating Points Data by Geocoding<a class="headerlink" href="#generating-points-data-by-geocoding" title="Permalink to this heading"></a></h2>
+<p>If you have a large number of street addresses and wish to turn them into points on a map, doing so using the method described above can be time consuming and tedious. ArcGIS Pro and ArcGIS Online have tools that can generate GIS coordinates from addresses. This process is called geocoding.  Free geocoding tools include GPS Visualizer, Geocodio, and Social Explorer .</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="terrain_mapping.html" class="btn btn-neutral float-left" title="6. Terrain Mapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

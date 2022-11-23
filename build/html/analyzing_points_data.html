@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. Analyzing Points Data &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Digitizing" href="digitizing.html" />
+    <link rel="prev" title="7. Collecting Points Data" href="points_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Terrain Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Analyzing Points Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-analysi-concepts">8.1. Spatial Analysi Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-statistical-analysis-wuth-qgis">8.2. Spatial Statistical Analysis wuth QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#point-pattern-analysis-with-r">8.3. Point Pattern Analysis with R</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">9. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">10. Geoprocessing Spatial Data</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>Analyzing Points Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/analyzing_points_data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="analyzing-points-data">
+<h1><span class="section-number">8. </span>Analyzing Points Data<a class="headerlink" href="#analyzing-points-data" title="Permalink to this heading"></a></h1>
+<p>Popular spatial analysis techniques compare observed point patterns to ones generated by an independent random process (IRP) also called complete spatial randomness (CSR). CSR/IRP satisfy two conditions:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="spatial-analysi-concepts">
+<h2><span class="section-number">8.1. </span>Spatial Analysi Concepts<a class="headerlink" href="#spatial-analysi-concepts" title="Permalink to this heading"></a></h2>
+<p>Point Pattern Analysis
+<a class="reference external" href="https://gistbok.ucgis.org/bok-topics/point-pattern-analysis">https://gistbok.ucgis.org/bok-topics/point-pattern-analysis</a></p>
+<p><a class="reference external" href="https://mgimond.github.io/Spatial/hypothesis-testing.html">https://mgimond.github.io/Spatial/hypothesis-testing.html</a></p>
+<p><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/spatial_statistics.html">https://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/spatial_statistics.html</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="spatial-statistical-analysis-wuth-qgis">
+<h2><span class="section-number">8.2. </span>Spatial Statistical Analysis wuth QGIS<a class="headerlink" href="#spatial-statistical-analysis-wuth-qgis" title="Permalink to this heading"></a></h2>
+<p>Spatial Density Analysis in QGIS
+<a class="reference external" href="https://www.youtube.com/watch?v=WPwGW9BG3DI">https://www.youtube.com/watch?v=WPwGW9BG3DI</a></p>
+<p>Spatial Analyses
+<a class="reference external" href="https://docs.sigro.org/qgis-basic-training/en/analyses.html">https://docs.sigro.org/qgis-basic-training/en/analyses.html</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="point-pattern-analysis-with-r">
+<h2><span class="section-number">8.3. </span>Point Pattern Analysis with R<a class="headerlink" href="#point-pattern-analysis-with-r" title="Permalink to this heading"></a></h2>
+<p>Point Pattern Analysis with R
+Point Pattern Analysis</p>
+<p><a class="reference external" href="https://rpubs.com/corey_sparks/579466">https://rpubs.com/corey_sparks/579466</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="points_data.html" class="btn btn-neutral float-left" title="7. Collecting Points Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="digitizing.html" class="btn btn-neutral float-right" title="9. Digitizing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

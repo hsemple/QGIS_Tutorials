@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Getting Started &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Thematic Mapping" href="thematic_mapping.html" />
+    <link rel="prev" title="Welcome" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-qgis">1.1. What is QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-and-installing-qgis">1.2. Downloading and Installing QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-data">1.3. Downloading Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-qgis">1.4. Launching QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-map-layers-in-qgis">1.5. Displaying Map Layers in QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#panning-the-map">1.6. Panning the Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zooming-the-map">1.7. Zooming the Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-identify-tool">1.8. The Identify Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#selecting-and-deselecting-features">1.9. Selecting and Deselecting Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-the-attribute-table">1.10. Viewing the Attribute Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saving-your-project">1.11. Saving your Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Terrain Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">8. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">9. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">10. Geoprocessing Spatial Data</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/launch_qgis.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1><span class="section-number">1. </span>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="what-is-qgis">
+<h2><span class="section-number">1.1. </span>What is QGIS<a class="headerlink" href="#what-is-qgis" title="Permalink to this heading"></a></h2>
+<p>QGIS is a widely used Open Source Geographic Information System (GIS) software that can be used for professional GIS work.  The software is licensed under the GNU General Public License and runs on various operating systems including Linux, Unix, Mac OSX, Windows and Android.  The software consists of a core component plus numerous plugins that add additional functionalities to the program.</p>
+<p>In this unit, we will begin exploring QGIS.  We will do so by downloading and installing the software, learning how to load a shapefile into the software, and looking at various controls used to manipulate and examine the map layer.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="downloading-and-installing-qgis">
+<h2><span class="section-number">1.2. </span>Downloading and Installing QGIS<a class="headerlink" href="#downloading-and-installing-qgis" title="Permalink to this heading"></a></h2>
+<p>1. QGIS is available free of charge to anyone who wants to use it. You can download QGIS for different platforms at:
+<a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html">https://www.qgis.org/en/site/forusers/download.html</a></p>
+<ol class="arabic simple" start="2">
+<li><p>To install QGIS, double click on rhe file you downloaded and follow the prompts.</p></li>
+<li><p>Click on the Youtube Video link below for an illustration of the installation process.</p></li>
+</ol>
+<p><a class="reference external" href="https://www.youtube.com/embed/wMBmc76Vk_4">https://www.youtube.com/embed/wMBmc76Vk_4</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="downloading-data">
+<h2><span class="section-number">1.3. </span>Downloading Data<a class="headerlink" href="#downloading-data" title="Permalink to this heading"></a></h2>
+<p>1. For this tutorial, please download a USA states shapefile at this link:
+<a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/USA-2.zip">https://github.com/hsemple/-Covid19/blob/master/USA-2.zip</a></p>
+<ol class="arabic simple" start="2">
+<li><p>After downloading the file, unzip or extract it to a location that you can remember.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="launching-qgis">
+<h2><span class="section-number">1.4. </span>Launching QGIS<a class="headerlink" href="#launching-qgis" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To launch QGIS on a Mac OS machine, click Finder | Application | QGIS.</p></li>
+<li><p>On Windows, click Start | All Programs | QGIS | QGIS for Desktop.</p></li>
+<li><p>At start-up the program may appear as shown below. Note: there may be a slight difference depending on how your computer is configured.</p></li>
+</ol>
+<img alt="QGIS at startup" src="_images/intro_qgis.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="displaying-map-layers-in-qgis">
+<h2><span class="section-number">1.5. </span>Displaying Map Layers in QGIS<a class="headerlink" href="#displaying-map-layers-in-qgis" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To load a map layer into QGIS, click the Layer button on the main menu, then click Add  Layer. Here, we have options for loading different types of GIS datasets.  There are also options for loading layers stored as web map services or in different database software.  As we are loading a shapefile, which is a type of vector layer, click on Add Vector Layer.</p></li>
+</ol>
+<img alt="Loading Vector Layer into QGIS" src="_images/load_vectorlayer.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click on the ellipsis (the three horizontal dots) to the right of the Vector Dataset(s) textbox. Browse to the folder where the data is loaded, and select the USA_States.shp file (Make sure it is not the XML file).  Click Add to add the layer to the map then close the data source manage dialog.  If you are prompted for Coordinate Systems Information, enter WGS 84 for the coordinates.</p></li>
+</ol>
+<img alt="QGIS Data Source Manager" src="_images/data_source_manager.png" />
+<ol class="arabic simple" start="3">
+<li><p>The map layer will be added to QGIS.</p></li>
+</ol>
+<img alt="Display Layer" src="_images/Display_USA_Layer.png" />
+<ol class="arabic simple" start="4">
+<li><p>If the Layers panel to the right is not visible, click on View  | Panels | Layers. The panel will be added. You may have to move panels that are blocking its view.</p></li>
+<li><p>Click on the video below for a quick overview of the process:</p></li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q8T82P1uBT8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="panning-the-map">
+<h2><span class="section-number">1.6. </span>Panning the Map<a class="headerlink" href="#panning-the-map" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Panning refers to moving the map in any direction on the screen.</p></li>
+<li><p>To pan the map, first click on the PAN tool (see illustration), then click and drag the map to various locations on the screen.</p></li>
+</ol>
+<img alt="Display Layer" src="_images/PanningMap.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="zooming-the-map">
+<h2><span class="section-number">1.7. </span>Zooming the Map<a class="headerlink" href="#zooming-the-map" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Zooming allows us to see the map in either greater or lesser detail.</p></li>
+<li><p>To zoom in to a particular state on the map, e.g, Texas, first click on the Zoom tool to make it active(see illustration), then click and drag a box shape over the State of Texas.  Letting go of the click button will zoom into the extent of the selection.</p></li>
+</ol>
+<img alt="Zoom in Tools" src="_images/Zoom_in_Tool.png" />
+<ol class="arabic simple" start="3">
+<li><p>To zoom out, firs clik on the Zoom out button, then click on any spot on the map. The map will zoom out, centered on the selected point.</p></li>
+<li><p>QGIS also has several other zoom tools (See illustration below). Please click on these tools and note their effect.  The Zoom to Layer tool is particularly important.  If you zoomed in or zoomed out too much and want to quickly return to the original extent of the map, then click on the the Zoom to Layer tool.</p></li>
+</ol>
+<img alt="Zoom Buttons" src="_images/zoom_buttons.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="the-identify-tool">
+<h2><span class="section-number">1.8. </span>The Identify Tool<a class="headerlink" href="#the-identify-tool" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The Identify tool is used to view data about a map feature that is stored in the layer’s attribute table.</p></li>
+<li><p>To use the Identify tool, click on the Identify button, then click on the feature of interest.  The attributes associated with the feature will display in the Identify Results information box.</p></li>
+</ol>
+<img alt="Identify Tool" src="_images/identify_tool.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="selecting-and-deselecting-features">
+<h2><span class="section-number">1.9. </span>Selecting and Deselecting Features<a class="headerlink" href="#selecting-and-deselecting-features" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The QGIS toolbar provides several tools to select one or more map features. To select one or several features, just click on the appropriate select tool.</p></li>
+</ol>
+<img alt="Select Feature Tool" src="_images/deselect_features.png" />
+<ol class="arabic simple" start="2">
+<li><p>To deselect all selected features click on the Deselect Features from All Layers tool.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="viewing-the-attribute-table">
+<h2><span class="section-number">1.10. </span>Viewing the Attribute Table<a class="headerlink" href="#viewing-the-attribute-table" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To view the attribute table of the USA layer, right click on the name of the layer and select Open Attribute table. Inspect the data in the attribute table.</p></li>
+</ol>
+<img alt="View Attribute Table" src="_images/view_attribute_table.png" />
+<ol class="arabic simple" start="2">
+<li><p>Notice the names of each state in the attribute table. If you select the record or row for a state, the state will be highlighted on the map.  Try it and see for yourself.  It is one of the features that make GIS software special.</p></li>
+</ol>
+<img alt="View Attribute Table" src="_images/view_attribute_table2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Investigate the numerous columns in the attribute table. Each column contains data about the characteristics of each state’s population.  Looking at the numbers in each column, you may eventually see a pattern, but it takes time. To quickly visualize geographic patterns, we can map the numbers.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="saving-your-project">
+<h2><span class="section-number">1.11. </span>Saving your Project<a class="headerlink" href="#saving-your-project" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To save your QGIS project, click on Project on the main menu, then select the Save As .. button. Note: when you save a project, you are saving a file that contains information on all the formatting you applied to the data you were workig with. Also, the project file does not save your data; it only saves a reference to your data.</p></li>
+</ol>
+<img alt="View Attribute Table" src="_images/qgis_project.png" />
+<p>In the next unit, we will do thematic mapping, which involves mapping the data in selected columns.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="thematic_mapping.html" class="btn btn-neutral float-right" title="2. Thematic Mapping" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

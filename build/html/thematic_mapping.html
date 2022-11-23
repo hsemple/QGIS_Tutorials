@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Thematic Mapping &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Loading Data into QGIS" href="spatial_data.html" />
+    <link rel="prev" title="1. Getting Started" href="launch_qgis.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Thematic Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mapping-data-stored-in-the-attribute-table">2.1. Mapping Data Stored in the Attribute Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-maps-for-printing-in-qgis">2.2. Preparing maps for printing in QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Terrain Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">8. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">9. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">10. Geoprocessing Spatial Data</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Thematic Mapping</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/thematic_mapping.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="thematic-mapping">
+<h1><span class="section-number">2. </span>Thematic Mapping<a class="headerlink" href="#thematic-mapping" title="Permalink to this heading"></a></h1>
+<p>GIS is concerned with mapping the location of events and phenomena so that map readers can understand the geographic pattern of phenonomena and incorporate the implications of these patterns into decision making.</p>
+<p>A basic way of presenting information information about spatial pattern is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas) or quantitative (e.g., percentage population change, income distribution).</p>
+<p>With a GIS software, the basic way to create a vector thematic map is to select one of the fields in the attribute table of the map layer and then display the data using the software’s thematic mapping engine. The data in attribute field may be quantitative or qualitative. If the data is qualitative, we create a qualitative thematic map.  If the data is quantitative, we create a quantitative thematic map.</p>
+<p>The data in the attribute table can be entered manually or we can join tables obtained from other sources to the attribute table of the shapefile.  With practice, the actual mapping process can be accomplished very quickly.</p>
+<p>The next section below shows how to perform thematic mapping in QGIS.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="mapping-data-stored-in-the-attribute-table">
+<h2><span class="section-number">2.1. </span>Mapping Data Stored in the Attribute Table<a class="headerlink" href="#mapping-data-stored-in-the-attribute-table" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Load the map layer into QGIS.</p></li>
+<li><p>Right click on the name of the layer and select Open Attribute table. Inspect the attribute table. We will use the column that contains population data for the US. Examine the population data, then close the attribute table.</p></li>
+<li><p>Now, right click on the layer name again and choose ‘Properties’.</p></li>
+</ol>
+<img alt="Mapping Attributes" src="_images/mapping_attributes1.png" />
+<ol class="arabic simple" start="4">
+<li><p>When the layer properties dialog opens, select the  “Symbology” tab to the left of the dialog.</p></li>
+</ol>
+<img alt="Mapping Attributes" src="_images/mapping_attributes2.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.</p></li>
+<li><p>The graduated style is used when you want to map columns in which the data are numerical quantities.  The graduated scheme will create choropleth maps, i.e., maps in which varying colors are used to represent different sized quantities.  Categorized is used when the values in the columns refer to categories of information, e.g. Democrats = 1, Republicans = 2, Independents = 3. In this case, the numbers 1,2, and 3 are not quantities, but categories.</p></li>
+</ol>
+<img alt="Mapping Attributes" src="_images/mapping_attributes3.png" />
+<ol class="arabic simple" start="7">
+<li><p>To map the population column, select Graduated as the Style.  Select Population as the column to map. Click on the dropdown next to Color Ramp and select also a color ramp. For numerical data that goes from lower values to higher values, one can select a single color.  Lower values will be given a lighter version of the color while higher values will be given a darker version of the color.</p></li>
+</ol>
+<img alt="Mapping Attributes" src="_images/mapping_attributes4.png" />
+<ol class="arabic simple" start="8">
+<li><p>Select the default 5 as the number of classes. Most cartographers suggest 5-6 classes as providing the best results.  Since we selected five classes, QGIS will place the population totals of the 50 states into 5 groups.</p></li>
+<li><p>Next to “Mode”, select “Natural Breaks” as the method of classification or grouping the data. Natural breaks means that the software will rank the data from highest to lowest and then create five groups such that each group contains numbers that are generally similar to each other. The goal is to create groupings of similar numbers rather than groups of equal number of cases. You can also experiment with equal interval, standard deviation, etc. to see their effect. Click Classify.</p></li>
+</ol>
+<img alt="Mapping Attributes" src="_images/mapping_attributes4.png" />
+<ol class="arabic simple" start="10">
+<li><p>Click OK and see the map in the main QGIS window. This map definitely conveys a lot more useful information that just numbers in a table.</p></li>
+<li><p>The steps outlined above show how to create a basic choropleth map in QGIS.  You should also take a look at the video below for a brief description of the process.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="preparing-maps-for-printing-in-qgis">
+<h2><span class="section-number">2.2. </span>Preparing maps for printing in QGIS<a class="headerlink" href="#preparing-maps-for-printing-in-qgis" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Now that you are done creating the map, the final step is “compose” the map to give it a professional touch.  QGIS comes an application called “Composer” that is used to  create professional quality maps.  Key components of a professional map include:</dt><dd><ul class="simple">
+<li><p>The map body</p></li>
+<li><p>The title of the map</p></li>
+<li><p>The scale bar</p></li>
+<li><p>The north arrow</p></li>
+<li><p>The legend</p></li>
+<li><p>Data Source (optional)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>With the map you are working on still opened in QGIS,  click on Project on the main menu, then ‘New Print Layout’.</p></li>
+</ol>
+<img alt="Composing Map" src="_images/composing_map1.png" />
+<ol class="arabic simple" start="3">
+<li><p>Enter a name for the new print composer object that will be created, e.g., “USA_Population Distribution Layout”. A new print Composer window will open. The Print Composer tool contains four main parts(1) a menu at the top of the screen, (2) a toolbar to the left, (3) the main map area, which has blank canvas where you would be composing the map, and (4) a panel with three tabs to the right, Composition, Item Properties, and Guides.</p></li>
+</ol>
+<img alt="Composing Map" src="_images/composing_map2.png" />
+<p>4.  To add a map to composer, click on Add Item on the main menu, then click “Add Map”.  Now draw a rectangle container on the canvas to hold the map.  When you end the rectangle, the map will appear.  Note: If you do not like the rectangle size, you can always resize it afterwards.</p>
+<img alt="Composing Map" src="_images/composing_map3.png" />
+<ol class="arabic simple" start="5">
+<li><p>If you wanted to enlarge the map and show only the contiguous states, then go back to the map area, and enlarge the view there. You may have to delete the rectangle and redraw it.</p></li>
+<li><p>Click inside the box and drag the map container until it is centered on the page.</p></li>
+<li><p>To add a scalebar, click on Add Item on the main menu, then select “Add Scalebar”.  Draw a rectangle on the composition where you want to place the scale bar then release. The scalebar will appear. Resize the scalebar to suit your taste.</p></li>
+<li><p>With the scalebar selected, click on “Item Properties” to the right of the composer. Here you can fiddle with the different values to adjust elements of the scalebar’s appearance.</p></li>
+<li><p>Repeat the same process as described in 8 above to add north arrow and legend to your map. Title and other text are added with the “Add Label” button on the Toolbar to the left.  Here is an illustration of my completed map.</p></li>
+</ol>
+<img alt="Composing Map" src="_images/composing_map4.png" />
+<ol class="arabic simple" start="10">
+<li><p>Once you are satisfied with the map, you can export it as Image, PDF or SVG. For this tutorial, let’s export it as a PNG image. Click onLayout | Export as Image.  Select a path and a name for the exported image.  This image can be uploaded to Canvas Dropbox.</p></li>
+<li><p>Creating attractive maps requires knowledge about map design and map communication principles.  There is a large body of literature on elements of good map design. In Module 1.6,  I present some basic maps design ideas.  Please read these design ideas and try to integrate them as much as possible into your own map design.</p></li>
+<li><p>As a rule, always try to create beautiful maps that effectively communicate spatial information. Conversely, always try to avoid creating ugly maps that fail to effectively communicate useful information.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="launch_qgis.html" class="btn btn-neutral float-left" title="1. Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="spatial_data.html" class="btn btn-neutral float-right" title="3. Loading Data into QGIS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
