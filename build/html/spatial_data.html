@@ -169,6 +169,46 @@ Google Roads  <a class="reference external" href="https://mt1.google.com/vt">htt
 </section>
 <section id="add-landsat-imagery">
 <h2><span class="section-number">3.5. </span>Add Landsat Imagery<a class="headerlink" href="#add-landsat-imagery" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Download Landsat imagery from <a class="reference external" href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a></p></li>
+<li><p>The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.</p></li>
+</ol>
+<img alt="Landsat Imagery" src="_images/landsat_imagery1.png" />
+<ol class="arabic simple" start="3">
+<li><p>After the files are loaded, they should appear as shown below. You can uncheck and then recheck each layer to observe it in detail. You can also zoom in and inspect different parts of the imagery.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/imagery_in_qgis.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click on Raster in the main menu, then select Miscellaneous | Build Virtual Raster.  This step will combine the rasters into a single layer.  Fill out the dialog that appears.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/virtual_raster.png" />
+<ol class="arabic simple" start="5">
+<li><p>Select the layers you want to use. I selected bands 1 through 8.  Click OK when you are done.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/multiple_selected_rasters.png" />
+<ol class="arabic simple" start="6">
+<li><p>In the main menu, click Run in Background. A new layer called “Virtual” will be created.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/build_virtual_raster1.png" />
+<ol class="arabic simple" start="7">
+<li><p>Right click on the layer called “Virtual” and select Properties.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/virtual_raster2.png" />
+<ol class="arabic simple" start="8">
+<li><p>To generate an image that represents a 5-4-3 band combination, fill out the dialog similar to the illustration below. The key selections are as follows: Render Type: Multiband Color; Red Band – 5; Green Band – 4; Blue Band - 3.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/symbolizing_virtual_raster.png" />
+<ol class="arabic" start="9">
+<li><p>When you are done, click Apply to view the image. Afterwards, click Ok.</p></li>
+<li><dl>
+<dt>Now, display the Virtual raster layer using the band combinations given below.</dt><dd><p>5-4-3. Traditional False Color Infrared image. Good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different vegetation. From visual inspection, we can detect many shades of red. The computer can detect lots more shade.</p>
+<p>5-6-4.  False Color NIR. Similar to 5-4-3, this is a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green. The land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.</p>
+<p>7-6-4. False Color SWIR. Useful for visualizing urban environments, particularly in situations where haze is an issue.</p>
+<p>7-6-2.  This combination enables easier visualization of major structural features like faults and folds.</p>
+</dd>
+</dl>
+</li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>

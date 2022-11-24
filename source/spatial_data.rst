@@ -113,7 +113,59 @@ Adding Google Satellite Imagery
 
 Add Landsat Imagery
 ---------------------
+1. Download Landsat imagery from https://earthexplorer.usgs.gov/
 
+2. The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.
+
+.. image:: img/landsat_imagery1.png
+   :alt: Landsat Imagery 
+
+3. After the files are loaded, they should appear as shown below. You can uncheck and then recheck each layer to observe it in detail. You can also zoom in and inspect different parts of the imagery. 
+
+.. image:: img/imagery_in_qgis.png
+   :alt: Landsat Imagery in QGIS
+
+4. Click on Raster in the main menu, then select Miscellaneous | Build Virtual Raster.  This step will combine the rasters into a single layer.  Fill out the dialog that appears.
+
+.. image:: img/virtual_raster.png
+   :alt: Landsat Imagery in QGIS
+
+5. Select the layers you want to use. I selected bands 1 through 8.  Click OK when you are done.
+
+.. image:: img/multiple_selected_rasters.png
+   :alt: Landsat Imagery in QGIS
+
+ 
+6. In the main menu, click Run in Background. A new layer called "Virtual" will be created.
+
+.. image:: img/build_virtual_raster1.png
+   :alt: Landsat Imagery in QGIS
+
+ 
+7. Right click on the layer called "Virtual" and select Properties.
+ 
+
+.. image:: img/virtual_raster2.png
+   :alt: Landsat Imagery in QGIS
+
+
+8.  To generate an image that represents a 5-4-3 band combination, fill out the dialog similar to the illustration below. The key selections are as follows: Render Type: Multiband Color; Red Band – 5; Green Band – 4; Blue Band - 3.
+
+.. image:: img/symbolizing_virtual_raster.png
+   :alt: Landsat Imagery in QGIS
+
+
+
+9. When you are done, click Apply to view the image. Afterwards, click Ok.
+
+10. Now, display the Virtual raster layer using the band combinations given below. 
+     5-4-3. Traditional False Color Infrared image. Good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different vegetation. From visual inspection, we can detect many shades of red. The computer can detect lots more shade.
+    
+     5-6-4.  False Color NIR. Similar to 5-4-3, this is a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green. The land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.
+
+     7-6-4. False Color SWIR. Useful for visualizing urban environments, particularly in situations where haze is an issue. 
+
+     7-6-2.  This combination enables easier visualization of major structural features like faults and folds. 
 
 
 
