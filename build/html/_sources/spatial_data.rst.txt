@@ -181,19 +181,31 @@ To add a csv file to QGIS, follow these steps:
 2. Browse to the CSV file and fill out the dialog.
 
 3. If the CSV file contains latitude/longittude data, ensure that you define the X field and Y field that contains Longitude and Latitude values.   
+     
+.. image:: img/data_source_manager_csv.png
+   :alt: Data Source Manager CSV Files
+
 
 4. When you are done filling out the dialog, click Ok. QGIS will read and load the CSV file. Also, the points associated with the coordinates will appear on the screen.
-             
 
 |
 
 Loading GPS Data
 ------------------
-1. Data downloaded from GPS receivers is often available in GPX (GPS eXchange) format.
+1. Data downloaded from GPS receivers are often available in GPX (GPS eXchange)format.  A quick source of GPX data is to create a direction route in Google Map and then then use the Maps to GPX website (https://mapstogpx.com/) to convert the Google Map route to a GPX route, which can be downloaded.  Click on this link for more information: https://www.groovypost.com/howto/export-google-maps-route-data/
 
 2. To load GPX data into QGIS, first click on the Data Source Manager button, then click on GPS.
 
+.. image:: img/load_gps_data.png
+   :alt: Data Source Manager GPS Files
+
+
 3. Navigate to the GPX file and load it into QGIS.
+
+.. image:: img/display_gpx_data.png
+   :alt: Data Source Manager GPS Files
+
+
 
 
 |
@@ -222,11 +234,18 @@ Loading WMS Layer
 
 1.  In QGIS, click on Layer | Add layer | Add WMS/WMTS Layers
 
-2. In the 'Create a new WMS connection' dialog, enter a name for the conection and the appropriate URL. (e.g. https://services.ga.gov.au/gis/services/Earthquake_Hazard_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS)
+2. In the 'Create a new WMS connection' dialog, enter a name for the conection and the appropriate URL. (e.g. https://mrdata.usgs.gov/services/active-mines?service=WMS&version=1.3.0)
+
+.. image:: img/wms_dialog.png
+   :alt: Load WMS Layer
 
 3. Select OK.
 
 4. Back in the the main Connection dialog, select Connect and then Add. If the URL is correct, the WMS layer should be added to the View.
+
+.. image:: img/wms_dialog2.png
+   :alt: Load WMS Layer
+
 
 5. Select Close.
 
@@ -241,7 +260,7 @@ Loading WFS Layer
 
 1. In QGIS, click on Layer | Add layer | Add WFS Layer
    
-2. In the 'Create a new WFS connection' dialog, enter a name for the connection and the appropriate URL(e.g. https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&service=WFS)
+2. In the 'Create a new WFS connection' dialog, enter a name for the connection and the appropriate URL.
 
 3. Select OK.
 
@@ -253,7 +272,7 @@ Loading WFS Layer
 
 |
 
-Adding a NAIP REST Service from the USDA
+Adding an ArcGIS REST Service to QGIS
 ------------------------------------------
 https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda
 

@@ -54,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#loading-postgresql-postgis-data">3.8. Loading PostgreSQL/PostGIS Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-wms-layer">3.9. Loading WMS Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-wfs-layer">3.10. Loading WFS Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-a-naip-rest-service-from-the-usda">3.11. Adding a NAIP REST Service from the USDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-an-arcgis-rest-service-to-qgis">3.11. Adding an ArcGIS REST Service to QGIS</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
@@ -218,6 +218,9 @@
 <li><p>Click on Layer | Add Layer | Add Delimited Text Layer.</p></li>
 <li><p>Browse to the CSV file and fill out the dialog.</p></li>
 <li><p>If the CSV file contains latitude/longittude data, ensure that you define the X field and Y field that contains Longitude and Latitude values.</p></li>
+</ol>
+<img alt="Data Source Manager CSV Files" src="_images/data_source_manager_csv.png" />
+<ol class="arabic simple" start="4">
 <li><p>When you are done filling out the dialog, click Ok. QGIS will read and load the CSV file. Also, the points associated with the coordinates will appear on the screen.</p></li>
 </ol>
 <div class="line-block">
@@ -227,10 +230,14 @@
 <section id="loading-gps-data">
 <h2><span class="section-number">3.7. </span>Loading GPS Data<a class="headerlink" href="#loading-gps-data" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Data downloaded from GPS receivers is often available in GPX (GPS eXchange) format.</p></li>
+<li><p>Data downloaded from GPS receivers are often available in GPX (GPS eXchange)format.  A quick source of GPX data is to create a direction route in Google Map and then then use the Maps to GPX website (<a class="reference external" href="https://mapstogpx.com/">https://mapstogpx.com/</a>) to convert the Google Map route to a GPX route, which can be downloaded.  Click on this link for more information: <a class="reference external" href="https://www.groovypost.com/howto/export-google-maps-route-data/">https://www.groovypost.com/howto/export-google-maps-route-data/</a></p></li>
 <li><p>To load GPX data into QGIS, first click on the Data Source Manager button, then click on GPS.</p></li>
+</ol>
+<img alt="Data Source Manager GPS Files" src="_images/load_gps_data.png" />
+<ol class="arabic simple" start="3">
 <li><p>Navigate to the GPX file and load it into QGIS.</p></li>
 </ol>
+<img alt="Data Source Manager GPS Files" src="_images/display_gpx_data.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -252,9 +259,15 @@
 <h2><span class="section-number">3.9. </span>Loading WMS Layer<a class="headerlink" href="#loading-wms-layer" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Layer | Add layer | Add WMS/WMTS Layers</p></li>
-<li><p>In the ‘Create a new WMS connection’ dialog, enter a name for the conection and the appropriate URL. (e.g. <a class="reference external" href="https://services.ga.gov.au/gis/services/Earthquake_Hazard_WM/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS">https://services.ga.gov.au/gis/services/Earthquake_Hazard_WM/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS</a>)</p></li>
+<li><p>In the ‘Create a new WMS connection’ dialog, enter a name for the conection and the appropriate URL. (e.g. <a class="reference external" href="https://mrdata.usgs.gov/services/active-mines?service=WMS&amp;version=1.3.0">https://mrdata.usgs.gov/services/active-mines?service=WMS&amp;version=1.3.0</a>)</p></li>
+</ol>
+<img alt="Load WMS Layer" src="_images/wms_dialog.png" />
+<ol class="arabic simple" start="3">
 <li><p>Select OK.</p></li>
 <li><p>Back in the the main Connection dialog, select Connect and then Add. If the URL is correct, the WMS layer should be added to the View.</p></li>
+</ol>
+<img alt="Load WMS Layer" src="_images/wms_dialog2.png" />
+<ol class="arabic simple" start="5">
 <li><p>Select Close.</p></li>
 <li><p>Click on this link for examples of WMS geology layers - <a class="reference external" href="https://mrdata.usgs.gov/wms.html">https://mrdata.usgs.gov/wms.html</a></p></li>
 </ol>
@@ -266,7 +279,7 @@
 <h2><span class="section-number">3.10. </span>Loading WFS Layer<a class="headerlink" href="#loading-wfs-layer" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Layer | Add layer | Add WFS Layer</p></li>
-<li><p>In the ‘Create a new WFS connection’ dialog, enter a name for the connection and the appropriate URL(e.g. <a class="reference external" href="https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS">https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS</a>)</p></li>
+<li><p>In the ‘Create a new WFS connection’ dialog, enter a name for the connection and the appropriate URL.</p></li>
 <li><p>Select OK.</p></li>
 <li><p>In the ‘Add WFS Layer from a Server’ dialog box, select Connect and then Apply. Note: Loading the WFS data may take a while.</p></li>
 <li><p>Select Close.</p></li>
@@ -275,8 +288,8 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="adding-a-naip-rest-service-from-the-usda">
-<h2><span class="section-number">3.11. </span>Adding a NAIP REST Service from the USDA<a class="headerlink" href="#adding-a-naip-rest-service-from-the-usda" title="Permalink to this heading"></a></h2>
+<section id="adding-an-arcgis-rest-service-to-qgis">
+<h2><span class="section-number">3.11. </span>Adding an ArcGIS REST Service to QGIS<a class="headerlink" href="#adding-an-arcgis-rest-service-to-qgis" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda">https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda</a></p>
 </section>
 </section>
