@@ -133,13 +133,13 @@ Add Landsat Imagery
 5. Select the layers you want to use. I selected bands 1 through 8.  Click OK when you are done.
 
 .. image:: img/multiple_selected_rasters.png
-   :alt: Landsat Imagery in QGIS
+   :alt: Selecting Landsat Bands for Display in QGIS
 
  
 6. In the main menu, click Run in Background. A new layer called "Virtual" will be created.
 
 .. image:: img/build_virtual_raster1.png
-   :alt: Landsat Imagery in QGIS
+   :alt: Building a Virtual Raster in QGIS
 
  
 7. Right click on the layer called "Virtual" and select Properties.
@@ -156,7 +156,7 @@ Add Landsat Imagery
 * Blue Band - 3.
 
 .. image:: img/symbolizing_virtual_raster.png
-   :alt: Landsat Imagery in QGIS
+   :alt: Symbolizing Virtual Rasters
 
 
 
@@ -194,7 +194,7 @@ To add a csv file to QGIS, follow these steps:
 
 |
 
-Loading GPS data
+Loading GPS Data
 ------------------
 1. Data downloaded from GPS receivers is often available in GPX (GPS eXchange) format.
 
@@ -205,11 +205,11 @@ Loading GPS data
 .. image:: img/data_source_manager_gpx.png
    :alt: Data Source Manager GPX. 
 
-5. Click Ok. QGIS will read and load the GPX file. It will also display the points on the screen as waypoints, routes, or polygons..
+4. Click Ok. QGIS will read and load the GPX file. It will also display the points on the screen as waypoints or routes, as shown below.
           
 
 .. image:: img/gps_points.png
-   :alt: GPS Data  
+   :alt: GPS Data Displayed as Route  
 
 
 
@@ -223,9 +223,9 @@ To visualize datasets in PostgreSQl/PostGIS from within QGIS, follow the steps b
 
 1. In QGIS, click on Layer | Add Layer | Add PostGIS Layers.
 
-2. In the dialog that appears, click “New”. This opens the dialog to connect to the PostGIS server and database. Enter the connection information and click Ok.
+2. In the dialog that appears, click "New". This opens the dialog to connect to the PostGIS server and database. Enter the connection information and click Ok.
 
-3. Back in the Connection dialog, click “Connect”. If the connection is successful, you will be able to see all tables in the database. 
+3. Back in the Connection dialog, click "Connect". If the connection is successful, you will be able to see all tables in the database. 
 
 4. Select any table of interest and click “Add”.  This will load the layer into QGIS.
 
@@ -240,13 +240,13 @@ To Add a WMS Layer
 
 1. In QGIS, click on Layer | Add WMS/WMTS Layer.
 
-2. Select New in the Data Source Manager dialog box.
+2. Select "New" in the Data Source Manager dialog box.
 
 .. image:: img/wms_new_connection.png
-   :alt: GPS Data  
+   :alt: GPS Data Source Connection 
 
 
-3. In the 'Create a new WMS connection' dialog box, enter a name for the conection and the appropriate URL. (e.g. https://mrdata.usgs.gov/services/active-mines?version=1.3.0)
+3. In the 'Create a new WMS connection' dialog, enter a name for the conection and the appropriate URL (e.g. https://mrdata.usgs.gov/services/active-mines?version=1.3.0)
 
 .. image:: img/new_wms_connection.png
    :alt: GPS Data  
@@ -254,7 +254,7 @@ To Add a WMS Layer
 
 4. Select OK.
 
-5. In the Sever Connection dialog, select Connect and then Add. THe WMS should now be added.
+5. In the Sever Connection dialog, select "Connect" and then "Add". THe WMS layer should now be added.
 
 .. image:: img/wms_connection_dialog.png
    :alt: GPS Data  
@@ -270,7 +270,7 @@ Loading WFS Layer
 
 1. In QGIS, click on Layer | Add WFS Layer.
 
-2. Select New in the Data Source Manager dialog box.
+2. Select New in the Data Source Manager dialog.
    
 3. In the 'Create a new WFS connection' dialog box, enter a name for the connection and the appropriate URL. (e.g. https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&service=WFS)
 
