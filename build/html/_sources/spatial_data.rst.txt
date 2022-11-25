@@ -100,11 +100,11 @@ Adding Google Satellite Imagery
 
 6. Additional Google Map Tiles Links
 
-  Google Maps	https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}
-  Google Satellite	https://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}
-  Google Satellite Hybrid	https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}
-  Google Terrain	https://mt1.google.com/vt/lyrs=t&x={x}&y={y}&z={z}
-  Google Roads	https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}
+  * Google Maps	https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}
+  * Google Satellite	https://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}
+  * Google Satellite Hybrid	https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}
+  * Google Terrain	https://mt1.google.com/vt/lyrs=t&x={x}&y={y}&z={z}
+  * Google Roads	https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}
 
 
 
@@ -113,7 +113,7 @@ Adding Google Satellite Imagery
 
 Add Landsat Imagery
 ---------------------
-1. Download Landsat imagery from https://earthexplorer.usgs.gov/
+1. Download Landsat 8 imagery from https://earthexplorer.usgs.gov/
 
 2. The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.
 
@@ -149,7 +149,11 @@ Add Landsat Imagery
    :alt: Landsat Imagery in QGIS
 
 
-8.  To generate an image that represents a 5-4-3 band combination, fill out the dialog similar to the illustration below. The key selections are as follows: Render Type: Multiband Color; Red Band – 5; Green Band – 4; Blue Band - 3.
+8.  To generate an image that represents a 5-4-3 band combination, fill out the dialog similar to the illustration below. The key selections are as follows: 
+* Render Type: Multiband Color
+* Red Band – 5
+* Green Band – 4
+* Blue Band - 3.
 
 .. image:: img/symbolizing_virtual_raster.png
    :alt: Landsat Imagery in QGIS
@@ -158,14 +162,14 @@ Add Landsat Imagery
 
 9. When you are done, click Apply to view the image. Afterwards, click Ok.
 
-10. Now, display the Virtual raster layer using the band combinations given below. 
-     5-4-3. Traditional False Color Infrared image. Good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different vegetation. From visual inspection, we can detect many shades of red. The computer can detect lots more shade.
+10. The 5-4-3 band combination is the traditional False Color Infrared image. it is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different vegetation. From visual inspection, we can detect many shades of red. The computer can detect lots more shade.
     
-     5-6-4.  False Color NIR. Similar to 5-4-3, this is a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green. The land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.
+10. Now, display an image using a 5-6-4 band combination. This is also a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green. 
 
-     7-6-4. False Color SWIR. Useful for visualizing urban environments, particularly in situations where haze is an issue. 
+11. In the 5-6-4 band combination, land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.
 
-     7-6-2.  This combination enables easier visualization of major structural features like faults and folds. 
+12. Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue. 
+
 
 
 
@@ -174,15 +178,17 @@ Add Landsat Imagery
 Importing CSV files
 -------------------
 
-To add ta csv file to QGIS, follow these steps:
+To add a csv file to QGIS, follow these steps:
 
 1. Click on Layer | Add Layer | Add Delimited Text Layer.
 
 2. Browse to the CSV file.
 
-4. fill out the dialog. If the CSV files contains latitude/longittude data, ensure that you define the X field and Y field that contains Longitude and Latitude values.   
+3. Fill out the dialog. If the CSV files contains latitude/longittude data, ensure that you define the X field and Y field that contains Longitude and Latitude values.   
 
-5. When you are done filling out the dialog, click Ok. QGIS will read and load the CSV file. Also, the points associated with the coordinates will appear on the screen.
+
+
+4. When you are done filling out the dialog, click Ok. QGIS will read and load the CSV file. Also, the points associated with the coordinates will appear on the screen.
              
 
 |
@@ -199,8 +205,8 @@ Loading GPS data
 |
 
 
-Loading Spatial Data Stored in a PostgreSQL/PostGIS Database
------------------------------------------------------------------
+Loading PostgreSQL/PostGIS Layers
+-------------------------------------
 
 To visualize datasets in PostgreSQl/PostGIS from within QGIS, follow the steps below:
 
@@ -251,8 +257,8 @@ Loading WFS Layer
 
 |
 
-Adding a NAIP REST Service from the USDA
-------------------------------------------
+Adding an ArcGIS REST Service to QQIS
+--------------------------------------
 https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda
 
 
