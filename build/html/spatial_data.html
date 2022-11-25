@@ -54,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#loading-postgresql-postgis-layers">3.8. Loading PostgreSQL/PostGIS Layers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-wms-layer">3.9. Loading WMS Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-wfs-layer">3.10. Loading WFS Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-an-arcgis-rest-service-to-qqis">3.11. Adding an ArcGIS REST Service to QQIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-an-arcgis-rest-service-to-qgis">3.11. Adding an ArcGIS REST Service to QGIS</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
@@ -204,13 +204,11 @@
 <img alt="Landsat Imagery in QGIS" src="_images/symbolizing_virtual_raster.png" />
 <ol class="arabic simple" start="9">
 <li><p>When you are done, click Apply to view the image. Afterwards, click Ok.</p></li>
-<li><p>The 5-4-3 band combination is the traditional False Color Infrared image. it is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different vegetation. From visual inspection, we can detect many shades of red. The computer can detect lots more shade.</p></li>
-</ol>
-<ol class="arabic simple" start="10">
+<li><p>As you may be aware, the Landsat 8 5-4-3 band combination is the traditional False Color Infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shade.</p></li>
 <li><p>Now, display an image using a 5-6-4 band combination. This is also a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green.</p></li>
 <li><p>In the 5-6-4 band combination, land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.</p></li>
-<li><p>Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue.</p></li>
 </ol>
+<p>13 Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -238,7 +236,11 @@
 <li><p>To load GPX data into QGIS, first click on the Data Source Manager button, then click on GPS.</p></li>
 <li><p>Navigate to the GPX file and load it into QGIS.</p></li>
 </ol>
-<img alt="Data Source Manager GPX" src="_images/data_source_manager_gpx.png" />
+<img alt="Data Source Manager GPX." src="_images/data_source_manager_gpx.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Ok. QGIS will read and load the GPX file. It will also display the points on the screen as waypoints, routes, or polygons..</p></li>
+</ol>
+<img alt="GPS Data" src="_images/gps_points.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -247,9 +249,10 @@
 <h2><span class="section-number">3.8. </span>Loading PostgreSQL/PostGIS Layers<a class="headerlink" href="#loading-postgresql-postgis-layers" title="Permalink to this heading"></a></h2>
 <p>To visualize datasets in PostgreSQl/PostGIS from within QGIS, follow the steps below:</p>
 <ol class="arabic simple">
-<li><p>Open QGIS, select Layer -&gt; Add layer -&gt; Add PostGIS layers, it should open the interface to connect a PostGIS table.</p></li>
-<li><p>In the dialog that appears, click “New”, it should open the dialog to configure the PostGIS server, and database. Enter relevant information in Step 3, click Ok</p></li>
-<li><p>Back to the dialog, click “Connect”, you shall be able to see all tables in the database. You may select any table, click “Add”, then you can load it into the QGIS.</p></li>
+<li><p>In QGIS, click on Layer | Add Layer | Add PostGIS Layers.</p></li>
+<li><p>In the dialog that appears, click “New”. This opens the dialog to connect to the PostGIS server and database. Enter the connection information and click Ok.</p></li>
+<li><p>Back in the Connection dialog, click “Connect”. If the connection is successful, you will be able to see all tables in the database.</p></li>
+<li><p>Select any table of interest and click “Add”.  This will load the layer into QGIS.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -259,10 +262,20 @@
 <h2><span class="section-number">3.9. </span>Loading WMS Layer<a class="headerlink" href="#loading-wms-layer" title="Permalink to this heading"></a></h2>
 <p>To Add a WMS Layer</p>
 <ol class="arabic simple">
-<li><p>Select New in the ‘Add Layer(s) from a Server’ dialogue box.</p></li>
-<li><p>In the ‘Create a new WMS connection’ dialogue box, enter a name for the conection and the appropriate URL. (e.g. <a class="reference external" href="https://services.ga.gov.au/gis/services/Earthquake_Hazard_WM/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS">https://services.ga.gov.au/gis/services/Earthquake_Hazard_WM/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS</a>)</p></li>
+<li><p>In QGIS, click on Layer | Add WMS/WMTS Layer.</p></li>
+<li><p>Select New in the Data Source Manager dialog box.</p></li>
+</ol>
+<img alt="GPS Data" src="_images/wms_new_connection.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the ‘Create a new WMS connection’ dialog box, enter a name for the conection and the appropriate URL. (e.g. <a class="reference external" href="https://mrdata.usgs.gov/services/active-mines?version=1.3.0">https://mrdata.usgs.gov/services/active-mines?version=1.3.0</a>)</p></li>
+</ol>
+<img alt="GPS Data" src="_images/new_wms_connection.png" />
+<ol class="arabic simple" start="4">
 <li><p>Select OK.</p></li>
-<li><p>In the ‘Add Layer(s) from a Server’ dialogue box, select Connect and then Add. THe WMS should now be added.</p></li>
+<li><p>In the Sever Connection dialog, select Connect and then Add. THe WMS should now be added.</p></li>
+</ol>
+<img alt="GPS Data" src="_images/wms_connection_dialog.png" />
+<ol class="arabic simple" start="6">
 <li><p>Select Close.</p></li>
 </ol>
 <div class="line-block">
@@ -272,18 +285,19 @@
 <section id="loading-wfs-layer">
 <h2><span class="section-number">3.10. </span>Loading WFS Layer<a class="headerlink" href="#loading-wfs-layer" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Select New in the ‘Add WFS Layer from a Server’ dialogue box.</p></li>
-<li><p>In the ‘Create a new WFS connection’ dialogue box, enter a name for the connection and the appropriate URL. (e.g. <a class="reference external" href="https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS">https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS</a>)</p></li>
+<li><p>In QGIS, click on Layer | Add WFS Layer.</p></li>
+<li><p>Select New in the Data Source Manager dialog box.</p></li>
+<li><p>In the ‘Create a new WFS connection’ dialog box, enter a name for the connection and the appropriate URL. (e.g. <a class="reference external" href="https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS">https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS</a>)</p></li>
 <li><p>Select OK.</p></li>
-<li><p>In the ‘Add WFS Layer from a Server’ dialogue box, select Connect and then Apply. NB - loading the WFS data may take a while.</p></li>
+<li><p>In the Server Connection dialog box, select Connect and then Apply. NB - loading the WFS data may take a while.</p></li>
 <li><p>Select Close.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="adding-an-arcgis-rest-service-to-qqis">
-<h2><span class="section-number">3.11. </span>Adding an ArcGIS REST Service to QQIS<a class="headerlink" href="#adding-an-arcgis-rest-service-to-qqis" title="Permalink to this heading"></a></h2>
+<section id="adding-an-arcgis-rest-service-to-qgis">
+<h2><span class="section-number">3.11. </span>Adding an ArcGIS REST Service to QGIS<a class="headerlink" href="#adding-an-arcgis-rest-service-to-qgis" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda">https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda</a></p>
 </section>
 </section>
