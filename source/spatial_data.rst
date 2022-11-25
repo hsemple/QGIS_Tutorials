@@ -186,7 +186,8 @@ To add a csv file to QGIS, follow these steps:
 
 3. Fill out the dialog. If the CSV files contains latitude/longittude data, ensure that you define the X field and Y field that contains Longitude and Latitude values.   
 
-
+.. image:: img/data_source_manager_csv.png
+   :alt: Data Source Manager CSV
 
 4. When you are done filling out the dialog, click Ok. QGIS will read and load the CSV file. Also, the points associated with the coordinates will appear on the screen.
              
@@ -201,6 +202,8 @@ Loading GPS data
 
 3. Navigate to the GPX file and load it into QGIS.
 
+.. image:: img/data_source_manager_gpx.png
+   :alt: Data Source Manager GPX
 
 |
 
