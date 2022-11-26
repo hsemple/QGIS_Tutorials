@@ -2,12 +2,13 @@
 Map Projections
 =======================================
 
-This tutorial introduces you to the basics of temporarily displaying map layers in different projections and coordinate systems using QGIS. This is also called changing the projections 'on the fly' and does not alter the underlying coordinates of the map layers.  
+This lab introduces you to the basics of temporarily displaying map layers in different projections and coordinate systems using QGIS. This is also called changing the projections 'on the fly' and does not alter the underlying coordinates of the map layers.  
 
-The tutorial will also illustrate how to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.   
+The lab will also illustrate how to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.   
 
-Finally, the tutorial will show how to change projections in ArcGIS Online.  We will touch on projections for world maps, US maps, and maps of Michigan. 
+Finally, the lab will show how to change projections in ArcGIS Online.  We will touch on projections for world maps, US maps, and maps of Michigan. 
 
+|
 
 **Data Requirements**
 
@@ -27,7 +28,7 @@ Projections of the World
 
 2. Click on Layer | Add Layer | Add Vector Layer and browse to the downloaded data folder. 
 
-3. Open the world subdirectory,. Select ESRI shapefiles as the file type to display, and load the .shp files into QGIS. 
+3. Open the world subdirectory. Select ESRI shapefiles as the file type to display, and load the .shp files into QGIS. 
 
 .. image:: img/world_countries.png
    :alt: Landsat Imagery in QGIS
@@ -42,13 +43,13 @@ Projections of the World
 
 6. Look at the different circles on the map (also called Tissot's indicatrix after the French mathematician who devised them in 1859). Notice that close to the equator, the circles show little distortion, but as one moves north and south of the equator, the circles show increasing distortion. The circles give an indication of how much the shape of places are being distorted on the map as one goes north and south.
 
-7.	Examine the coordinates of the map. They are circled red on the map. (See illustration below).   As you move the cursor over the map the coordinates change. These coordinates are latitude \ longitude. They range from 0 to 90 degrees north and south of the equator and 0 to 180 degrees east and west of the Prime Meridian, which is represented by zero degrees longitude.   
+7.	Examine the coordinates of the map. They are circled red on the map. (See illustration above).  As you move the cursor over the map the coordinates change. These coordinates are latitude \ longitude. They range from 0 to 90 degrees north and south of the equator and 0 to 180 degrees east and west of the Prime Meridian, which is represented by zero degrees longitude.   
 
 8.	At the bottom-right corner of QGIS you will see EPSG:4326. This is the code for the current CRS (Coordinate Referencing System) for the project.
 
 9.	In GIS, latitude \ longitude coordinates are also called Geographic Coordinates. This important to remember.  When they appear on a physical three-dimensional globe, we also refer to the latitudes and longitudes as unprojected coordinates because the coordinates have not been projected to a flat plane. 
 
-10.	On your map in QGIS, uncheck the lat\long grid.
+10.	In the Contents browser in QGIS, uncheck the lat\long grid.
 
 11.	To determine the projection of your entire project, we can look at the project's metadata. Click on Project and the top left of QGIS and select Properties.
 

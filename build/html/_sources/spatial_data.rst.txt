@@ -93,7 +93,7 @@ Adding Google Satellite Imagery
 3. In the dialog that appears, type "Google" in the Name textbox.
 
 4. In the URL, copy and paste the address the following URL then click OK: 
-   http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}&s=Ga
+:samp: 'http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}&s=Ga'
 
 .. image:: img/google_earth_connection.png
    :alt: Loading Google Earth Imagery
