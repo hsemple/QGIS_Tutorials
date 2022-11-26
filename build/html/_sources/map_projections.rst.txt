@@ -4,7 +4,9 @@ Map Projections
 
 This tutorial introduces you to the basics of temporarily displaying map layers in different projections and coordinate systems using QGIS. This is also called changing the projections 'on the fly' and does not alter the underlying coordinates of the map layers.  
 
-The tutorial will also show how to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.   Finally, the lab will show how to change projections in ArcGIS Online.  We will touch on projections for world maps, US maps, and maps of Michigan. 
+The tutorial will also show how to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.   
+
+Finally, the tutorial will show how to change projections in ArcGIS Online.  We will touch on projections for world maps, US maps, and maps of Michigan. 
 
 
 **Data Requirements**
@@ -19,42 +21,47 @@ Projections of the World
 
 
 
-**View the World in Geographic Coordinates**
+**View the World in Geographic Coordinates or Plate-Carrée Projection)**
 
-1. Open QGIS Pro from the Start menu and create a new empty map document.
+1. Open QGIS from the Start menu and create a new empty map document.
 
-2. Click on Layer | Add Layer | Add Vector Layer and browse to the data folder. Open the world subdirectory, select all files from the file type section, and load the map layers into QGIS. 
+2. Click on Layer | Add Layer | Add Vector Layer and browse to the data folder. 
+
+3. Open the world subdirectory,. Select ESRI shapefiles as the file type to display, and load the .shp files into QGIS. 
 
 .. image:: img/world_countries.png
    :alt: Landsat Imagery in QGIS
 
+4. The layers should appear as shown below. The colors on the map will vary.
 
 .. image:: img/world_geographic_coordinates.png
    :alt: Landsat Imagery in QGIS
 
 
-3.	Study the shape and relative sizes of continents. Compare the size of Greenland with that of Africa and South America. Notice how small Greenland is on this projection. On some projections, you will notice major differences in the size of Greenland relative to Africa or South America.
+5.	Study the shape and relative sizes of continents. Compare the size of Greenland with that of Africa and South America. Notice how small Greenland is on this projection. On some projections, you will notice major differences in the size of Greenland relative to Africa or South America.
 
-4.	Look at the different circles on the map (also called  Tissot's indicatrix after the French mathematician who devised them in 1859). Notice that close to the equator, the circles show little distortion, but as one moves north and south of the equator, the circles show increasing distortion. The circles give an indication of how much the shape of places are being distorted on the map as one goes north and south.
+6. Look at the different circles on the map (also called Tissot's indicatrix after the French mathematician who devised them in 1859). Notice that close to the equator, the circles show little distortion, but as one moves north and south of the equator, the circles show increasing distortion. The circles give an indication of how much the shape of places are being distorted on the map as one goes north and south.
 
-5.	Examine the coordinates of the map. They are circled red on the map. (See illustration below).   As you move the cursor over the map the coordinates change. These coordinates are latitude \ longitude. They range from 0 to 90 degrees north and south of the equator and 0 to 180 degrees east and west of the Prime Meridian, which is represented by zero degrees longitude.   
+7.	Examine the coordinates of the map. They are circled red on the map. (See illustration below).   As you move the cursor over the map the coordinates change. These coordinates are latitude \ longitude. They range from 0 to 90 degrees north and south of the equator and 0 to 180 degrees east and west of the Prime Meridian, which is represented by zero degrees longitude.   
 
-6.	At the bottom-right corner of QGIS you will see EPSG:4326. This is the code for the current CRS (Coordinate Referencing System) for the project.
+8.	At the bottom-right corner of QGIS you will see EPSG:4326. This is the code for the current CRS (Coordinate Referencing System) for the project.
 
-7.	In GIS, latitude \ longitude coordinates are also called Geographic Coordinates. This important to remember.  When they appear on a physical three-dimensional globe, we also refer to the latitudes and longitudes as unprojected coordinates because the coordinates have not been projected to a flat plane. 
+9.	In GIS, latitude \ longitude coordinates are also called Geographic Coordinates. This important to remember.  When they appear on a physical three-dimensional globe, we also refer to the latitudes and longitudes as unprojected coordinates because the coordinates have not been projected to a flat plane. 
 
-8.	On your map in QGIS, uncheck the lat\long grid.
+10.	On your map in QGIS, uncheck the lat\long grid.
 
-9.	To determine the projection of your entire project, we can look at the project's metadata. Click on Project and the top left of QGIS and select Properties.
+11.	To determine the projection of your entire project, we can look at the project's metadata. Click on Project and the top left of QGIS and select Properties.
 
-10.	On the dialog that appears, click on CRS (Coordinate Referencing System). The coordinate system information shows under Geometry and Coordinate Referencing System.
+12.	On the dialog that appears, click on CRS (Coordinate Referencing System). The coordinate system information shows under Geometry and Coordinate Referencing System.
 
 
 .. image:: img/spatial_reference_properties.png
    :alt: Landsat Imagery in QGIS
 
 
-11.	EPSG 4326 is the code for a widely used global spherical geographic coordinate system. It is based on the WGS84 datum and uses longitude and latitude in decimal degrees. For the most part, when you describe a long/lat coordinate location, those coordinates are based on the EPSG:4326 coordinate system.   There is no way to visualize the EPSG: 4326 coordinate system on a two-dimensional plane (map), so most software programs project these coordinates to an equirectangular projection named (Plate-Carrée).  The world map above is thus in the Plate-Carrée projection. 
+13.	EPSG 4326 is the code for a widely used global spherical geographic coordinate system. It is based on the WGS84 datum and uses longitude and latitude in decimal degrees. For the most part, when you describe a long/lat coordinate location, those coordinates are based on the EPSG:4326 coordinate system.   
+
+14. There is no way to visualize the EPSG: 4326 coordinate system on a two-dimensional plane (map), so most software programs project these coordinates to an equirectangular projection named (Plate-Carrée).  The world map above is thus in the Plate-Carrée projection. 
 
 
 
@@ -67,7 +74,7 @@ The Plate Carrée is the basic projection for rendering world maps in geographic
 
 A popular projection for rendering the entire world to create thematic maps is the Robinson's projection. If you do not know about the Robinson's projection, you should do a quick review of the lecture notes. To render our world map in Robinson's projection, do the following:
 
-1.	Click on Project and properties and the dialog below will appear. Enter Robinson next to filter.  Select either World Robinson or Sphere Robinson as the Coordinate System.
+1.	Click on Project and properties and the dialog below will appear. Enter Robinson next to Filter.  Select either World Robinson or Sphere Robinson as the Coordinate System.
 
 .. image:: img/crs_properties.png
    :alt: CRS Properties
@@ -85,7 +92,7 @@ A popular projection for rendering the entire world to create thematic maps is t
 
 5. The unit of measurement for projected are typically in feet or meters. That is because we are projecting the lat/long, which are in degrees, to a plane coordinate system, which are feet or meters. 
 
-6. If you look at the coordinates at the bottom of the map, you see the map coordinates in meters.  
+6. If you look at the coordinates at the bottom of the map, you see that the map coordinates are now in meters.  
 
 
 
@@ -107,7 +114,7 @@ A popular projection for rendering the entire world to create thematic maps is t
 
 |
 
-**Making a Layout of the Different Global Projections**
+**Making a Single Layout of the Different Global Projections**
 
 1. Now, let us make a layout of the world in the different projections.  First Reset your map to the EPSG: 4326 coordinate system  then Click on Project | New Print Layout.
 
@@ -257,12 +264,13 @@ To display a map of Michigan using the Michigan Georef Coordinate System, do the
 
 **Summary of Deliverables**
 
-1. Create a Single Layout showing the world in the following coordinate systems/ projections
-*	Geographic Coordinates
-*	Robinson Projection
-*	Winkel Tripel (NGS - world)
-*   Mercator (world)
-*	Sinudoidal (world) 
+1. Create a Single Layout showing the world in the following coordinate systems or projections:
+
+* Geographic Coordinates
+* Robinson Projection
+* Winkel Tripel (NGS - world)
+* Mercator (world)
+* Sinudoidal (world) 
 
 2. Write short statements on the characteristics of each projection and what mapping tasks each is best suited for.
 
@@ -304,31 +312,56 @@ Your task is to change the coordinate systems of the map layers Michigan State P
  
 3. Let us check the Coordinate Reference System (CRS) of the street layer.  Right click on the name of the streets layer, then select properties. 
  
+.. image:: img/street_layer_crs.png
+   :alt: CRS Street Layer
+
  
 4.  Under "Geometry and Coordinate System", notice it says Invalid Projection. This means that the projection has not been set or defined. Close the dialog.
   
 
-5. Prior to downloading the street layer, we were told that its coordinates were Geographic Coordinates, WGS 84.  Recall that Geographic Coordinates is a another name for latitude \ longitude. If you look at the bottom of the screen you can see the latitude \ longitude values.  Although QGIS recognizes those values as latitude \ longitude, it does not know which datum the latitude \longitudes are based on.   Let us provide this information to QGIS by defining the coordinate system of the map of the layer.  To do so, close the current dialog, then right click on the name of the street layer and select Set CRS | Set Layer CRS...
+.. image:: img/street_layer_crs2.png
+   :alt: CRS Street Layer
+
+
+5. Prior to downloading the street layer, we were told that its coordinates were Geographic Coordinates, WGS 84.  Recall that Geographic Coordinates is another name for latitude \ longitude. If you look at the bottom of the screen you can see the latitude \ longitude values.  Although QGIS recognizes those values as latitude \ longitude, it does not know which datum the latitude \longitudes are based on.   Let us provide this information to QGIS by defining the coordinate system of the map of the layer.  To do so, close the current dialog, then right click on the name of the street layer and select Set CRS | Set Layer CRS...
  
+.. image:: img/street_layer_crs3.png
+   :alt: CRS Street Layer
+
+
 6. When the CRS Selector dialog appears, enter 'WGS 84' next to 'Filter' and search for this coordinate system.  WGS 84 is the name of the datum.  Select WGS 84 (EPSG: 4326) as the Coordinate Reference System for the new map layer.  Click Ok.
+
+.. image:: img/street_layer_crs4.png
+   :alt: CRS Street Layer
  
 7.  When you click Ok, the software will update the shapefile's  .prj file by adding this projection information. For this particular projection, you won't see any changes to the shape of the map.
  
-8. Now, on your own, define the coordinate system for the two layers below as GS 84:
-•	School districts 
-•	Census tracts 
-  
+8. Now, on your own, define the coordinate system for the two layers below as WGS 84:
+
+* School districts 
+* Census tracts 
+
+.. image:: img/define_coordinates2.png
+   :alt: Define Coordinates
+
 
 9. Now add the other three files below.  The coordinate system of these layers is Michigan GeoRef (NAD 83):
-•	Wells
-•	Cities and 
-•	County boundary
+
+* Wells
+* Cities 
+* County boundary
 
 10. The coordinate system of the last three files you added is Michigan Oblique Mercator.  Since this is a projected coordinate system, it is not in latitude \ longitude. Thus, when you add the layers to QGIS, they may not display because the software can only display layers in one coordinate system at a time.
   
+.. image:: img/define_coordinares_georef.png
+   :alt: Define Coordinates
 
+ 
 11. To better work with the last set of files you loaded, I suggest that you click on Project at the top left of the screen and select "New" to start a new project.  Do not save the project. Re-add only the Wells, Cities, and Country Boundary layers.  If you look at the coordinates at the bottom of the screen, you will see coordinates values in the Michigan Oblique Mercator Coordinate System.
  
+.. image:: img/layers_michigan_georef.png
+   :alt: Define Coordinates
+
  
 12. Notice the question marks next to the layer names in the Table of Content?  That means the coordinate system of the layers has not yet been defined or set as yet.  To define the coordinate system of these layers in QGIS, right click on the name of the first layer  and select Set CRS | Set Layer CRS...   When the CRS Selector dialog appears, enter Michigan GeoRef into the filter and search for this coordinate system.  Select NAD83/  Michigan Oblique Mercator as the projection for the layer.  Click Ok.
  
@@ -342,19 +375,32 @@ Your task is to change the coordinate systems of the map layers Michigan State P
 
 Now that we have defined all the map layers based on their original coordinate system, we will convert all the map layers to a common coordinate system, i.e., Michigan State Plane, NAD 83 (feet).  
  
-1. Click on Project at the top left of the screen and select "NEW" to start a new project.  Do not save the project.  Add only the Wells, Cities, and County Boundary layers.
+1. Click on Project at the top left of the screen and select "New" to start a new project.  Do not save the project.  Add only the Wells, Cities, and County Boundary layers.
 
 2.   Right click on the first layer, e.g., Wells then select Export | Save Feature as..
+
+.. image:: img/michigan_state_plane1.png
+   :alt: project Coordinates
+
  
 3. Fill out the dialog that appears, fill it out as shown below, i.e., set a path and a name for the output file.  Don't just enter a file name, click on the triple dots icon and set the path. In the example below, I appended the word 'projected' to the original fine name. 
+
+
+.. image:: img/michigan_state_plane2.png
+   :alt: project Coordinates
+
 
  
 4.  For CRS, click on the globe icon and enter State Plane in the filter textbox.  When the various options appear, select NAD 83, State Plane Michigan, South Zone, as shown below.   Click Ok. This will save the layer with a new name and a new coordinate system.
   
+.. image:: img/michigan_state_plane3.png
+   :alt: Project Coordinates
+
 5.  Since you wish to convert all the layers to the Michigan State Plane Coordinate System, South Zone projection, repeat this process for all map layers.
 
 6. The projected layers now appears in QGIS Table of Content. However, if you click on one of them, they may not draw. This is because the original layers in in different coordinate system compared to those that have been projected.   I suggest you save and close the current project, then open a brand new project and display only the projected layers.  If everything was done correctly, all the layers should overlay exactly on each other.  
  
+
 
 
 |
@@ -373,6 +419,10 @@ Display all the Projected Layers
 
 3. Use map design principles and create a map that shows all six of the layers at the same time.  To accomplish this, for some of the layers, instead of using a "Fill" color which hides layers underneath, using just the outline of the features. For different layers, use different color outlines.  Here is an example map that was previously submitted by a student.
   
+
+.. image:: img/michigan_state_plane4.png
+   :alt: Final Map
+
 
 |
 
