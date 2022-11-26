@@ -8,18 +8,16 @@ Popular spatial analysis techniques compare observed point patterns to ones gene
 
 |
 
-Spatial Analysi Concepts
+Spatial Analysis Concepts
 --------------------------
 
 Point Pattern Analysis
-https://gistbok.ucgis.org/bok-topics/point-pattern-analysis
 
+* https://gistbok.ucgis.org/bok-topics/point-pattern-analysis
 
+* https://mgimond.github.io/Spatial/hypothesis-testing.html
 
-https://mgimond.github.io/Spatial/hypothesis-testing.html
-
-
-https://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/spatial_statistics.html
+* https://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/spatial_statistics.html
 
 
 

@@ -4,7 +4,7 @@ Map Projections
 
 This tutorial introduces you to the basics of temporarily displaying map layers in different projections and coordinate systems using QGIS. This is also called changing the projections 'on the fly' and does not alter the underlying coordinates of the map layers.  
 
-The tutorial will also show how to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.   
+The tutorial will also illustrate how to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.   
 
 Finally, the tutorial will show how to change projections in ArcGIS Online.  We will touch on projections for world maps, US maps, and maps of Michigan. 
 
@@ -21,11 +21,11 @@ Projections of the World
 
 
 
-**View the World in Geographic Coordinates or Plate-Carrée Projection)**
+**View the World in Geographic Coordinates or Plate-Carrée Projection**
 
 1. Open QGIS from the Start menu and create a new empty map document.
 
-2. Click on Layer | Add Layer | Add Vector Layer and browse to the data folder. 
+2. Click on Layer | Add Layer | Add Vector Layer and browse to the downloaded data folder. 
 
 3. Open the world subdirectory,. Select ESRI shapefiles as the file type to display, and load the .shp files into QGIS. 
 
@@ -61,7 +61,7 @@ Projections of the World
 
 13.	EPSG 4326 is the code for a widely used global spherical geographic coordinate system. It is based on the WGS84 datum and uses longitude and latitude in decimal degrees. For the most part, when you describe a long/lat coordinate location, those coordinates are based on the EPSG:4326 coordinate system.   
 
-14. There is no way to visualize the EPSG: 4326 coordinate system on a two-dimensional plane (map), so most software programs project these coordinates to an equirectangular projection named (Plate-Carrée).  The world map above is thus in the Plate-Carrée projection. 
+14. There is no way to visualize the EPSG: 4326 coordinate system on a two-dimensional plane (map), so most software programs project these coordinates to an equirectangular projection named Plate-Carrée.  The world map above is thus in the Plate-Carrée projection. 
 
 
 
@@ -136,23 +136,24 @@ A popular projection for rendering the entire world to create thematic maps is t
    :alt: New Layout
 
 
-5. Click on the second map to select it, then to the right next to CRS, select Robinson as the projection for this map/
+5. Click on the second map to select it, then to the right next to CRS, select Robinson as the projection for this map.
 
 
 .. image:: img/composer_layout3.png
    :alt: New Layout
 
-6. Repeat the process and set projections for the other maps. The results should appear as shown below.   Add scale bar, titles, etc, to your map. Export your map for submission.
+6. Repeat the process and set projections for the other maps. The results should appear as shown below.   Add scale bar, titles, etc, to your map. 
 
 
 .. image:: img/composer_layout4.png
    :alt: New Layout
 
+7. Export your map for submission.
 
  
 |
 
-**Answer the questions below**
+**Answer the Qestions Below**
 
 1. How well is Antarctica represented on a Mercator Projection? What do you notice about the size of places as you go farther north and south?
 
@@ -243,6 +244,7 @@ Projections of Michigan
    :alt: Michigan Projection
 
 
+|
 
 **b. Display the Michigan Layer Using the Michigan GeoRef Coordinate Systems**
 
@@ -261,6 +263,7 @@ To display a map of Michigan using the Michigan Georef Coordinate System, do the
    :alt: Michigan Projection
  
 
+|
 
 **Summary of Deliverables**
 
@@ -303,6 +306,7 @@ The other three files are in Michigan GeoRef Coordinate System. The datum is NAD
  
 Your task is to change the coordinate systems of the map layers Michigan State Plane, South Zone, NAD 83 Feet), so that all the map layers can correctly overlay on each other.
  
+|
 
 **Procedure**
 
@@ -412,7 +416,9 @@ Now that we have defined all the map layers based on their original coordinate s
 2. Repeat the process described above to convert these layers to Michigan State Plane, NAD 83.
  
 
-Display all the Projected Layers
+|
+
+**Display all the Projected Layers**
 1. Click on Project at the top left of the screen and select "NEW" to start a new project.  Do not save the project.   
 
 2. Add all six of the projected layers.  If everything was done correctly, all the layers should overlay exactly on each other.  
@@ -437,23 +443,46 @@ By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to dis
 
 2. Visit arcgisonline.com and sign in.
 
-3.. Click on Add | Search for Layers
+3. Click on Add | Search for Layers
 
-4. Click on My Content | ArcGIS Online
+.. image:: img/arcgisonline_projections1.png
+   :alt: ArcGIS Online Map Projections
+
+
+4. Click on My Content | ArcGIS Online.
+
+.. image:: img/arcgisonline_projections2.png
+   :alt: ArcGIS Online Map Projections
+
  
 5. Search for "Albers Equal Area".   Select and load one of the Albers Equal Area Basemaps.
+
+.. image:: img/arcgisonline_projections3.png
+   :alt: ArcGIS Online Map Projections
+
    
-6. After loading the basemap, notice its shape. Notice how different it is from the Web Mercator Auxiliary projection shown above.  I strongly suggest that you use this or similar projections for plotting US wide datasets.  
+6. After loading the basemap, notice its shape. Observe how different it is from the Web Mercator Auxiliary projection shown above.  I strongly suggest that you use this or similar projections for plotting US wide datasets.  
   
-7.  If you are making global thematic maps, you can also search for something like "Equal Area Projections world basemaps" and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.   You can even make your own projection. (Links to an external site.)
-If you are sharing datasets such global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps. 
+.. image:: img/arcgisonline_projections4.png
+   :alt: ArcGIS Online Map Projections
+
+
+7.  If you are making global thematic maps, you can also search for something like "Equal Area Projections world basemaps" and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.   You can even make your own projection. If you are sharing datasets such as global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps. 
  
+
+ .. image:: img/arcgisonline_projections5.png
+   :alt: ArcGIS Online Map Projections
+
  
 8. Return to the Albers Equal Area USA projection and click on Add | Add Layers from file and load the USA Covid-19 Shapefile.  
+
+ .. image:: img/arcgisonline_projections5.png
+   :alt: ArcGIS Online Map Projections
  
 9.  Using instructions from last last week's lab plus your own fiddling, plot the Covid 19 mortality cases.
  
 
+|
 
 **Deliverables**
 

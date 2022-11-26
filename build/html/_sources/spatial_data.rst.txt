@@ -5,11 +5,11 @@ Loading Data into QGIS
 
 In GIS, spatial data refers to the points, lines, and area features that are drawn on maps to represent the geographic location of natural and human phenomena, such as mountains, rivers, roads, bridges, homicides, etc.  In general, spatial data is any data that can be mapped. 
 
-The points, lines and polygons that represent map features can be drawn using precise coordinates (vector data) or they can be represented by one or more contiguous cells  on a grid (raster data).  
+In a computer, the points, lines and polygons that represent map features can be drawn using precise coordinates (vector data) or they can be represented by one or more contiguous cells  on a grid (raster data).  
 
 Popular vector products include shapefiles and geodatabases, which are sets of files used to represents points, lines, and polygons. Popular raster products include digital elevation models, satellite imagery, thematic rasters, orthophotos, and digital topographic maps. 
 
-With QGIS, we can  easily load the various types of spatial data mentioned above into the software.  The method of loading data varies depending on the type of spatial data. The sections below describe how to load different types of spatial data into QGIS.
+With QGIS, we can  easily load the various types of spatial data into the software.  The method of loading data varies depending on the type of spatial data. The sections below describe how to load different types of spatial data into QGIS.
 
 
 
@@ -44,7 +44,7 @@ Loading a Digital Elevation Model
 
 1 To display a DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/. 
 
-2. Select the file named w001001.adf,  Make sure it is the adf file with large file size.
+2. Select the file named w001001.adf,  Make sure it is the adf file with the larger file size.
 
 3. If the DEM is loaded and doesn’t show up, simply right click on it and select Zoom to Layer.
 
@@ -83,13 +83,16 @@ Loading an Aerial Photograph
 Adding Google Satellite Imagery
 ---------------------------------
 
-1. Click undefinedbutton in the toolba
+1. Click the Open Data Source Manager button in the toolbar
 
-2. Right click on XYZ Tiles > New Connection…
+.. image:: img/open_data_source_manage_xyz.png
+   :alt: Loading Orthophoto
+
+2. Right click on XYZ Tiles | New Connection…
 
 3. In the dialog that appears, type "Google" in the Name textbox.
 
-4. In the URL, copy and paste the address below, then click OK. 
+4. In the URL, copy and paste the address the following URL then click OK: 
    http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}&s=Ga
 
 .. image:: img/google_earth_connection.png

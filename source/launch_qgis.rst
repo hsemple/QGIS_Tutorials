@@ -107,7 +107,7 @@ Displaying Map Layers in QGIS
 
 
 Panning the Map
-----------------------------
+-----------------
 
 1. Panning refers to moving the map in any direction on the screen. 
 
@@ -135,7 +135,7 @@ Zooming the Map
    :alt: Zoom in Tools
 
 
-3. To zoom out, firs clik on the Zoom out button, then click on any spot on the map. The map will zoom out, centered on the selected point.
+3. To zoom out, first click on the Zoom out button, then click on any spot on the map. The map will zoom out but centered on the selected point.
 
 
 4. QGIS also has several other zoom tools (See illustration below). Please click on these tools and note their effect.  The Zoom to Layer tool is particularly important.  If you zoomed in or zoomed out too much and want to quickly return to the original extent of the map, then click on the the Zoom to Layer tool.
@@ -206,7 +206,7 @@ Saving your Project
 --------------------
 
 
-1. To save your QGIS project, click on Project on the main menu, then select the Save As .. button. Note: when you save a project, you are saving a file that contains information on all the formatting you applied to the data you were workig with. Also, the project file does not save your data; it only saves a reference to your data.
+1. To save your QGIS project, click on Project on the main menu, then select the Save As .. button. Note: when you save a project, you are saving a file that contains information on all the formatting you applied to the data during the current session. Also, it is useful to realize that the project file does not save your data; it only saves a reference to your data.
 
 .. image:: img/qgis_project.png
    :alt: View Attribute Table
