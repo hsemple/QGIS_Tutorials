@@ -24,7 +24,7 @@ Once we are done joining the tables, we will perform attribute queries to unders
 
 1.  Download and unzip the  Michigan Counties shapefile in Canvas to a folder on your computer.
  
-2. Click on this link  - https://www.michigan.gov/coronavirus/stats - to visit the Michigan State Govt website that carries data on Covid-19.
+2. Click on this `link <https://www.michigan.gov/coronavirus/stats>`_ to visit the Michigan State Govt website that carries data on Covid-19.
  
 3. Copy the data in the table named "Confirmed COVID-19 Cases by Jurisdiction (Counties)" and paste the values into Excel.  
  
@@ -50,7 +50,7 @@ Once we are done joining the tables, we will perform attribute queries to unders
  
 6. Open QGIS, start a new project, and load the shapefile and CSV file into QGIS.
  
-7. Since we studied map coordinates in the last module, let's determine the map coordinates of our project. Whichever map layer goes into the map area first, that layer sets up the coordinates of the Project. Since the Michigan layer first was the first map layer opened in the map, then the project took on the coordinates of the Michigan layer.  So, click on Project on the main menu then select Properties. In the dialog, the selected coordinate system is the project's coordinate system. It is called "NAD 83/ Michigan Oblique Mercator ".   When you are done inspecting the values, click OK and close the dialog.
+7. Since we studied map coordinates in the last module, let's determine the map coordinates of our project. Whichever map layer goes into the map area first, that layer sets up the coordinates of the Project. Since the Michigan layer was the first map layer opened in the map, then the project took on the coordinates of the Michigan layer.  So, click on Project on the main menu then select Properties. In the dialog, the selected coordinate system is the project's coordinate system. It is called "NAD 83/ Michigan Oblique Mercator".   When you are done inspecting the values, click OK and close the dialog.
 
 .. image:: img/attribute-query3.png
    :alt: Covid19 Attribute Data
@@ -170,8 +170,7 @@ The dataset for this exercise can be downloaded from Canvas.
   
 4. Right click on the name of the cities.  Select Export | Save Features as and create a layer only of cities that fall within your state. You will need the exported layer for the next query.  (2 pt).
  
-5. Run an attribute query on the cities within the state you selected to find cities that have population greater than 25,000.  (Note: This is a Select by Attributes Query). 
-To create a map of the selected cities, right click on the layer, then select Data | Export data).  (2 pt)
+5. Run an attribute query on the cities within the state you selected to find cities that have population greater than 25,000.  (Note: This is a Select by Attributes Query). To create a map of the selected cities, right click on the layer, then select Data | Export data).  (2 pt)
  
 6. Select one of the Great Lakes and create a separate layer of the lake.  For the lake you selected, create a buffer of 50 miles around the lake and identify all the cities within the buffered areas (Geoprocessing | Buffer).  (2 pts).
 

@@ -1,3 +1,4 @@
+
 Collecting Points Data
 =========================
 
@@ -39,4 +40,31 @@ Generating Points Data by Geocoding
 If you have a large number of street addresses and wish to turn them into points on a map, doing so using the method described above can be time consuming and tedious. ArcGIS Pro and ArcGIS Online have tools that can generate GIS coordinates from addresses. This process is called geocoding.  Free geocoding tools include GPS Visualizer, Geocodio, and Social Explorer .
 
 
+
+**Geocoding Using QGIS**
+
+* https://guides.library.ucsc.edu/DS/Resources/QGIS
+
+* https://www.gislounge.com/how-to-geocode-addresses-using-qgis/
+
+* https://www.youtube.com/watch?v=FOAM0vfsSns
+
+
 |
+
+**Spatial Statistics**
+
+* https://docs.qgis.org/3.22/en/docs/training_manual/vector_analysis/spatial_statistics.html
+
+* Exploring Standard Statistics in QGIS  - https://dges.carleton.ca/CUOSGwiki/index.php/Exploring_Standard_Statistics_in_QGIS
+
+* Performing Spatial Queries (QGIS3) - https://www.qgistutorials.com/en/docs/3/performing_spatial_queries.html
+
+* https://courses.spatialthoughts.com/spatial-data-viz.html
+
+* : Simple Geospatial Analysis with QGIS - https://eamena.org/sites/default/files/eamena/documents/media/gis_3_simple_geospatial_analysis_with_qgis_final.pdf
+
+
+
+
+
