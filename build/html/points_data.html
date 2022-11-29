@@ -51,13 +51,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#generating-x-y-coordinates-from-google-maps">7.1. Generating X,Y Coordinates from Google Maps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#selecting-a-smart-phone-gps-app">7.2. Selecting a Smart Phone GPS App</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pre-planning-your-gps-project">7.3. Pre-Planning your GPS Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#field-data-collection-with-geopaparazzi">7.4. Field Data Collection with Geopaparazzi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exporting-gps-data-from-smart-phones">7.5. Exporting GPS Data from Smart Phones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#displaying-gps-points-in-google-map">7.6. Displaying GPS Points in Google Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#importing-gps-points-into-qgis">7.7. Importing GPS Points into QGIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#uploading-gps-points-in-arcgis-online">7.8. Uploading GPS Points in ArcGIS Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-a-gps-file-into-your-phone">7.9. Loading a GPS File into Your Phone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#generating-points-data-by-geocoding">7.10. Generating Points Data by Geocoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#field-data-collection-with-survey123">7.4. Field Data Collection with Survey123</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#field-data-collection-with-geopaparazzi">7.5. Field Data Collection with Geopaparazzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exporting-gps-data-from-smart-phones">7.6. Exporting GPS Data from Smart Phones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-gps-points-in-google-map">7.7. Displaying GPS Points in Google Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importing-gps-points-into-qgis">7.8. Importing GPS Points into QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uploading-gps-points-in-arcgis-online">7.9. Uploading GPS Points in ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-a-gps-file-into-your-phone">7.10. Loading a GPS File into Your Phone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generating-points-data-by-geocoding">7.11. Generating Points Data by Geocoding</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">8. Analyzing Points Data</a></li>
@@ -102,20 +103,18 @@
 <li><p>Open Google maps with a web browser at maps.google.com</p></li>
 <li><p>Use the Search field to find your selected location of interest.</p></li>
 <li><p>Zoom in, move the map, and then click on the specific location you identify as your most accurate data point.</p></li>
-<li><dl class="simple">
-<dt>Generate latitude and longitude information, using one of these methods:</dt><dd><ol class="loweralpha simple">
+<li><p>Generate latitude and longitude information, using one of these methods:</p>
+<ul class="simple">
 <li><p>Click on a select location, to open a small box with location details, or</p></li>
 <li><p>Control/right-click on a spot to open a menu, select “What’s here?”, or</p></li>
 <li><p>Click on a red location marker, select “What’s here?” if needed.</p></li>
-</ol>
-</dd>
-</dl>
+</ul>
 </li>
 <li><p>Click on the latitude and longitude data that appears in decimal degrees in the location information box at the bottom. These latitude and longitude details will appear in the Google Search field.</p></li>
 <li><p>Highlight and Copy both the latitude and longitude data together from the Search field. (Do not copy the version with the hemispheric initials, i.e.  N,W,E,S).</p></li>
 <li><p>In Excel or Google Sheets, create a new workbook. Name the workbook and save it on your local drive. Title the first three columns, “Name,” “Latitude” and “Longitude.”</p></li>
 <li><p>Paste the copied latitude and longitude data into the respective columns.</p></li>
-<li><p>You are ready to import the geographic data into software, such as ArcGIS Pro, ArcGIS Online, Carto, Datawrapper, or ArcGIS, to create maps for data analysis and visualization.</p></li>
+<li><p>You are ready to import the geographic data into software, such as ArcGIS Pro, ArcGIS Online, or QGIS to create maps for data analysis and visualization.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -179,13 +178,23 @@ The main page of the website is shown below. To the left is a list of GNSS satel
 <li><p>Once you have entered all the data, click “Apply”. Now click on Charts menu at the top of the screen. The software will now show you charts of the number of satellites overhead during your field work period, the visibility status of the satellites, PDOP status, etc.</p></li>
 <li><p>Since we are particularly interested in PDOP, please look over the DOPs chart.  Look at PDOP values for different times of the day.  Generally, PDOP values below 6 are good enough and values below 4 are even better.  Values at 9 or higher mean that the user should not rely on the accuracy of that data collected at that time and should wait until a better PDOP value could be attained by the satellites.</p></li>
 </ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</section>
+<section id="field-data-collection-with-survey123">
+<h2><span class="section-number">7.4. </span>Field Data Collection with Survey123<a class="headerlink" href="#field-data-collection-with-survey123" title="Permalink to this heading"></a></h2>
+<p>I strongly encourage you to do field data collection using Survey123.  This platform smmothly integrates data collection with data vsisualization using the ArcGIS Platform. Data collected by Survey123 can be immediately passed to ArcGIS Online and other software within the ESRI suite.</p>
+<p>Please click on the link to gain access to a tutorial on how to use this software for this lab.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="field-data-collection-with-geopaparazzi">
-<h2><span class="section-number">7.4. </span>Field Data Collection with Geopaparazzi<a class="headerlink" href="#field-data-collection-with-geopaparazzi" title="Permalink to this heading"></a></h2>
-<p>I will illustrate the details of smart phone GPS field data collection using an app named Geopaparazzi. If you want to use this app, first download it from the app store, install it, then click on the app icon to start the program.</p>
+<h2><span class="section-number">7.5. </span>Field Data Collection with Geopaparazzi<a class="headerlink" href="#field-data-collection-with-geopaparazzi" title="Permalink to this heading"></a></h2>
+<p>If you are already famiiar with Survey123 or if you want to use an Open Source platform for field data collection, you can use Geopaparazzi.  In this section, I will illustrate the details of smart phone GPS field data collection using an open source app named Geopaparazzi. If you want to use this app, first download it from the app store, install it, then click on the app icon to start the program.</p>
 <ol class="arabic simple">
 <li><p>After starting Geopaparazzi, the main dashboard appears.  This screen is shown below with labels.</p></li>
 <li><p>A useful way to start interacting with the application is to click on the Project Info icon and enter basic information such as the name of your project, a description of the project, date, creator, etc.  I strongly recommended that you create a new project for each field survey you conduct so as to avoid confusion in the registered data.   Projects are saved in a single file in the home directory of the phone. The file is called geopaparazzi.gpap.</p></li>
@@ -215,7 +224,7 @@ Geopaparzzi manual - <a class="reference external" href="https://www.slideshare.
 </div>
 </section>
 <section id="exporting-gps-data-from-smart-phones">
-<h2><span class="section-number">7.5. </span>Exporting GPS Data from Smart Phones<a class="headerlink" href="#exporting-gps-data-from-smart-phones" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.6. </span>Exporting GPS Data from Smart Phones<a class="headerlink" href="#exporting-gps-data-from-smart-phones" title="Permalink to this heading"></a></h2>
 <p>Once you are done collecting GPS data, your next step is to move the data from the smart phone to a GIS or similar software for viewing or analysis.  The details of this process are specific to the equipment that you are using. However, the general idea is that the GPS receiver must be connected to the computer that has the GIS software. The connection can be done via cable or wirelessly.  Appropriate software is then used to transfer the data.</p>
 <ol class="arabic simple">
 <li><p>To begin exporting your data from Geopaparazzi, click on the export icon at the main menu.</p></li>
@@ -229,7 +238,7 @@ Geopaparzzi manual - <a class="reference external" href="https://www.slideshare.
 </div>
 </section>
 <section id="displaying-gps-points-in-google-map">
-<h2><span class="section-number">7.6. </span>Displaying GPS Points in Google Map<a class="headerlink" href="#displaying-gps-points-in-google-map" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.7. </span>Displaying GPS Points in Google Map<a class="headerlink" href="#displaying-gps-points-in-google-map" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Google Earth is a popular software for viewing GPS waypoints or routes.  Let’s visualize our GPS data using Google Earth.</p></li>
 <li><p>If you do not have Google Earth Pro on your computer, then download at at this website: <a class="reference external" href="https://www.google.com/earth/versions/">https://www.google.com/earth/versions/</a>  Make sure you download the Desktop version.</p></li>
@@ -241,7 +250,7 @@ Geopaparzzi manual - <a class="reference external" href="https://www.slideshare.
 </div>
 </section>
 <section id="importing-gps-points-into-qgis">
-<h2><span class="section-number">7.7. </span>Importing GPS Points into QGIS<a class="headerlink" href="#importing-gps-points-into-qgis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.8. </span>Importing GPS Points into QGIS<a class="headerlink" href="#importing-gps-points-into-qgis" title="Permalink to this heading"></a></h2>
 <p>To view your data in QGIS, do the following:</p>
 <ol class="arabic simple">
 <li><p>Click on the QGIS icon and start a new QGIS Project.</p></li>
@@ -251,7 +260,7 @@ Geopaparzzi manual - <a class="reference external" href="https://www.slideshare.
 </ol>
 </section>
 <section id="uploading-gps-points-in-arcgis-online">
-<h2><span class="section-number">7.8. </span>Uploading GPS Points in ArcGIS Online<a class="headerlink" href="#uploading-gps-points-in-arcgis-online" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.9. </span>Uploading GPS Points in ArcGIS Online<a class="headerlink" href="#uploading-gps-points-in-arcgis-online" title="Permalink to this heading"></a></h2>
 <p>ArGIS Online is a popular ESRI software used for viewing and sharing data online   If you want to share your GPS data with colleagues near and far via the web maps, ArcGIS Online is a good choice. To do so, follow the steps below:</p>
 <ol class="arabic simple">
 <li><p>Visit ArcGIS Online and sign up for a free account.</p></li>
@@ -263,7 +272,7 @@ Geopaparzzi manual - <a class="reference external" href="https://www.slideshare.
 </div>
 </section>
 <section id="loading-a-gps-file-into-your-phone">
-<h2><span class="section-number">7.9. </span>Loading a GPS File into Your Phone<a class="headerlink" href="#loading-a-gps-file-into-your-phone" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.10. </span>Loading a GPS File into Your Phone<a class="headerlink" href="#loading-a-gps-file-into-your-phone" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Email the GPX file to yourself.</p></li>
 <li><p>Load file into your app by clicking on the GPX file in your mail app</p></li>
@@ -281,7 +290,7 @@ Geopaparzzi manual - <a class="reference external" href="https://www.slideshare.
 </div>
 </section>
 <section id="generating-points-data-by-geocoding">
-<h2><span class="section-number">7.10. </span>Generating Points Data by Geocoding<a class="headerlink" href="#generating-points-data-by-geocoding" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.11. </span>Generating Points Data by Geocoding<a class="headerlink" href="#generating-points-data-by-geocoding" title="Permalink to this heading"></a></h2>
 <p>If you have a large number of street addresses and wish to turn them into points on a map, doing so using the method described above can be time consuming and tedious. QGIS and ArcGIS Online have tools that can generate GIS coordinates from addresses. This process is called geocoding.</p>
 <p><strong>Geocoding Using QGIS</strong></p>
 <p>Click on the links below for tutorials on how to perform geocoding using QGIS.</p>

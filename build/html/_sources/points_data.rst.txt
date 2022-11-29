@@ -20,9 +20,10 @@ Generating X,Y Coordinates from Google Maps
 3. Zoom in, move the map, and then click on the specific location you identify as your most accurate data point.  
      
 4. Generate latitude and longitude information, using one of these methods:
-    a. Click on a select location, to open a small box with location details, or
-    b. Control/right-click on a spot to open a menu, select “What’s here?”, or
-    c. Click on a red location marker, select “What’s here?” if needed.
+
+   * Click on a select location, to open a small box with location details, or
+   * Control/right-click on a spot to open a menu, select “What’s here?”, or
+   * Click on a red location marker, select “What’s here?” if needed.
      
 
 5. Click on the latitude and longitude data that appears in decimal degrees in the location information box at the bottom. These latitude and longitude details will appear in the Google Search field.
@@ -33,7 +34,7 @@ Generating X,Y Coordinates from Google Maps
      
 8. Paste the copied latitude and longitude data into the respective columns. 
 
-9. You are ready to import the geographic data into software, such as ArcGIS Pro, ArcGIS Online, Carto, Datawrapper, or ArcGIS, to create maps for data analysis and visualization.  
+9. You are ready to import the geographic data into software, such as ArcGIS Pro, ArcGIS Online, or QGIS to create maps for data analysis and visualization.  
 
 
 |
@@ -129,12 +130,22 @@ e. Since we are particularly interested in PDOP, please look over the DOPs chart
 
  
 
+ |
+
+Field Data Collection with Survey123
+-------------------------------------
+I strongly encourage you to do field data collection using Survey123.  This platform smmothly integrates data collection with data vsisualization using the ArcGIS Platform. Data collected by Survey123 can be immediately passed to ArcGIS Online and other software within the ESRI suite.
+
+Please click on the link to gain access to a tutorial on how to use this software for this lab.
+
+
+
 |
 
 Field Data Collection with Geopaparazzi
 -----------------------------------------
 
-I will illustrate the details of smart phone GPS field data collection using an app named Geopaparazzi. If you want to use this app, first download it from the app store, install it, then click on the app icon to start the program.
+If you are already famiiar with Survey123 or if you want to use an Open Source platform for field data collection, you can use Geopaparazzi.  In this section, I will illustrate the details of smart phone GPS field data collection using an open source app named Geopaparazzi. If you want to use this app, first download it from the app store, install it, then click on the app icon to start the program.
 
 
 1. After starting Geopaparazzi, the main dashboard appears.  This screen is shown below with labels.
