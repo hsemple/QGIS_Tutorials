@@ -19,6 +19,7 @@ Topics covered by the different tutorials include thematic mapping, loading data
    attribute_spatial.rst
    terrain_mapping.rst
    points_data.rst
+   geocoding.rst
    analyzing_points_data.rst
    digitizing.rst
    geoprocessing.rst

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>8. Analyzing Points Data &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>9. Analyzing Points Data &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="9. Digitizing" href="digitizing.html" />
-    <link rel="prev" title="7. Collecting Points Data" href="points_data.html" /> 
+    <link rel="next" title="10. Digitizing" href="digitizing.html" />
+    <link rel="prev" title="8. Generating Points Data by Geocoding" href="geocoding.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,18 +47,19 @@
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
 <li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Intoduction to Terrain Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Analyzing Points Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#measures-of-spatial-central-tendency">8.1. Measures of Spatial Central Tendency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#point-pattern-analysis">8.2. Point Pattern Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#density-mapping">8.3. Density Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#spatial-interpolation">8.4. Spatial Interpolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cluster-analysis">8.5. Cluster Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#regression-analysis">8.6. Regression Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data Using GPD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">8. Generating Points Data by Geocoding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Analyzing Points Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#measures-of-spatial-central-tendency">9.1. Measures of Spatial Central Tendency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#point-pattern-analysis">9.2. Point Pattern Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#density-mapping">9.3. Density Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-interpolation">9.4. Spatial Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-analysis">9.5. Cluster Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#regression-analysis">9.6. Regression Analysis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">9. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">10. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">10. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">11. Geoprocessing Spatial Data</a></li>
 </ul>
 
         </div>
@@ -75,7 +76,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">8. </span>Analyzing Points Data</li>
+      <li class="breadcrumb-item active"><span class="section-number">9. </span>Analyzing Points Data</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/analyzing_points_data.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -86,7 +87,7 @@
            <div itemprop="articleBody">
              
   <section id="analyzing-points-data">
-<h1><span class="section-number">8. </span>Analyzing Points Data<a class="headerlink" href="#analyzing-points-data" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">9. </span>Analyzing Points Data<a class="headerlink" href="#analyzing-points-data" title="Permalink to this heading"></a></h1>
 <p>GIS software has numerous functions for statistically analyzing GPS points or points data obtained from other sources.   Below is a list of a few statistical operations that can be performed on points data:</p>
 <ul class="simple">
 <li><p>Calculate mean center of a set of points or lines</p></li>
@@ -101,7 +102,7 @@
 <div class="line"><br /></div>
 </div>
 <section id="measures-of-spatial-central-tendency">
-<h2><span class="section-number">8.1. </span>Measures of Spatial Central Tendency<a class="headerlink" href="#measures-of-spatial-central-tendency" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.1. </span>Measures of Spatial Central Tendency<a class="headerlink" href="#measures-of-spatial-central-tendency" title="Permalink to this heading"></a></h2>
 <p><strong>Mean Center</strong></p>
 <ol class="arabic simple">
 <li><p>The mean center of a set of points is a point calculated by taking the average of the x coordinates and the average of the y coordinates and then plotting a point with the two averages.</p></li>
@@ -139,7 +140,7 @@
 </div>
 </section>
 <section id="point-pattern-analysis">
-<h2><span class="section-number">8.2. </span>Point Pattern Analysis<a class="headerlink" href="#point-pattern-analysis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.2. </span>Point Pattern Analysis<a class="headerlink" href="#point-pattern-analysis" title="Permalink to this heading"></a></h2>
 <p>Point Pattern analysis techniques compare observed point patterns to ones generated by an independent random process (IRP) also called complete spatial randomness (CSR) to determine whether points are randomly distributed, or whether some pattern exists in the data.  The links below provide information on how to conduct point pattern analysis in QGIS.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://gistbok.ucgis.org/bok-topics/point-pattern-analysis">https://gistbok.ucgis.org/bok-topics/point-pattern-analysis</a></p></li>
@@ -151,7 +152,7 @@
 </div>
 </section>
 <section id="density-mapping">
-<h2><span class="section-number">8.3. </span>Density Mapping<a class="headerlink" href="#density-mapping" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.3. </span>Density Mapping<a class="headerlink" href="#density-mapping" title="Permalink to this heading"></a></h2>
 <p>Density maps shows the number of points per unit area. Conceptually, there are created by placing a grid over the study area and for each cell in the grid, the software sets up a search radius and counts the number of points within that radius. This gives the simple density of points within that vicinity.  This type of analysis is good for creating hotspot maps.
 In the illustration below, the density map shows the number of asthma cases per unit area. The hotspots are areas where lots of asthma cases per unit area (e.g., per sq. mile) are found.</p>
 <p>In QGIS, we create point density maps using a tool called Heatmap.   In earlier versions of QGIS, Heatmap was a plugin. In the version that I am using (Version 3.2.3), the tool can be accessed from the Processing Toolbox. Let’s perform an analysis.</p>
@@ -176,7 +177,7 @@ In the illustration below, the density map shows the number of asthma cases per 
 </div>
 </section>
 <section id="spatial-interpolation">
-<h2><span class="section-number">8.4. </span>Spatial Interpolation<a class="headerlink" href="#spatial-interpolation" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.4. </span>Spatial Interpolation<a class="headerlink" href="#spatial-interpolation" title="Permalink to this heading"></a></h2>
 <p>Spatial Interpolation is the process of creating raster maps from discrete vector points.  The concept is shown in the illustration below where we start with a set of well distributed sample points and end up with a map that has values for every location in the study area.</p>
 <p>Interpolated maps are different from density maps in that density maps are a count of the number of points per unit y area. On the other hand, interpolated maps are an estimate of the values of some phenomena based on sample location values.
 Interpolated maps are important because rarely in environmental and other areas of study do we have time or other resources to visit every location in a study area and gather data values.   To still get data values for every location, we resort to spatial interpolation, which is a process of estimating values for unknown locations using data values from a set of known locations.</p>
@@ -193,7 +194,7 @@ Interpolated maps are important because rarely in environmental and other areas 
 </div>
 </section>
 <section id="cluster-analysis">
-<h2><span class="section-number">8.5. </span>Cluster Analysis<a class="headerlink" href="#cluster-analysis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.5. </span>Cluster Analysis<a class="headerlink" href="#cluster-analysis" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Global and Local Moran’s I</p></li>
 <li><p>Global and Local G* Statistics</p></li>
@@ -203,7 +204,7 @@ Interpolated maps are important because rarely in environmental and other areas 
 </div>
 </section>
 <section id="regression-analysis">
-<h2><span class="section-number">8.6. </span>Regression Analysis<a class="headerlink" href="#regression-analysis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.6. </span>Regression Analysis<a class="headerlink" href="#regression-analysis" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -225,8 +226,8 @@ Interpolated maps are important because rarely in environmental and other areas 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="points_data.html" class="btn btn-neutral float-left" title="7. Collecting Points Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="digitizing.html" class="btn btn-neutral float-right" title="9. Digitizing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="geocoding.html" class="btn btn-neutral float-left" title="8. Generating Points Data by Geocoding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="digitizing.html" class="btn btn-neutral float-right" title="10. Digitizing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
