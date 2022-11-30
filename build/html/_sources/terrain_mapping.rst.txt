@@ -1,20 +1,20 @@
-Intoduction to Terrain Analysis
-===============================
+Introduction to Terrain Analysis
+==================================
 
 |
 
-Basic Terrain Analysis 
------------------------
+Computing Basic Terrain Parameters
+------------------------------------
 
 1. Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <https://apps.nationalmap.gov/viewer/>`_, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:
 
 1.	elevation of each of the two points.
-2.	distance between the two points.
+2.	straight line distance between the two points.
 3.	slope between the two points.
 4.	aspect between the two points.
-5.	a profile graph of a direct line between the two points.
-6.	a line-of-sight graph between the two points.
-7.	a viewshed map from point 44.535252, -72.781882.
+5.	a profile of a direct line between the two points.
+6.	a line-of-sight between the two points.
+7.	a viewshed from point 44.535252, -72.781882.
 
 
 |
@@ -28,6 +28,8 @@ Visit the `National Map data downloader <https://apps.nationalmap.gov/downloader
 •	a slope map 
 •	an aspect map  
 •	a contour map
+•  a profile curvature map
+
 
 After generating the maps, briefly state two practical uses of each of the above maps.
 

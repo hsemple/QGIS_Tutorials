@@ -326,11 +326,11 @@ To view your data in QGIS, do the following:
 Uploading GPS Points from Geopaparazzi to ArcGIS Online 
 --------------------------------------------------------
 
-1. Visit ArcGIS Online and sign up for a free account.
+1. Visit ArcGIS Online and sign in.
 
-2. Once you are done signing up, click on “Map” to create a new map.
+2. Once you are done signing in, click on “Map” to create a new map.
 
-3. Click on “Add”you load the data into the software.
+3. Click on “Add” then follow the prompt to load the data into the software.
 
 
 

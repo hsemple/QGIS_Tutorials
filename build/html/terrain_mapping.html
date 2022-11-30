@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. Intoduction to Terrain Analysis &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>6. Introduction to Terrain Analysis &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="7. Collecting Points Data" href="points_data.html" />
+    <link rel="next" title="7. Collecting Points Data Using GPS" href="points_data.html" />
     <link rel="prev" title="5. Attribute and Spatial Queries" href="attribute_spatial.html" /> 
 </head>
 
@@ -46,18 +46,19 @@
 <li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
 <li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Intoduction to Terrain Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#basic-terrain-analysis">6.1. Basic Terrain Analysis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Introduction to Terrain Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#computing-basic-terrain-parameters">6.1. Computing Basic Terrain Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-basic-terrain-maps">6.2. Creating Basic Terrain Maps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#habitat-suitability-analysis">6.3. Habitat Suitability Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#watershed-delineation">6.4. Watershed Delineation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#working-with-lidar-data-in-qgis">6.5. Working with LiDAR Data in QGIS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">8. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">9. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">10. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">8. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">9. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">10. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">11. Geoprocessing Spatial Data</a></li>
 </ul>
 
         </div>
@@ -74,7 +75,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">6. </span>Intoduction to Terrain Analysis</li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Introduction to Terrain Analysis</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/terrain_mapping.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -84,24 +85,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="intoduction-to-terrain-analysis">
-<h1><span class="section-number">6. </span>Intoduction to Terrain Analysis<a class="headerlink" href="#intoduction-to-terrain-analysis" title="Permalink to this heading"></a></h1>
+  <section id="introduction-to-terrain-analysis">
+<h1><span class="section-number">6. </span>Introduction to Terrain Analysis<a class="headerlink" href="#introduction-to-terrain-analysis" title="Permalink to this heading"></a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="basic-terrain-analysis">
-<h2><span class="section-number">6.1. </span>Basic Terrain Analysis<a class="headerlink" href="#basic-terrain-analysis" title="Permalink to this heading"></a></h2>
+<section id="computing-basic-terrain-parameters">
+<h2><span class="section-number">6.1. </span>Computing Basic Terrain Parameters<a class="headerlink" href="#computing-basic-terrain-parameters" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Visit Stowe, VT using <a class="reference external" href="https://caltopo.com/">Caltopo</a>, <a class="reference external" href="https://apps.nationalmap.gov/viewer/">the National Map</a>, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:</p></li>
 </ol>
 <ol class="arabic simple">
 <li><p>elevation of each of the two points.</p></li>
-<li><p>distance between the two points.</p></li>
+<li><p>straight line distance between the two points.</p></li>
 <li><p>slope between the two points.</p></li>
 <li><p>aspect between the two points.</p></li>
-<li><p>a profile graph of a direct line between the two points.</p></li>
-<li><p>a line-of-sight graph between the two points.</p></li>
-<li><p>a viewshed map from point 44.535252, -72.781882.</p></li>
+<li><p>a profile of a direct line between the two points.</p></li>
+<li><p>a line-of-sight between the two points.</p></li>
+<li><p>a viewshed from point 44.535252, -72.781882.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -115,6 +116,7 @@
 <li><p>a slope map</p></li>
 <li><p>an aspect map</p></li>
 <li><p>a contour map</p></li>
+<li><p>a profile curvature map</p></li>
 </ul>
 <p>After generating the maps, briefly state two practical uses of each of the above maps.</p>
 <div class="line-block">
@@ -551,7 +553,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="attribute_spatial.html" class="btn btn-neutral float-left" title="5. Attribute and Spatial Queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="points_data.html" class="btn btn-neutral float-right" title="7. Collecting Points Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="points_data.html" class="btn btn-neutral float-right" title="7. Collecting Points Data Using GPS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
