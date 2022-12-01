@@ -48,7 +48,10 @@
 <li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Introduction to Terrain Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data Using GPS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Geocoding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Geocoding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-steps-for-geocoding">8.1. Basic Steps for Geocoding</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">9. Analyzing Points Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="digitizing.html">10. Digitizing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">11. Geoprocessing Spatial Data</a></li>
@@ -80,16 +83,33 @@
              
   <section id="geocoding">
 <h1><span class="section-number">8. </span>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this heading"></a></h1>
-<p>If you have a large number of street addresses and wish to turn them into points on a map, doing so using the method described above can be time consuming and tedious. QGIS and ArcGIS Online have tools that can generate GIS coordinates from addresses. This process is called geocoding.</p>
-<p>Click on the links below for tutorials on how to perform geocoding using QGIS.</p>
+<p>If you have a large number of street addresses and wish to turn them into points on a map, you can use QGIS to generate X,Y coordinates from the addresses. This process is called geocoding.  QGIS uses a plugin called MMQGIS for geocoding.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="basic-steps-for-geocoding">
+<h2><span class="section-number">8.1. </span>Basic Steps for Geocoding<a class="headerlink" href="#basic-steps-for-geocoding" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Obtain the List of Addresses*.  The addreses must be stored in a csv file.  The address information split into multiple columns, e.g.,  street address, state, and 5-digit ZIP code.  For latitude and longitude data, make sure there are 2 columns and any extraneous characters are deleted (i.e. commas, parenthesis).</p></li>
+<li><p>Install the MMQGIS Plugin.</p></li>
+<li><p>After installation, access the plugin by clicking on MMQGIS | Geocoding from the top menu bar.</p></li>
+</ol>
+<img alt="Lidar Data" src="_images/geocoding_mmqgis.png" />
+<ol class="arabic simple" start="4">
+<li><p>When the dialog appears, enter the path to the csv file that contains the list of addresses for geocoding.</p></li>
+<li><p>Select the columns in the csv file that contain the street addresses, city, and state.</p></li>
+<li><p>Select OpenStreetMap as the Web Service to use for geocoding.</p></li>
+<li><p>Browse to a folder where you want the resulting shapefile to be and supply a complete path inluding file name for the shapefile that will be created.</p></li>
+<li><p>Supply a path and file name for a new csv file that will be created to store the addresses the software could not find.</p></li>
+<li><p>Click Apply. A new shapefile with the geocoded points will appear.</p></li>
+</ol>
+<p><strong>References</strong></p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://www.gislounge.com/how-to-geocode-addresses-using-qgis/">https://www.gislounge.com/how-to-geocode-addresses-using-qgis/</a></p></li>
 <li><p><a class="reference external" href="https://guides.library.ucsc.edu/DS/Resources/QGIS">https://guides.library.ucsc.edu/DS/Resources/QGIS</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=FOAM0vfsSns">https://www.youtube.com/watch?v=FOAM0vfsSns</a></p></li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+</section>
 </section>
 
 

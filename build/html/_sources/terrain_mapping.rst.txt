@@ -622,7 +622,7 @@ To generate a Digital Elevation Model from the points cloud, do the following:
 |
 
 
-**Generating DTM Las Files**
+**Generating DTM or TIN from Las Files**
 
 To generate a Digital Terrain Model or a TIN surface from the points cloud, do the following:
 

@@ -5,11 +5,11 @@ Loading Data into QGIS
 
 In GIS, spatial data refers to the points, lines, and area features that are drawn on maps to represent the geographic location of natural and human phenomena, such as mountains, rivers, roads, bridges, homicides, etc.  In general, spatial data is any data that can be mapped. 
 
-In a computer, the points, lines and polygons that represent map features can be drawn using precise coordinates (vector data) or they can be represented by one or more contiguous cells  on a grid (raster data).  
+In a computer, the points, lines and polygons that represent map features can be drawn using precise coordinates (vectors) or they can be represented by one or more contiguous cells on a grid (rasters).  
 
-Popular vector products include shapefiles and geodatabases, which are sets of files used to represents points, lines, and polygons. Popular raster products include digital elevation models, satellite imagery, thematic rasters, orthophotos, and digital topographic maps. 
+Popular vector products include shapefiles and geodatabases. Popular raster products include digital elevation models, satellite imagery, thematic rasters, orthophotos, and digital topographic maps. 
 
-With QGIS, we can  easily load the various types of spatial data into the software.  The method of loading data varies depending on the type of spatial data. The sections below describe how to load different types of spatial data into QGIS.
+With QGIS, we can easily load the various types of spatial data into the software.  The method of loading data varies depending on the type of spatial data. The sections below describe how to load different types of spatial data into QGIS.
 
 
 
@@ -114,8 +114,8 @@ Adding Google Satellite Imagery
 
 |
 
-Add Landsat Imagery
----------------------
+Loading Landsat Imagery
+------------------------
 1. Download Landsat 8 imagery from https://earthexplorer.usgs.gov/
 
 2. The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.
@@ -179,7 +179,7 @@ Add Landsat Imagery
 |
 
 Importing CSV files
--------------------
+--------------------
 
 To add a csv file to QGIS, follow these steps:
 

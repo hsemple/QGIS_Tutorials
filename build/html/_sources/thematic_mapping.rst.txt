@@ -1,7 +1,7 @@
 
 
 Thematic Mapping
-==========================================
+=======================
 GIS is concerned with mapping the location of events and phenomena so that map readers can understand the geographic pattern of phenonomena and incorporate the implications of these patterns into decision making.   
 
 A basic way of presenting information information about spatial pattern is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas) or quantitative (e.g., percentage population change, income distribution).
@@ -76,7 +76,7 @@ Mapping Data Stored in the Attribute Table
 
 |
  
-Preparing maps for printing in QGIS
+Preparing Maps for Printing in QGIS
 ------------------------------------
 
 1. Now that you are done creating the map, the final step is "compose" the map to give it a professional touch.  QGIS comes an application called "Composer" that is used to  create professional quality maps.  Key components of a professional map include:
@@ -95,8 +95,7 @@ Preparing maps for printing in QGIS
    :alt: Composing Map
 
 
- 
- 
+
 3. Enter a name for the new print composer object that will be created, e.g., "USA_Population Distribution Layout". A new print Composer window will open. The Print Composer tool contains four main parts(1) a menu at the top of the screen, (2) a toolbar to the left, (3) the main map area, which has blank canvas where you would be composing the map, and (4) a panel with three tabs to the right, Composition, Item Properties, and Guides.
  
 
@@ -104,7 +103,6 @@ Preparing maps for printing in QGIS
    :alt: Composing Map
 
 
- 
  
 4.  To add a map to composer, click on Add Item on the main menu, then click "Add Map".  Now draw a rectangle container on the canvas to hold the map.  When you end the rectangle, the map will appear.  Note: If you do not like the rectangle size, you can always resize it afterwards.
  
