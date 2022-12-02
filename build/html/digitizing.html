@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10. Digitizing &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>11. Digitizing &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11. Geoprocessing Spatial Data" href="geoprocessing.html" />
-    <link rel="prev" title="9. Analyzing Points Data" href="analyzing_points_data.html" /> 
+    <link rel="next" title="12. Geoprocessing Spatial Data" href="geoprocessing.html" />
+    <link rel="prev" title="10. Analyzing Points Data" href="analyzing_points_data.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,17 +41,27 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Intoduction to Terrain Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data Using GPD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geocoding.html">8. Generating Points Data by Geocoding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">9. Analyzing Points Data</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">11. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Digitizing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#previewing-the-basemap">11.1. Previewing the Basemap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#determining-the-coordinate-system-of-the-basemap">11.2. Determining the Coordinate System of the Basemap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-new-empty-shapefiles">11.3. Create New, Empty Shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tracing-features">11.4. Tracing Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#entering-attribute-data">11.5. Entering Attribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deliverables">11.6. Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-links">11.7. Useful Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
 </ul>
 
         </div>
@@ -68,7 +78,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">10. </span>Digitizing</li>
+      <li class="breadcrumb-item active"><span class="section-number">11. </span>Digitizing</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/digitizing.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -79,16 +89,258 @@
            <div itemprop="articleBody">
              
   <section id="digitizing">
-<h1><span class="section-number">10. </span>Digitizing<a class="headerlink" href="#digitizing" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">11. </span>Digitizing<a class="headerlink" href="#digitizing" title="Permalink to this heading"></a></h1>
+<p>In this lab, you will digitize four map layers centered on Oakland Schools Technical School Campus Northwest (or any other location you choose).  You will digitize at least four vector layers, e.g., building footprints, streets, lakes, vegetation, etc,  Instead of scanning and georeferencing an image to use as background for digitizing, we will use satellite imagery from QGIS as our background.  The output of this exercise is a professionally looking map of the features you digitized.  Follow the instructions below to complete the lab.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="previewing-the-basemap">
+<h2><span class="section-number">11.1. </span>Previewing the Basemap<a class="headerlink" href="#previewing-the-basemap" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Create a folder in your hard drive and give it a suitable name, e.g., c:Digitizing.</p></li>
+<li><p>Start QGIS, create a new project, and save it to the digitizing folder.</p></li>
+<li><p>Click on XYZ tiles under Browser to the left of the screen and select Bing Maps. Pan and zoom to Michigan.</p></li>
+</ol>
+<img alt="QGIS Launch basemap" src="_images/digitizing1_xyz.png" />
+<ol class="arabic" start="4">
+<li><p>If the tiles are missing, then copy the entire script below</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sources</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Google Maps&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;https://mt1.google.com/vt/lyrs=m&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;19&quot;</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Google Satellite&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://mt1.google.com/vt/lyrs=s&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Google Terrain&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://mt1.google.com/vt/lyrs=t&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Google Terrain Hybrid&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://mt1.google.com/vt/lyrs=p&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Google Satellite Hybrid&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://mt1.google.com/vt/lyrs=y&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Stamen Terrain&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.stamen.com/terrain/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Stamen Toner&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.stamen.com/toner/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Stamen Toner Light&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.stamen.com/toner-lite/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Stamen Watercolor&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.stamen.com/watercolor/%7Bz%7D/%7Bx%7D/%7By%7D.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;18&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Wikimedia Map&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;OpenStreetMap contributors, under ODbL&quot;</span><span class="p">,</span> <span class="s2">&quot;https://maps.wikimedia.org/osm-intl/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Wikimedia Hike Bike Map&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;OpenStreetMap contributors, under ODbL&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tiles.wmflabs.org/hikebike/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;17&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Boundaries Places&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Gray (dark)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Gray (light)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri National Geographic&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;http://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Ocean&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://services.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Satellite&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;17&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Standard&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;17&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Terrain&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Transportation&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Esri Topo World&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;OpenStreetMap Standard&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;OpenStreetMap contributors, CC-BY-SA&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;OpenStreetMap H.O.T.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;OpenStreetMap contributors, CC-BY-SA&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.openstreetmap.fr/hot/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;OpenStreetMap Monochrome&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;OpenStreetMap contributors, CC-BY-SA&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tiles.wmflabs.org/bw-mapnik/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;OpenTopoMap&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Kartendaten: © OpenStreetMap-Mitwirkende, SRTM | Kartendarstellung: © OpenTopoMap (CC-BY-SA)&quot;</span><span class="p">,</span> <span class="s2">&quot;https://tile.opentopomap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;17&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Strava All&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;OpenStreetMap contributors, CC-BY-SA&quot;</span><span class="p">,</span> <span class="s2">&quot;https://heatmap-external-b.strava.com/tiles/all/bluered/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Strava Run&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;OpenStreetMap contributors, CC-BY-SA&quot;</span><span class="p">,</span> <span class="s2">&quot;https://heatmap-external-b.strava.com/tiles/run/bluered/%7Bz%7D/%7Bx%7D/%7By%7D.png?v=19&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Open Weather Map Temperature&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by OpenWeatherMap, under CC BY-SA 4.0&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.openweathermap.org/map/temp_new/%7Bz%7D/%7Bx%7D/%7By%7D.png?APPID=1c3e4ef8e25596946ee1f3846b53218a&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Open Weather Map Clouds&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by OpenWeatherMap, under CC BY-SA 4.0&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.openweathermap.org/map/clouds_new/%7Bz%7D/%7Bx%7D/%7By%7D.png?APPID=ef3c5137f6c31db50c4c6f1ce4e7e9dd&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Open Weather Map Wind Speed&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by OpenWeatherMap, under CC BY-SA 4.0&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.openweathermap.org/map/wind_new/%7Bz%7D/%7Bx%7D/%7By%7D.png?APPID=f9d0069aa69438d52276ae25c1ee9893&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;CartoDb Dark Matter&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.&quot;</span><span class="p">,</span> <span class="s2">&quot;http://basemaps.cartocdn.com/dark_all/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;CartoDb Positron&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.&quot;</span><span class="p">,</span> <span class="s2">&quot;http://basemaps.cartocdn.com/light_all/%7Bz%7D/%7Bx%7D/%7By%7D.png&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">])</span>
+<span class="n">sources</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;connections-xyz&quot;</span><span class="p">,</span><span class="s2">&quot;Bing VirtualEarth&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;http://ecn.t3.tiles.virtualearth.net/tiles/a</span><span class="si">{q}</span><span class="s2">.jpeg?g=1&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">])</span>
+
+
+<span class="c1"># Add sources to browser</span>
+
+<span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">sources</span><span class="p">:</span>
+   <span class="n">connectionType</span> <span class="o">=</span> <span class="n">source</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+   <span class="n">connectionName</span> <span class="o">=</span> <span class="n">source</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+   <span class="n">QSettings</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;qgis/</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/authcfg&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">connectionType</span><span class="p">,</span> <span class="n">connectionName</span><span class="p">),</span> <span class="n">source</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+   <span class="n">QSettings</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;qgis/</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/password&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">connectionType</span><span class="p">,</span> <span class="n">connectionName</span><span class="p">),</span> <span class="n">source</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+   <span class="n">QSettings</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;qgis/</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/referer&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">connectionType</span><span class="p">,</span> <span class="n">connectionName</span><span class="p">),</span> <span class="n">source</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+   <span class="n">QSettings</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;qgis/</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/url&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">connectionType</span><span class="p">,</span> <span class="n">connectionName</span><span class="p">),</span> <span class="n">source</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+   <span class="n">QSettings</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;qgis/</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/username&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">connectionType</span><span class="p">,</span> <span class="n">connectionName</span><span class="p">),</span> <span class="n">source</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+   <span class="n">QSettings</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;qgis/</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/zmax&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">connectionType</span><span class="p">,</span> <span class="n">connectionName</span><span class="p">),</span> <span class="n">source</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+   <span class="n">QSettings</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;qgis/</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/zmin&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">connectionType</span><span class="p">,</span> <span class="n">connectionName</span><span class="p">),</span> <span class="n">source</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span>
+
+<span class="c1"># Update GUI</span>
+<span class="n">iface</span><span class="o">.</span><span class="n">reloadConnections</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>5. Script Source: The script above was taken from:
+<a class="reference external" href="https://github.com/klakar/QGIS_resources/blob/master/collections/Geosupportsystem/python/qgis_basemaps.py">https://github.com/klakar/QGIS_resources/blob/master/collections/Geosupportsystem/python/qgis_basemaps.py</a></p>
+<ol class="arabic simple" start="6">
+<li><p>In QGIS, click on Plugins | Python Console and paste the script into the console. Press enter. The tiles controls will be added to the QGIS.</p></li>
+</ol>
+<img alt="QGIS Add Basemaps" src="_images/digitizing2_python_console.png" />
+<ol class="arabic simple" start="7">
+<li><p>The basemaps are visible under the XYZ Tiles dropdown.</p></li>
+</ol>
+<img alt="QGIS Add Basemaps" src="_images/digitizing3_basemaps.png" />
+<ol class="arabic simple" start="8">
+<li><p>Our area of interest is located at -83.452499; Lat: 42.736869. To zoom to this location, we will use a plugin named LatLong Tools.  Click on Plugins | Manage and Install Plugins.</p></li>
+</ol>
+<img alt="QGIS Install Plugin" src="_images/digitizing3b_install_plugin.png" />
+<ol class="arabic simple" start="9">
+<li><p>Scroll down to LatLong Tools. Select the plugin and click on Install plugin to the bottom right of the page.</p></li>
+<li><p>When the plugin is done installing, a toolbar will appear among the set of toolbars in QGIS.   Click on the red marker and the Lat Long plugin will place a dialog at the bottom of the screen for you to enter a pair of latlong.  Enter the values “42.736869, -83.452499: and press enter. The location of the X,Y value will appear as a red cross.</p></li>
+</ol>
+<img alt="QGIS Add Plug in" src="_images/digitizing4.png" />
+<ol class="arabic simple" start="11">
+<li><p>Zoom in to the red cross until you see the college campus clearly.</p></li>
+</ol>
+<img alt="QGIS Find Lat_Long with Lat Long Tool" src="_images/digitizing5.png" />
+<ol class="arabic simple" start="12">
+<li><p>Whenever you locate a place to use as a background for digitizing, it is a good idea to create a <em>bookmark</em> to help you to return to that location quickly if you panned away from it.  To create a bookmark for the College, click on View | New Bookmark. Give the bookmark a name.  If you go elsewhere on the map and want to return to that location, just click on the bookmark and it will take you back to that location.</p></li>
+</ol>
+<img alt="QGIS Create Bookmark" src="_images/digitizing6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="determining-the-coordinate-system-of-the-basemap">
+<h2><span class="section-number">11.2. </span>Determining the Coordinate System of the Basemap<a class="headerlink" href="#determining-the-coordinate-system-of-the-basemap" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Information on the Coordinate System of the basemap can be quickly determined.  To do so, right click on Bing Map, select Properties.  Take a moment and read the information that is in the dialog.</p></li>
+</ol>
+<img alt="QGIS Basemap Properties" src="_images/digitizing7.png" />
+<ol class="arabic simple" start="2">
+<li><p>Now, click on Source.  The coordinate system is given as EPSG 3857 – WGS 84 Pseudo Mercator.  All shapefiles digitized from this basemap will automatically take on this coordinate system.</p></li>
+</ol>
+<img alt="QGIS Read Coordinates" src="_images/digitizing8.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="create-new-empty-shapefiles">
+<h2><span class="section-number">11.3. </span>Create New, Empty Shapefiles<a class="headerlink" href="#create-new-empty-shapefiles" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>For this project, we will create the following layers:</p>
+<ul class="simple">
+<li><p>outline of study area</p></li>
+<li><p>building footprints</p></li>
+<li><p>roads</p></li>
+<li><p>lakes</p></li>
+<li><p>vegetation</p></li>
+</ul>
+</li>
+<li><p>In QGIS, click on Layer | Create Layer | New Shapefile Layer.</p></li>
+</ol>
+<img alt="QGIS Create New Shapefile" src="_images/digitizing9.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the “New Shapefile Layer” box enter the path and name of the new shapefile you want to create, i.e., Study Area. We will digitize “Study Area” as a polygon, so set the Geometry type as polygon. Leave everything else as default and click Ok.</p></li>
+</ol>
+<img alt="QGIS Create New Shapefile" src="_images/digitizing10.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Ok.  A new empty shapefile will be created called “Study_Area”.</p></li>
+</ol>
+<img alt="QGIS Create New Shapefile" src="_images/digitizing11.png" />
+<ol class="arabic" start="5">
+<li><p>Now, repeat the process creating additional empty shapefiles simply by clicking on Layer | Create Layer | New Shapefile Layer.  Create the shapefiles below making sure that you set the geometry type appropriately. If the geometry type is set incorrectly, you will not be able to properly digitize features.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Building                 - polygon</p></li>
+<li><p>Streets                  - polylines</p></li>
+<li><p>Lakes                    - polygons</p></li>
+<li><p>Vegetation       - polygon</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>When you are done, your project should appear similar to what is shown below.</p></li>
+</ol>
+<img alt="QGIS Create New Shapefiles" src="_images/digitizing12.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="tracing-features">
+<h2><span class="section-number">11.4. </span>Tracing Features<a class="headerlink" href="#tracing-features" title="Permalink to this heading"></a></h2>
+<p>The steps below outline the procedures for conducting heads-up digitizing in QGIS.</p>
+<ol class="arabic simple">
+<li><p>In QGIS, ensure that you are zoomed in to the area of interest.</p></li>
+<li><p>In the main toolbar, click on the “Toggle Editing” button.  This puts the software in editing mode so that changes can be made to the shapefiles.</p></li>
+</ol>
+<img alt="QGIS Toggle Button" src="_images/digitizing13.png" />
+<ol class="arabic simple" start="3">
+<li><p>Now, select the “Add feature” button   to use for digitizing.</p></li>
+</ol>
+<img alt="QGIS Add Feature Button" src="_images/digitizing15.png" />
+<ol class="arabic simple" start="4">
+<li><p>To digitize a polygon that represents the study area, use the left mouse button to click on four or more points to define the study area.  QGIS will automatically create a closed polygon.  Double click to end.</p></li>
+</ol>
+<img alt="QGIS Trace Feature" src="_images/digitizing16.png" />
+<ol class="arabic simple" start="5">
+<li><p>The feature attribute dialog will appear. Enter a value, e.g., 1 . This value will appear in the attribute table of the layer.  Click Ok.</p></li>
+</ol>
+<img alt="QGIS Trace Feature" src="_images/digitizing17.png" />
+<ol class="arabic simple" start="6">
+<li><p>The layer will be created.  In the main toolbar, click on the “Toggle Editing” button to permanently save the layer.</p></li>
+</ol>
+<img alt="QGIS Toggle Button" src="_images/digitizing18a.png" />
+<ol class="arabic simple" start="7">
+<li><p>The saved layer should appear as shown below.</p></li>
+</ol>
+<img alt="QGIS Saved Layer" src="_images/digitizing19.png" />
+<ol class="arabic simple" start="8">
+<li><p>With the study area layer digitized, click on its icon in the Table of Content, select Symbology, then change its color to transparent. This allows you to see through it while you digitize the other layers. When you digitize the other layers, you do not want to digitize outside the study area’s boundary.</p></li>
+</ol>
+<img alt="QGIS Saved Layer" src="_images/digitizing20.png" />
+<img alt="QGIS Tranparent Study Area" src="_images/digitizing21.png" />
+<ol class="arabic simple" start="9">
+<li><p>Now, let us digitize the street layer.</p></li>
+<li><p>Highlight the street layer, then click on the Toggle Editing button.  This time, the “Add Line Feature” tool appears. We use this tool to tract line features.</p></li>
+</ol>
+<img alt="QGIS Add Line Feature" src="_images/digitizing22.png" />
+<ol class="arabic simple" start="11">
+<li><p>The process of digitizing the roads involves clicking along the outline of a road segment at frequent intervals.  When you get to the end of a segment, double click to end. This will result in the dialog below appearing. Enter a value to represent the ID number of the road segment you just created.  Each time, you digitize a road segment, you will be prompted to enter an ID number for the segment.</p></li>
+<li><p>The illustration below shows the results of digitizing the various road segments.</p></li>
+<li><p>When digitizing you should always zoom in until the feature you are working with fills the screen.  The most common problem is not zooming in enough on the background image. If you do not zoom in enough, you will not see the features clearly.  Zoom in until you can see lines or points clearly.  Also, when digitizing, remember to save your work often.</p></li>
+<li><p>Now, using the same techniques described above, trace features in the other layers.</p></li>
+<li><p>The illustration below shows what your completed map could look like.</p></li>
+</ol>
+<img alt="QGIS Add Line Feature" src="_images/digitizing25.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="entering-attribute-data">
+<h2><span class="section-number">11.5. </span>Entering Attribute Data<a class="headerlink" href="#entering-attribute-data" title="Permalink to this heading"></a></h2>
+<p>After digitizing a map layer, you could add data to the attribute table of the layer.  In this section, you will add two fields to any of the shapefiles you digitized and then enter attribute data into the records associated with the fields.  You can add real or fictitious data.</p>
+<ol class="arabic simple">
+<li><p>To begin adding fields to a shapefile’s table, right click on the name of the shapefile you want to add the field, e.g., click on Streets.</p></li>
+<li><p>Click on Open Attribute Table.  When the new page appears, click on “New Field” to add a new field to the attribute table.  We will add a field to store the names of the roads.</p></li>
+</ol>
+<img alt="QGIS Adding New Field" src="_images/digitizing26.png" />
+<ol class="arabic simple" start="3">
+<li><p>Enter a name for the field. Set the data type to Text and enter 100 as the maximum number of characters that can go into the field.</p></li>
+</ol>
+<img alt="QGIS Name of New Column" src="_images/digitizing27.png" />
+<ol class="arabic simple" start="4">
+<li><p>When you are done creating the new field, Click Ok to close the dialog.</p></li>
+<li><p>To enter data into the new field that you created, resize the table dialog so that you can see both the table and the map features. Select a row in the table and the corresponding feature in the map should be highlighted allowing you to see the road feature that is associated with the row. Now, type some value into the row. Press enter when you are done. When you are done entering names, click the Toggle Editing button to save the edits to the table.</p></li>
+</ol>
+<blockquote>
+<div><img alt="QGIS Name of New Column" src="_images/digitizing28.png" />
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="deliverables">
+<h2><span class="section-number">11.6. </span>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Submit a professional looking vector map of the features you digitized. Do not inclue the raster background in your final map.</p></li>
+<li><p>Submit a screen shot of the table you created.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="useful-links">
+<h2><span class="section-number">11.7. </span>Useful Links<a class="headerlink" href="#useful-links" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://www.qgistutorials.com/en/docs/digitizing_basics.html">https://www.qgistutorials.com/en/docs/digitizing_basics.html</a></p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="analyzing_points_data.html" class="btn btn-neutral float-left" title="9. Analyzing Points Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="geoprocessing.html" class="btn btn-neutral float-right" title="11. Geoprocessing Spatial Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="analyzing_points_data.html" class="btn btn-neutral float-left" title="10. Analyzing Points Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="geoprocessing.html" class="btn btn-neutral float-right" title="12. Geoprocessing Spatial Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

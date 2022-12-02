@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. Introduction to Terrain Analysis &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>7. Terrain Analysis &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="7. Collecting Points Data Using GPS" href="points_data.html" />
-    <link rel="prev" title="5. Attribute and Spatial Queries" href="attribute_spatial.html" /> 
+    <link rel="next" title="8. Collecting Points Data Using GPS" href="points_data.html" />
+    <link rel="prev" title="6. Attribute and Spatial Queries" href="attribute_spatial.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,24 +41,25 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Introduction to Terrain Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#computing-basic-terrain-parameters">6.1. Computing Basic Terrain Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-basic-terrain-maps">6.2. Creating Basic Terrain Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#habitat-suitability-analysis">6.3. Habitat Suitability Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#watershed-delineation">6.4. Watershed Delineation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#working-with-lidar-data-in-qgis">6.5. Working with LiDAR Data in QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Terrain Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generate-basic-terrain-parameters">7.1. Generate Basic Terrain Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-basic-terrain-maps">7.2. Creating Basic Terrain Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#habitat-suitability-analysis">7.3. Habitat Suitability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#watershed-delineation">7.4. Watershed Delineation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-lidar-data-in-qgis">7.5. Working with LiDAR Data in QGIS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data Using GPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geocoding.html">8. Geocoding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">9. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">10. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">11. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
 </ul>
 
         </div>
@@ -75,7 +76,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">6. </span>Introduction to Terrain Analysis</li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Terrain Analysis</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/terrain_mapping.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -85,13 +86,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="introduction-to-terrain-analysis">
-<h1><span class="section-number">6. </span>Introduction to Terrain Analysis<a class="headerlink" href="#introduction-to-terrain-analysis" title="Permalink to this heading"></a></h1>
+  <section id="terrain-analysis">
+<h1><span class="section-number">7. </span>Terrain Analysis<a class="headerlink" href="#terrain-analysis" title="Permalink to this heading"></a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="computing-basic-terrain-parameters">
-<h2><span class="section-number">6.1. </span>Computing Basic Terrain Parameters<a class="headerlink" href="#computing-basic-terrain-parameters" title="Permalink to this heading"></a></h2>
+<section id="generate-basic-terrain-parameters">
+<h2><span class="section-number">7.1. </span>Generate Basic Terrain Parameters<a class="headerlink" href="#generate-basic-terrain-parameters" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Visit Stowe, VT using <a class="reference external" href="https://caltopo.com/">Caltopo</a>, <a class="reference external" href="https://apps.nationalmap.gov/viewer/">the National Map</a>, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:</p></li>
 </ol>
@@ -109,7 +110,7 @@
 </div>
 </section>
 <section id="creating-basic-terrain-maps">
-<h2><span class="section-number">6.2. </span>Creating Basic Terrain Maps<a class="headerlink" href="#creating-basic-terrain-maps" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.2. </span>Creating Basic Terrain Maps<a class="headerlink" href="#creating-basic-terrain-maps" title="Permalink to this heading"></a></h2>
 <p>Visit the <a class="reference external" href="https://apps.nationalmap.gov/downloader/">National Map data downloader</a> and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.</p>
 <ul class="simple">
 <li><p>a hillshade map (hysometric tinting)</p></li>
@@ -140,7 +141,7 @@
 </ol>
 <img alt="Select adf file" src="_images/terrain_anaysis3_identify.png" />
 <ol class="arabic simple" start="8">
-<li><p>Now, let us inspect the properties of the DEM. Right click on the layer name, then select properties.  Click on Source. You can see the DEM’s coordinate system information. To learn more about the coordinate system, click on the icon to the right of the screen. The dialog to the left of the screen will appear.</p></li>
+<li><p>Now, let us inspect the properties of the DEM. Right click on the layer’s name in the Table of Content, then select properties.  Click on Source. Here, you can see the DEM’s coordinate system information. To learn more about the coordinate system, click on the icon to the right of the screen. The dialog to the left of the screen will appear.</p></li>
 </ol>
 <img alt="Select adf file" src="_images/terain_analysis3_properties.png" />
 <ol class="arabic simple" start="9">
@@ -233,7 +234,10 @@
 <li><p>Make sure you select the elevation layer as the input raster.  Set a contour interval of 50 ft, then click Ok. If you do not like the results, you can try different contours intervals.</p></li>
 </ol>
 <img alt="Contours" src="_images/terrain_analysis_contours2.png" />
-<p><em>Labeling the Contour Map</em></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Labeling the Contour Map</strong></p>
 <p>The first image below shows basic contour labeling with the contour placed on the lines.  The halo hides the lines where the numbers intersect the lines. Our goal is to learn to create these cartographically pleasing labels.</p>
 <img alt="Contours" src="_images/terrain_analysis_contours3.png" />
 <p>To create labels, do the following:</p>
@@ -252,7 +256,7 @@
 </div>
 </section>
 <section id="habitat-suitability-analysis">
-<h2><span class="section-number">6.3. </span>Habitat Suitability Analysis<a class="headerlink" href="#habitat-suitability-analysis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.3. </span>Habitat Suitability Analysis<a class="headerlink" href="#habitat-suitability-analysis" title="Permalink to this heading"></a></h2>
 <p>The habitat for a certain animal in Stowe, Vermont must be protected.  Preliminary studies show that the habitat for the animal is generally associated with the following very broad geographic conditions:</p>
 <ol class="loweralpha simple">
 <li><p>elevation greater than 800 ft</p></li>
@@ -353,7 +357,7 @@
 </div>
 </section>
 <section id="watershed-delineation">
-<h2><span class="section-number">6.4. </span>Watershed Delineation<a class="headerlink" href="#watershed-delineation" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.4. </span>Watershed Delineation<a class="headerlink" href="#watershed-delineation" title="Permalink to this heading"></a></h2>
 <p>Delineating watersheds has long been an important aspect of terrain analysis.  Watersheds are frequently delineated for use as the basic unit for environmental management in different communities.  They are also used for identifying areas upstream of a point on a river that could be contributing contaminant to the stream. In this section of the lab, you will use QGIS or ArcGIS Online to quickly identify a watershed.  Unlike QGIS, ArcGIS Online significantly hides the details of watershed delineation from the user.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -415,7 +419,7 @@
 </div>
 </section>
 <section id="working-with-lidar-data-in-qgis">
-<h2><span class="section-number">6.5. </span>Working with LiDAR Data in QGIS<a class="headerlink" href="#working-with-lidar-data-in-qgis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.5. </span>Working with LiDAR Data in QGIS<a class="headerlink" href="#working-with-lidar-data-in-qgis" title="Permalink to this heading"></a></h2>
 <p>LiDAR data is becoming more available and is quickly becoming a fundamental source for detailed elevation data. This tutorial shows how to work with LiDAR data in QGIS. In QGIS,  Point Cloud and LazTools are two popular tools for working with Lidar data. The Point Cloud Tool enables QGIS to read Lidar data while LazTools are used to process the Lidar data, e.g., generate elevation surface, get height of buildings or vegetation, etc.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -552,8 +556,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="attribute_spatial.html" class="btn btn-neutral float-left" title="5. Attribute and Spatial Queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="points_data.html" class="btn btn-neutral float-right" title="7. Collecting Points Data Using GPS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="attribute_spatial.html" class="btn btn-neutral float-left" title="6. Attribute and Spatial Queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="points_data.html" class="btn btn-neutral float-right" title="8. Collecting Points Data Using GPS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

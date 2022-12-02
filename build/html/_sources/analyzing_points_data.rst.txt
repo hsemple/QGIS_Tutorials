@@ -84,6 +84,14 @@ Point Pattern analysis techniques compare observed point patterns to ones genera
 
 |
 
+
+**Quadrat Analysis**
+
+I am still looking for any easy way to do this in QGIS. In the meantime, I suggest using the `quadrat analysis functions in R <https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html>`_to accomplish this.
+
+!
+
+
 **Nearest Neighbor Analysis**
 
 * Click on the menu item Vector ‣ Analysis Tools ‣ Nearest neighbor analysis. Click `here <https://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/spatial_statistics.html>`_ for more information
@@ -91,6 +99,15 @@ Point Pattern analysis techniques compare observed point patterns to ones genera
 * You can also click on this `link <https://www.qgistutorials.com/en/docs/nearest_neighbor_analysis.html>`_ for more information on Nearest Neighbor Analysis.
 
 |
+
+
+**Ripley K**
+
+https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html
+
+|
+
+
 
 **Global and Local Moran's I**
 
@@ -100,6 +117,9 @@ The SAGA GIS toolkit provides many functions for spatial statistis including Mor
 .. image:: img/analyzing_points_sagagis.png
    :alt: Lidar Data
 
+
+
+|
 
 
 In many situations, it might be more convenient to complete the point pattern analysis using the R Software

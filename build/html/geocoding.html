@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>8. Geocoding &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>9. Geocoding &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="9. Analyzing Points Data" href="analyzing_points_data.html" />
-    <link rel="prev" title="7. Collecting Points Data Using GPS" href="points_data.html" /> 
+    <link rel="next" title="10. Analyzing Points Data" href="analyzing_points_data.html" />
+    <link rel="prev" title="8. Collecting Points Data Using GPS" href="points_data.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,20 +41,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Introduction to Terrain Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data Using GPS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Geocoding</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#basic-steps-for-geocoding">8.1. Basic Steps for Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Geocoding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-steps-for-geocoding">9.1. Basic Steps for Geocoding</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">9. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">10. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">11. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
 </ul>
 
         </div>
@@ -71,7 +72,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">8. </span>Geocoding</li>
+      <li class="breadcrumb-item active"><span class="section-number">9. </span>Geocoding</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/geocoding.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -82,13 +83,13 @@
            <div itemprop="articleBody">
              
   <section id="geocoding">
-<h1><span class="section-number">8. </span>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">9. </span>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this heading"></a></h1>
 <p>If you have a large number of street addresses and wish to turn them into points on a map, you can use QGIS to generate X,Y coordinates from the addresses. This process is called geocoding.  QGIS uses a plugin called MMQGIS for geocoding.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <section id="basic-steps-for-geocoding">
-<h2><span class="section-number">8.1. </span>Basic Steps for Geocoding<a class="headerlink" href="#basic-steps-for-geocoding" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.1. </span>Basic Steps for Geocoding<a class="headerlink" href="#basic-steps-for-geocoding" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Obtain the List of Addresses*.  The addreses must be stored in a csv file.  The address information split into multiple columns, e.g.,  street address, state, and 5-digit ZIP code.  For latitude and longitude data, make sure there are 2 columns and any extraneous characters are deleted (i.e. commas, parenthesis).</p></li>
 <li><p>Install the MMQGIS Plugin.</p></li>
@@ -116,8 +117,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="points_data.html" class="btn btn-neutral float-left" title="7. Collecting Points Data Using GPS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="analyzing_points_data.html" class="btn btn-neutral float-right" title="9. Analyzing Points Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="points_data.html" class="btn btn-neutral float-left" title="8. Collecting Points Data Using GPS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="analyzing_points_data.html" class="btn btn-neutral float-right" title="10. Analyzing Points Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -12,19 +12,19 @@ Finally, the lab will show how to change projections in ArcGIS Online.  We will 
 
 **Data Requirements**
 
-Download the MapProj_QGIS.zip file from the Assignment Section on Canvas.  Unzip it and save the files to a working directory on your computer.
+Download the MapProj_QGIS.zip file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_ .  Unzip it and save the files to a working directory on your computer.
 
 
 |
 
-Projections of the World
---------------------------
+Global Projections
+---------------------
 
 
 
 **View the World in Geographic Coordinates or Plate-Carrée Projection**
 
-1. Open QGIS from the Start menu and create a new empty map document.
+1. Open QGIS from the Start menu and create a new project.
 
 2. Click on Layer | Add Layer | Add Vector Layer and browse to the downloaded data folder. 
 

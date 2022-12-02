@@ -24,9 +24,9 @@ https://www.qgis.org/en/site/forusers/download.html
 2. To install QGIS, double click on rhe file you downloaded and follow the prompts.  
 
 
-3. Click on the Youtube Video link below for an illustration of the installation process.
+3. Click on `this Youtube Video link <https://www.youtube.com/embed/wMBmc76Vk_4>`_ for an illustration of the installation process.
 
-https://www.youtube.com/embed/wMBmc76Vk_4
+
 
 
 
@@ -34,8 +34,7 @@ https://www.youtube.com/embed/wMBmc76Vk_4
 
 Downloading Data
 ------------------
-1. For this tutorial, please download a USA states shapefile at this link: 
-https://github.com/hsemple/-Covid19/blob/master/USA-2.zip
+1. For this tutorial, please visit the Github page at this `link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_ , click on the *Download* button and download the USA states shapefile: 
 
 
 2. After downloading the file, unzip or extract it to a location that you can remember.
@@ -47,11 +46,12 @@ https://github.com/hsemple/-Covid19/blob/master/USA-2.zip
 
 Launching QGIS 
 ----------------
+
 1. To launch QGIS on a Mac OS machine, click Finder | Application | QGIS. 
 
 
 2. On Windows, click Start | All Programs | QGIS | QGIS for Desktop. 
- 
+ 
 
 3. At start-up the program may appear as shown below. Note: there may be a slight difference depending on how your computer is configured. 
  
@@ -62,10 +62,10 @@ Launching QGIS
 
 |
 
-Displaying Map Layers in QGIS
-------------------------------
+Loading and Displaying a Shapefile 
+------------------------------------
 
-1. To load a map layer into QGIS, click the Layer button on the main menu, then click Add  Layer. Here, we have options for loading different types of GIS datasets.  There are also options for loading layers stored as web map services or in different database software.  As we are loading a shapefile, which is a type of vector layer, click on Add Vector Layer. 
+1. To load a shapefile into QGIS, click the Layer button on the main menu, then click Add  Layer. Here, we have options for loading different types of GIS datasets.  There are also options for loading layers stored as web map services or in different database software.  As we are loading a shapefile, which is a type of vector layer, click on Add Vector Layer. 
  
 
 .. image:: img/load_vectorlayer.png
@@ -73,7 +73,7 @@ Displaying Map Layers in QGIS
 
 
  
-2. Click on the ellipsis (the three horizontal dots) to the right of the Vector Dataset(s) textbox. Browse to the folder where the data is loaded, and select the USA_States.shp file (Make sure it is not the XML file).  Click Add to add the layer to the map then close the data source manage dialog.  If you are prompted for Coordinate Systems Information, enter WGS 84 for the coordinates.
+2. Click on the ellipsis (the three horizontal dots) to the right of the Vector Dataset(s) textbox. Browse to the folder where the data is loaded, and select the USA_States.shp file. Make sure it is not the XML file.  Click Add to add the layer to the map then close the data source manage dialog. If you are prompted for Coordinate Systems Information, select WGS 84 for the coordinates.
 
 
 .. image:: img/data_source_manager.png

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. Map Projections &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>5. Map Projections &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Attribute and Spatial Queries" href="attribute_spatial.html" />
-    <link rel="prev" title="3. Loading Data into QGIS" href="spatial_data.html" /> 
+    <link rel="next" title="6. Attribute and Spatial Queries" href="attribute_spatial.html" />
+    <link rel="prev" title="4. Loading Data into QGIS" href="spatial_data.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,24 +41,26 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Map Projections</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#projections-of-the-world">4.1. Projections of the World</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#projections-of-the-united-states">4.2. Projections of the United States</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#projections-of-michigan">4.3. Projections of Michigan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#transforming-map-projections">4.4. Transforming Map Projections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#map-projections-in-arcgis-online">4.5. Map Projections in ArcGIS Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#references">4.6. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Map Projections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#global-projections">5.1. Global Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#projections-of-the-united-states">5.2. Projections of the United States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#projections-of-michigan">5.3. Projections of Michigan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transforming-map-projections">5.4. Transforming Map Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#map-projections-in-arcgis-online">5.5. Map Projections in ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">5.6. References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Terrain Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">8. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">9. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">10. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
 </ul>
 
         </div>
@@ -75,7 +77,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4. </span>Map Projections</li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Map Projections</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/map_projections.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -86,7 +88,7 @@
            <div itemprop="articleBody">
              
   <section id="map-projections">
-<h1><span class="section-number">4. </span>Map Projections<a class="headerlink" href="#map-projections" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">5. </span>Map Projections<a class="headerlink" href="#map-projections" title="Permalink to this heading"></a></h1>
 <p>This lab introduces you to the basics of temporarily displaying map layers in different projections and coordinate systems using QGIS. This is also called changing the projections ‘on the fly’ and does not alter the underlying coordinates of the map layers.</p>
 <p>The lab will also illustrate how to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.</p>
 <p>Finally, the lab will show how to change projections in ArcGIS Online.  We will touch on projections for world maps, US maps, and maps of Michigan.</p>
@@ -94,15 +96,15 @@
 <div class="line"><br /></div>
 </div>
 <p><strong>Data Requirements</strong></p>
-<p>Download the MapProj_QGIS.zip file from the Assignment Section on Canvas.  Unzip it and save the files to a working directory on your computer.</p>
+<p>Download the MapProj_QGIS.zip file from this <a class="reference external" href="https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip">Github page</a> .  Unzip it and save the files to a working directory on your computer.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="projections-of-the-world">
-<h2><span class="section-number">4.1. </span>Projections of the World<a class="headerlink" href="#projections-of-the-world" title="Permalink to this heading"></a></h2>
+<section id="global-projections">
+<h2><span class="section-number">5.1. </span>Global Projections<a class="headerlink" href="#global-projections" title="Permalink to this heading"></a></h2>
 <p><strong>View the World in Geographic Coordinates or Plate-Carrée Projection</strong></p>
 <ol class="arabic simple">
-<li><p>Open QGIS from the Start menu and create a new empty map document.</p></li>
+<li><p>Open QGIS from the Start menu and create a new project.</p></li>
 <li><p>Click on Layer | Add Layer | Add Vector Layer and browse to the downloaded data folder.</p></li>
 <li><p>Open the world subdirectory. Select ESRI shapefiles as the file type to display, and load the .shp files into QGIS.</p></li>
 </ol>
@@ -205,7 +207,7 @@
 </div>
 </section>
 <section id="projections-of-the-united-states">
-<h2><span class="section-number">4.2. </span>Projections of the United States<a class="headerlink" href="#projections-of-the-united-states" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.2. </span>Projections of the United States<a class="headerlink" href="#projections-of-the-united-states" title="Permalink to this heading"></a></h2>
 <p><strong>Display the United States in the Geographic Coordinates</strong></p>
 <p>Similar to global datasets, when working with US map layers, it is important that you set the map projection based on the purpose of the map. In this section, we will focus on how to set map projections for US data.</p>
 <ol class="arabic simple">
@@ -245,7 +247,7 @@
 </div>
 </section>
 <section id="projections-of-michigan">
-<h2><span class="section-number">4.3. </span>Projections of Michigan<a class="headerlink" href="#projections-of-michigan" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.3. </span>Projections of Michigan<a class="headerlink" href="#projections-of-michigan" title="Permalink to this heading"></a></h2>
 <p><strong>a. View of Michigan in Geographic Coordinates</strong></p>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Project | New and start a new project. Navigate to the Michigan subdirectory in the dataset you downloaded and load the Michigan and lat/long dataset.</p></li>
@@ -289,7 +291,7 @@ statewide maps, we can use a state-wide coordinate system for Michigan called th
 </div>
 </section>
 <section id="transforming-map-projections">
-<h2><span class="section-number">4.4. </span>Transforming Map Projections<a class="headerlink" href="#transforming-map-projections" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.4. </span>Transforming Map Projections<a class="headerlink" href="#transforming-map-projections" title="Permalink to this heading"></a></h2>
 <p>When you download map layers from different websites, there is a high likelihood that the map layers you download will be in different coordinates.</p>
 <p>Map layers that have different coordinates will not overlay on top of each other. In order to make the maps overlay, you have to first define their projection tool, i.e., tell the software the name of the coordinate system of each of the map layer. Secondly, you have to transform the different coordinates into a common coordinate system.</p>
 <p>In this section of the lab, we use QGIS software to practice converting map layers from one coordinate system to another.  You are given six shapefiles pertaining to Washtenaw County. Three of the files are in Geographic Coordinates or latlong (WGS 84). They are:</p>
@@ -401,7 +403,7 @@ statewide maps, we can use a state-wide coordinate system for Michigan called th
 </div>
 </section>
 <section id="map-projections-in-arcgis-online">
-<h2><span class="section-number">4.5. </span>Map Projections in ArcGIS Online<a class="headerlink" href="#map-projections-in-arcgis-online" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.5. </span>Map Projections in ArcGIS Online<a class="headerlink" href="#map-projections-in-arcgis-online" title="Permalink to this heading"></a></h2>
 <p>Increasingly, GIS professionals and businesses are using ArcGIS Online to share map files, so for correct depiction of size, shape, and directions of places relative to each other, it is important to be able to set projections correctly, particularly on maps that cover large areas.</p>
 <p>By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to display map layers. However, this projection distorts the size of places in the far north and south.  See this link  for a brief discussion.   Making non-Web-Mercator maps is possible in ArcGIS Online. First, you have to search ArcGIS Online for basemap template in the desired projection of interests, then display the basemap projection, and then upload your maps into the projection.  Here are the steps.</p>
 <ol class="arabic simple">
@@ -452,7 +454,7 @@ statewide maps, we can use a state-wide coordinate system for Michigan called th
 </div>
 </section>
 <section id="references">
-<h2><span class="section-number">4.6. </span>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.6. </span>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <p>Working with Projections -  Working with Projections</p>
 </section>
 </section>
@@ -461,8 +463,8 @@ statewide maps, we can use a state-wide coordinate system for Michigan called th
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="spatial_data.html" class="btn btn-neutral float-left" title="3. Loading Data into QGIS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="attribute_spatial.html" class="btn btn-neutral float-right" title="5. Attribute and Spatial Queries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="spatial_data.html" class="btn btn-neutral float-left" title="4. Loading Data into QGIS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="attribute_spatial.html" class="btn btn-neutral float-right" title="6. Attribute and Spatial Queries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

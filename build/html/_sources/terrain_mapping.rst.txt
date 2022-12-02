@@ -1,9 +1,9 @@
-Introduction to Terrain Analysis
+Terrain Analysis
 ==================================
 
 |
 
-Computing Basic Terrain Parameters
+Generate Basic Terrain Parameters
 ------------------------------------
 
 1. Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <https://apps.nationalmap.gov/viewer/>`_, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:
@@ -64,7 +64,7 @@ After generating the maps, briefly state two practical uses of each of the above
    :alt: Select adf file
 
 
-8. Now, let us inspect the properties of the DEM. Right click on the layer name, then select properties.  Click on Source. You can see the DEM's coordinate system information. To learn more about the coordinate system, click on the icon to the right of the screen. The dialog to the left of the screen will appear.
+8. Now, let us inspect the properties of the DEM. Right click on the layer's name in the Table of Content, then select properties.  Click on Source. Here, you can see the DEM's coordinate system information. To learn more about the coordinate system, click on the icon to the right of the screen. The dialog to the left of the screen will appear.
 
 
 .. image:: img/terain_analysis3_properties.png
@@ -197,9 +197,9 @@ https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/
    :alt: Contours
 
 
+|
 
-
-*Labeling the Contour Map*
+**Labeling the Contour Map**
 
 The first image below shows basic contour labeling with the contour placed on the lines.  The halo hides the lines where the numbers intersect the lines. Our goal is to learn to create these cartographically pleasing labels. 
 

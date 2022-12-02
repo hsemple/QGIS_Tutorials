@@ -44,7 +44,7 @@ Loading a Digital Elevation Model
 
 1 To display a DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/. 
 
-2. Select the file named w001001.adf,  Make sure it is the adf file with the larger file size.
+2. Select the file named w001001.adf. Make sure it is the adf file with the larger file size.
 
 3. If the DEM is loaded and doesn’t show up, simply right click on it and select Zoom to Layer.
 
@@ -92,8 +92,8 @@ Adding Google Satellite Imagery
 
 3. In the dialog that appears, type "Google" in the Name textbox.
 
-4. In the URL, copy and paste the address the following URL then click OK: 
-:samp: 'http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}&s=Ga'
+4. In the URL textbox, copy and paste the address the following URL then click OK: 
+   'http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}&s=Ga'
 
 .. image:: img/google_earth_connection.png
    :alt: Loading Google Earth Imagery
@@ -103,11 +103,11 @@ Adding Google Satellite Imagery
 
 6. Additional Google Map Tiles Links
 
-  * Google Maps	https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}
-  * Google Satellite	https://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}
-  * Google Satellite Hybrid	https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}
-  * Google Terrain	https://mt1.google.com/vt/lyrs=t&x={x}&y={y}&z={z}
-  * Google Roads	https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}
+  * Google Maps       -  https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}
+  * Google Satellite	 - https://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}
+  * Google Satellite Hybrid - https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}
+  * Google Terrain - https://mt1.google.com/vt/lyrs=t&x={x}&y={y}&z={z}
+  * Google Roads	- https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}
 
 
 
@@ -116,7 +116,7 @@ Adding Google Satellite Imagery
 
 Loading Landsat Imagery
 ------------------------
-1. Download Landsat 8 imagery from https://earthexplorer.usgs.gov/
+1. Visit the Earth Explorer website (https://earthexplorer.usgs.gov/) and download Landsat 8 imagery for an area of interest.  If you are not familiar with the downloading process, click on this `link <https://guides.library.uwm.edu/c.php?g=567847&p=5338445>`_ for instructions on this process. 
 
 2. The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.
 
@@ -145,7 +145,7 @@ Loading Landsat Imagery
    :alt: Building a Virtual Raster in QGIS
 
  
-7. Right click on the layer called "Virtual" and select Properties.
+7. Right click on the layer named "Virtual" and select Properties.
  
 
 .. image:: img/virtual_raster2.png
@@ -236,7 +236,7 @@ To visualize datasets in PostgreSQl/PostGIS from within QGIS, follow the steps b
 
 |
 
-Loading WMS Layer
+Loading WMS Layers
 -------------------
 
 To Add a WMS Layer
@@ -268,7 +268,7 @@ To Add a WMS Layer
 |
 
 
-Loading WFS Layer
+Loading WFS Layers
 -------------------
 
 1. In QGIS, click on Layer | Add WFS Layer.

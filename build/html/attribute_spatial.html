@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5. Attribute and Spatial Queries &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>6. Attribute and Spatial Queries &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="6. Terrain Mapping" href="terrain_mapping.html" />
-    <link rel="prev" title="4. Map Projections" href="map_projections.html" /> 
+    <link rel="next" title="7. Terrain Analysis" href="terrain_mapping.html" />
+    <link rel="prev" title="5. Map Projections" href="map_projections.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,22 +41,24 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">2. Thematic Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Attribute and Spatial Queries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#attribute-queries">5.1. Attribute Queries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#spatial-queries">5.2. Spatial Queries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#joining-tables-arcgis-online">5.3. Joining Tables - ArcGIS Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">5.4. Summary of Deliverables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Attribute and Spatial Queries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attribute-queries">6.1. Attribute Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-queries">6.2. Spatial Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#joining-tables-arcgis-online">6.3. Joining Tables - ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">6.4. Summary of Deliverables</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Terrain Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">8. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">9. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">10. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
 </ul>
 
         </div>
@@ -73,7 +75,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">5. </span>Attribute and Spatial Queries</li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Attribute and Spatial Queries</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/attribute_spatial.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -84,14 +86,14 @@
            <div itemprop="articleBody">
              
   <section id="attribute-and-spatial-queries">
-<h1><span class="section-number">5. </span>Attribute and Spatial Queries<a class="headerlink" href="#attribute-and-spatial-queries" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">6. </span>Attribute and Spatial Queries<a class="headerlink" href="#attribute-and-spatial-queries" title="Permalink to this heading"></a></h1>
 <p>Within a GIS, data can be queried in two ways; attribute queries and spatial queries. For attribute queries, features are selected using attribute data. Results can be mapped or presented in conventional database form.</p>
 <p>Spatial query is used extract features based solely on their topological relationship to other features. Combined, attribute and spatial queries are a powerful way of exploring spatial patterns in the data.  In the next section, we explore attribute queries.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <section id="attribute-queries">
-<h2><span class="section-number">5.1. </span>Attribute Queries<a class="headerlink" href="#attribute-queries" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.1. </span>Attribute Queries<a class="headerlink" href="#attribute-queries" title="Permalink to this heading"></a></h2>
 <p>This section of the lab is intended to strengthen your skills working with the attribute tables of shapefiles. Specifically, you will learn how to join external tables to the attribute table of a shapefile.  You will also experiment with querying and summarizing the attribute data to see numeric and geographic patterns associated with the data.</p>
 <p>Recall that in Lab 2, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile’s attribute table?   The answer is through table joins.</p>
 <p>To illustrate the process, we will make a make of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile’s attribute data. Table joins are important in GIS as it saves us the need to manually enter data into the attribute table.</p>
@@ -176,7 +178,7 @@
 </div>
 </section>
 <section id="spatial-queries">
-<h2><span class="section-number">5.2. </span>Spatial Queries<a class="headerlink" href="#spatial-queries" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.2. </span>Spatial Queries<a class="headerlink" href="#spatial-queries" title="Permalink to this heading"></a></h2>
 <p>In this section, we will practice spatial queries, which is querying map layers by location and spatial relationships to other layers, not by attribute values.</p>
 <p>The dataset for this exercise can be downloaded from Canvas.</p>
 <ol class="arabic simple">
@@ -235,7 +237,7 @@
 </div>
 </section>
 <section id="joining-tables-arcgis-online">
-<h2><span class="section-number">5.3. </span>Joining Tables - ArcGIS Online<a class="headerlink" href="#joining-tables-arcgis-online" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.3. </span>Joining Tables - ArcGIS Online<a class="headerlink" href="#joining-tables-arcgis-online" title="Permalink to this heading"></a></h2>
 <p>ArcGIS Online has simplified the process of table joining for people using this platform for GIS. To join a table using ArcGIS Online, follow the steps below:</p>
 <ol class="arabic simple">
 <li><p>Upload both the shapefile and CSV to ArcGIS Online. When uploading the CSV file, upload as Table.</p></li>
@@ -259,7 +261,7 @@
 </div>
 </section>
 <section id="summary-of-deliverables">
-<h2><span class="section-number">5.4. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.4. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
 <p><strong>Section 1 (10 pts)</strong></p>
 <ul class="simple">
 <li><p>Answers to the questions in Section 1 under “Performing Attribute Queries to Answer the Questions …” and under “Rates Calculation”.</p></li>
@@ -284,8 +286,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="map_projections.html" class="btn btn-neutral float-left" title="4. Map Projections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="terrain_mapping.html" class="btn btn-neutral float-right" title="6. Terrain Mapping" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="map_projections.html" class="btn btn-neutral float-left" title="5. Map Projections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="terrain_mapping.html" class="btn btn-neutral float-right" title="7. Terrain Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

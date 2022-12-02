@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Thematic Mapping &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>3. Thematic Mapping &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Loading Data into QGIS" href="spatial_data.html" />
-    <link rel="prev" title="1. Getting Started" href="launch_qgis.html" /> 
+    <link rel="next" title="4. Loading Data into QGIS" href="spatial_data.html" />
+    <link rel="prev" title="2. Getting Started" href="launch_qgis.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,21 +41,22 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">1. Getting Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Thematic Mapping</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#mapping-data-stored-in-the-attribute-table">2.1. Mapping Data Stored in the Attribute Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#preparing-maps-for-printing-in-qgis">2.2. Preparing Maps for Printing in QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Thematic Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mapping-data-stored-in-the-attribute-table">3.1. Mapping Data Stored in the Attribute Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-maps-for-printing-in-qgis">3.2. Preparing Maps for Printing in QGIS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">3. Loading Data into QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="map_projections.html">4. Map Projections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">5. Attribute and Spatial Queries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">6. Introduction to Terrain Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="points_data.html">7. Collecting Points Data Using GPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geocoding.html">8. Geocoding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">9. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">10. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">11. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
 </ul>
 
         </div>
@@ -72,7 +73,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2. </span>Thematic Mapping</li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Thematic Mapping</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/thematic_mapping.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,7 +84,7 @@
            <div itemprop="articleBody">
              
   <section id="thematic-mapping">
-<h1><span class="section-number">2. </span>Thematic Mapping<a class="headerlink" href="#thematic-mapping" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">3. </span>Thematic Mapping<a class="headerlink" href="#thematic-mapping" title="Permalink to this heading"></a></h1>
 <p>GIS is concerned with mapping the location of events and phenomena so that map readers can understand the geographic pattern of phenonomena and incorporate the implications of these patterns into decision making.</p>
 <p>A basic way of presenting information information about spatial pattern is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas) or quantitative (e.g., percentage population change, income distribution).</p>
 <p>With a GIS software, the basic way to create a vector thematic map is to select one of the fields in the attribute table of the map layer and then display the data using the software’s thematic mapping engine. The data in attribute field may be quantitative or qualitative. If the data is qualitative, we create a qualitative thematic map.  If the data is quantitative, we create a quantitative thematic map.</p>
@@ -93,7 +94,7 @@
 <div class="line"><br /></div>
 </div>
 <section id="mapping-data-stored-in-the-attribute-table">
-<h2><span class="section-number">2.1. </span>Mapping Data Stored in the Attribute Table<a class="headerlink" href="#mapping-data-stored-in-the-attribute-table" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1. </span>Mapping Data Stored in the Attribute Table<a class="headerlink" href="#mapping-data-stored-in-the-attribute-table" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Load the map layer into QGIS.</p></li>
 <li><p>Right click on the name of the layer and select Open Attribute table. Inspect the attribute table. We will use the column that contains population data for the US. Examine the population data, then close the attribute table.</p></li>
@@ -127,7 +128,7 @@
 </div>
 </section>
 <section id="preparing-maps-for-printing-in-qgis">
-<h2><span class="section-number">2.2. </span>Preparing Maps for Printing in QGIS<a class="headerlink" href="#preparing-maps-for-printing-in-qgis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2. </span>Preparing Maps for Printing in QGIS<a class="headerlink" href="#preparing-maps-for-printing-in-qgis" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><dl class="simple">
 <dt>Now that you are done creating the map, the final step is “compose” the map to give it a professional touch.  QGIS comes an application called “Composer” that is used to  create professional quality maps.  Key components of a professional map include:</dt><dd><ul class="simple">
@@ -170,8 +171,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="launch_qgis.html" class="btn btn-neutral float-left" title="1. Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="spatial_data.html" class="btn btn-neutral float-right" title="3. Loading Data into QGIS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="launch_qgis.html" class="btn btn-neutral float-left" title="2. Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="spatial_data.html" class="btn btn-neutral float-right" title="4. Loading Data into QGIS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
