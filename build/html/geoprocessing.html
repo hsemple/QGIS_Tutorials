@@ -52,7 +52,12 @@
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">12. Geoprocessing Spatial Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#geoprocessing-vector-data">12.1. Geoprocessing Vector Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-data">12.1. Download Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-new-shapefile-to-represent-your-study-area">12.2. Create a new shapefile to represent your Study Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merge-shapefiles">12.3. Merge Shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clip-all-shapefiles-to-the-extent-of-the-study-area">12.4. Clip All Shapefiles to the Extent of the Study Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merging-and-clipping-the-digital-elevation-models-dems">12.5. Merging and Clipping the Digital Elevation Models (DEMs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-links">12.6. Useful Links</a></li>
 </ul>
 </li>
 </ul>
@@ -83,11 +88,187 @@
              
   <section id="geoprocessing-spatial-data">
 <h1><span class="section-number">12. </span>Geoprocessing Spatial Data<a class="headerlink" href="#geoprocessing-spatial-data" title="Permalink to this heading"></a></h1>
+<p>You work for an environmental monitoring company conducting a project in South East Michigan. The project area straddles the boundaries of two adjacent counties, e.g., Wayne and Washtenaw.</p>
+<p>As the GIS expert on the project, you are required to assemble several digital map layers pertaining to the geographic extent of the study area.  Some of the map layers are available as separate files for Wayne and Washtenaw counties, so you will be required to merge and clip these files in order to create seamless layers for the study area.  Other layers are only available for the entire State of Michigan, so you will have to clip these layers to the extent of your study area.</p>
+<p>The shapefiles you are required to assemble are census blocks, soils, geology, roads, drinking wells and streams. You are also required to include a digital elevation model (DEM) of the area. You may include optionally include two orthophotos for extra credit.</p>
+<p>Complete the task for your company using data from Michigan’s archived CGI.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="geoprocessing-vector-data">
-<h2><span class="section-number">12.1. </span>Geoprocessing Vector Data<a class="headerlink" href="#geoprocessing-vector-data" title="Permalink to this heading"></a></h2>
+<section id="download-data">
+<h2><span class="section-number">12.1. </span>Download Data<a class="headerlink" href="#download-data" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Visit the Michigan CGI’s archived website at <a class="reference external" href="https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm">https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm</a></p></li>
+<li><p>Use the table below as a guide to what you should download.  Since you are downloading the same type of data for both counties, in all you will download six of files.</p></li>
+</ol>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Title</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Layer Name</p></th>
+<th class="head"><p>Notes</p></th>
+<th class="head"><p>Geoprocessing Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Census Blocks</p></td>
+<td><p>Block Groups from MI Geographic Framework (v14a)</p></td>
+<td><p>Merge and Clip</p></td>
+</tr>
+<tr class="row-odd"><td><p>STATSGO Soils</p></td>
+<td><p>Available for entire State</p></td>
+<td><p>Clip</p></td>
+</tr>
+<tr class="row-even"><td><p>Roads</p></td>
+<td><p>MI Geographic Framework Transportation (v14a)</p></td>
+<td><p>Clip</p></td>
+</tr>
+<tr class="row-odd"><td><p>Drinking Water Wells</p></td>
+<td><p>Located under the Geology Section</p></td>
+<td><p>Merge and Clip</p></td>
+</tr>
+<tr class="row-even"><td><p>Bedrock Geology</p></td>
+<td><p>Located under the GEOLOGY Section.</p></td>
+<td><p>Clip</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEM</p></td>
+<td><p>Located under the TOPOGRAPHY Section</p></td>
+<td><p>Clip</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Create a folder then unzip the files you downloaded to that folder.  Place all of the unzipped files in the same folder.  The illustration below shows some of my zipped and unzipped folders.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="create-a-new-shapefile-to-represent-your-study-area">
+<h2><span class="section-number">12.2. </span>Create a new shapefile to represent your Study Area<a class="headerlink" href="#create-a-new-shapefile-to-represent-your-study-area" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>You are free to decide on the geographic extent of your study area. The only requirement is that it straddles the boundaries of the two counties.</p></li>
+<li><p>Open any pair of shapefiles for Wayne and Washtenaw Counties (e.g. the census block layers) and use them as a background for digitizing the boundaries of the study area. The shapefile type is polygon, so leave polygon as the Geometry Type.</p></li>
+</ol>
+<img alt="Study Area" src="_images/geoprocessing_studyarea.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="merge-shapefiles">
+<h2><span class="section-number">12.3. </span>Merge Shapefiles<a class="headerlink" href="#merge-shapefiles" title="Permalink to this heading"></a></h2>
+<p>The pairs of shapefiles you downloaded that need merging should be merged before they are clipped.  For example, the census block group files for Wayne and Washtenaw Counties need to be merged before clipping.  In order to merge the shapefiles, you will use geoprocessing tools from Toolbox.</p>
+<ol class="arabic simple">
+<li><p>Click on Vector | Data Management tools | Merge Vector Layers</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_merge_shapefile.png" />
+<ol class="arabic simple" start="2">
+<li><p>Fill out the dialog that appears. Under “Input layers”, enter the names of the two files to merge.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_mergelayers2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Ensure that the path and name of your output are correct, then click Run. The resultant merged shapefile appears as shown below.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_mergelayers3.png" />
+<ol class="arabic simple" start="4">
+<li><p>Repeat the process for the other pairs of shapefiles you need to merge.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="clip-all-shapefiles-to-the-extent-of-the-study-area">
+<h2><span class="section-number">12.4. </span>Clip All Shapefiles to the Extent of the Study Area<a class="headerlink" href="#clip-all-shapefiles-to-the-extent-of-the-study-area" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Ensure that the Study area shapefile is loaded into QGIS.</p></li>
+<li><p>Click on Vector | Geoprocessing Tools | Clip.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_cliplayer1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Fill out the dialog that appears. Note that the Input Features are the features you want to clip, i.e., the Merged Census Blocks.  The Clip Feature is the file that serves as the cookie cutter, i.e., the study area polygon that you digitized.</p></li>
+<li><p>If necessary, re-specify a path and a name for the output. Click Ok</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_cliplayer2.png" />
+<ol class="arabic simple" start="4">
+<li><p>The resultant file should appear as shown in the illustration.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_cliplayer3.png" />
+<ol class="arabic simple" start="5">
+<li><p>Repeat the process for the other shapefiles you want to clip.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="merging-and-clipping-the-digital-elevation-models-dems">
+<h2><span class="section-number">12.5. </span>Merging and Clipping the Digital Elevation Models (DEMs)<a class="headerlink" href="#merging-and-clipping-the-digital-elevation-models-dems" title="Permalink to this heading"></a></h2>
+<p>DEMs are floating point raster grids containing Z values that represent elevation. The steps
+for clipping rasters are different compared to those for clipping shapefiles.  Below, I illustrate how DEMS are mosaiced (merged) and clipped in QGIS.  Click on this link for more information: <a class="reference external" href="https://docs.qgis.org/3.4/en/docs/training_manual/processing/cutting_merging.html">https://docs.qgis.org/3.4/en/docs/training_manual/processing/cutting_merging.html</a></p>
+<p><strong>Mosaicing DEMs</strong></p>
+<ol class="arabic simple">
+<li><p>Add the DEMs for Wayne and Washtenaw Counties to QGIS.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_merge_dems.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Raster menu, then Miscellaneous | Merge.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_merge_dems2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Now click the ellipsis (three dots … ) next to the Input layers label to select the layers to merge.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_merge_dems3.png" />
+<ol class="arabic simple" start="4">
+<li><p>Fill out the dialog as shown below.  Click Run to process the data.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_merge_dems4.png" />
+<ol class="arabic simple" start="5">
+<li><p>The results of the operation should appear as shown below:</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_merge_dems5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Clipping the Mosaic DEM</strong></p>
+<ol class="arabic simple">
+<li><p>Add the study area shapefile to the project and drag it above the merged DEM.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_clip_dems0.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Raster menu, then Miscellaneous | Clip Raster by Extent.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_clip_dems1.png" />
+<ol class="arabic simple" start="3">
+<li><p>Fill out the Dialog as shown below. Note that the output will be saved as a tif image.  Click on Run.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_clip_dems2.png" />
+<ol class="arabic simple" start="4">
+<li><p>The results should appear as shown below.</p></li>
+</ol>
+<img alt="Downloaded Files" src="_images/geoprocessing_clip_dems3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Deliverables</strong></p>
+<p>The deliverables for this exercise are:</p>
+<ol class="arabic simple">
+<li><p>One or two professional layouts showing the result of the merged and clipped shapefiles.</p></li>
+<li><p>A professional layout of the merged and clipped DEM.</p></li>
+</ol>
+<p>The maps should be visually pleasing while at the same time reflecting a high degree of cartographic sensitivity.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="useful-links">
+<h2><span class="section-number">12.6. </span>Useful Links<a class="headerlink" href="#useful-links" title="Permalink to this heading"></a></h2>
 <p>Seven Geoprocessing Tools Every GIS Analyst Should Know
 <a class="reference external" href="https://gisgeography.com/geoprocessing-tools/">https://gisgeography.com/geoprocessing-tools/</a></p>
 </section>
