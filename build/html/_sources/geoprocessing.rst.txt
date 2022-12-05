@@ -242,3 +242,8 @@ Useful Links
 
 Seven Geoprocessing Tools Every GIS Analyst Should Know 
 https://gisgeography.com/geoprocessing-tools/
+
+
+Introduction to Raster Data (Part 1): Processing and Visualizing Single-Band Rasters
+https://www.statcan.gc.ca/en/wtc/online-lectures/qgis/2020019
+

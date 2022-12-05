@@ -28,20 +28,7 @@ https://www.qgis.org/en/site/forusers/download.html
 
 
 
-
-
 |
-
-Downloading Data
-------------------
-1. For this tutorial, please visit the Github page at this `link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_ , click on the *Download* button and download the USA states shapefile: 
-
-
-2. After downloading the file, unzip or extract it to a location that you can remember.
-
-|
-
-
 
 
 Launching QGIS 
@@ -57,12 +44,24 @@ Launching QGIS
  
 .. image:: img/intro_qgis.png
    :alt: QGIS at startup
- 
- 
+
+
 
 |
 
-Loading and Displaying a Shapefile 
+Download a USA Shapefile
+-------------------------
+1. For this tutorial, please visit the Github page at this `link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_ , click on the *Download* button and download the USA states shapefile: 
+
+
+2. After downloading the file, unzip or extract it to a location that you can remember.
+
+
+|
+
+
+
+Loading and Displaying the Shapefile 
 ------------------------------------
 
 1. To load a shapefile into QGIS, click the Layer button on the main menu, then click Add  Layer. Here, we have options for loading different types of GIS datasets.  There are also options for loading layers stored as web map services or in different database software.  As we are loading a shapefile, which is a type of vector layer, click on Add Vector Layer. 

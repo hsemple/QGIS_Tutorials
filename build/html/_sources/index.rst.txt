@@ -1,9 +1,7 @@
 
 Welcome
 ==========================================
-These tutorials provide an introduction to the QGIS software. Although the tutorials are pitched at the level of an introductory college level GIS course, you don't need to know anything about QGIS to begin the tutorials as we take a beginner-friendly approach to learning both the software and GIS.
-
-Topics covered by the different tutorials include thematic mapping, loading data from different sources, map projections, attribute and spatial queries, terrain mapping and analysis, geocoding, digitizing, geoprocessing, spatial interpolation, and spatial statistics.
+These tutorials provide an introduction to the QGIS software. Topics covered by the different tutorials include thematic mapping, loading data from different sources, map projections, attribute and spatial queries, terrain mapping and analysis, geocoding, digitizing, geoprocessing, spatial interpolation, spatial statistics, web mapping, and drone mapping.
 
 
 .. toctree::
@@ -24,3 +22,8 @@ Topics covered by the different tutorials include thematic mapping, loading data
    analyzing_points_data.rst
    digitizing.rst
    geoprocessing.rst
+   python.rst
+   web_mapping.rst
+   drone_mapping.rst
+   
+
