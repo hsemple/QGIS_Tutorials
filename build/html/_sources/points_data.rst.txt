@@ -13,11 +13,11 @@ For each feature of interest, you will record its coordinates and its physical c
 Pre-Planning your GPS Project
 -------------------------------
 
-To successfully carry out a GPS data collection project, some amount of pre-planning is necessary.  Some things that you need to consider include: 
+To successfully carry out a GPS data collection project, some amount of pre-planning is necessary.  Some things that you need to d0 include: 
 
 
 
-**1. Selecting a Smart Phone GPS App**
+**1. Select a Smart Phone GPS App**
 
 There are many smart phone GPS mapping applications available. Some require purchases while others are free. Each app has its own advantages and disadvantages, but in choosing a mapping application, there are certain things that need to considered. These include:  
 
@@ -40,7 +40,7 @@ If no GPS app is present on your phone, or you wish to install one that you real
 
 * `GPS Essentials <https://play.google.com/store/apps/details?id=com.mictale.gpsessentials&hl=en_US&gl=US>`_ . This is a good app for fieldwork in the social and environmental sciences. It logs waypoints and routes and allows users to record attributes of features. It will also allow you to export to KML and GPX.
 
-* `ArcGIS Survey123 <https://play.google.com/store/apps/details?id=com.esri.survey123&hl=en_US&gl=US>`_.  This is an excellent app for conducting surveys that involve some location questions. It smoothly integrated with other ArcGIS Products when it comes to data visualization and data analysis.
+* `ArcGIS Survey123 <https://play.google.com/store/apps/details?id=com.esri.survey123&hl=en_US&gl=US>`_.  This is an excellent app for conducting surveys that includes some location questions. It smoothly integrated with other ArcGIS poducts when it comes to data visualization and data analysis.
 
 * `ArcGIS Field Maps <https://play.google.com/store/apps/details?id=com.esri.fieldmaps&hl=en_US&gl=US>`_. Many organizations use ArcGIS Field Maps or its predecssor,ESRI Collector, for collecting location-based data, e.g., utility lines, other assets, geological data, etc. This is a good app to master if you work in the ESRI world. The software also smoothly integrated with other ArcGIS Products when it comes to data visualization and data analysis.
 
@@ -78,17 +78,22 @@ Finally, you should be aware of the datum used for your coordinates. The datum d
 
 
 **3. Ascertain the level of accuracy of your GPS.**  
-You should be aware that a single measurement of a point feature using a smart phone GPS is likely to yield positional errors in the region of 5-10 meters without differential correction.  The effect of this is that when the point is displayed in a GIS software or even Google Earth, it may not exactly reference the feature of interest.  For this project, this level of accuracy is acceptable, but you should be aware that each project has its accuracy tolerance.
 
+You should be aware that a single measurement of a point feature using a smart phone GPS is likely to yield positional errors in the region of 5-10 meters without differential correction.  The effect of this is that when the point is displayed in a GIS software,  it may not exactly reference the feature of interest.  This is clearly seen in the illustration below where the plotted point (the yellow marker) is 24.42 meters from the hydrant. 
 
 .. image:: img/collecting_points_error.png
    :alt: Trimble GPS Tracking Software
 
 
+How do you determine the accuracy level of your smartphone GPS receiver? Some smart phones GPS software are purposefully built to read and report estimated accuracy directly from the GNSS receiver. If your GPS software has this functionality, then you can use it to ascertain the accuracy of your GPS points.
+
+Another way to get the accuracy of your GPS device is to use it to get the coordinates of a survey mark whose coordinates have been previously accurately determined. You then compare the results of the smart phone receiver with the known coordinates of the survey mark. The difference in the value of the coordinates is the error associated with the GPS.
+
 To improve the quality of the coordinates you collect, make sure that you get a clear view of the sky when you are collecting the points so that the GPS signals are not being affected by trees or buildings.  Also, stand at a given location for at least a minute to give the receiver sufficient time to settle on the coordinates of your position.   Finally, you should wait for your receiver to be receiving signals from at least 4 satellites before recording data.
 
 
 **4. Decide on the best time of the day to best collect the GPS points.** 
+
 Recall the concept of Position Dilution of Precision (PDOP).  Poor satellite geometry may give rise to unacceptable errors in the coordinates of points collected. This problem can be reduced by selecting a time of the day to collect data when the overhead positions of satellite will result in in good PDOP. 
 
 Trimble, a company that makes GPS receivers, has a software on their website that can be used to plan the best time of day to collect GPS coordinates. Let’s hop over to Trimble and have a look at their `GPS tracking software <https://www.gnssplanning.com/#/settings>`_. The main page of the website is shown below. To the left is a list of GNSS satellites and their status.  To the far right is a locator map. 
@@ -116,6 +121,8 @@ e. Since we are particularly interested in PDOP, please look over the DOPs chart
    :alt: Trimble GPS Tracking Software
 
 |
+
+
 
 Field Data Collection with Survey123
 -------------------------------------
@@ -159,13 +166,13 @@ I strongly encourage you to do field data collection using Survey123.  This plat
    :alt: Survey123 Web Designer
 
 
-7. The illustration below shows the beginning of the form. Afer creating and publishing the form, the software generates a URL that can be used to bring up the survey on your cell phone or computer. 
+7. The illustration below shows the beginning of the form. Noticed that I placed a map object unto the form. After placing the map object on the form, I configured it so that it defaults to a location and zoom level of interest. Users will use this map to enter the coordinates of the location of the hydrants. Users can either tap on the location of the hydrant on the map to records the coordinates or they can enter a street address. The points that are entered on this map will eventually be displayed in ArcGIS Online.
 
 .. image:: img/collecting_points_survey123_form.png
    :alt: Survey123 Form
 
 
-8. You can view the form's URL by clicking on Collaborate in the main menu.  The URL for this form is: https://arcg.is/0DuHW00.
+8. After creating and publishing the form, the software generates a URL that can be used to bring up the survey on your cell phone or computer. You can view the form's URL by clicking on Collaborate in the main menu.  The URL for this form is: https://arcg.is/0DuHW00.
 
 .. image:: img/collecting_points_survey123_url.png
    :alt: Survey123 Form URL
