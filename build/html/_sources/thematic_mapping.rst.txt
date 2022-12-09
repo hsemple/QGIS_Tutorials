@@ -2,20 +2,32 @@
 
 Thematic Mapping
 =======================
-GIS is concerned with mapping the location of events and phenomena so that map readers can understand the geographic pattern of phenonomena and incorporate the implications of these patterns into decision making.   
+GIS is concerned with mapping the location of events and phenomena so that consumers of GIS information can understand the geographic pattern of phenonomena and incorporate the implications of these patterns into decision making.   
 
-A basic way of presenting information information about spatial pattern is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas) or quantitative (e.g., percentage population change, income distribution).
+A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas) or quantitative (e.g., percentage population change, income distribution).
 
-With a GIS software, the basic way to create a vector thematic map is to select one of the fields in the attribute table of the map layer and then display the data using the software's thematic mapping engine. The data in attribute field may be quantitative or qualitative. If the data is qualitative, we create a qualitative thematic map.  If the data is quantitative, we create a quantitative thematic map.
+With a GIS software, the basic way to create a vector thematic map is to select one of the fields in the attribute table of the map layer and then display the data using the software's thematic mapping engine. The data in an attribute field may be quantitative or qualitative. If the data is quantitative, we create a quantitative thematic map, which may vary in appearance depending on how the map is symbolized, the number of classes utilized, classification method, and whether the data is normalized.  If the data is qualitative, we create a qqualitative thematic map, which may also vary in appearance depending on the details of the data.
 
-The data in the attribute table can be entered manually or we can join tables obtained from other sources to the attribute table of the shapefile.  With practice, the actual mapping process can be accomplished very quickly.  
+The data in a GIS attribute table can be entered manually or we can join tables obtained from other sources to the attribute table of the shapefile.  With practice, the actual mapping process can be accomplished very quickly.  
 
-The next section below shows how to perform thematic mapping in QGIS.
-
+The next section shows how to perform thematic mapping in QGIS.
 
 
 
 |
+
+Data
+-------------------------
+1. For this tutorial, please visit the Github page at this `link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_, click on the *Download* button and download the USA states shapefile: 
+
+
+2. After downloading the file, unzip or extract it to a location that you can remember.
+
+
+|
+
+
+
 
 Mapping Data Stored in the Attribute Table
 --------------------------------------------
@@ -71,15 +83,87 @@ Mapping Data Stored in the Attribute Table
 
 
 11. The steps outlined above show how to create a basic choropleth map in QGIS.  You should also take a look at the video below for a brief description of the process. 
- 
- 
+ 
+
+|
+
+Proportional Symbol Maps
+------------------------
+
+Creating proportional symbols maps in QGIS is relatively. The workflow entails obtaining a points map of the dataset and then symbolizing the points map. The points can be symbolized as graduated proportional symbols or simply proportional symbols.
+
+
+1. If the data is a polygon layer, you can convert the polygon layer into a points layer by clicking on Vector in the top menu, then selecting Geometry Tools | Centroids.
+
+.. image:: img/thematic_maps_proportional_symbolmap1.png
+   :alt: Points Map 
+
+
+2. When the dialog appears, ensure that the polygon layer is selected as the input file then click Run.  This will create a points layer from the polygon layer. All attribute fields will be preserved.
+
+.. image:: img/thematic_maps_proportional_symbolmap2.png
+   :alt: Mapping Attributes
+
+
+3. Right click on the *Centroid* layer that was created and select *Properties*.
+
+
+4.  Click on *Symbology* then fill out the dialog.  Start by selecting *Single Symbol* to create a single symbol map. 
+
+.. image:: img/thematic_maps_proportional_symbolmap3.png
+   :alt: Mapping Attributes
+
+
+5. Make sure Simple Marker is highlighted then click on the dropdown to the right of the Size textbox. This will reveal the Assistant.
+
+.. image:: img/thematic_maps_proportional_symbolmap4.png
+   :alt: Mapping Attributes
+
+
+6. When the Assistant dialog appears, click on the dropdown to the right of Source and select the field that you wish to map. In this case, select the *Pop_2015* field. 
+
+.. image:: img/thematic_maps_proportional_symbolmap5.png
+   :alt: Mapping Attributes
+
+
+7. To the far right of the 'Values From' text box, click on the refresh button to load the minimum and maximum values for the selected values. In this case, there are several zeroes, so these are ignored and the next lowest value, 580000 was entered manually. I also adjusted the maximum symbol size to 20 to enhancee the appearance of fhe map. 
+
+
+8. The resultant map should appear as shown below.
+
+.. image:: img/thematic_maps_proportional_symbolmap6.png
+   :alt: Mapping Attributes
+
+
+9. By default, QGIS does not create a legend. To manually create a legend, double click on the name of the proportional symbol layer to bring up the properties dialog. 
+
+
+10. Click on Marker, then click on Advanced | Data-Defined Size Legend.
+
+.. image:: img/thematic_maps_proportional_symbolmap7.png
+   :alt: Mapping Attributes
+
+
+11. In the dialog that appears, select Collapsed legend, then click Ok.
+
+.. image:: img/thematic_maps_proportional_symbolmap8.png
+   :alt: Mapping Attributes
+
+12. In the Table of Content, expand the legend of the Centroid layer.  It should appear as shown below.
+
+.. image:: img/thematic_maps_proportional_symbolmap9.png
+   :alt: Mapping Attributes
+
+
+
+
 
 |
  
 Preparing Maps for Printing in QGIS
 ------------------------------------
 
-1. Now that you are done creating the map, the final step is "compose" the map to give it a professional touch.  QGIS comes an application called "Composer" that is used to  create professional quality maps.  Key components of a professional map include:
+1. Now that you are familiar with the process of creating a thematic map, the final step is "compose" the thematic map to give it a professional touch.   QGIS comes with an application called "Composer" that is used to create professional quality layouts.  Key components of a professional map include:
 	•	The map body
 	•	The title of the map 
 	•	The scale bar
@@ -96,45 +180,86 @@ Preparing Maps for Printing in QGIS
 
 
 
-3. Enter a name for the new print composer object that will be created, e.g., "USA_Population Distribution Layout". A new print Composer window will open. The Print Composer tool contains four main parts(1) a menu at the top of the screen, (2) a toolbar to the left, (3) the main map area, which has blank canvas where you would be composing the map, and (4) a panel with three tabs to the right, Composition, Item Properties, and Guides.
- 
+3. Enter a name for the new print composer object that will be created, e.g., "Population Distribution USA". A new print Composer window will open.  You may have to use the Zoom button to adjust the size of the main map area of composer.
 
 .. image:: img/composing_map2.png
    :alt: Composing Map
 
 
- 
-4.  To add a map to composer, click on Add Item on the main menu, then click "Add Map".  Now draw a rectangle container on the canvas to hold the map.  When you end the rectangle, the map will appear.  Note: If you do not like the rectangle size, you can always resize it afterwards.
+4. The Print Composer tool contains four main parts: (1) a menu at the top of the screen, (2) a toolbar to the left, (3) the main map area, which has blank canvas where you would be composing the map, and (4) a panel with three tabs to the right, Composition, Item Properties, and Guides.
  
 
+5. To add a map to composer, click on Add Item on the main menu, then click "Add Map".  Now draw a rectangle container on the canvas to hold the map.  When you end the rectangle, the map will appear.  Note: If you do not like the rectangle size, you can always resize it afterwards.
+ 
 
 .. image:: img/composing_map3.png
    :alt: Composing Map
 
 
  
-5. If you wanted to enlarge the map and show only the contiguous states, then go back to the map area, and enlarge the view there. You may have to delete the rectangle and redraw it.
+6. If you wanted to enlarge the map and show only the contiguous states, then go back to the map area, and enlarge the view there. You may have to delete the rectangle and redraw it.
 
 
-6. Click inside the box and drag the map container until it is centered on the page. 
+7. Click inside the box and drag the map container until it is centered on the page. 
 
 
-7. To add a scalebar, click on Add Item on the main menu, then select "Add Scalebar".  Draw a rectangle on the composition where you want to place the scale bar then release. The scalebar will appear. Resize the scalebar to suit your taste.
+8. To add a scalebar, click on Add Item on the main menu, then select "Add Scalebar".  Draw a rectangle on the composition where you want to place the scale bar then release. The scalebar will appear. Resize the scalebar to suit your taste.
  
 
-8. With the scalebar selected, click on "Item Properties" to the right of the composer. Here you can fiddle with the different values to adjust elements of the scalebar's appearance.
+9. With the scalebar selected, click on "Item Properties" to the right of the composer. Here you can fiddle with the different values to adjust elements of the scalebar's appearance.
  
 
-9. Repeat the same process as described in 8 above to add north arrow and legend to your map. Title and other text are added with the "Add Label" button on the Toolbar to the left.  Here is an illustration of my completed map.
+10. Repeat the same process as described in 8 above to add north arrow and legend to your map. Title and other text are added with the "Add Label" button on the Toolbar to the left.  Here is an illustration of my completed map.
  
 
 .. image:: img/composing_map4.png
    :alt: Composing Map
 
  
-10. Once you are satisfied with the map, you can export it as Image, PDF or SVG. For this tutorial, let’s export it as a PNG image. Click onLayout | Export as Image.  Select a path and a name for the exported image.  This image can be uploaded to Canvas Dropbox.
+11. Once you are satisfied with the map, you can export it as Image, PDF or SVG. For this tutorial, let’s export it as a PNG image. Click onLayout | Export as Image.  Select a path and a name for the exported image.  This image can be uploaded to Canvas Dropbox.
  
-11. Creating attractive maps requires knowledge about map design and map communication principles.  There is a large body of literature on elements of good map design. In Module 1.6,  I present some basic maps design ideas.  Please read these design ideas and try to integrate them as much as possible into your own map design. 
+
+12. Creating attractive maps requires knowledge about map design and map communication principles.  There is a large body of literature on elements of good map design. In Module 1.6,  I present some basic maps design ideas.  Please read these design ideas and try to integrate them as much as possible into your own map design. 
  
-12. As a rule, always try to create beautiful maps that effectively communicate spatial information. Conversely, always try to avoid creating ugly maps that fail to effectively communicate useful information.
+
+13. As a rule, always try to create beautiful maps that effectively communicate spatial information. Conversely, always try to avoid creating ugly maps that fail to effectively communicate useful information.
+
+
+14. Submit this map as proof that you completed the tutorial.
  
+
+
+|
+
+
+On your Own
+------------
+
+1. Create a thematic choropleth map showing Covid19 cases by Counties for the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
+
+
+2. If you wish o join Covid19 data to the county shapefile's attribute table, then download Covid19 attibute data here -
+
+
+
+|
+
+
+Resources
+----------
+
+Covid19 datasets (csv files). These files must be joined to the shapefile's attribute table before creating the thematic map.
+https://github.com/nytimes/covid-19-data
+
+Create a Proportional Symbol Map and Legend Using QGIS 3.x (Youtube)
+https://www.youtube.com/watch?v=lmw1AZPyXiY&t=320s
+
+|
+
+Deliverables
+------------
+
+1. Map showing distribution of population by states in the USA.
+
+2.  Map showing distribution of Covid19 cases by counties in the USA for January, 2022.
+
