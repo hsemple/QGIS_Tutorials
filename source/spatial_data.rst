@@ -264,8 +264,25 @@ To Add a WMS Layer
 
 6. Select Close.
 
+|
+
+**WMS Servers Sites for Practice**
+
+
+1. Georeferenced bathymetry map of the world's oceans (Add as OGC WMS Layer)
+https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?
+
+2. NASA Earth Observations.
+https://neo.sci.gsfc.nasa.gov/wms/wms
+
+3. Boundaries in effect for the 2022 American Community Survey
+https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer
+
+4. Global Poplation, Agriculture, Food Security, and other Themes
+https://sedac.ciesin.columbia.edu/geoserver/wms
 
 |
+
 
 
 Loading WFS Layers
@@ -292,32 +309,9 @@ Adding an ArcGIS REST Service to QGIS
 https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda
 
 
-|
-
-Resources
-----------
 
 
-**WMS Servers**
-
-
-1. Georeferenced bathymetry map of the world's oceans (Add as OGC WMS Layer)
-https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?
-
-2. NASA Earth Observations.
-https://neo.sci.gsfc.nasa.gov/wms/wms
-
-3. Boundaries in effect for the 2022 American Community Survey
-https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer
-
-4. Global Poplation, Agriculture, Food Security, and other Themes
-https://sedac.ciesin.columbia.edu/geoserver/wms
-
-
-
-|
-
-**ArcGIS Rest Servers**
+**ArcGIS Rest Servers Links for Practice**
 
 1. NAIP Imagery (Add as OG WMS Layers)
 https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer?
@@ -351,6 +345,8 @@ https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageSe
 * `Geologic Maps of the US <https://mrdata.usgs.gov/#geologic-data>`_
 
 * `Cartographic Boundary Files <https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html>`_
+
+* `Mineral Resources Online Spatial Data <https://mrdata.usgs.gov/general/map-global.html>`_
 
 * etc
  
