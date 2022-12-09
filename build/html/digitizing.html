@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11. Digitizing &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>12. Digitizing &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="12. Geoprocessing Spatial Data" href="geoprocessing.html" />
-    <link rel="prev" title="10. Analyzing Points Data" href="analyzing_points_data.html" /> 
+    <link rel="next" title="13. Geoprocessing Spatial Data" href="geoprocessing.html" />
+    <link rel="prev" title="11. Spatial Analysis Using R" href="spatial_analysis_using_R.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,17 +51,21 @@
 <li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Digitizing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#previewing-the-basemap">11.1. Previewing the Basemap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#determining-the-coordinate-system-of-the-basemap">11.2. Determining the Coordinate System of the Basemap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-new-empty-shapefiles">11.3. Create New, Empty Shapefiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tracing-features">11.4. Tracing Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#entering-attribute-data">11.5. Entering Attribute Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#deliverables">11.6. Deliverables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#useful-links">11.7. Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Digitizing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#previewing-the-basemap">12.1. Previewing the Basemap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#determining-the-coordinate-system-of-the-basemap">12.2. Determining the Coordinate System of the Basemap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-new-empty-shapefiles">12.3. Create New, Empty Shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tracing-features">12.4. Tracing Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#entering-attribute-data">12.5. Entering Attribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deliverables">12.6. Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-links">12.7. Useful Links</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone_mapping.html">16. Drone Mapping</a></li>
 </ul>
 
         </div>
@@ -78,7 +82,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">11. </span>Digitizing</li>
+      <li class="breadcrumb-item active"><span class="section-number">12. </span>Digitizing</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/digitizing.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -89,13 +93,13 @@
            <div itemprop="articleBody">
              
   <section id="digitizing">
-<h1><span class="section-number">11. </span>Digitizing<a class="headerlink" href="#digitizing" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">12. </span>Digitizing<a class="headerlink" href="#digitizing" title="Permalink to this heading"></a></h1>
 <p>In this lab, you will digitize four map layers centered on Oakland Schools Technical School Campus Northwest (or any other location you choose).  You will digitize at least four vector layers, e.g., building footprints, streets, lakes, vegetation, etc,  Instead of scanning and georeferencing an image to use as background for digitizing, we will use satellite imagery from QGIS as our background.  The output of this exercise is a professionally looking map of the features you digitized.  Follow the instructions below to complete the lab.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <section id="previewing-the-basemap">
-<h2><span class="section-number">11.1. </span>Previewing the Basemap<a class="headerlink" href="#previewing-the-basemap" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.1. </span>Previewing the Basemap<a class="headerlink" href="#previewing-the-basemap" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Create a folder in your hard drive and give it a suitable name, e.g., c:Digitizing.</p></li>
 <li><p>Start QGIS, create a new project, and save it to the digitizing folder.</p></li>
@@ -192,7 +196,7 @@
 </div>
 </section>
 <section id="determining-the-coordinate-system-of-the-basemap">
-<h2><span class="section-number">11.2. </span>Determining the Coordinate System of the Basemap<a class="headerlink" href="#determining-the-coordinate-system-of-the-basemap" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.2. </span>Determining the Coordinate System of the Basemap<a class="headerlink" href="#determining-the-coordinate-system-of-the-basemap" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Information on the Coordinate System of the basemap can be quickly determined.  To do so, right click on Bing Map, select Properties.  Take a moment and read the information that is in the dialog.</p></li>
 </ol>
@@ -206,7 +210,7 @@
 </div>
 </section>
 <section id="create-new-empty-shapefiles">
-<h2><span class="section-number">11.3. </span>Create New, Empty Shapefiles<a class="headerlink" href="#create-new-empty-shapefiles" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.3. </span>Create New, Empty Shapefiles<a class="headerlink" href="#create-new-empty-shapefiles" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>For this project, we will create the following layers:</p>
 <ul class="simple">
@@ -247,7 +251,7 @@
 </div>
 </section>
 <section id="tracing-features">
-<h2><span class="section-number">11.4. </span>Tracing Features<a class="headerlink" href="#tracing-features" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.4. </span>Tracing Features<a class="headerlink" href="#tracing-features" title="Permalink to this heading"></a></h2>
 <p>The steps below outline the procedures for conducting heads-up digitizing in QGIS.</p>
 <ol class="arabic simple">
 <li><p>In QGIS, ensure that you are zoomed in to the area of interest.</p></li>
@@ -297,7 +301,7 @@
 </div>
 </section>
 <section id="entering-attribute-data">
-<h2><span class="section-number">11.5. </span>Entering Attribute Data<a class="headerlink" href="#entering-attribute-data" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.5. </span>Entering Attribute Data<a class="headerlink" href="#entering-attribute-data" title="Permalink to this heading"></a></h2>
 <p>After digitizing a map layer, you could add data to the attribute table of the layer.  In this section, you will add two fields to any of the shapefiles you digitized and then enter attribute data into the records associated with the fields.  You can add real or fictitious data.</p>
 <ol class="arabic simple">
 <li><p>To begin adding fields to a shapefile’s table, right click on the name of the shapefile you want to add the field, e.g., click on Streets.</p></li>
@@ -320,7 +324,7 @@
 </div>
 </section>
 <section id="deliverables">
-<h2><span class="section-number">11.6. </span>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.6. </span>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Submit a professional looking vector map of the features you digitized. Do not inclue the raster background in your final map.</p></li>
 <li><p>Submit a screen shot of the table you created.</p></li>
@@ -330,7 +334,7 @@
 </div>
 </section>
 <section id="useful-links">
-<h2><span class="section-number">11.7. </span>Useful Links<a class="headerlink" href="#useful-links" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.7. </span>Useful Links<a class="headerlink" href="#useful-links" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://www.qgistutorials.com/en/docs/digitizing_basics.html">https://www.qgistutorials.com/en/docs/digitizing_basics.html</a></p>
 </section>
 </section>
@@ -339,8 +343,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="analyzing_points_data.html" class="btn btn-neutral float-left" title="10. Analyzing Points Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="geoprocessing.html" class="btn btn-neutral float-right" title="12. Geoprocessing Spatial Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="spatial_analysis_using_R.html" class="btn btn-neutral float-left" title="11. Spatial Analysis Using R" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="geoprocessing.html" class="btn btn-neutral float-right" title="13. Geoprocessing Spatial Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

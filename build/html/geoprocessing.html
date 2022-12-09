@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12. Geoprocessing Spatial Data &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>13. Geoprocessing Spatial Data &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,7 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="11. Digitizing" href="digitizing.html" /> 
+    <link rel="next" title="14. Automating Processes with Python" href="python.html" />
+    <link rel="prev" title="12. Digitizing" href="digitizing.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,16 +51,20 @@
 <li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Geoprocessing Spatial Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#download-data">12.1. Download Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-new-shapefile-to-represent-your-study-area">12.2. Create a new shapefile to represent your Study Area</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#merge-shapefiles">12.3. Merge Shapefiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#clip-all-shapefiles-to-the-extent-of-the-study-area">12.4. Clip All Shapefiles to the Extent of the Study Area</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#merging-and-clipping-the-digital-elevation-models-dems">12.5. Merging and Clipping the Digital Elevation Models (DEMs)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#useful-links">12.6. Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Geoprocessing Spatial Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-data">13.1. Download Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-new-shapefile-to-represent-your-study-area">13.2. Create a new shapefile to represent your Study Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merge-shapefiles">13.3. Merge Shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clip-all-shapefiles-to-the-extent-of-the-study-area">13.4. Clip All Shapefiles to the Extent of the Study Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merging-and-clipping-the-digital-elevation-models-dems">13.5. Merging and Clipping the Digital Elevation Models (DEMs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-links">13.6. Useful Links</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone_mapping.html">16. Drone Mapping</a></li>
 </ul>
 
         </div>
@@ -76,7 +81,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">12. </span>Geoprocessing Spatial Data</li>
+      <li class="breadcrumb-item active"><span class="section-number">13. </span>Geoprocessing Spatial Data</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/geoprocessing.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -87,7 +92,7 @@
            <div itemprop="articleBody">
              
   <section id="geoprocessing-spatial-data">
-<h1><span class="section-number">12. </span>Geoprocessing Spatial Data<a class="headerlink" href="#geoprocessing-spatial-data" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">13. </span>Geoprocessing Spatial Data<a class="headerlink" href="#geoprocessing-spatial-data" title="Permalink to this heading"></a></h1>
 <p>You work for an environmental monitoring company conducting a project in South East Michigan. The project area straddles the boundaries of two adjacent counties, e.g., Wayne and Washtenaw.</p>
 <p>As the GIS expert on the project, you are required to assemble several digital map layers pertaining to the geographic extent of the study area.  Some of the map layers are available as separate files for Wayne and Washtenaw counties, so you will be required to merge and clip these files in order to create seamless layers for the study area.  Other layers are only available for the entire State of Michigan, so you will have to clip these layers to the extent of your study area.</p>
 <p>The shapefiles you are required to assemble are census blocks, soils, geology, roads, drinking wells and streams. You are also required to include a digital elevation model (DEM) of the area. You may include optionally include two orthophotos for extra credit.</p>
@@ -96,7 +101,7 @@
 <div class="line"><br /></div>
 </div>
 <section id="download-data">
-<h2><span class="section-number">12.1. </span>Download Data<a class="headerlink" href="#download-data" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.1. </span>Download Data<a class="headerlink" href="#download-data" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Visit the Michigan CGI’s archived website at <a class="reference external" href="https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm">https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm</a></p></li>
 <li><p>Use the table below as a guide to what you should download.  Since you are downloading the same type of data for both counties, in all you will download six of files.</p></li>
@@ -153,7 +158,7 @@
 </div>
 </section>
 <section id="create-a-new-shapefile-to-represent-your-study-area">
-<h2><span class="section-number">12.2. </span>Create a new shapefile to represent your Study Area<a class="headerlink" href="#create-a-new-shapefile-to-represent-your-study-area" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.2. </span>Create a new shapefile to represent your Study Area<a class="headerlink" href="#create-a-new-shapefile-to-represent-your-study-area" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>You are free to decide on the geographic extent of your study area. The only requirement is that it straddles the boundaries of the two counties.</p></li>
 <li><p>Open any pair of shapefiles for Wayne and Washtenaw Counties (e.g. the census block layers) and use them as a background for digitizing the boundaries of the study area. The shapefile type is polygon, so leave polygon as the Geometry Type.</p></li>
@@ -164,7 +169,7 @@
 </div>
 </section>
 <section id="merge-shapefiles">
-<h2><span class="section-number">12.3. </span>Merge Shapefiles<a class="headerlink" href="#merge-shapefiles" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.3. </span>Merge Shapefiles<a class="headerlink" href="#merge-shapefiles" title="Permalink to this heading"></a></h2>
 <p>The pairs of shapefiles you downloaded that need merging should be merged before they are clipped.  For example, the census block group files for Wayne and Washtenaw Counties need to be merged before clipping.  In order to merge the shapefiles, you will use geoprocessing tools from Toolbox.</p>
 <ol class="arabic simple">
 <li><p>Click on Vector | Data Management tools | Merge Vector Layers</p></li>
@@ -186,7 +191,7 @@
 </div>
 </section>
 <section id="clip-all-shapefiles-to-the-extent-of-the-study-area">
-<h2><span class="section-number">12.4. </span>Clip All Shapefiles to the Extent of the Study Area<a class="headerlink" href="#clip-all-shapefiles-to-the-extent-of-the-study-area" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.4. </span>Clip All Shapefiles to the Extent of the Study Area<a class="headerlink" href="#clip-all-shapefiles-to-the-extent-of-the-study-area" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Ensure that the Study area shapefile is loaded into QGIS.</p></li>
 <li><p>Click on Vector | Geoprocessing Tools | Clip.</p></li>
@@ -209,7 +214,7 @@
 </div>
 </section>
 <section id="merging-and-clipping-the-digital-elevation-models-dems">
-<h2><span class="section-number">12.5. </span>Merging and Clipping the Digital Elevation Models (DEMs)<a class="headerlink" href="#merging-and-clipping-the-digital-elevation-models-dems" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.5. </span>Merging and Clipping the Digital Elevation Models (DEMs)<a class="headerlink" href="#merging-and-clipping-the-digital-elevation-models-dems" title="Permalink to this heading"></a></h2>
 <p>DEMs are floating point raster grids containing Z values that represent elevation. The steps
 for clipping rasters are different compared to those for clipping shapefiles.  Below, I illustrate how DEMS are mosaiced (merged) and clipped in QGIS.  Click on this link for more information: <a class="reference external" href="https://docs.qgis.org/3.4/en/docs/training_manual/processing/cutting_merging.html">https://docs.qgis.org/3.4/en/docs/training_manual/processing/cutting_merging.html</a></p>
 <p><strong>Mosaicing DEMs</strong></p>
@@ -268,7 +273,7 @@ for clipping rasters are different compared to those for clipping shapefiles.  B
 </div>
 </section>
 <section id="useful-links">
-<h2><span class="section-number">12.6. </span>Useful Links<a class="headerlink" href="#useful-links" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.6. </span>Useful Links<a class="headerlink" href="#useful-links" title="Permalink to this heading"></a></h2>
 <p>Seven Geoprocessing Tools Every GIS Analyst Should Know
 <a class="reference external" href="https://gisgeography.com/geoprocessing-tools/">https://gisgeography.com/geoprocessing-tools/</a></p>
 <p>Introduction to Raster Data (Part 1): Processing and Visualizing Single-Band Rasters
@@ -280,7 +285,8 @@ for clipping rasters are different compared to those for clipping shapefiles.  B
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="digitizing.html" class="btn btn-neutral float-left" title="11. Digitizing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="digitizing.html" class="btn btn-neutral float-left" title="12. Digitizing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="python.html" class="btn btn-neutral float-right" title="14. Automating Processes with Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

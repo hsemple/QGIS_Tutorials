@@ -6,20 +6,24 @@ Terrain Analysis
 Generate Basic Terrain Parameters
 ------------------------------------
 
-1. Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <https://apps.nationalmap.gov/viewer/>`_, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:
+Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <https://apps.nationalmap.gov/viewer/>`_, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then generate the following:
 
-1.	elevation of each of the two points.
-2.	straight line distance between the two points.
-3.	slope between the two points.
-4.	aspect between the two points.
-5.	a profile of a direct line between the two points.
-6.	a line-of-sight between the two points.
+1.	the elevation of each of the two points.
+2.	the straight line distance between the two points.
+3.	the slope between the two points.
+4.	the aspect between the two points.
+5.	a profile graph of a direct line between the two points.
+6.	a line-of-sight graph between the two points.
 7.	a viewshed from point 44.535252, -72.781882.
+
+
+
+**Procedure**
 
 
 |
 
-Creating Basic Terrain Maps
+Create Basic Terrain Maps
 -----------------------------
 
 Visit the `National Map data downloader <https://apps.nationalmap.gov/downloader/>`_ and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.
@@ -31,11 +35,13 @@ Visit the `National Map data downloader <https://apps.nationalmap.gov/downloader
 •  a profile curvature map
 
 
+Create well organized hillshade, slope, aspect and contour for submission. Your maps should attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design. 
+
 After generating the maps, briefly state two practical uses of each of the above maps.
 
 |
 
-**Procedures**
+**Procedure for Generating Terrain Maps**
 
 1. Download the DEM from the National Map then unzip the files to a folder whose path you can remember. I downloaded a DEM for the Stowe, Vermont area.
 
@@ -71,11 +77,11 @@ After generating the maps, briefly state two practical uses of each of the above
    :alt: Select adf file
 
 
-9. In the dialog that contains the coordinate system information, inspect the information under "Selected CRS".  You can see that it gives 'Extent', which is longitude / latitude values for indicating the geographic area occupied by the map layer. The four coordinates are the long/lat for the lower left position and upper right position of the bounding area.
+9. In the dialog that contains the coordinate system information, inspect the information under "Selected CRS".  You can see that it includes 'Extent', which are the longitude / latitude values of the geographic area occupied by the map layer. The four coordinates are the long/lat for the lower left position and upper right position of the bounding area.
 
 10. Proj4 provides details about the coordinate system. Proj = tmerc means that the projection is Transverse Mercator. The lat/long give the central meridian of the coordinates on the map. You can also see that the ellipsoid is GRS 1980. The towgs84 parameter gives values for translating this coordinate system into WGS 1980.  The zeroes mean that the two systems have the same dimension. Map units is meters. False Easting (+x_0) is 500000 and false northing (+y_0) is 0.
 
-11. Answer the questions below about the DEM's coordinate system:
+11. Try to answer the questions below regarding the DEM's coordinate system:
  
  * What is the coordinate system of the DEM? 
 
@@ -125,7 +131,7 @@ After generating the maps, briefly state two practical uses of each of the above
    :alt: Hillshade
 
 
-10. Make a Layout of this map for submission.    
+10. Make a professional layout of this map for submission.  
  
 
 |
@@ -155,9 +161,7 @@ After generating the maps, briefly state two practical uses of each of the above
  
 5. For improved visualization, you can drape the slope map over the hillshade. 
 
-6. Make a Layout of this map for submission. To aid with your cartography, here is an example of a nicely drawn slope map. 
- 
-https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/
+6. Make a professional layout of this map for submission. To aid with your cartography, here is an example of a nicely drawn slope map  - https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/
 
 
 |
@@ -174,7 +178,7 @@ https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/
    :alt: Aspect
 
   
-4. Make a Layout of this map for submission.
+4. Make a professional layout of this map for submission.
 
 
 
@@ -190,7 +194,7 @@ https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/
    :alt: Contours
 
  
-2. Make sure you select the elevation layer as the input raster.  Set a contour interval of 50 ft, then click Ok. If you do not like the results, you can try different contours intervals.
+2. Make sure you select the elevation layer as the input raster.  Set a contour interval of 50ft, then click Ok. If you do not like the results, you can try different contours intervals.
  
  
 .. image:: img/terrain_analysis_contours2.png
@@ -199,13 +203,13 @@ https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/
 
 |
 
-**Labeling the Contour Map**
+*Labeling the Contour Map*
 
-The first image below shows basic contour labeling with the contour placed on the lines.  The halo hides the lines where the numbers intersect the lines. Our goal is to learn to create these cartographically pleasing labels. 
+The first image below shows basic contour labeling with the contour placed on the lines.  The halo hides the lines where the numbers intersect the lines. Your task is to generate these cartographically pleasing labels. 
 
 
 .. image:: img/terrain_analysis_contours3.png
-   :alt: Contours
+   :alt: Contours Labels
 
 
 
@@ -223,8 +227,6 @@ To create labels, do the following:
    :alt: Contours
 
   
-5. Create well organized hillshade, slope, aspect and contour for submission. Your maps should attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design. 
- 
 
 |
 
@@ -244,7 +246,7 @@ Use QGIS to identify locations that meet all of the above conditions.
  
 |
 
-**Procedures**
+**Procedure**
 
 The basic logic in any habitat suitability analysis is to assemble map layers for each of the project criteria and then query the map layers to find locations that meet all of the criteria.  In this example, you have to assemble the following maps:
 
@@ -348,14 +350,14 @@ The basic logic in any habitat suitability analysis is to assemble map layers fo
 
 **Map Design** 
 
-1. Initially, your final map will not look very attractive.  My final map appears as shown below, but I am not daunted. If you look at the legend, you will notice that map consists of 1s and 0s. The 1s represent places where the query was satisfied, i.e., the white areas. The black areas are areas where the query was not satisfied.   Now, using the cartography skills, you have learned so far, let us make the black areas transparent. 
+1. Initially, your final map will not look very attractive.  My final map appears as shown below, but I am not daunted. If you look at the legend, you will notice that the map consists of 1s and 0s. The 1s represent places where the query was satisfied, i.e., the white areas. The black areas are areas where the query was not satisfied.   Now, using the cartography skills you have learned so far, let us make the black areas transparent. 
  
 
 .. image:: img/terrain_analysis_suitability11.png
    :alt: Habitat Suitability Analysis
 
 
-2. Right click on the Final Raster and select Properties. Select Symbology.  How about using Palleted / Unique Values as the Render Type, as shown in the dialog below to achieve a good color effect.
+2. Right click on the Final Raster and select Properties. Select Symbology.  How about using Palleted / Unique Values as the Render Type, as shown in the dialog below to achieve a good color effect?
  
 .. image:: img/terrain_analysis_suitability12.png
    :alt: Habitat Suitability Analysis
@@ -437,31 +439,17 @@ https://equatorstudios.com/how-to-delineate-a-watershed-in-qgis
 
 |
 
-**Deliverables for this Section**
-
-1. Submit the following maps:
-
-•	hillshade  
-•	slope  
-•	aspect  
-•	contour  
- 
-2. A brief statement explaining two practical uses of each of the above maps.
- 
-3. A habitat location map (Submit either a layout or a link to the possible sites in ArcGIS Online).
- 
-4. A link to the watershed you delineated using ArcGIS Online.
-
-
-|
 
 
 Working with LiDAR Data in QGIS
 ---------------------------------
 
-LiDAR data is becoming more available and is quickly becoming a fundamental source for detailed elevation data. This tutorial shows how to work with LiDAR data in QGIS. In QGIS,  Point Cloud and LazTools are two popular tools for working with Lidar data. The Point Cloud Tool enables QGIS to read Lidar data while LazTools are used to process the Lidar data, e.g., generate elevation surface, get height of buildings or vegetation, etc.
+LiDAR data is becoming more available and is quickly becoming a fundamental source for detailed elevation data. This tutorial shows how to work with LiDAR data in QGIS. In QGIS, the Point Cloud tool and LazTools are two popular tools for working with Lidar data. The Point Cloud tool enables QGIS to rapidly read Lidar data while LazTools are used to process the Lidar data, e.g., generate elevation surface, get height of buildings or vegetation, etc.
+
+In this lab, you are required to download a laz dataset, display it in QGIS, then generate an elevation surface and a DTM or TIN surface from the point cloud.
 
 |
+
 
 **Downloading Lidar Data**
 
@@ -476,7 +464,7 @@ Visit `the National Map Viewer <https://apps.nationalmap.gov/downloader/>`_ . Cl
 
 
 
-**Accessing the Point Cloud Tool to Convert LAS Files to LAS Files**
+**Accessing the Point Cloud Tool to Convert LAZ Files to LAS Files**
 
 When downloading Lidar data, frequently the data appears in LAZ format, which is a compressed format.  To use the data in QGIS, it should be in LAS format. To convert from LAZ to LAS format, follow the steps.
 
@@ -535,13 +523,13 @@ The Identify Map Tool can be used to investigate further information about speci
 .. image:: img/terrain_analysis_lidar9.png
    :alt: Lidar Data
 
+
 The Layer Styling Panel allows changing the point visualization using the additional attributes.
 •	in the panel change the rendering from Classification to Attribute by Ramp
 •	select the Z value to shade the points based on their height
 
 .. image:: img/terrain_analysis_lidar10.png
    :alt: Lidar Data
-
 
  
 The summary statistics of the attributes can be accessed in the layer properties.
@@ -637,6 +625,28 @@ To generate a Digital Terrain Model or a TIN surface from the points cloud, do t
 
 |
 
+
+
+Summary of Deliverables
+------------------------
+
+
+1. Submit the following maps:
+
+•  hillshade  
+•  slope  
+•  aspect  
+•  contour  
+ 
+2. A brief statement explaining two practical uses of each of the above maps.
+ 
+3. A habitat location map. Submit either a layout or a link to the possible sites in ArcGIS Online.
+ 
+4. A link to the watershed you delineated using ArcGIS Online.
+
+5. An elevation surface and a TIN surface from the Point Cloud 
+
+|
 
 
 

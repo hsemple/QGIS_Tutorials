@@ -20,10 +20,11 @@ These tutorials provide an introduction to the QGIS software. Topics covered by 
    points_data.rst
    geocoding.rst
    analyzing_points_data.rst
+   spatial_analysis_using_R.rst
    digitizing.rst
    geoprocessing.rst
    python.rst
    web_mapping.rst
    drone_mapping.rst
-   
+
 

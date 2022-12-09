@@ -49,17 +49,22 @@
 <li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Terrain Analysis</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#generate-basic-terrain-parameters">7.1. Generate Basic Terrain Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-basic-terrain-maps">7.2. Creating Basic Terrain Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-basic-terrain-maps">7.2. Create Basic Terrain Maps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#habitat-suitability-analysis">7.3. Habitat Suitability Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#watershed-delineation">7.4. Watershed Delineation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#working-with-lidar-data-in-qgis">7.5. Working with LiDAR Data in QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">7.6. Summary of Deliverables</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone_mapping.html">16. Drone Mapping</a></li>
 </ul>
 
         </div>
@@ -93,24 +98,23 @@
 </div>
 <section id="generate-basic-terrain-parameters">
 <h2><span class="section-number">7.1. </span>Generate Basic Terrain Parameters<a class="headerlink" href="#generate-basic-terrain-parameters" title="Permalink to this heading"></a></h2>
+<p>Visit Stowe, VT using <a class="reference external" href="https://caltopo.com/">Caltopo</a>, <a class="reference external" href="https://apps.nationalmap.gov/viewer/">the National Map</a>, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then generate the following:</p>
 <ol class="arabic simple">
-<li><p>Visit Stowe, VT using <a class="reference external" href="https://caltopo.com/">Caltopo</a>, <a class="reference external" href="https://apps.nationalmap.gov/viewer/">the National Map</a>, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:</p></li>
-</ol>
-<ol class="arabic simple">
-<li><p>elevation of each of the two points.</p></li>
-<li><p>straight line distance between the two points.</p></li>
-<li><p>slope between the two points.</p></li>
-<li><p>aspect between the two points.</p></li>
-<li><p>a profile of a direct line between the two points.</p></li>
-<li><p>a line-of-sight between the two points.</p></li>
+<li><p>the elevation of each of the two points.</p></li>
+<li><p>the straight line distance between the two points.</p></li>
+<li><p>the slope between the two points.</p></li>
+<li><p>the aspect between the two points.</p></li>
+<li><p>a profile graph of a direct line between the two points.</p></li>
+<li><p>a line-of-sight graph between the two points.</p></li>
 <li><p>a viewshed from point 44.535252, -72.781882.</p></li>
 </ol>
+<p><strong>Procedure</strong></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="creating-basic-terrain-maps">
-<h2><span class="section-number">7.2. </span>Creating Basic Terrain Maps<a class="headerlink" href="#creating-basic-terrain-maps" title="Permalink to this heading"></a></h2>
+<section id="create-basic-terrain-maps">
+<h2><span class="section-number">7.2. </span>Create Basic Terrain Maps<a class="headerlink" href="#create-basic-terrain-maps" title="Permalink to this heading"></a></h2>
 <p>Visit the <a class="reference external" href="https://apps.nationalmap.gov/downloader/">National Map data downloader</a> and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.</p>
 <ul class="simple">
 <li><p>a hillshade map (hysometric tinting)</p></li>
@@ -119,11 +123,12 @@
 <li><p>a contour map</p></li>
 <li><p>a profile curvature map</p></li>
 </ul>
+<p>Create well organized hillshade, slope, aspect and contour for submission. Your maps should attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design.</p>
 <p>After generating the maps, briefly state two practical uses of each of the above maps.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Procedures</strong></p>
+<p><strong>Procedure for Generating Terrain Maps</strong></p>
 <ol class="arabic simple">
 <li><p>Download the DEM from the National Map then unzip the files to a folder whose path you can remember. I downloaded a DEM for the Stowe, Vermont area.</p></li>
 <li><p>Launch QGIS.</p></li>
@@ -145,9 +150,9 @@
 </ol>
 <img alt="Select adf file" src="_images/terain_analysis3_properties.png" />
 <ol class="arabic simple" start="9">
-<li><p>In the dialog that contains the coordinate system information, inspect the information under “Selected CRS”.  You can see that it gives ‘Extent’, which is longitude / latitude values for indicating the geographic area occupied by the map layer. The four coordinates are the long/lat for the lower left position and upper right position of the bounding area.</p></li>
+<li><p>In the dialog that contains the coordinate system information, inspect the information under “Selected CRS”.  You can see that it includes ‘Extent’, which are the longitude / latitude values of the geographic area occupied by the map layer. The four coordinates are the long/lat for the lower left position and upper right position of the bounding area.</p></li>
 <li><p>Proj4 provides details about the coordinate system. Proj = tmerc means that the projection is Transverse Mercator. The lat/long give the central meridian of the coordinates on the map. You can also see that the ellipsoid is GRS 1980. The towgs84 parameter gives values for translating this coordinate system into WGS 1980.  The zeroes mean that the two systems have the same dimension. Map units is meters. False Easting (+x_0) is 500000 and false northing (+y_0) is 0.</p></li>
-<li><p>Answer the questions below about the DEM’s coordinate system:</p></li>
+<li><p>Try to answer the questions below regarding the DEM’s coordinate system:</p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
@@ -185,7 +190,7 @@
 </ol>
 <img alt="Hillshade" src="_images/terrain_analysis_hillshade5.png" />
 <ol class="arabic simple" start="10">
-<li><p>Make a Layout of this map for submission.</p></li>
+<li><p>Make a professional layout of this map for submission.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -206,9 +211,8 @@
 <img alt="Slope" src="_images/terrain_analysis_slope3.png" />
 <ol class="arabic simple" start="5">
 <li><p>For improved visualization, you can drape the slope map over the hillshade.</p></li>
-<li><p>Make a Layout of this map for submission. To aid with your cartography, here is an example of a nicely drawn slope map.</p></li>
+<li><p>Make a professional layout of this map for submission. To aid with your cartography, here is an example of a nicely drawn slope map  - <a class="reference external" href="https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/">https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/</a></p></li>
 </ol>
-<p><a class="reference external" href="https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/">https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/</a></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -220,7 +224,7 @@
 </ol>
 <img alt="Aspect" src="_images/terrain_analysis_aspect1.png" />
 <ol class="arabic simple" start="4">
-<li><p>Make a Layout of this map for submission.</p></li>
+<li><p>Make a professional layout of this map for submission.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -231,15 +235,15 @@
 </ol>
 <img alt="Contours" src="_images/terrain_analysis_contours1.png" />
 <ol class="arabic simple" start="2">
-<li><p>Make sure you select the elevation layer as the input raster.  Set a contour interval of 50 ft, then click Ok. If you do not like the results, you can try different contours intervals.</p></li>
+<li><p>Make sure you select the elevation layer as the input raster.  Set a contour interval of 50ft, then click Ok. If you do not like the results, you can try different contours intervals.</p></li>
 </ol>
 <img alt="Contours" src="_images/terrain_analysis_contours2.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Labeling the Contour Map</strong></p>
-<p>The first image below shows basic contour labeling with the contour placed on the lines.  The halo hides the lines where the numbers intersect the lines. Our goal is to learn to create these cartographically pleasing labels.</p>
-<img alt="Contours" src="_images/terrain_analysis_contours3.png" />
+<p><em>Labeling the Contour Map</em></p>
+<p>The first image below shows basic contour labeling with the contour placed on the lines.  The halo hides the lines where the numbers intersect the lines. Your task is to generate these cartographically pleasing labels.</p>
+<img alt="Contours Labels" src="_images/terrain_analysis_contours3.png" />
 <p>To create labels, do the following:</p>
 <ol class="arabic simple">
 <li><p>Right click on the contour shapefile, select Properties, then  select ‘Label’. Select Elev as the field in the attribute table to use for labeling. This will add labels to your contours.  However, the labels are placed above the contour lines, and hence, need editing.  On contour labels are placed on the lines, “breaking” the lines in the process, as shown in the illustration above.</p></li>
@@ -248,9 +252,6 @@
 <li><p>Click Apply.</p></li>
 </ol>
 <img alt="Contours" src="_images/terrain_analysis_contours4.png" />
-<ol class="arabic simple" start="5">
-<li><p>Create well organized hillshade, slope, aspect and contour for submission. Your maps should attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design.</p></li>
-</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -269,7 +270,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Procedures</strong></p>
+<p><strong>Procedure</strong></p>
 <p>The basic logic in any habitat suitability analysis is to assemble map layers for each of the project criteria and then query the map layers to find locations that meet all of the criteria.  In this example, you have to assemble the following maps:</p>
 <ul class="simple">
 <li><p>an elevation map. In this case, we already have the Stowe DEM.</p></li>
@@ -342,11 +343,11 @@
 </div>
 <p><strong>Map Design</strong></p>
 <ol class="arabic simple">
-<li><p>Initially, your final map will not look very attractive.  My final map appears as shown below, but I am not daunted. If you look at the legend, you will notice that map consists of 1s and 0s. The 1s represent places where the query was satisfied, i.e., the white areas. The black areas are areas where the query was not satisfied.   Now, using the cartography skills, you have learned so far, let us make the black areas transparent.</p></li>
+<li><p>Initially, your final map will not look very attractive.  My final map appears as shown below, but I am not daunted. If you look at the legend, you will notice that the map consists of 1s and 0s. The 1s represent places where the query was satisfied, i.e., the white areas. The black areas are areas where the query was not satisfied.   Now, using the cartography skills you have learned so far, let us make the black areas transparent.</p></li>
 </ol>
 <img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability11.png" />
 <ol class="arabic simple" start="2">
-<li><p>Right click on the Final Raster and select Properties. Select Symbology.  How about using Palleted / Unique Values as the Render Type, as shown in the dialog below to achieve a good color effect.</p></li>
+<li><p>Right click on the Final Raster and select Properties. Select Symbology.  How about using Palleted / Unique Values as the Render Type, as shown in the dialog below to achieve a good color effect?</p></li>
 </ol>
 <img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability12.png" />
 <ol class="arabic simple" start="3">
@@ -399,28 +400,11 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Deliverables for this Section</strong></p>
-<ol class="arabic simple">
-<li><p>Submit the following maps:</p></li>
-</ol>
-<ul class="simple">
-<li><p>hillshade</p></li>
-<li><p>slope</p></li>
-<li><p>aspect</p></li>
-<li><p>contour</p></li>
-</ul>
-<ol class="arabic simple" start="2">
-<li><p>A brief statement explaining two practical uses of each of the above maps.</p></li>
-<li><p>A habitat location map (Submit either a layout or a link to the possible sites in ArcGIS Online).</p></li>
-<li><p>A link to the watershed you delineated using ArcGIS Online.</p></li>
-</ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </section>
 <section id="working-with-lidar-data-in-qgis">
 <h2><span class="section-number">7.5. </span>Working with LiDAR Data in QGIS<a class="headerlink" href="#working-with-lidar-data-in-qgis" title="Permalink to this heading"></a></h2>
-<p>LiDAR data is becoming more available and is quickly becoming a fundamental source for detailed elevation data. This tutorial shows how to work with LiDAR data in QGIS. In QGIS,  Point Cloud and LazTools are two popular tools for working with Lidar data. The Point Cloud Tool enables QGIS to read Lidar data while LazTools are used to process the Lidar data, e.g., generate elevation surface, get height of buildings or vegetation, etc.</p>
+<p>LiDAR data is becoming more available and is quickly becoming a fundamental source for detailed elevation data. This tutorial shows how to work with LiDAR data in QGIS. In QGIS, the Point Cloud tool and LazTools are two popular tools for working with Lidar data. The Point Cloud tool enables QGIS to rapidly read Lidar data while LazTools are used to process the Lidar data, e.g., generate elevation surface, get height of buildings or vegetation, etc.</p>
+<p>In this lab, you are required to download a laz dataset, display it in QGIS, then generate an elevation surface and a DTM or TIN surface from the point cloud.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -430,7 +414,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Accessing the Point Cloud Tool to Convert LAS Files to LAS Files</strong></p>
+<p><strong>Accessing the Point Cloud Tool to Convert LAZ Files to LAS Files</strong></p>
 <p>When downloading Lidar data, frequently the data appears in LAZ format, which is a compressed format.  To use the data in QGIS, it should be in LAS format. To convert from LAZ to LAS format, follow the steps.</p>
 <ol class="arabic simple">
 <li><p>Open a new project in QGIS</p></li>
@@ -545,6 +529,27 @@
 <img alt="Lidar Data" src="_images/terrain_analysis_lidar19.png" />
 <ol class="arabic simple" start="2">
 <li><p>When filling out the dialog, ensure that the “Filter” is set to “keep last”. Also, the attribute should be elevation. When specifying the file name, add the .shp to the file name, otherwise, it might not work.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="summary-of-deliverables">
+<h2><span class="section-number">7.6. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Submit the following maps:</p></li>
+</ol>
+<ul class="simple">
+<li><p>hillshade</p></li>
+<li><p>slope</p></li>
+<li><p>aspect</p></li>
+<li><p>contour</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>A brief statement explaining two practical uses of each of the above maps.</p></li>
+<li><p>A habitat location map. Submit either a layout or a link to the possible sites in ArcGIS Online.</p></li>
+<li><p>A link to the watershed you delineated using ArcGIS Online.</p></li>
+<li><p>An elevation surface and a TIN surface from the Point Cloud</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>

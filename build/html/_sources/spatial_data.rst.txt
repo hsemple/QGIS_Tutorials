@@ -292,5 +292,66 @@ Adding an ArcGIS REST Service to QGIS
 https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda
 
 
+|
 
+Resources
+----------
+
+
+**WMS Servers**
+
+
+1. Georeferenced bathymetry map of the world's oceans (Add as OGC WMS Layer)
+https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?
+
+2. NASA Earth Observations.
+https://neo.sci.gsfc.nasa.gov/wms/wms
+
+3. Boundaries in effect for the 2022 American Community Survey
+https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer
+
+4. Global Poplation, Agriculture, Food Security, and other Themes
+https://sedac.ciesin.columbia.edu/geoserver/wms
+
+
+
+|
+
+**ArcGIS Rest Servers**
+
+1. NAIP Imagery (Add as OG WMS Layers)
+https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer?
+
+
+2. ESRI World Imagery Layers
+http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer
+
+3. Elevation imagery layer covering the Antarctic, providing slope for use in visualization.
+https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServer
+
+
+4. Comprehensive elevation map of the world. (Add as ArcGIS Server Web Service)
+https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer
+(https://www.arcgis.com/home/group.html?id=bbc5f50839094e9d8dc5255b6a7783dd#overview)
+
+
+|
+
+
+**Other Sources of GIS Data**
+
+* `National Landcover dataset <https://www.usgs.gov/centers/eros/science/national-land-cover-database?qt-science_center_objects=0#qt-science_center_objects>`_
+
+* `National Hydrologic Dataset <https://www.usgs.gov/national-hydrography>`_ 
+
+* `National Wetlands Inventory <https://www.fws.gov/program/national-wetlands-inventory>`_
+
+* `National Flood Hazard Layer <https://www.fema.gov/flood-maps/national-flood-hazard-layer>`_
+
+* `Geologic Maps of the US <https://mrdata.usgs.gov/#geologic-data>`_
+
+* `Cartographic Boundary Files <https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html>`_
+
+* etc
+ 
 

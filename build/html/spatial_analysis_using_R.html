@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>11. Spatial Analysis Using R &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,7 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Welcome" href="welcome.html" /> 
+    <link rel="next" title="12. Digitizing" href="digitizing.html" />
+    <link rel="prev" title="10. Analyzing Points Data" href="analyzing_points_data.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -28,7 +29,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> QGIS Tutorials
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -39,7 +40,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
@@ -50,7 +51,14 @@
 <li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Spatial Analysis Using R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-install-r">11.1. Download and install R.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-and-loading-libraries">11.2. Installing and Loading Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load-shapefiles-into-r">11.3. Load Shapefiles into R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load-rasters-into-r">11.4. Load Rasters into R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#point-patterns-analysis">11.5. Point Patterns Analysis</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
@@ -64,17 +72,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">QGIS Tutorials</a>
+          <a href="index.html">QGIS Tutorials</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Welcome</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11. </span>Spatial Analysis Using R</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/spatial_analysis_using_R.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -82,18 +90,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome">
-<h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this heading"></a></h1>
-<p>These tutorials provide an introduction to the QGIS software. Topics covered by the different tutorials include thematic mapping, loading data from different sources, map projections, attribute and spatial queries, terrain mapping and analysis, geocoding, digitizing, geoprocessing, spatial interpolation, spatial statistics, web mapping, and drone mapping.</p>
-<div class="toctree-wrapper compound">
+  <section id="spatial-analysis-using-r">
+<h1><span class="section-number">11. </span>Spatial Analysis Using R<a class="headerlink" href="#spatial-analysis-using-r" title="Permalink to this heading"></a></h1>
+<section id="download-and-install-r">
+<h2><span class="section-number">11.1. </span>Download and install R.<a class="headerlink" href="#download-and-install-r" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
+</section>
+<section id="installing-and-loading-libraries">
+<h2><span class="section-number">11.2. </span>Installing and Loading Libraries<a class="headerlink" href="#installing-and-loading-libraries" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="load-shapefiles-into-r">
+<h2><span class="section-number">11.3. </span>Load Shapefiles into R<a class="headerlink" href="#load-shapefiles-into-r" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="load-rasters-into-r">
+<h2><span class="section-number">11.4. </span>Load Rasters into R<a class="headerlink" href="#load-rasters-into-r" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="point-patterns-analysis">
+<h2><span class="section-number">11.5. </span>Point Patterns Analysis<a class="headerlink" href="#point-patterns-analysis" title="Permalink to this heading"></a></h2>
+<p><em>Extracting Centroids</em></p>
+<p><em>Calculating Standard Distance Circles</em></p>
+<p><em>Nearest neighbor distance</em></p>
+<p><em>G-Function</em></p>
+<p><em>K-Function</em></p>
+<p><em>Quadrat Count</em></p>
+<p><em>Kernel estimation</em></p>
+<p><em>Spatial Interpolation</em></p>
+<p><em>Local Moran’s I</em></p>
+<p><a class="reference external" href="https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html">https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html</a></p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="welcome.html" class="btn btn-neutral float-right" title="1. Welcome" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="analyzing_points_data.html" class="btn btn-neutral float-left" title="10. Analyzing Points Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="digitizing.html" class="btn btn-neutral float-right" title="12. Digitizing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

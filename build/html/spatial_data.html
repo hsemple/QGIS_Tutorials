@@ -56,6 +56,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#loading-wms-layers">4.9. Loading WMS Layers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-wfs-layers">4.10. Loading WFS Layers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#adding-an-arcgis-rest-service-to-qgis">4.11. Adding an ArcGIS REST Service to QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">4.12. Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
@@ -64,8 +65,12 @@
 <li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone_mapping.html">16. Drone Mapping</a></li>
 </ul>
 
         </div>
@@ -304,6 +309,47 @@
 <section id="adding-an-arcgis-rest-service-to-qgis">
 <h2><span class="section-number">4.11. </span>Adding an ArcGIS REST Service to QGIS<a class="headerlink" href="#adding-an-arcgis-rest-service-to-qgis" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda">https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="resources">
+<h2><span class="section-number">4.12. </span>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
+<p><strong>WMS Servers</strong></p>
+<p>1. Georeferenced bathymetry map of the world’s oceans (Add as OGC WMS Layer)
+<a class="reference external" href="https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv">https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv</a>?</p>
+<p>2. NASA Earth Observations.
+<a class="reference external" href="https://neo.sci.gsfc.nasa.gov/wms/wms">https://neo.sci.gsfc.nasa.gov/wms/wms</a></p>
+<p>3. Boundaries in effect for the 2022 American Community Survey
+<a class="reference external" href="https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer">https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer</a></p>
+<p>4. Global Poplation, Agriculture, Food Security, and other Themes
+<a class="reference external" href="https://sedac.ciesin.columbia.edu/geoserver/wms">https://sedac.ciesin.columbia.edu/geoserver/wms</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>ArcGIS Rest Servers</strong></p>
+<p>1. NAIP Imagery (Add as OG WMS Layers)
+<a class="reference external" href="https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer">https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer</a>?</p>
+<p>2. ESRI World Imagery Layers
+<a class="reference external" href="http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer">http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer</a></p>
+<p>3. Elevation imagery layer covering the Antarctic, providing slope for use in visualization.
+<a class="reference external" href="https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServer">https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServer</a></p>
+<p>4. Comprehensive elevation map of the world. (Add as ArcGIS Server Web Service)
+<a class="reference external" href="https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer">https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer</a>
+(<a class="reference external" href="https://www.arcgis.com/home/group.html?id=bbc5f50839094e9d8dc5255b6a7783dd#overview">https://www.arcgis.com/home/group.html?id=bbc5f50839094e9d8dc5255b6a7783dd#overview</a>)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Other Sources of GIS Data</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.usgs.gov/centers/eros/science/national-land-cover-database?qt-science_center_objects=0#qt-science_center_objects">National Landcover dataset</a></p></li>
+<li><p><a class="reference external" href="https://www.usgs.gov/national-hydrography">National Hydrologic Dataset</a></p></li>
+<li><p><a class="reference external" href="https://www.fws.gov/program/national-wetlands-inventory">National Wetlands Inventory</a></p></li>
+<li><p><a class="reference external" href="https://www.fema.gov/flood-maps/national-flood-hazard-layer">National Flood Hazard Layer</a></p></li>
+<li><p><a class="reference external" href="https://mrdata.usgs.gov/#geologic-data">Geologic Maps of the US</a></p></li>
+<li><p><a class="reference external" href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">Cartographic Boundary Files</a></p></li>
+<li><p>etc</p></li>
+</ul>
 </section>
 </section>
 

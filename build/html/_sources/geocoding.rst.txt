@@ -5,6 +5,9 @@ Geocoding
 
 If you have a large number of street addresses and wish to turn them into points on a map, you can use QGIS to generate X,Y coordinates from the addresses. This process is called geocoding.  QGIS uses a plugin called MMQGIS for geocoding. 
 
+In this tutorial, we will geocode a list of addresses that represent McDonald's restaurants in the USA. The list is somewhat dated, but its contents meets our purpose. The addresses were downloaded from a Github site at https://github.com/gavinr/usa-mcdonalds-locations/blob/master/mcdonalds.geojson. The list is originally in geojson format and was converted to csv format for this exercise.
+
+
 
 
 |
@@ -13,15 +16,14 @@ Basic Steps for Geocoding
 --------------------------
 
 
-1. Obtain the List of Addresses*.  The addreses must be stored in a csv file.  The address information split into multiple columns, e.g.,  street address, state, and 5-digit ZIP code.  For latitude and longitude data, make sure there are 2 columns and any extraneous characters are deleted (i.e. commas, parenthesis).  
-
+1. Download the `list of addresses <https://github.com/hsemple/gistutorials_datasets/blob/main/Mcdonalds.csv>`_ in csv format.  The address information split into multiple columns, e.g.,  street address, state, and 5-digit ZIP code.   
 
 2. Install the MMQGIS Plugin.
 
 3. After installation, access the plugin by clicking on MMQGIS | Geocoding from the top menu bar.
 
 .. image:: img/geocoding_mmqgis.png
-   :alt: Lidar Data
+   :alt: The MMGIS Plugin
 
 4.  When the dialog appears, enter the path to the csv file that contains the list of addresses for geocoding.
 

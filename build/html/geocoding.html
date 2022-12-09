@@ -54,8 +54,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone_mapping.html">16. Drone Mapping</a></li>
 </ul>
 
         </div>
@@ -85,17 +89,18 @@
   <section id="geocoding">
 <h1><span class="section-number">9. </span>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this heading"></a></h1>
 <p>If you have a large number of street addresses and wish to turn them into points on a map, you can use QGIS to generate X,Y coordinates from the addresses. This process is called geocoding.  QGIS uses a plugin called MMQGIS for geocoding.</p>
+<p>In this tutorial, we will geocode a list of addresses that represent McDonald’s restaurants in the USA. The list is somewhat dated, but its contents meets our purpose. The addresses were downloaded from a Github site at <a class="reference external" href="https://github.com/gavinr/usa-mcdonalds-locations/blob/master/mcdonalds.geojson">https://github.com/gavinr/usa-mcdonalds-locations/blob/master/mcdonalds.geojson</a>. The list is originally in geojson format and was converted to csv format for this exercise.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <section id="basic-steps-for-geocoding">
 <h2><span class="section-number">9.1. </span>Basic Steps for Geocoding<a class="headerlink" href="#basic-steps-for-geocoding" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Obtain the List of Addresses*.  The addreses must be stored in a csv file.  The address information split into multiple columns, e.g.,  street address, state, and 5-digit ZIP code.  For latitude and longitude data, make sure there are 2 columns and any extraneous characters are deleted (i.e. commas, parenthesis).</p></li>
+<li><p>Download the <a class="reference external" href="https://github.com/hsemple/gistutorials_datasets/blob/main/Mcdonalds.csv">list of addresses</a> in csv format.  The address information split into multiple columns, e.g.,  street address, state, and 5-digit ZIP code.</p></li>
 <li><p>Install the MMQGIS Plugin.</p></li>
 <li><p>After installation, access the plugin by clicking on MMQGIS | Geocoding from the top menu bar.</p></li>
 </ol>
-<img alt="Lidar Data" src="_images/geocoding_mmqgis.png" />
+<img alt="The MMGIS Plugin" src="_images/geocoding_mmqgis.png" />
 <ol class="arabic simple" start="4">
 <li><p>When the dialog appears, enter the path to the csv file that contains the list of addresses for geocoding.</p></li>
 <li><p>Select the columns in the csv file that contain the street addresses, city, and state.</p></li>
