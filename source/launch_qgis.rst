@@ -209,6 +209,16 @@ Saving your Project
 
 .. image:: img/qgis_project.png
    :alt: View Attribute Table
+
+
+
+|
+
+Deliverables
+-------------
+
+There are no deliverables for this tutorial.
+
  
 
 

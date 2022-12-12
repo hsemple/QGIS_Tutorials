@@ -239,7 +239,7 @@ To visualize datasets in PostgreSQl/PostGIS from within QGIS, follow the steps b
 Loading WMS Layers
 -------------------
 
-To Add a WMS Layer
+To Add a WMS Layer, do the following:
 
 1. In QGIS, click on Layer | Add WMS/WMTS Layer.
 
@@ -266,7 +266,7 @@ To Add a WMS Layer
 
 |
 
-**WMS Servers Sites for Practice**
+**Example WMS Servers**
 
 
 1. Georeferenced bathymetry map of the world's oceans (Add as OGC WMS Layer)
@@ -306,8 +306,38 @@ Loading WFS Layers
 
 Adding an ArcGIS REST Service to QGIS
 --------------------------------------
-https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda
 
+To Add an ArcGIS Server Layer, do the following:
+
+1. In QGIS, click on Layer | Add ArcGIS Rest Server Layer.
+
+2. Select "New" in the Data Source Manager dialog box.
+
+.. image:: img/arcgis_server_connection.png
+   :alt: GPS Data Source Connection 
+
+
+3. In the 'Create a new ArcGIS Rest Server connection' dialog, enter a name for the conection (e.g., NAIP Imagery), and the appropriate URL (e.g. https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer?)
+
+
+4. Select OK.
+
+
+5. In the Sever Connection dialog, select "Connect". 
+
+
+6. When the NAIP Imagery connection appears, expand it then select the web map layer. Click "Add". The NAIP imagery layer should now be added.  Select Close.
+
+.. image:: img/arcgis_server_imagery_connection.png
+   :alt: GPS Data  
+
+
+7. The NAIP imagery should now appear in the map area of QGIS.
+
+.. image:: img/arcgis_server_imagery.png
+   :alt: GPS Data  
+
+|
 
 
 
@@ -326,7 +356,11 @@ https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServe
 
 4. Comprehensive elevation map of the world. (Add as ArcGIS Server Web Service)
 https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer
-(https://www.arcgis.com/home/group.html?id=bbc5f50839094e9d8dc5255b6a7783dd#overview)
+
+
+5. TNM Blank US base map service from The National Map:
+https://basemap.nationalmap.gov/arcgis/rest/services/USGSTNMBlank/MapServer'
+
 
 
 |

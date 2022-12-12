@@ -25,6 +25,5 @@ These tutorials provide an introduction to the QGIS software. Topics covered by 
    geoprocessing.rst
    python.rst
    web_mapping.rst
-   drone_mapping.rst
 
 

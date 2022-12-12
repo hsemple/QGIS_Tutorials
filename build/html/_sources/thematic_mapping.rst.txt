@@ -2,15 +2,12 @@
 
 Thematic Mapping
 =======================
-GIS is concerned with mapping the location of events and phenomena so that consumers of GIS information can understand the geographic pattern of phenonomena and incorporate the implications of these patterns into decision making.   
-
-A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas) or quantitative (e.g., percentage population change, income distribution).
+   
+A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be quantitative (e.g., percentage population change, income distribution) or qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas).
 
 With a GIS software, the basic way to create a vector thematic map is to select one of the fields in the attribute table of the map layer and then display the data using the software's thematic mapping engine. The data in an attribute field may be quantitative or qualitative. If the data is quantitative, we create a quantitative thematic map, which may vary in appearance depending on how the map is symbolized, the number of classes utilized, classification method, and whether the data is normalized.  If the data is qualitative, we create a qqualitative thematic map, which may also vary in appearance depending on the details of the data.
 
 The data in a GIS attribute table can be entered manually or we can join tables obtained from other sources to the attribute table of the shapefile.  With practice, the actual mapping process can be accomplished very quickly.  
-
-The next section shows how to perform thematic mapping in QGIS.
 
 
 
@@ -82,7 +79,9 @@ Mapping Data Stored in the Attribute Table
 10. Click OK and see the map in the main QGIS window. This map definitely conveys a lot more useful information that just numbers in a table.  
 
 
-11. The steps outlined above show how to create a basic choropleth map in QGIS.  You should also take a look at the video below for a brief description of the process. 
+.. image:: img/mapping_attributes5.png
+   :alt: Mapping Attributes
+
  
 
 |

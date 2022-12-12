@@ -269,7 +269,7 @@
 </section>
 <section id="loading-wms-layers">
 <h2><span class="section-number">4.9. </span>Loading WMS Layers<a class="headerlink" href="#loading-wms-layers" title="Permalink to this heading"></a></h2>
-<p>To Add a WMS Layer</p>
+<p>To Add a WMS Layer, do the following:</p>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Layer | Add WMS/WMTS Layer.</p></li>
 <li><p>Select “New” in the Data Source Manager dialog box.</p></li>
@@ -290,7 +290,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>WMS Servers Sites for Practice</strong></p>
+<p><strong>Example WMS Servers</strong></p>
 <p>1. Georeferenced bathymetry map of the world’s oceans (Add as OGC WMS Layer)
 <a class="reference external" href="https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv">https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv</a>?</p>
 <p>2. NASA Earth Observations.
@@ -319,7 +319,26 @@
 </section>
 <section id="adding-an-arcgis-rest-service-to-qgis">
 <h2><span class="section-number">4.11. </span>Adding an ArcGIS REST Service to QGIS<a class="headerlink" href="#adding-an-arcgis-rest-service-to-qgis" title="Permalink to this heading"></a></h2>
-<p><a class="reference external" href="https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda">https://www.northrivergeographic.com/qgis-adding-a-naip-wms-service-from-the-usda</a></p>
+<p>To Add an ArcGIS Server Layer, do the following:</p>
+<ol class="arabic simple">
+<li><p>In QGIS, click on Layer | Add ArcGIS Rest Server Layer.</p></li>
+<li><p>Select “New” in the Data Source Manager dialog box.</p></li>
+</ol>
+<img alt="GPS Data Source Connection" src="_images/arcgis_server_connection.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the ‘Create a new ArcGIS Rest Server connection’ dialog, enter a name for the conection (e.g., NAIP Imagery), and the appropriate URL (e.g. <a class="reference external" href="https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer">https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer</a>?)</p></li>
+<li><p>Select OK.</p></li>
+<li><p>In the Sever Connection dialog, select “Connect”.</p></li>
+<li><p>When the NAIP Imagery connection appears, expand it then select the web map layer. Click “Add”. The NAIP imagery layer should now be added.  Select Close.</p></li>
+</ol>
+<img alt="GPS Data" src="_images/arcgis_server_imagery_connection.png" />
+<ol class="arabic simple" start="7">
+<li><p>The NAIP imagery should now appear in the map area of QGIS.</p></li>
+</ol>
+<img alt="GPS Data" src="_images/arcgis_server_imagery.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p><strong>ArcGIS Rest Servers Links for Practice</strong></p>
 <p>1. NAIP Imagery (Add as OG WMS Layers)
 <a class="reference external" href="https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer">https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer</a>?</p>
@@ -328,8 +347,9 @@
 <p>3. Elevation imagery layer covering the Antarctic, providing slope for use in visualization.
 <a class="reference external" href="https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServer">https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServer</a></p>
 <p>4. Comprehensive elevation map of the world. (Add as ArcGIS Server Web Service)
-<a class="reference external" href="https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer">https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer</a>
-(<a class="reference external" href="https://www.arcgis.com/home/group.html?id=bbc5f50839094e9d8dc5255b6a7783dd#overview">https://www.arcgis.com/home/group.html?id=bbc5f50839094e9d8dc5255b6a7783dd#overview</a>)</p>
+<a class="reference external" href="https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer">https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer</a></p>
+<p>5. TNM Blank US base map service from The National Map:
+<a class="reference external" href="https://basemap.nationalmap.gov/arcgis/rest/services/USGSTNMBlank/MapServer">https://basemap.nationalmap.gov/arcgis/rest/services/USGSTNMBlank/MapServer</a>’</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>

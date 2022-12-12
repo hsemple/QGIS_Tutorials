@@ -4,58 +4,48 @@ Automating Processes with Python
 
 |
 
-Getting Started
+**Getting Started**
 
-1. Add this WFS layer to QGIS - Add Layer - Add WFS Layer..., then select New and provide this URL: https://maps.gns.cri.nz/geology/wfs
+1. Add this WFS layer to QGIS. To do so, click on Add Layer | Add WFS Layer..., then select New and provide this URL: https://maps.gns.cri.nz/geology/wfs
 
-2. Right-click the layer called NZL_GNS_250K_faults (it is near the bottom of the list) and select Add Layer to Project. The layer should appear in the project table of contents.
+2. Highlight the layer called NZL_GNS_250K_faults and select Add Layer to Project. 
 
-3.  Select Plugins - Python Console from the main menubar.  It will open up somewhere in the window (you may find it easier to work with if you detach it from the main window.
-
-4.  The lower part of this display with the >>> prompt is where you can type commands. Try an oldie-but-goodie
-
-   >>> print("Hello, World!")
+.. image:: img/python_wfsLayer.png
+   :alt: The NZL_GNS_250K_faults layer
 
 
-5. Since we are running Python inside QGIS,  core pyqgis modules are loaded. Try this
+3.  From the main menu in QGIS, select Plugins | Python Console.  This will cause the Python Console to appear. It may open up towards the bottom of the application, however, if you wish, you can detach it from the main window and place it whereever you wish.
+
+4.  The lower part of the Console display with the >>> prompt. This is is where you type commands. T
+
+
+5. The Python commands can be pure Python commands that have nothing to do with GIS or QGIS, or they can be Python commands ained at manipulating QGIS commands or user data.
+
+
+6.  The iface class is used to access most graphical QGIS components. For example, to get a reference to the active layer, we can write:   
 
    >>> layer = iface.activeLayer()
+
+
+7. Once you get a reference to the active layer object, you can access methods and properties associated with this object. For example, to get the name of the active layer, we write:
+   
    >>> layer.sourceName()
 
 
-6.  You should get the response in the upper half of the console
+8.  You should get the response in the upper half of the console
 
-'NZL_GNS_250K_faults'
-
-
-7. iface refers to the interface, and the activeLayer() function returns an object representing the active layer, which in our project is the only layer loaded. Now try
+     'NZL_GNS_250K_faults'
 
 
 
-|
-
-**Let's try a few things**
-
-Let us count the number of features in the layer:
+9. Now, let us get a count of the number of features in the layer:
 
 >>> layer.featureCount()
 
 
-That was easy. How about we add together their lengths? Inspection of the layer tells us there is an attribute called length, so we could do this:
-
->>> lengths = []
->>> for fault in layer.getFeatures():
-        lengths.append(fault.attribute("length"))
->>> print(sum(lengths))
+10. The console is great for entering simple Python commands. To enter Python scripts consisting of many lines, it is better to use the Editor Window. Let's use the Editor Window to enter a slighly longer script.
 
 
->>> for fld in layer.fields():
-        print(fld.name())
-
-
-
-
-You'll start to see the limitions of the console here. You have to indent by hand (it doesn't do it automatically), but if you get past that it works. 
 
 
 |
@@ -63,18 +53,38 @@ You'll start to see the limitions of the console here. You have to indent by han
 The Editor Window
 -------------------
 
-An alternative to using the Console is to use the Editor window.  The editor is accessed by right-clicking Show Editor in the upper part of the console.
+1.  The editor is accessed by right-clicking Show Editor in the upper part of the console.
+
+2.  We will write a simple script to print the names of the fields in the attribute table of the WFC layer ::
+
+      layer = iface.activeLayer()
+
+      for fld in layer.fields():
+          print(fld.name())
 
 
+.. image:: img/python_script1.png
+   :alt: Python Script Print Name of Attribute Fields
+
+
+3. The script below get the length of each fault segment and maintains keeps a running total of the lengths ::
+
+    layer = iface.activeLayer()
+    lengths = []
+    for fault in layer.getFeatures():
+        lengths.append(fault.attribute("shape_len"))
+        print(sum(lengths))
+
+
+
+|
 
 Jupyter notebook
 -------------------
 
-If you are familiar with Jupyter notebook, then put it to use with QGIS. You can install the pyqgis modules into an environment and work with them directly outside of the application itself. And ESRI are also into notebooks, see here for more!
+1. If you are familiar with Jupyter notebook, then you can use it with QGIS.  First, you must install the pyqgis modules into an environment. After than, you can with QGIS outside of the application itself. 
 
-
-
-Create a Python GIS environment  - https://autogis-site.readthedocs.io/en/latest/course-info/create-python-gis-environment.html
+2. Create a Python GIS environment  - https://autogis-site.readthedocs.io/en/latest/course-info/create-python-gis-environment.html
 
 
 
