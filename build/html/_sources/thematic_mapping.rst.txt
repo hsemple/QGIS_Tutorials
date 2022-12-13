@@ -84,7 +84,17 @@ Mapping Data Stored in the Attribute Table
 
 
 
-10. Click OK and see the map in the main QGIS window. This map definitely conveys a lot more useful information that just numbers in a table.  
+10. You can also set the boundaries of the groups manually. Click on the Histogram tab then select Load Data.  You can now edit the class boundaries by moving the vertical lines with your mouse. You can also click on an empty space to add new class boundaries. 
+
+
+.. image:: img/mapping_attributes5b.png
+   :alt: Histogram
+
+
+11. Next to Legend Format, the %1 - %2 lets you control how you want the lower and upper numbers to appear in the legend. %1 is the lower number and %2 is the upper number.  Precision controls the number of decimal places that will appear in the legend while the Trim option removes excess trailing zeroes.
+
+
+12. Click OK and see the map in the main QGIS window. This map definitely conveys a lot more useful information that just numbers in a table.  
 
 
 .. image:: img/mapping_attributes5.png
