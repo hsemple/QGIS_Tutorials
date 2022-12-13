@@ -41,7 +41,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Thematic Mapping</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#data">3.1. Data</a></li>
@@ -65,7 +65,6 @@
 <li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone_mapping.html">16. Drone Mapping</a></li>
 </ul>
 
         </div>
@@ -94,8 +93,8 @@
              
   <section id="thematic-mapping">
 <h1><span class="section-number">3. </span>Thematic Mapping<a class="headerlink" href="#thematic-mapping" title="Permalink to this heading"></a></h1>
-<p>A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be quantitative (e.g., percentage population change, income distribution) or qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas).</p>
-<p>With a GIS software, the basic way to create a vector thematic map is to select one of the fields in the attribute table of the map layer and then display the data using the software’s thematic mapping engine. The data in an attribute field may be quantitative or qualitative. If the data is quantitative, we create a quantitative thematic map, which may vary in appearance depending on how the map is symbolized, the number of classes utilized, classification method, and whether the data is normalized.  If the data is qualitative, we create a qqualitative thematic map, which may also vary in appearance depending on the details of the data.</p>
+<p>A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The data may be quantitative (e.g., percentage population change, income distribution) or qualitative  (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas).</p>
+<p>With a GIS software, the basic way to create a vector thematic map is to identify one of the fields in the attribute table of the map layer and then display the data using the software’s thematic mapping engine.  If the data is quantitative, we create a quantitative thematic map, which may vary in appearance depending on how the map is symbolized, the number of classes utilized, classification method, and whether the data is normalized.  If the data is qualitative, we create a qqualitative thematic map, which may also vary in appearance depending on the details of the data.</p>
 <p>The data in a GIS attribute table can be entered manually or we can join tables obtained from other sources to the attribute table of the shapefile.  With practice, the actual mapping process can be accomplished very quickly.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -117,18 +116,19 @@
 <li><p>Right click on the name of the layer and select Open Attribute table. Inspect the attribute table. We will use the column that contains population data for the US. Examine the population data, then close the attribute table.</p></li>
 <li><p>Now, right click on the layer name again and choose ‘Properties’.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/mapping_attributes1.png" />
+<img alt="Layer Propertie" src="_images/mapping_attributes1.png" />
 <ol class="arabic simple" start="4">
-<li><p>When the layer properties dialog opens, select the  “Symbology” tab to the left of the dialog.</p></li>
+<li><p>When the layer properties dialog opens, select the “Symbology” tab to the left of the dialog.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/mapping_attributes2.png" />
+<img alt="QGIS Symbology Dialog" src="_images/mapping_attributes2.png" />
 <ol class="arabic simple" start="5">
 <li><p>Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.</p></li>
-<li><p>The graduated style is used when you want to map columns in which the data are numerical quantities.  The graduated scheme will create choropleth maps, i.e., maps in which varying colors are used to represent different sized quantities.  Categorized is used when the values in the columns refer to categories of information, e.g. Democrats = 1, Republicans = 2, Independents = 3. In this case, the numbers 1,2, and 3 are not quantities, but categories.</p></li>
 </ol>
+<img alt="QGIS Symbology Dialog" src="_images/mapping_attributes2b.png" />
 <img alt="Mapping Attributes" src="_images/mapping_attributes3.png" />
-<ol class="arabic simple" start="7">
-<li><p>To map the population column, select Graduated as the Style.  Select Population as the column to map. Click on the dropdown next to Color Ramp and select also a color ramp. For numerical data that goes from lower values to higher values, one can select a single color.  Lower values will be given a lighter version of the color while higher values will be given a darker version of the color.</p></li>
+<ol class="arabic simple" start="6">
+<li><p>The graduated style is used when you want to map fields in which the data are numerical quantities.  The graduated scheme will create choropleth maps, i.e., maps in which varying colors are used to represent different sized quantities.  Categorized is used when the values in the columns refer to categories of information, e.g. Democrats = 1, Republicans = 2, Independents = 3. In this case, the numbers 1,2, and 3 are not quantities, but categories.</p></li>
+<li><p>To map the population column, select Graduated as the Style.  Select Population as the column to map. Click on the dropdown next to Color Ramp and select also a color ramp. For numerical data that goes from lower values to higher values, one can select a single color ramp.  Lower values will be given a lighter version of the color while higher values will be given a darker version of the color.</p></li>
 </ol>
 <img alt="Mapping Attributes" src="_images/mapping_attributes4.png" />
 <ol class="arabic simple" start="8">
@@ -146,7 +146,7 @@
 </section>
 <section id="proportional-symbol-maps">
 <h2><span class="section-number">3.3. </span>Proportional Symbol Maps<a class="headerlink" href="#proportional-symbol-maps" title="Permalink to this heading"></a></h2>
-<p>Creating proportional symbols maps in QGIS is relatively. The workflow entails obtaining a points map of the dataset and then symbolizing the points map. The points can be symbolized as graduated proportional symbols or simply proportional symbols.</p>
+<p>Creating proportional symbols maps in QGIS is relatively. The workflow entails obtaining a points layer of the dataset and then symbolizing the points layer. The points layer can be symbolized as proportional symbols or graduated proportional symbols.</p>
 <ol class="arabic simple">
 <li><p>If the data is a polygon layer, you can convert the polygon layer into a points layer by clicking on Vector in the top menu, then selecting Geometry Tools | Centroids.</p></li>
 </ol>
@@ -159,33 +159,33 @@
 <li><p>Right click on the <em>Centroid</em> layer that was created and select <em>Properties</em>.</p></li>
 <li><p>Click on <em>Symbology</em> then fill out the dialog.  Start by selecting <em>Single Symbol</em> to create a single symbol map.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/thematic_maps_proportional_symbolmap3.png" />
+<img alt="Single Symbol Map" src="_images/thematic_maps_proportional_symbolmap3.png" />
 <ol class="arabic simple" start="5">
-<li><p>Make sure Simple Marker is highlighted then click on the dropdown to the right of the Size textbox. This will reveal the Assistant.</p></li>
+<li><p>Make sure that Simple Marker is highlighted then click on the dropdown to the right of the Size textbox. This will reveal the Assistant.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/thematic_maps_proportional_symbolmap4.png" />
+<img alt="Select Simple Marker" src="_images/thematic_maps_proportional_symbolmap4.png" />
 <ol class="arabic simple" start="6">
 <li><p>When the Assistant dialog appears, click on the dropdown to the right of Source and select the field that you wish to map. In this case, select the <em>Pop_2015</em> field.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/thematic_maps_proportional_symbolmap5.png" />
+<img alt="Assistant Dialog" src="_images/thematic_maps_proportional_symbolmap5.png" />
 <ol class="arabic simple" start="7">
 <li><p>To the far right of the ‘Values From’ text box, click on the refresh button to load the minimum and maximum values for the selected values. In this case, there are several zeroes, so these are ignored and the next lowest value, 580000 was entered manually. I also adjusted the maximum symbol size to 20 to enhancee the appearance of fhe map.</p></li>
 <li><p>The resultant map should appear as shown below.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/thematic_maps_proportional_symbolmap6.png" />
+<img alt="Default Proportional Symbol Map" src="_images/thematic_maps_proportional_symbolmap6.png" />
 <ol class="arabic simple" start="9">
 <li><p>By default, QGIS does not create a legend. To manually create a legend, double click on the name of the proportional symbol layer to bring up the properties dialog.</p></li>
 <li><p>Click on Marker, then click on Advanced | Data-Defined Size Legend.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/thematic_maps_proportional_symbolmap7.png" />
+<img alt="Data-Defined Size Legend" src="_images/thematic_maps_proportional_symbolmap7.png" />
 <ol class="arabic simple" start="11">
-<li><p>In the dialog that appears, select Collapsed legend, then click Ok.</p></li>
+<li><p>In the dialog that appears, select Collapsed legend then click Ok.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/thematic_maps_proportional_symbolmap8.png" />
+<img alt="Collapsed legend" src="_images/thematic_maps_proportional_symbolmap8.png" />
 <ol class="arabic simple" start="12">
 <li><p>In the Table of Content, expand the legend of the Centroid layer.  It should appear as shown below.</p></li>
 </ol>
-<img alt="Mapping Attributes" src="_images/thematic_maps_proportional_symbolmap9.png" />
+<img alt="New Legend" src="_images/thematic_maps_proportional_symbolmap9.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -238,8 +238,8 @@
 <section id="on-your-own">
 <h2><span class="section-number">3.5. </span>On your Own<a class="headerlink" href="#on-your-own" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Create a thematic choropleth map showing Covid19 cases by Counties for the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip">here</a>.</p></li>
-<li><p>If you wish o join Covid19 data to the county shapefile’s attribute table, then download Covid19 attibute data here -</p></li>
+<li><p>Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip">here</a>.</p></li>
+<li><p>If you wish to join Covid19 data to the county shapefile’s attribute table, then download Covid19 attibute data here -</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>

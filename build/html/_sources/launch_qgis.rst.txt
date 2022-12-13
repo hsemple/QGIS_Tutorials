@@ -49,9 +49,9 @@ Launching QGIS
 
 |
 
-Download a USA Shapefile
+Download Data
 -------------------------
-1. For this tutorial, please visit the Github page at this `link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_ , click on the *Download* button and download the USA states shapefile: 
+1. For this tutorial, please visit the Github page at this `link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_. Click on the *Download* button and download the USA States shapefile.
 
 
 2. After downloading the file, unzip or extract it to a location that you can remember.
@@ -188,7 +188,7 @@ Viewing the Attribute Table
 
  
  
-2. Notice the names of each state in the attribute table. If you select the record or row for a state, the state will be highlighted on the map.  Try it and see for yourself.  It is one of the features that make GIS software special.
+2. Notice the names of each state in the attribute table. If you select the record or row for a state, the state will be highlighted on the map.  Try it and see for yourself. It is one of the features that make GIS software special.
 
 
 .. image:: img/view_attribute_table2.png
@@ -224,4 +224,5 @@ There are no deliverables for this tutorial.
 
 
 
-In the next unit, we will do thematic mapping, which involves mapping the data in selected columns.
+In the next unit, we will do vector thematic mapping, which involves mapping the data in the fields of the attribute table of a vector layer. 
+

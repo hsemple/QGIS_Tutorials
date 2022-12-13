@@ -41,19 +41,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
 <li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Terrain Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#generate-basic-terrain-parameters">7.1. Generate Basic Terrain Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-basic-terrain-maps">7.2. Create Basic Terrain Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#habitat-suitability-analysis">7.3. Habitat Suitability Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#watershed-delineation">7.4. Watershed Delineation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#working-with-lidar-data-in-qgis">7.5. Working with LiDAR Data in QGIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">7.6. Summary of Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtain-basic-terrain-information-from-elevation-maps">7.1. Obtain Basic Terrain Information from Elevation Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-basic-terrain-maps">7.2. Creating Basic Terrain Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profile-graph-line-of-sight-graph-and-viewshed-maps">7.3. Profile Graph, line-of-sight Graph, and Viewshed Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#habitat-suitability-analysis">7.4. Habitat Suitability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#channel-extraction-and-watershed-delineation">7.5. Channel Extraction and Watershed Delineation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-lidar-data-in-qgis">7.6. Working with LiDAR Data in QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">7.7. Summary of Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">7.8. Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
@@ -64,7 +66,6 @@
 <li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone_mapping.html">16. Drone Mapping</a></li>
 </ul>
 
         </div>
@@ -96,25 +97,21 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="generate-basic-terrain-parameters">
-<h2><span class="section-number">7.1. </span>Generate Basic Terrain Parameters<a class="headerlink" href="#generate-basic-terrain-parameters" title="Permalink to this heading"></a></h2>
-<p>Visit Stowe, VT using <a class="reference external" href="https://caltopo.com/">Caltopo</a>, <a class="reference external" href="https://apps.nationalmap.gov/viewer/">the National Map</a>, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then generate the following:</p>
+<section id="obtain-basic-terrain-information-from-elevation-maps">
+<h2><span class="section-number">7.1. </span>Obtain Basic Terrain Information from Elevation Maps<a class="headerlink" href="#obtain-basic-terrain-information-from-elevation-maps" title="Permalink to this heading"></a></h2>
+<p>Visit Stowe, VT using <a class="reference external" href="https://caltopo.com/">Caltopo</a>, <a class="reference external" href="https://apps.nationalmap.gov/viewer/">the National Map</a>, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:</p>
 <ol class="arabic simple">
 <li><p>the elevation of each of the two points.</p></li>
 <li><p>the straight line distance between the two points.</p></li>
 <li><p>the slope between the two points.</p></li>
 <li><p>the aspect between the two points.</p></li>
-<li><p>a profile graph of a direct line between the two points.</p></li>
-<li><p>a line-of-sight graph between the two points.</p></li>
-<li><p>a viewshed from point 44.535252, -72.781882.</p></li>
 </ol>
-<p><strong>Procedure</strong></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="create-basic-terrain-maps">
-<h2><span class="section-number">7.2. </span>Create Basic Terrain Maps<a class="headerlink" href="#create-basic-terrain-maps" title="Permalink to this heading"></a></h2>
+<section id="creating-basic-terrain-maps">
+<h2><span class="section-number">7.2. </span>Creating Basic Terrain Maps<a class="headerlink" href="#creating-basic-terrain-maps" title="Permalink to this heading"></a></h2>
 <p>Visit the <a class="reference external" href="https://apps.nationalmap.gov/downloader/">National Map data downloader</a> and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.</p>
 <ul class="simple">
 <li><p>a hillshade map (hysometric tinting)</p></li>
@@ -256,8 +253,49 @@
 <div class="line"><br /></div>
 </div>
 </section>
+<section id="profile-graph-line-of-sight-graph-and-viewshed-maps">
+<h2><span class="section-number">7.3. </span>Profile Graph, line-of-sight Graph, and Viewshed Maps<a class="headerlink" href="#profile-graph-line-of-sight-graph-and-viewshed-maps" title="Permalink to this heading"></a></h2>
+<p>Using the two points mentioned in Section 1 (44.535252, -72.781882; 44.437931, -72.761282), generate a  profile graph and a line of sight chart for the two points.  Also, generate a viewshed from point 44.535252, -72.781882. Use QGIS, Google Map, or any software of your choice to generate these products.</p>
+<p><strong>Profile Graph</strong></p>
+<p><em>QGIS</em></p>
+<ol class="arabic simple">
+<li><p>Create a new line layer snapping to your start and end points.</p></li>
+<li><p>Get the Profile tool from the Plugins menu, search for Profile.</p></li>
+<li><p>Open the profile tool.</p></li>
+<li><p>In the profile tool there is a drop down box called “Selection” by default it has a value of “Temporary polyline” change that to “Selected Polyline”.</p></li>
+<li><p>Your cursor when in the map will change to a pointer finger, click on your polyline with the cursor and your profile will draw.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Line-of-Sight Graph</strong></p>
+<ol class="arabic simple">
+<li><p>YouTube Video</p></li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0NTw7hujRCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <p> <br> </p><ol class="arabic simple" start="2">
+<li><p>See also this tutorial - <a class="reference external" href="https://analyticalgraphics.force.com/faqs/articles/Knowledge/Line-of-sight-analysis-from-shapefile-building-data">https://analyticalgraphics.force.com/faqs/articles/Knowledge/Line-of-sight-analysis-from-shapefile-building-data</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Viewshed Map</strong></p>
+<p>In QGIS, to create a viewshed map, you must first create a viewpoint layer. After than, you use the view point layer to create the viewshed layer.  Click on the videos below for the detailed steps :</p>
+<ol class="arabic simple">
+<li><p>YouTube Video</p></li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fGKgvg0QoXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p> <br> </p><ol class="arabic simple" start="2">
+<li><p>YouTube Video</p></li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kC1ApQLcEhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    <p> <br> </p><ol class="arabic simple" start="3">
+<li><p>See also this tutorial- <a class="reference external" href="https://landscapearchaeology.org/2020/visibility-index/">https://landscapearchaeology.org/2020/visibility-index/</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
 <section id="habitat-suitability-analysis">
-<h2><span class="section-number">7.3. </span>Habitat Suitability Analysis<a class="headerlink" href="#habitat-suitability-analysis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.4. </span>Habitat Suitability Analysis<a class="headerlink" href="#habitat-suitability-analysis" title="Permalink to this heading"></a></h2>
 <p>The habitat for a certain animal in Stowe, Vermont must be protected.  Preliminary studies show that the habitat for the animal is generally associated with the following very broad geographic conditions:</p>
 <ol class="loweralpha simple">
 <li><p>elevation greater than 800 ft</p></li>
@@ -357,15 +395,15 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="watershed-delineation">
-<h2><span class="section-number">7.4. </span>Watershed Delineation<a class="headerlink" href="#watershed-delineation" title="Permalink to this heading"></a></h2>
-<p>Delineating watersheds has long been an important aspect of terrain analysis.  Watersheds are frequently delineated for use as the basic unit for environmental management in different communities.  They are also used for identifying areas upstream of a point on a river that could be contributing contaminant to the stream. In this section of the lab, you will use QGIS or ArcGIS Online to quickly identify a watershed.  Unlike QGIS, ArcGIS Online significantly hides the details of watershed delineation from the user.</p>
+<section id="channel-extraction-and-watershed-delineation">
+<h2><span class="section-number">7.5. </span>Channel Extraction and Watershed Delineation<a class="headerlink" href="#channel-extraction-and-watershed-delineation" title="Permalink to this heading"></a></h2>
+<p>Extracting stream channel network and delineating drainage basins or watersheds have long been an important aspect of terrain analysis.  Watersheds are frequently delineated for use as the basic unit for environmental management in different communities.  They are also used for identifying areas upstream of a point on a river that could be contributing contaminant to the stream. In this section of the lab, you will use QGIS or ArcGIS Online to quickly identify a watershed.  Unlike QGIS, ArcGIS Online significantly hides the details of watershed delineation from the user.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Watershed Delineation in QGIS</strong></p>
+<p><strong>Basic Steps</strong></p>
 <ol class="arabic simple">
-<li><p><em>Acquire the DEM and load it into QGIS.</em></p></li>
+<li><p><em>Acquire the DEM of the study area and load it into QGIS.</em></p></li>
 <li><p><em>Fill Sinks.</em>  Click on Processing Toolbox → SAGA → Fill sinks.   Be sure to select Filled DEM as your only Output File.</p></li>
 <li><p><em>Generate the Stream network.</em>  Click on Processing Toolbox → SAGA → Terrain Analysis – Channels → Strahler Order.</p></li>
 <li><p><em>Generate a polyline of the Stream Network.</em>  To do so, click on Processing Toolbox → SAGA → Terrain Analysis – Channels → Channel Network and Drainage Basins.  Using the Channel Network and Drainage Basins tool, set the Threshold as the strahler number you will to use to isolate streams that possess a number greater than or equal to it (in this case our threshold was 5). Be sure to select Channels as your only Output File.</p></li>
@@ -375,7 +413,10 @@
 <li><p><em>Raster to Vector Conversion</em>.  If you desire your watershed in a polygon format, this step outlines the process of converting your raster to a polygon using the Polygonize tool.  Click on Raster → Conversion → Polygonize (Raster to Vector. Set your Input Layer to be your watershed layer. Once you run the tool, it should generate something similar to the one below:</p></li>
 <li><p>Finally, we can generate our Watershed. With the x &amp; y-coordinates of our outlet point, we will use the Upslope area tool to generate the Watershed. Click on Processing Toolbox → SAGA → Terrain Analysis – Hydrology → Upslope Area</p></li>
 </ol>
-<p>Reference</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><em>Reference</em></p>
 <p><a class="reference external" href="https://equatorstudios.com/how-to-delineate-a-watershed-in-qgis">https://equatorstudios.com/how-to-delineate-a-watershed-in-qgis</a></p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -402,7 +443,7 @@
 </div>
 </section>
 <section id="working-with-lidar-data-in-qgis">
-<h2><span class="section-number">7.5. </span>Working with LiDAR Data in QGIS<a class="headerlink" href="#working-with-lidar-data-in-qgis" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.6. </span>Working with LiDAR Data in QGIS<a class="headerlink" href="#working-with-lidar-data-in-qgis" title="Permalink to this heading"></a></h2>
 <p>LiDAR data is becoming more available and is quickly becoming a fundamental source for detailed elevation data. This tutorial shows how to work with LiDAR data in QGIS. In QGIS, the Point Cloud tool and LazTools are two popular tools for working with Lidar data. The Point Cloud tool enables QGIS to rapidly read Lidar data while LazTools are used to process the Lidar data, e.g., generate elevation surface, get height of buildings or vegetation, etc.</p>
 <p>In this lab, you are required to download a laz dataset, display it in QGIS, then generate an elevation surface and a DTM or TIN surface from the point cloud.</p>
 <div class="line-block">
@@ -535,7 +576,7 @@
 </div>
 </section>
 <section id="summary-of-deliverables">
-<h2><span class="section-number">7.6. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.7. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Submit the following maps:</p></li>
 </ol>
@@ -554,6 +595,10 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+</section>
+<section id="resources">
+<h2><span class="section-number">7.8. </span>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://sagatutorials.wordpress.com/basic-terrain-analysis/">https://sagatutorials.wordpress.com/basic-terrain-analysis/</a></p>
 </section>
 </section>
 

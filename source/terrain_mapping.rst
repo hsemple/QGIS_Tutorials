@@ -3,27 +3,23 @@ Terrain Analysis
 
 |
 
-Generate Basic Terrain Parameters
-------------------------------------
+Obtain Basic Terrain Information from Elevation Maps
+---------------------------------------------------------
 
-Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <https://apps.nationalmap.gov/viewer/>`_, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then generate the following:
+Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <https://apps.nationalmap.gov/viewer/>`_, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:
 
 1.	the elevation of each of the two points.
 2.	the straight line distance between the two points.
 3.	the slope between the two points.
 4.	the aspect between the two points.
-5.	a profile graph of a direct line between the two points.
-6.	a line-of-sight graph between the two points.
-7.	a viewshed from point 44.535252, -72.781882.
 
 
 
-**Procedure**
 
 
 |
 
-Create Basic Terrain Maps
+Creating Basic Terrain Maps
 -----------------------------
 
 Visit the `National Map data downloader <https://apps.nationalmap.gov/downloader/>`_ and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.
@@ -231,6 +227,87 @@ To create labels, do the following:
 |
 
 
+Profile Graph, line-of-sight Graph, and Viewshed Maps
+------------------------------------------------------
+
+Using the two points mentioned in Section 1 (44.535252, -72.781882; 44.437931, -72.761282), generate a  profile graph and a line of sight chart for the two points.  Also, generate a viewshed from point 44.535252, -72.781882. Use QGIS, Google Map, or any software of your choice to generate these products.
+
+
+
+
+
+**Profile Graph**
+
+*QGIS*
+
+
+1. Create a new line layer snapping to your start and end points.
+
+2. Get the Profile tool from the Plugins menu, search for Profile. 
+
+3. Open the profile tool.
+
+4. In the profile tool there is a drop down box called "Selection" by default it has a value of "Temporary polyline" change that to "Selected Polyline".
+
+5. Your cursor when in the map will change to a pointer finger, click on your polyline with the cursor and your profile will draw.
+
+
+
+
+
+|
+
+
+
+**Line-of-Sight Graph**
+
+1. YouTube Video
+
+.. raw:: html
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/0NTw7hujRCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <p> <br> </p>
+
+
+
+2. See also this tutorial - https://analyticalgraphics.force.com/faqs/articles/Knowledge/Line-of-sight-analysis-from-shapefile-building-data
+
+
+
+|
+
+
+
+**Viewshed Map**
+
+In QGIS, to create a viewshed map, you must first create a viewpoint layer. After than, you use the view point layer to create the viewshed layer.  Click on the videos below for the detailed steps :
+
+
+
+1. YouTube Video
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/fGKgvg0QoXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <p> <br> </p>
+
+
+2. YouTube Video
+
+.. raw:: html
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/kC1ApQLcEhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    <p> <br> </p>
+
+
+
+3. See also this tutorial- https://landscapearchaeology.org/2020/visibility-index/
+
+
+
+
+
+|
+
+
 Habitat Suitability Analysis
 -----------------------------
 
@@ -366,21 +443,22 @@ The basic logic in any habitat suitability analysis is to assemble map layers fo
 3. Drape the final map over the hillshade.
  
 
-|
-
-
-
-Watershed Delineation
-----------------------
-
-Delineating watersheds has long been an important aspect of terrain analysis.  Watersheds are frequently delineated for use as the basic unit for environmental management in different communities.  They are also used for identifying areas upstream of a point on a river that could be contributing contaminant to the stream. In this section of the lab, you will use QGIS or ArcGIS Online to quickly identify a watershed.  Unlike QGIS, ArcGIS Online significantly hides the details of watershed delineation from the user.
 
 |
 
-**Watershed Delineation in QGIS**
 
 
-1. *Acquire the DEM and load it into QGIS.*
+Channel Extraction and Watershed Delineation
+----------------------------------------------
+
+Extracting stream channel network and delineating drainage basins or watersheds have long been an important aspect of terrain analysis.  Watersheds are frequently delineated for use as the basic unit for environmental management in different communities.  They are also used for identifying areas upstream of a point on a river that could be contributing contaminant to the stream. In this section of the lab, you will use QGIS or ArcGIS Online to quickly identify a watershed.  Unlike QGIS, ArcGIS Online significantly hides the details of watershed delineation from the user.
+
+|
+
+**Basic Steps**
+
+
+1. *Acquire the DEM of the study area and load it into QGIS.*
 
 2. *Fill Sinks.*  Click on Processing Toolbox → SAGA → Fill sinks.   Be sure to select Filled DEM as your only Output File.
 
@@ -401,8 +479,9 @@ Delineating watersheds has long been an important aspect of terrain analysis.  W
 
 
 
+|
 
-Reference
+*Reference*
 
 https://equatorstudios.com/how-to-delineate-a-watershed-in-qgis
 
@@ -437,7 +516,9 @@ https://equatorstudios.com/how-to-delineate-a-watershed-in-qgis
   
 5. The resultant watershed appears as shown below.  You can now submit a delineated watershed for the Corvallis area or any area that you may be interested in.
 
+
 |
+
 
 
 
@@ -647,6 +728,13 @@ Summary of Deliverables
 5. An elevation surface and a TIN surface from the Point Cloud 
 
 |
+
+
+
+Resources
+----------
+https://sagatutorials.wordpress.com/basic-terrain-analysis/
+
 
 
 

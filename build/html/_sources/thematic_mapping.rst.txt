@@ -3,9 +3,9 @@
 Thematic Mapping
 =======================
    
-A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The map may be quantitative (e.g., percentage population change, income distribution) or qualitative in nature (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas).
+A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The data may be quantitative (e.g., percentage population change, income distribution) or qualitative  (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas).
 
-With a GIS software, the basic way to create a vector thematic map is to select one of the fields in the attribute table of the map layer and then display the data using the software's thematic mapping engine. The data in an attribute field may be quantitative or qualitative. If the data is quantitative, we create a quantitative thematic map, which may vary in appearance depending on how the map is symbolized, the number of classes utilized, classification method, and whether the data is normalized.  If the data is qualitative, we create a qqualitative thematic map, which may also vary in appearance depending on the details of the data.
+With a GIS software, the basic way to create a vector thematic map is to identify one of the fields in the attribute table of the map layer and then display the data using the software's thematic mapping engine.  If the data is quantitative, we create a quantitative thematic map, which may vary in appearance depending on how the map is symbolized, the number of classes utilized, classification method, and whether the data is normalized.  If the data is qualitative, we create a qqualitative thematic map, which may also vary in appearance depending on the details of the data.
 
 The data in a GIS attribute table can be entered manually or we can join tables obtained from other sources to the attribute table of the shapefile.  With practice, the actual mapping process can be accomplished very quickly.  
 
@@ -38,27 +38,35 @@ Mapping Data Stored in the Attribute Table
 3. Now, right click on the layer name again and choose ‘Properties’.
 
 .. image:: img/mapping_attributes1.png
-   :alt: Mapping Attributes
+   :alt: Layer Propertie
  
 
-4. When the layer properties dialog opens, select the  "Symbology" tab to the left of the dialog.
+4. When the layer properties dialog opens, select the "Symbology" tab to the left of the dialog.
 
 .. image:: img/mapping_attributes2.png
-   :alt: Mapping Attributes
+   :alt: QGIS Symbology Dialog
 
 
 5. Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.
 
 
+.. image:: img/mapping_attributes2b.png
+   :alt: QGIS Symbology Dialog
 
-6. The graduated style is used when you want to map columns in which the data are numerical quantities.  The graduated scheme will create choropleth maps, i.e., maps in which varying colors are used to represent different sized quantities.  Categorized is used when the values in the columns refer to categories of information, e.g. Democrats = 1, Republicans = 2, Independents = 3. In this case, the numbers 1,2, and 3 are not quantities, but categories.
- 
+
+
 
 .. image:: img/mapping_attributes3.png
    :alt: Mapping Attributes
 
 
-7. To map the population column, select Graduated as the Style.  Select Population as the column to map. Click on the dropdown next to Color Ramp and select also a color ramp. For numerical data that goes from lower values to higher values, one can select a single color.  Lower values will be given a lighter version of the color while higher values will be given a darker version of the color.
+
+6. The graduated style is used when you want to map fields in which the data are numerical quantities.  The graduated scheme will create choropleth maps, i.e., maps in which varying colors are used to represent different sized quantities.  Categorized is used when the values in the columns refer to categories of information, e.g. Democrats = 1, Republicans = 2, Independents = 3. In this case, the numbers 1,2, and 3 are not quantities, but categories.
+ 
+
+
+
+7. To map the population column, select Graduated as the Style.  Select Population as the column to map. Click on the dropdown next to Color Ramp and select also a color ramp. For numerical data that goes from lower values to higher values, one can select a single color ramp.  Lower values will be given a lighter version of the color while higher values will be given a darker version of the color.
 
 .. image:: img/mapping_attributes4.png
    :alt: Mapping Attributes
@@ -89,7 +97,7 @@ Mapping Data Stored in the Attribute Table
 Proportional Symbol Maps
 ------------------------
 
-Creating proportional symbols maps in QGIS is relatively. The workflow entails obtaining a points map of the dataset and then symbolizing the points map. The points can be symbolized as graduated proportional symbols or simply proportional symbols.
+Creating proportional symbols maps in QGIS is relatively. The workflow entails obtaining a points layer of the dataset and then symbolizing the points layer. The points layer can be symbolized as proportional symbols or graduated proportional symbols.
 
 
 1. If the data is a polygon layer, you can convert the polygon layer into a points layer by clicking on Vector in the top menu, then selecting Geometry Tools | Centroids.
@@ -110,19 +118,19 @@ Creating proportional symbols maps in QGIS is relatively. The workflow entails o
 4.  Click on *Symbology* then fill out the dialog.  Start by selecting *Single Symbol* to create a single symbol map. 
 
 .. image:: img/thematic_maps_proportional_symbolmap3.png
-   :alt: Mapping Attributes
+   :alt: Single Symbol Map
 
 
-5. Make sure Simple Marker is highlighted then click on the dropdown to the right of the Size textbox. This will reveal the Assistant.
+5. Make sure that Simple Marker is highlighted then click on the dropdown to the right of the Size textbox. This will reveal the Assistant.
 
 .. image:: img/thematic_maps_proportional_symbolmap4.png
-   :alt: Mapping Attributes
+   :alt: Select Simple Marker
 
 
 6. When the Assistant dialog appears, click on the dropdown to the right of Source and select the field that you wish to map. In this case, select the *Pop_2015* field. 
 
 .. image:: img/thematic_maps_proportional_symbolmap5.png
-   :alt: Mapping Attributes
+   :alt: Assistant Dialog
 
 
 7. To the far right of the 'Values From' text box, click on the refresh button to load the minimum and maximum values for the selected values. In this case, there are several zeroes, so these are ignored and the next lowest value, 580000 was entered manually. I also adjusted the maximum symbol size to 20 to enhancee the appearance of fhe map. 
@@ -131,7 +139,7 @@ Creating proportional symbols maps in QGIS is relatively. The workflow entails o
 8. The resultant map should appear as shown below.
 
 .. image:: img/thematic_maps_proportional_symbolmap6.png
-   :alt: Mapping Attributes
+   :alt: Default Proportional Symbol Map
 
 
 9. By default, QGIS does not create a legend. To manually create a legend, double click on the name of the proportional symbol layer to bring up the properties dialog. 
@@ -140,18 +148,19 @@ Creating proportional symbols maps in QGIS is relatively. The workflow entails o
 10. Click on Marker, then click on Advanced | Data-Defined Size Legend.
 
 .. image:: img/thematic_maps_proportional_symbolmap7.png
-   :alt: Mapping Attributes
+   :alt: Data-Defined Size Legend
 
 
-11. In the dialog that appears, select Collapsed legend, then click Ok.
+11. In the dialog that appears, select Collapsed legend then click Ok.
 
 .. image:: img/thematic_maps_proportional_symbolmap8.png
-   :alt: Mapping Attributes
+   :alt: Collapsed legend
+
 
 12. In the Table of Content, expand the legend of the Centroid layer.  It should appear as shown below.
 
 .. image:: img/thematic_maps_proportional_symbolmap9.png
-   :alt: Mapping Attributes
+   :alt: New Legend
 
 
 
@@ -234,10 +243,10 @@ Preparing Maps for Printing in QGIS
 On your Own
 ------------
 
-1. Create a thematic choropleth map showing Covid19 cases by Counties for the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
+1. Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
 
 
-2. If you wish o join Covid19 data to the county shapefile's attribute table, then download Covid19 attibute data here -
+2. If you wish to join Covid19 data to the county shapefile's attribute table, then download Covid19 attibute data here -
 
 
 
