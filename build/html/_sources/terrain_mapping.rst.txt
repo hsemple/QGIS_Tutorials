@@ -19,16 +19,21 @@ Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <http
 
 |
 
-Creating Basic Terrain Maps
------------------------------
+Creating Basic Terrain Maps and Graphs
+----------------------------------------
 
 Visit the `National Map data downloader <https://apps.nationalmap.gov/downloader/>`_ and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.
 
-•	a hillshade map (hysometric tinting)
-•	a slope map 
-•	an aspect map  
-•	a contour map
-•  a profile curvature map
+* a hillshade map (hysometric tinting)
+* a slope map 
+* an aspect map  
+* a contour map
+* a profile curvature map
+* a profile graph
+* a line of sight graph and map
+* a visibility map
+
+
 
 
 Create well organized hillshade, slope, aspect and contour for submission. Your maps should attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design. 
@@ -227,7 +232,7 @@ To create labels, do the following:
 |
 
 
-Profile Graph, line-of-sight Graph, and Viewshed Maps
+Profile Graph, Line-of-sight Graph, and Viewshed Maps
 ------------------------------------------------------
 
 Using the two points mentioned in Section 1 (44.535252, -72.781882; 44.437931, -72.761282), generate a  profile graph and a line of sight chart for the two points.  Also, generate a viewshed from point 44.535252, -72.781882. Use QGIS, Google Map, or any software of your choice to generate these products.

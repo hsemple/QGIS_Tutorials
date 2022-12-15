@@ -44,13 +44,13 @@
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Thematic Mapping</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#data">3.1. Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mapping-data-stored-in-the-attribute-table">3.2. Mapping Data Stored in the Attribute Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#proportional-symbol-maps">3.3. Proportional Symbol Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#preparing-maps-for-printing-in-qgis">3.4. Preparing Maps for Printing in QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercises">3.1. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-choropleth-thematic-map">3.2. Creating a Choropleth Thematic Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-the-map-for-printing">3.3. Preparing the Map for Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-proportional-symbol-map">3.4. Creating a Proportional Symbol Map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#on-your-own">3.5. On your Own</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">3.6. Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#deliverables">3.7. Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deliverables">3.6. Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">3.7. Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
@@ -99,48 +99,46 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="data">
-<h2><span class="section-number">3.1. </span>Data<a class="headerlink" href="#data" title="Permalink to this heading"></a></h2>
+<section id="exercises">
+<h2><span class="section-number">3.1. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>For this tutorial, please visit the Github page at this <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/USA-2.zip">link</a>, click on the <em>Download</em> button and download the USA states shapefile:</p></li>
-<li><p>After downloading the file, unzip or extract it to a location that you can remember.</p></li>
+<li><p>Create a thematic choropleth map showing population distribution by states in the USA.  The dataset for this exercise can be found at  this <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/USA-2.zip">Github link</a>.  Click on the <em>Download</em> button and download the USA states shapefile.</p></li>
+<li><p>Using the same data as above, create a proportional symbol map.</p></li>
+<li><p>Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip">here</a>.</p></li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>Follow the instructions in this tutorial to complete Exercise 1 and 2, Complete Exercise 3 on your own.</p>
 </section>
-<section id="mapping-data-stored-in-the-attribute-table">
-<h2><span class="section-number">3.2. </span>Mapping Data Stored in the Attribute Table<a class="headerlink" href="#mapping-data-stored-in-the-attribute-table" title="Permalink to this heading"></a></h2>
+<section id="creating-a-choropleth-thematic-map">
+<h2><span class="section-number">3.2. </span>Creating a Choropleth Thematic Map<a class="headerlink" href="#creating-a-choropleth-thematic-map" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
+<li><p>After downloading the data, unzip or extract it to a location that you can remember.</p></li>
 <li><p>Load the map layer into QGIS.</p></li>
 <li><p>Right click on the name of the layer and select Open Attribute table. Inspect the attribute table. We will use the column that contains population data for the US. Examine the population data, then close the attribute table.</p></li>
 <li><p>Now, right click on the layer name again and choose ‘Properties’.</p></li>
 </ol>
 <img alt="Layer Propertie" src="_images/mapping_attributes1.png" />
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="5">
 <li><p>When the layer properties dialog opens, select the “Symbology” tab to the left of the dialog.</p></li>
 </ol>
 <img alt="QGIS Symbology Dialog" src="_images/mapping_attributes2.png" />
-<ol class="arabic simple" start="5">
-<li><p>Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.</p></li>
-</ol>
+<p>6 Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.</p>
 <img alt="QGIS Symbology Dialog" src="_images/mapping_attributes2b.png" />
 <img alt="Mapping Attributes" src="_images/mapping_attributes3.png" />
-<ol class="arabic simple" start="6">
+<ol class="arabic simple" start="7">
 <li><p>The graduated style is used when you want to map fields in which the data are numerical quantities.  The graduated scheme will create choropleth maps, i.e., maps in which varying colors are used to represent different sized quantities.  Categorized is used when the values in the columns refer to categories of information, e.g. Democrats = 1, Republicans = 2, Independents = 3. In this case, the numbers 1,2, and 3 are not quantities, but categories.</p></li>
 <li><p>To map the population column, select Graduated as the Style.  Select Population as the column to map. Click on the dropdown next to Color Ramp and select also a color ramp. For numerical data that goes from lower values to higher values, one can select a single color ramp.  Lower values will be given a lighter version of the color while higher values will be given a darker version of the color.</p></li>
 </ol>
 <img alt="Mapping Attributes" src="_images/mapping_attributes4.png" />
-<ol class="arabic simple" start="8">
+<ol class="arabic simple" start="9">
 <li><p>Select the default 5 as the number of classes. Most cartographers suggest 5-6 classes as providing the best results.  Since we selected five classes, QGIS will place the population totals of the 50 states into 5 groups.</p></li>
 <li><p>Next to “Mode”, select “Natural Breaks” as the method of classification or grouping the data. Natural breaks means that the software will rank the data from highest to lowest and then create five groups such that each group contains numbers that are generally similar to each other. The goal is to create groupings of similar numbers rather than groups of equal number of cases. You can also experiment with equal interval, standard deviation, etc. to see their effect. Click Classify.</p></li>
 </ol>
 <img alt="Mapping Attributes" src="_images/mapping_attributes4.png" />
-<ol class="arabic simple" start="10">
+<ol class="arabic simple" start="11">
 <li><p>You can also set the boundaries of the groups manually. Click on the Histogram tab then select Load Data.  You can now edit the class boundaries by moving the vertical lines with your mouse. You can also click on an empty space to add new class boundaries.</p></li>
 </ol>
 <img alt="Histogram" src="_images/mapping_attributes5b.png" />
-<ol class="arabic simple" start="11">
+<ol class="arabic simple" start="12">
 <li><p>Next to Legend Format, the %1 - %2 lets you control how you want the lower and upper numbers to appear in the legend. %1 is the lower number and %2 is the upper number.  Precision controls the number of decimal places that will appear in the legend while the Trim option removes excess trailing zeroes.</p></li>
 <li><p>Click OK and see the map in the main QGIS window. This map definitely conveys a lot more useful information that just numbers in a table.</p></li>
 </ol>
@@ -149,11 +147,52 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="proportional-symbol-maps">
-<h2><span class="section-number">3.3. </span>Proportional Symbol Maps<a class="headerlink" href="#proportional-symbol-maps" title="Permalink to this heading"></a></h2>
+<section id="preparing-the-map-for-printing">
+<h2><span class="section-number">3.3. </span>Preparing the Map for Printing<a class="headerlink" href="#preparing-the-map-for-printing" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Now that you are familiar with the process of creating a thematic chropleth map, the final step is “compose” the map for printing.  This is phase where your artistic skill comes into play.  I strongly suggest that you look over the lecture notes on map design principles, as they provide important information on how to style your final map.  Key components of a professional map include:
+•  The map body
+•  The title of the map
+•  The scale bar
+•  The north arrow
+•  The legend
+•  Data Source (optional)</p></li>
+<li><p>QGIS comes with an application called “Composer” that is used to create professional quality layouts.</p></li>
+<li><p>With the map you are working on still opened in QGIS, click on Project on the main menu, then ‘New Print Layout’.</p></li>
+</ol>
+<img alt="Composing Map" src="_images/composing_map1.png" />
+<ol class="arabic simple" start="3">
+<li><p>Enter a name for the new print composer object that will be created, e.g., “Population Distribution USA”. A new print Composer window will open.  You may have to use the Zoom button to adjust the size of the main map area of composer.</p></li>
+</ol>
+<img alt="Composing Map" src="_images/composing_map2.png" />
+<ol class="arabic simple" start="4">
+<li><p>The Print Composer tool contains four main parts: (1) a menu at the top of the screen, (2) a toolbar to the left, (3) the main map area, which has blank canvas where you would be composing the map, and (4) a panel with three tabs to the right, Composition, Item Properties, and Guides.</p></li>
+<li><p>To add a map to composer, click on Add Item on the main menu, then click “Add Map”.b Now draw a rectangle container on the canvas to hold the map.  When you end the rectangle, the map will appear.  Note: If you do not like the rectangle size, you can always resize it afterwards.</p></li>
+</ol>
+<img alt="Composing Map" src="_images/composing_map3.png" />
+<ol class="arabic simple" start="6">
+<li><p>If you wanted to enlarge the map and show only the contiguous states, then go back to the map area, and enlarge the view there. You may have to delete the rectangle and redraw it.</p></li>
+<li><p>Click inside the box and drag the map container until it is centered on the page.</p></li>
+<li><p>To add a scalebar, click on Add Item on the main menu, then select “Add Scalebar”.  Draw a rectangle on the composition where you want to place the scale bar then release. The scalebar will appear. Resize the scalebar to suit your taste.</p></li>
+<li><p>With the scalebar selected, click on “Item Properties” to the right of the composer. Here you can fiddle with the different values to adjust elements of the scalebar’s appearance.</p></li>
+<li><p>Repeat the same process as described in 8 above to add north arrow and legend to your map. Title and other text are added with the “Add Label” button on the Toolbar to the left.  Here is  view of my completed map.</p></li>
+</ol>
+<img alt="Composing Map" src="_images/composing_map4.png" />
+<ol class="arabic simple" start="11">
+<li><p>Once you are satisfied with the map, you can export it as Image, PDF or SVG. For this tutorial, let’s export it as a PNG image. Click onLayout | Export as Image.  Select a path and a name for the exported image.  This image can be uploaded to Canvas Dropbox.</p></li>
+<li><p>Creating attractive maps requires knowledge about map design and map communication principles.  There is a large body of literature on elements of good map design. In Module 1.6,  I present some basic maps design ideas.  Please read these design ideas and try to integrate them as much as possible into your own map design.</p></li>
+<li><p>As a rule, always try to create beautiful maps that effectively communicate spatial information. Conversely, always try to avoid creating ugly maps that fail to effectively communicate useful information.</p></li>
+<li><p>Submit this map as proof that you completed the tutorial.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="creating-a-proportional-symbol-map">
+<h2><span class="section-number">3.4. </span>Creating a Proportional Symbol Map<a class="headerlink" href="#creating-a-proportional-symbol-map" title="Permalink to this heading"></a></h2>
 <p>Creating proportional symbols maps in QGIS is relatively. The workflow entails obtaining a points layer of the dataset and then symbolizing the points layer. The points layer can be symbolized as proportional symbols or graduated proportional symbols.</p>
 <ol class="arabic simple">
-<li><p>If the data is a polygon layer, you can convert the polygon layer into a points layer by clicking on Vector in the top menu, then selecting Geometry Tools | Centroids.</p></li>
+<li><p>In our situation, the data is available as a polygon layer, so we can convert the polygon layer into a points layer by clicking on Vector in the top menu, then selecting Geometry Tools | Centroids.</p></li>
 </ol>
 <img alt="Points Map" src="_images/thematic_maps_proportional_symbolmap1.png" />
 <ol class="arabic simple" start="2">
@@ -191,51 +230,10 @@
 <li><p>In the Table of Content, expand the legend of the Centroid layer.  It should appear as shown below.</p></li>
 </ol>
 <img alt="New Legend" src="_images/thematic_maps_proportional_symbolmap9.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="preparing-maps-for-printing-in-qgis">
-<h2><span class="section-number">3.4. </span>Preparing Maps for Printing in QGIS<a class="headerlink" href="#preparing-maps-for-printing-in-qgis" title="Permalink to this heading"></a></h2>
-<ol class="arabic simple">
-<li><dl class="simple">
-<dt>Now that you are familiar with the process of creating a thematic map, the final step is “compose” the thematic map to give it a professional touch.   QGIS comes with an application called “Composer” that is used to create professional quality layouts.  Key components of a professional map include:</dt><dd><ul class="simple">
-<li><p>The map body</p></li>
-<li><p>The title of the map</p></li>
-<li><p>The scale bar</p></li>
-<li><p>The north arrow</p></li>
-<li><p>The legend</p></li>
-<li><p>Data Source (optional)</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>With the map you are working on still opened in QGIS,  click on Project on the main menu, then ‘New Print Layout’.</p></li>
+<ol class="arabic simple" start="13">
+<li><p>The final map should appear similar to the illustration shown below.</p></li>
 </ol>
-<img alt="Composing Map" src="_images/composing_map1.png" />
-<ol class="arabic simple" start="3">
-<li><p>Enter a name for the new print composer object that will be created, e.g., “Population Distribution USA”. A new print Composer window will open.  You may have to use the Zoom button to adjust the size of the main map area of composer.</p></li>
-</ol>
-<img alt="Composing Map" src="_images/composing_map2.png" />
-<ol class="arabic simple" start="4">
-<li><p>The Print Composer tool contains four main parts: (1) a menu at the top of the screen, (2) a toolbar to the left, (3) the main map area, which has blank canvas where you would be composing the map, and (4) a panel with three tabs to the right, Composition, Item Properties, and Guides.</p></li>
-<li><p>To add a map to composer, click on Add Item on the main menu, then click “Add Map”.  Now draw a rectangle container on the canvas to hold the map.  When you end the rectangle, the map will appear.  Note: If you do not like the rectangle size, you can always resize it afterwards.</p></li>
-</ol>
-<img alt="Composing Map" src="_images/composing_map3.png" />
-<ol class="arabic simple" start="6">
-<li><p>If you wanted to enlarge the map and show only the contiguous states, then go back to the map area, and enlarge the view there. You may have to delete the rectangle and redraw it.</p></li>
-<li><p>Click inside the box and drag the map container until it is centered on the page.</p></li>
-<li><p>To add a scalebar, click on Add Item on the main menu, then select “Add Scalebar”.  Draw a rectangle on the composition where you want to place the scale bar then release. The scalebar will appear. Resize the scalebar to suit your taste.</p></li>
-<li><p>With the scalebar selected, click on “Item Properties” to the right of the composer. Here you can fiddle with the different values to adjust elements of the scalebar’s appearance.</p></li>
-<li><p>Repeat the same process as described in 8 above to add north arrow and legend to your map. Title and other text are added with the “Add Label” button on the Toolbar to the left.  Here is an illustration of my completed map.</p></li>
-</ol>
-<img alt="Composing Map" src="_images/composing_map4.png" />
-<ol class="arabic simple" start="11">
-<li><p>Once you are satisfied with the map, you can export it as Image, PDF or SVG. For this tutorial, let’s export it as a PNG image. Click onLayout | Export as Image.  Select a path and a name for the exported image.  This image can be uploaded to Canvas Dropbox.</p></li>
-<li><p>Creating attractive maps requires knowledge about map design and map communication principles.  There is a large body of literature on elements of good map design. In Module 1.6,  I present some basic maps design ideas.  Please read these design ideas and try to integrate them as much as possible into your own map design.</p></li>
-<li><p>As a rule, always try to create beautiful maps that effectively communicate spatial information. Conversely, always try to avoid creating ugly maps that fail to effectively communicate useful information.</p></li>
-<li><p>Submit this map as proof that you completed the tutorial.</p></li>
-</ol>
+<img alt="New Legend" src="_images/composing_map4b.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -244,14 +242,24 @@
 <h2><span class="section-number">3.5. </span>On your Own<a class="headerlink" href="#on-your-own" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip">here</a>.</p></li>
-<li><p>If you wish to join Covid19 data to the county shapefile’s attribute table, then download Covid19 attibute data here -</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="deliverables">
+<h2><span class="section-number">3.6. </span>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Choropleth map showing distribution of population by states in the USA.</p></li>
+<li><p>Proportional Symbol map showing distribution of population by states in the USA.</p></li>
+<li><p>Chropleth map showing distribution of Covid19 cases by counties in the USA for January, 2022.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="resources">
-<h2><span class="section-number">3.6. </span>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.7. </span>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
 <p>Covid19 datasets (csv files). These files must be joined to the shapefile’s attribute table before creating the thematic map.
 <a class="reference external" href="https://github.com/nytimes/covid-19-data">https://github.com/nytimes/covid-19-data</a></p>
 <p>Create a Proportional Symbol Map and Legend Using QGIS 3.x (Youtube)
@@ -259,13 +267,6 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</section>
-<section id="deliverables">
-<h2><span class="section-number">3.7. </span>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Map showing distribution of population by states in the USA.</p></li>
-<li><p>Map showing distribution of Covid19 cases by counties in the USA for January, 2022.</p></li>
-</ol>
 </section>
 </section>
 

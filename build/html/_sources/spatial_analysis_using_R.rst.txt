@@ -53,3 +53,15 @@ Point Patterns Analysis
 
 
 https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html
+
+
+
+**Run R-Code in your Browsee**
+
+.. raw:: html
+
+ <iframe width='100%' height='400' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe> <p> <br> </p>
+ 
+
+ Source: https://rdrr.io/snippets/embedding/
+
