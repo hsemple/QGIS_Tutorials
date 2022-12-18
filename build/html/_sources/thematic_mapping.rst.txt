@@ -5,9 +5,7 @@ Thematic Mapping
    
 A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The data may be quantitative (e.g., percentage population change, income distribution) or qualitative  (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas).
 
-With a GIS software, the basic way to create a vector thematic map is to identify one of the fields in the attribute table of the map layer and then display the data using the software's thematic mapping engine.  If the data is quantitative, we create a quantitative thematic map, which may vary in appearance depending on how the map is symbolized, the number of classes utilized, classification method, and whether the data is normalized.  If the data is qualitative, we create a qqualitative thematic map, which may also vary in appearance depending on the details of the data.
-
-The data in a GIS attribute table can be entered manually or we can join tables obtained from other sources to the attribute table of the shapefile.  With practice, the actual mapping process can be accomplished very quickly.  
+With a GIS software, the basic way to create a vector thematic map is to identify and scrutinize the field in the attribute table of the map layer that will be used for mapping. Next, display the data using the software's thematic mapping engine.  Some amouht of thought is required here. If the data is quantitative, select one of the quantitative thematic mapping style, e.g., graduated color, proportional symbols, dot density, etc.  We also have to think about the color scheme for the map, the number of classes or bins into which the data will be placed, how the data will be classified, e.g., natural break, equal area, etc, and whether the data should be normalized.  If the data is qualitative, we create a qualitative thematic map, which may also vary in appearance depending on the details of the data.
 
 
 
@@ -22,11 +20,11 @@ Exercises
 2. Using the same data as above, create a proportional symbol map. 
 
 
-3.  Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
+3. Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
 
 
 
-Follow the instructions in this tutorial to complete Exercise 1 and 2, Complete Exercise 3 on your own.
+Follow the instructions in this tutorial to complete Exercise 1 and 2. Complete Exercise 3 on your own.
 
 
 

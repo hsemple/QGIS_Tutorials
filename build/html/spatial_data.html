@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. Loading Data into QGIS &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>4. Downloading Multiple Layers and Making Maps &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -44,18 +44,18 @@
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Loading Data into QGIS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#loading-shapefiles">4.1. Loading Shapefiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-a-digital-elevation-model">4.2. Loading a Digital Elevation Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-an-aerial-photograph">4.3. Loading an Aerial Photograph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-google-satellite-imagery">4.4. Adding Google Satellite Imagery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-landsat-imagery">4.5. Loading Landsat Imagery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#importing-csv-files">4.6. Importing CSV files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-gps-data">4.7. Loading GPS Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-postgresql-postgis-layers">4.8. Loading PostgreSQL/PostGIS Layers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-wms-layers">4.9. Loading WMS Layers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-wfs-layers">4.10. Loading WFS Layers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-an-arcgis-rest-service-to-qgis">4.11. Adding an ArcGIS REST Service to QGIS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Downloading Multiple Layers and Making Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#assignment">4.1. Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-unzip-files">4.2. Download and Unzip Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-shapefiles">4.3. Loading and Displaying Shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-the-dem">4.4. Loading and Displaying the DEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-the-aerial-photograph">4.5. Loading and Displaying the Aerial Photograph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-landsat-imagery">4.6. Loading and Displaying Landsat Imagery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-a-wms-layer">4.7. Loading and Displaying a WMS Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-an-arcgis-rest-service-layer">4.8. Loading and Displaying an ArcGIS REST Service Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#explore-your-data">4.9. Explore your Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prepare-professional-maps-of-your-data">4.10. Prepare Professional Maps of your Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">4.11. Summary of Deliverables</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
@@ -85,7 +85,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4. </span>Loading Data into QGIS</li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Downloading Multiple Layers and Making Maps</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/spatial_data.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -95,17 +95,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="loading-data-into-qgis">
-<h1><span class="section-number">4. </span>Loading Data into QGIS<a class="headerlink" href="#loading-data-into-qgis" title="Permalink to this heading"></a></h1>
-<p>In GIS, spatial data refers to the points, lines, and area features that are drawn on maps to represent the geographic location of natural and human phenomena, such as mountains, rivers, roads, bridges, homicides, etc.  In general, spatial data is any data that can be mapped.</p>
-<p>In a computer, the points, lines and polygons that represent map features can be drawn using precise coordinates (vectors) or they can be represented by one or more contiguous cells on a grid (rasters).</p>
-<p>Popular vector products include shapefiles and geodatabases. Popular raster products include digital elevation models, satellite imagery, thematic rasters, orthophotos, and digital topographic maps.</p>
-<p>With QGIS, we can easily load the various types of spatial data into the software.  The method of loading data varies depending on the type of spatial data. The sections below describe how to load different types of spatial data into QGIS.</p>
+  <section id="downloading-multiple-layers-and-making-maps">
+<h1><span class="section-number">4. </span>Downloading Multiple Layers and Making Maps<a class="headerlink" href="#downloading-multiple-layers-and-making-maps" title="Permalink to this heading"></a></h1>
+<p>The main goals of the lab are to help you:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as orthophotos, DEMs, satellite imagery, thematic rasters, and vector datasets.</p></li>
+<li><p>develop basic file management skills necessary to deal with the large number of files that are typically needed for a GIS project.</p></li>
+<li><p>become comfortable with smoothly loading and displaying multiple map layers in ArcGIS Pro or QGIS and rearranging the layers to suit your information needs.</p></li>
+<li><p>become comfortable interpreting data on shapefiles and DEMs.</p></li>
+<li><p>develop cartographic skills needed for effective presentation of spatial data.</p></li>
+</ul>
+</div></blockquote>
+<section id="assignment">
+<h2><span class="section-number">4.1. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this heading"></a></h2>
+<p>A typical GIS project involves working with multiple map layers overlaid on each other. In this lab, you will download, display, arrange, and explore multiple forms of spatial data. You will also extend your cartographic skills by preparing professional quality layouts using different types of spatial data.</p>
+<p>For submission, you will create the following maps:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, and urban areas.</p></li>
+<li><p>A showing the Digital Elevation Model you downloaded.</p></li>
+<li><p>Maps showing the satellite imagery you downloaded displayed in the following band combinations: 5-4-3; 5-6-4 and 7-6-4.</p></li>
+<li><p>A map showing either the orthophoto tile or tiles you downloaded.</p></li>
+<li><p>A map showing mines in the USA based on web services data that you accessed.</p></li>
+</ul>
+</div></blockquote>
+<p>The data used for this lab can pertain to any county in Michigan, however, I have downloaded data for Wayne County and have made them available for those who do not as yet feel comfortable downloading data from govt websites.</p>
+<p>Download at least 8 different layers. The layers should include at least 3 shapefiles, a DEM, a satellite imagery, an OGS web map map layer, an ArcGIS Server Rest Service layer, and an orthophoto (aerial photo).  The orthophoto will cover just a small part of your study area, not the entire county.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="loading-shapefiles">
-<h2><span class="section-number">4.1. </span>Loading Shapefiles<a class="headerlink" href="#loading-shapefiles" title="Permalink to this heading"></a></h2>
+</section>
+<section id="download-and-unzip-files">
+<h2><span class="section-number">4.2. </span>Download and Unzip Files<a class="headerlink" href="#download-and-unzip-files" title="Permalink to this heading"></a></h2>
+<p><strong>Download Files</strong></p>
+<ol class="arabic simple">
+<li><p>Create a folder on your computer to store all the downloaded data.</p></li>
+<li><p>Decide on a Michigan county of your choice, then visit the <a class="reference external" href="https://web.archive.org/web/20160201222536/http:/www.mcgi.state.mi.us/mgdl/?action=thm">Michigan CGI archived GIS website</a> to download data.</p></li>
+<li><p>Inspect the different categories of data and download the layers for the county of your choice.  Note: You can find digital elevation models and satellite imagery color composites under the TOPOGRAPHY section. Orthophotos are no longer available at this site.</p></li>
+<li><p>If you are having trouble downloading from the CGI website, you can visit the new Michigan GIS Data website and search for appropriate data</p></li>
+<li><p>Alternatively, you can simply download layers for Wayne County which I have placed on CGithub.</p></li>
+</ol>
+<p><strong>Unzipping Files</strong></p>
+<ol class="arabic simple">
+<li><p>Unzip the layers to the single folder you created, as shown below.  When your project is completed, you can delete files you no longer need.</p></li>
+</ol>
+<img alt="Unzipping Data" src="_images/unzipping_data.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loading-and-displaying-shapefiles">
+<h2><span class="section-number">4.3. </span>Loading and Displaying Shapefiles<a class="headerlink" href="#loading-and-displaying-shapefiles" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>ESRI’s shapefile is one of the most common vector data file formats. One way of loading a shapefile into QGIS is to click on Layer | Add Layer | Add Vector Layer, as shown below.</p></li>
 </ol>
@@ -118,9 +159,9 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="loading-a-digital-elevation-model">
-<h2><span class="section-number">4.2. </span>Loading a Digital Elevation Model<a class="headerlink" href="#loading-a-digital-elevation-model" title="Permalink to this heading"></a></h2>
-<p>1 To display a DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/.</p>
+<section id="loading-and-displaying-the-dem">
+<h2><span class="section-number">4.4. </span>Loading and Displaying the DEM<a class="headerlink" href="#loading-and-displaying-the-dem" title="Permalink to this heading"></a></h2>
+<p>1 To display the DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/.</p>
 <ol class="arabic simple" start="2">
 <li><p>Select the file named w001001.adf. Make sure it is the adf file with the larger file size.</p></li>
 <li><p>If the DEM is loaded and doesn’t show up, simply right click on it and select Zoom to Layer.</p></li>
@@ -130,57 +171,30 @@
 <li><p>The numbers below the name of the DEM in the Table of Content refer to elevation in ft.  If you click on the Identify button then click anywhere on the map, it will return the elevation at that location.</p></li>
 <li><p>To change the color of the DEM, double click on its name in the Table of Content and select Symbology. Change the Render Type from SingleBand Gray to SingleBand Psuedocolor.</p></li>
 <li><p>Select a color ramp that suits your taste. Make sure the color ramp does justice in showing the subtle variations in elevation.</p></li>
+<li><p>You can also click on the Classify button and experiment with the impact that different classifications methods have on the visual appearance of the DEM.</p></li>
 </ol>
 <img alt="Digital Elevation Model" src="_images/dem_symbology.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="loading-an-aerial-photograph">
-<h2><span class="section-number">4.3. </span>Loading an Aerial Photograph<a class="headerlink" href="#loading-an-aerial-photograph" title="Permalink to this heading"></a></h2>
+<section id="loading-and-displaying-the-aerial-photograph">
+<h2><span class="section-number">4.5. </span>Loading and Displaying the Aerial Photograph<a class="headerlink" href="#loading-and-displaying-the-aerial-photograph" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Download the orthophoto and unzip it to a folder that you can easily locate.</p></li>
-<li><p>Display the orthophoto in QGIS by clicking on Layers | Add Raster Layer and navigating to the folder where the file is stored.</p></li>
+<li><p>Click on Layers | Add Raster Layer and navigating to the folder where the file is stored.</p></li>
 </ol>
 <img alt="Loading Orthophoto" src="_images/ann_arbor_east.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="adding-google-satellite-imagery">
-<h2><span class="section-number">4.4. </span>Adding Google Satellite Imagery<a class="headerlink" href="#adding-google-satellite-imagery" title="Permalink to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Click the Open Data Source Manager button in the toolbar</p></li>
-</ol>
-<img alt="Loading Orthophoto" src="_images/open_data_source_manage_xyz.png" />
 <ol class="arabic simple" start="2">
-<li><p>Right click on XYZ Tiles | New Connection…</p></li>
-<li><p>In the dialog that appears, type “Google” in the Name textbox.</p></li>
-<li><p>In the URL textbox, copy and paste the address the following URL then click OK:
-‘<a class="reference external" href="http://mt0.google.com/vt">http://mt0.google.com/vt</a>/lyrs=y&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}&amp;s=Ga’</p></li>
+<li><p>There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc.</p></li>
 </ol>
-<img alt="Loading Google Earth Imagery" src="_images/google_earth_connection.png" />
-<ol class="arabic simple" start="5">
-<li><p>To view the imagery, drag the “Google Earth” button you created to the Table of Content.</p></li>
-<li><p>Additional Google Map Tiles Links</p></li>
-</ol>
-<blockquote>
-<div><ul class="simple">
-<li><p>Google Maps       -  <a class="reference external" href="https://mt1.google.com/vt">https://mt1.google.com/vt</a>/lyrs=r&amp;x={x}&amp;y={y}&amp;z={z}</p></li>
-<li><p>Google Satellite     - <a class="reference external" href="https://www.google.cn/maps/vt">https://www.google.cn/maps/vt</a><a class="reference external" href="mailto:?lyrs=s&#37;&#52;&#48;189&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z">?lyrs=s<span>&#64;</span>189&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z</a>}</p></li>
-<li><p>Google Satellite Hybrid - <a class="reference external" href="https://mt1.google.com/vt">https://mt1.google.com/vt</a>/lyrs=y&amp;x={x}&amp;y={y}&amp;z={z}</p></li>
-<li><p>Google Terrain - <a class="reference external" href="https://mt1.google.com/vt">https://mt1.google.com/vt</a>/lyrs=t&amp;x={x}&amp;y={y}&amp;z={z}</p></li>
-<li><p>Google Roads        - <a class="reference external" href="https://mt1.google.com/vt">https://mt1.google.com/vt</a>/lyrs=h&amp;x={x}&amp;y={y}&amp;z={z}</p></li>
-</ul>
-</div></blockquote>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="loading-landsat-imagery">
-<h2><span class="section-number">4.5. </span>Loading Landsat Imagery<a class="headerlink" href="#loading-landsat-imagery" title="Permalink to this heading"></a></h2>
+<section id="loading-and-displaying-landsat-imagery">
+<h2><span class="section-number">4.6. </span>Loading and Displaying Landsat Imagery<a class="headerlink" href="#loading-and-displaying-landsat-imagery" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Visit the Earth Explorer website (<a class="reference external" href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a>) and download Landsat 8 imagery for an area of interest.  If you are not familiar with the downloading process, click on this <a class="reference external" href="https://guides.library.uwm.edu/c.php?g=567847&amp;p=5338445">link</a> for instructions on this process.</p></li>
+<li><p>Visit the Earth Explorer website (<a class="reference external" href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a>) and download Landsat 8 imagery for an area of interest.  If you are not familiar with the downloading process, click on this <a class="reference external" href="https://guides.library.uwm.edu/c.php?g=567847&amp;p=5338445">link</a> for instructions on this process.  You can also download a Landsat imagery datset from Canvas.</p></li>
 <li><p>The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.</p></li>
 </ol>
 <img alt="Landsat Imagery" src="_images/landsat_imagery1.png" />
@@ -221,53 +235,8 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="importing-csv-files">
-<h2><span class="section-number">4.6. </span>Importing CSV files<a class="headerlink" href="#importing-csv-files" title="Permalink to this heading"></a></h2>
-<p>To add a csv file to QGIS, follow these steps:</p>
-<ol class="arabic simple">
-<li><p>Click on Layer | Add Layer | Add Delimited Text Layer.</p></li>
-<li><p>Browse to the CSV file.</p></li>
-<li><p>Fill out the dialog. If the CSV files contains latitude/longittude data, ensure that you define the X field and Y field that contains Longitude and Latitude values.</p></li>
-</ol>
-<img alt="Data Source Manager CSV" src="_images/data_source_manager_csv.png" />
-<ol class="arabic simple" start="4">
-<li><p>When you are done filling out the dialog, click Ok. QGIS will read and load the CSV file. Also, the points associated with the coordinates will appear on the screen.</p></li>
-</ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="loading-gps-data">
-<h2><span class="section-number">4.7. </span>Loading GPS Data<a class="headerlink" href="#loading-gps-data" title="Permalink to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Data downloaded from GPS receivers is often available in GPX (GPS eXchange) format.</p></li>
-<li><p>To load GPX data into QGIS, first click on the Data Source Manager button, then click on GPS.</p></li>
-<li><p>Navigate to the GPX file and load it into QGIS.</p></li>
-</ol>
-<img alt="Data Source Manager GPX." src="_images/data_source_manager_gpx.png" />
-<ol class="arabic simple" start="4">
-<li><p>Click Ok. QGIS will read and load the GPX file. It will also display the points on the screen as waypoints or routes, as shown below.</p></li>
-</ol>
-<img alt="GPS Data Displayed as Route" src="_images/gps_points.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="loading-postgresql-postgis-layers">
-<h2><span class="section-number">4.8. </span>Loading PostgreSQL/PostGIS Layers<a class="headerlink" href="#loading-postgresql-postgis-layers" title="Permalink to this heading"></a></h2>
-<p>To visualize datasets in PostgreSQl/PostGIS from within QGIS, follow the steps below:</p>
-<ol class="arabic simple">
-<li><p>In QGIS, click on Layer | Add Layer | Add PostGIS Layers.</p></li>
-<li><p>In the dialog that appears, click “New”. This opens the dialog to connect to the PostGIS server and database. Enter the connection information and click Ok.</p></li>
-<li><p>Back in the Connection dialog, click “Connect”. If the connection is successful, you will be able to see all tables in the database.</p></li>
-<li><p>Select any table of interest and click “Add”.  This will load the layer into QGIS.</p></li>
-</ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="loading-wms-layers">
-<h2><span class="section-number">4.9. </span>Loading WMS Layers<a class="headerlink" href="#loading-wms-layers" title="Permalink to this heading"></a></h2>
+<section id="loading-and-displaying-a-wms-layer">
+<h2><span class="section-number">4.7. </span>Loading and Displaying a WMS Layer<a class="headerlink" href="#loading-and-displaying-a-wms-layer" title="Permalink to this heading"></a></h2>
 <p>To Add a WMS Layer, do the following:</p>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Layer | Add WMS/WMTS Layer.</p></li>
@@ -289,35 +258,9 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Example WMS Servers</strong></p>
-<p>1. Georeferenced bathymetry map of the world’s oceans (Add as OGC WMS Layer)
-<a class="reference external" href="https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv">https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv</a>?</p>
-<p>2. NASA Earth Observations.
-<a class="reference external" href="https://neo.sci.gsfc.nasa.gov/wms/wms">https://neo.sci.gsfc.nasa.gov/wms/wms</a></p>
-<p>3. Boundaries in effect for the 2022 American Community Survey
-<a class="reference external" href="https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer">https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer</a></p>
-<p>4. Global Poplation, Agriculture, Food Security, and other Themes
-<a class="reference external" href="https://sedac.ciesin.columbia.edu/geoserver/wms">https://sedac.ciesin.columbia.edu/geoserver/wms</a></p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </section>
-<section id="loading-wfs-layers">
-<h2><span class="section-number">4.10. </span>Loading WFS Layers<a class="headerlink" href="#loading-wfs-layers" title="Permalink to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>In QGIS, click on Layer | Add WFS Layer.</p></li>
-<li><p>Select New in the Data Source Manager dialog.</p></li>
-<li><p>In the ‘Create a new WFS connection’ dialog box, enter a name for the connection and the appropriate URL. (e.g. <a class="reference external" href="https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS">https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&amp;service=WFS</a>)</p></li>
-<li><p>Select OK.</p></li>
-<li><p>In the Server Connection dialog box, select Connect and then Apply. NB - loading the WFS data may take a while.</p></li>
-<li><p>Select Close.</p></li>
-</ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="adding-an-arcgis-rest-service-to-qgis">
-<h2><span class="section-number">4.11. </span>Adding an ArcGIS REST Service to QGIS<a class="headerlink" href="#adding-an-arcgis-rest-service-to-qgis" title="Permalink to this heading"></a></h2>
+<section id="loading-and-displaying-an-arcgis-rest-service-layer">
+<h2><span class="section-number">4.8. </span>Loading and Displaying an ArcGIS REST Service Layer<a class="headerlink" href="#loading-and-displaying-an-arcgis-rest-service-layer" title="Permalink to this heading"></a></h2>
 <p>To Add an ArcGIS Server Layer, do the following:</p>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Layer | Add ArcGIS Rest Server Layer.</p></li>
@@ -338,30 +281,65 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>ArcGIS Rest Servers Links for Practice</strong></p>
-<p>1. NAIP Imagery (Add as OG WMS Layers)
-<a class="reference external" href="https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer">https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer</a>?</p>
-<p>2. ESRI World Imagery Layers
-<a class="reference external" href="http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer">http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer</a></p>
-<p>3. Elevation imagery layer covering the Antarctic, providing slope for use in visualization.
-<a class="reference external" href="https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServer">https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServer</a></p>
-<p>4. Comprehensive elevation map of the world. (Add as ArcGIS Server Web Service)
-<a class="reference external" href="https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer">https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer</a></p>
-<p>5. TNM Blank US base map service from The National Map:
-<a class="reference external" href="https://basemap.nationalmap.gov/arcgis/rest/services/USGSTNMBlank/MapServer">https://basemap.nationalmap.gov/arcgis/rest/services/USGSTNMBlank/MapServer</a>’</p>
+</section>
+<section id="explore-your-data">
+<h2><span class="section-number">4.9. </span>Explore your Data<a class="headerlink" href="#explore-your-data" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>One of the requirements of this lab is for you to create professional quality maps using the layers you downloaded.  One important contributor to making attractive maps is that you should know your data, so let’s explore the map layers we just displayed.</p></li>
+<li><p>Locate the Identify Tool then click on each map layer to investigate the map attributes at particular locations. Study the results carefully. In the case of shapefiles, they represent the contents of the attribute table at that location.  For rasters such as DEMs or satellite imagery, they represent the contents of cell values at that location.</p></li>
+<li><p>Using the Identify tool, click anywhere on the digital elevation model to get the elevation at different locations.</p></li>
+<li><p>Locate the Measure Tool as shown below.  Click it and then explore how to measure distances and areas on the map.</p></li>
+<li><p>Measure the length of the sides of the orthophoto. How much area does one of these photo cover?</p></li>
+<li><p>Right click on the name of each shapefiles and open the attribute tables of the map layers. Try to understand the information they contain.</p></li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Other Sources of GIS Data</strong></p>
+</section>
+<section id="prepare-professional-maps-of-your-data">
+<h2><span class="section-number">4.10. </span>Prepare Professional Maps of your Data<a class="headerlink" href="#prepare-professional-maps-of-your-data" title="Permalink to this heading"></a></h2>
+<p><strong>Prepare the Shapefiles</strong></p>
+<ol class="arabic simple">
+<li><p>One of your goals is to create a professional quality map using only the shapefiles. It is easier if you decide on a theme. For example, I will use my layers try to show water wells in relation to urban areas in Wayne County.</p></li>
+<li><p>Uncheck all the layers except the shapefile.</p></li>
+<li><p>Rearrange the order of the shapefiles to suit your preference by dragging them up and down in the Table of Contents. Check to see if some of the layers at the top of the list are hiding others below. If so, further re-arrange the layers. One rule we use is that point features should be at the top of the set, followed by layers that contain line features, then those that contain area features.</p></li>
+<li><p>Change the color of the layers. To do so, double click on the map icons of each layer, then go to Symbology and change the color to a color that you like.</p></li>
+<li><p>Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You will may find yourself using Simple Fill more often.</p></li>
+</ol>
+<img alt="GPS Data" src="_images/simple_fill.png" />
+<p>6  You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below.</p>
+<ol class="arabic simple" start="7">
+<li><p>Change Stroke or line widths to show emphasis.</p></li>
+<li><p>Double click on the name of the layer, then go to Source and from there you can change the layer name.</p></li>
+</ol>
+<img alt="GPS Data" src="_images/cities_lab2.png" />
+<p>9•  My final map appears as shown below.</p>
+<img alt="GPS Data" src="_images/final_shapefile_map.png" />
+<ol class="arabic simple" start="10">
+<li><p>Go to the Composer and compose the final map.</p></li>
+</ol>
+<img alt="GPS Data" src="_images/final_shapefile_map2.png" />
+<ol class="arabic simple" start="11">
+<li><p>Click on Layout | Export as Image.  Select a path and a name for the exported image.   Once you are satisfied with the map, you can export it PNG format. The image can be uploaded to Canvas Dropbox.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Prepare Other Professional Maps</strong></p>
+<p>Repeat the process described above regarding how to create layouts and create the other layouts from your data. Separate maps should be used for the satellite imagery, the DEM, the orthophoto, and eaach of the web services.  See Canvas for example maps.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="summary-of-deliverables">
+<h2><span class="section-number">4.11. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.usgs.gov/centers/eros/science/national-land-cover-database?qt-science_center_objects=0#qt-science_center_objects">National Landcover dataset</a></p></li>
-<li><p><a class="reference external" href="https://www.usgs.gov/national-hydrography">National Hydrologic Dataset</a></p></li>
-<li><p><a class="reference external" href="https://www.fws.gov/program/national-wetlands-inventory">National Wetlands Inventory</a></p></li>
-<li><p><a class="reference external" href="https://www.fema.gov/flood-maps/national-flood-hazard-layer">National Flood Hazard Layer</a></p></li>
-<li><p><a class="reference external" href="https://mrdata.usgs.gov/#geologic-data">Geologic Maps of the US</a></p></li>
-<li><p><a class="reference external" href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">Cartographic Boundary Files</a></p></li>
-<li><p><a class="reference external" href="https://mrdata.usgs.gov/general/map-global.html">Mineral Resources Online Spatial Data</a></p></li>
-<li><p>etc</p></li>
+<li><p>A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, and urban areas.</p></li>
+<li><p>A map showing the Digital Elevation Model you downloaded.</p></li>
+<li><p>Maps showing the satellite imagery you downloaded displayed in the following band combinations: 5-4-3; 5-6-4 and 7-6-4.</p></li>
+<li><p>A short write up-of the usefulness of the different band combinations that you displayed.</p></li>
+<li><p>A map showing either the orthophoto tile or tiles you downloaded.</p></li>
+<li><p>A map showing mines in the USA based on web services data that you accessed.</p></li>
 </ul>
 </section>
 </section>

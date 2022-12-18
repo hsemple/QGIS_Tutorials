@@ -8,7 +8,7 @@ Getting Started
 
 What is QGIS
 -------------
-QGIS is a widely used Open Source Geographic Information System (GIS) software that can be used for professional GIS work.  The software is licensed under the GNU General Public License and runs on various operating systems including Linux, Unix, Mac OSX, Windows and Android.  The software consists of a core component plus numerous plugins that add additional functionalities to the program.
+QGIS is a widely used open source Geographic Information System (GIS) software that can be used for professional GIS work.  The software is licensed under the GNU General Public License and runs on various operating systems including Linux, Unix, Mac OSX, Windows and Android.  The software consists of a core component plus numerous plugins that add additional functionalities to the program.
 
 In this unit, we will begin exploring QGIS.  We will do so by downloading and installing the software, learning how to load a shapefile into the software, and looking at various controls used to manipulate and examine the map layer.  
 
@@ -64,7 +64,10 @@ Download Data
 Loading and Displaying the Shapefile 
 ------------------------------------
 
-1. To load a shapefile into QGIS, click the Layer button on the main menu, then click Add  Layer. Here, we have options for loading different types of GIS datasets.  There are also options for loading layers stored as web map services or in different database software.  As we are loading a shapefile, which is a type of vector layer, click on Add Vector Layer. 
+1. To load a shapefile into QGIS, click the Layer button on the main menu, then click Add  Layer. Here, we have options for loading different types of GIS datasets.  Take a moment and study the different types of layers that can be easily loaded into QGIS from this menu. You can see there are options for loading rasters, csv files, etc. There are also options for loading ayers stored as web map services or in different database software.  
+
+
+2. As we are loading a shapefile, which is a type of vector layer, click on Add Vector Layer. 
  
 
 .. image:: img/load_vectorlayer.png
@@ -72,7 +75,7 @@ Loading and Displaying the Shapefile
 
 
  
-2. Click on the ellipsis (the three horizontal dots) to the right of the Vector Dataset(s) textbox. Browse to the folder where the data is loaded, and select the USA_States.shp file. Make sure it is not the XML file.  Click Add to add the layer to the map then close the data source manage dialog. If you are prompted for Coordinate Systems Information, select WGS 84 for the coordinates.
+3. Click on the ellipsis (the three horizontal dots) to the right of the Vector Dataset(s) textbox. Browse to the folder where the data is loaded, and select the USA_States.shp file. Make sure it is not the XML file.  Click Add to add the layer to the map then close the data source manage dialog. If you are prompted for Coordinate Systems Information, select WGS 84 for the coordinates.
 
 
 .. image:: img/data_source_manager.png
@@ -81,7 +84,7 @@ Loading and Displaying the Shapefile
 
 
  
-3. The map layer will be added to QGIS.
+4. The map layer will be added to QGIS.
 
 .. image:: img/Display_USA_Layer.png
    :alt: Display Layer
@@ -90,11 +93,11 @@ Loading and Displaying the Shapefile
 
  
 
-4. If the Layers panel to the right is not visible, click on View  | Panels | Layers. The panel will be added. You may have to move panels that are blocking its view. 
+5. If the Layers panel to the right is not visible, click on View  | Panels | Layers. The panel will be added. You may have to move panels that are blocking its view. 
  
 
 
-5. Click on the video below for a quick overview of the process:
+6. Click on the video below for a quick overview of the process:
 
 .. raw:: html
 
@@ -179,7 +182,7 @@ Selecting and Deselecting Features
 Viewing the Attribute Table
 ----------------------------
 
-1. To view the attribute table of the USA layer, right click on the name of the layer and select Open Attribute table. Inspect the data in the attribute table.
+1. Each vector layer has a table that stores data about the map features.  To view the attribute table of the USA layer, right click on the name of the layer and select Open Attribute table. Inspect the data in the attribute table.
 
 
 .. image:: img/view_attribute_table.png
@@ -217,12 +220,8 @@ Saving your Project
 Deliverables
 -------------
 
-There are no deliverables for this tutorial.
-
+Write a blog commenting on your experience downloading, installing, and loading data into QGIS. 
  
-
-
-
 
 In the next unit, we will do vector thematic mapping, which involves mapping the data in the fields of the attribute table of a vector layer. 
 

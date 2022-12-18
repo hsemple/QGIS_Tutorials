@@ -1,28 +1,43 @@
 
 Map Projections
-=======================================
+===================
 
-This lab introduces you to the basics of temporarily displaying map layers in different projections and coordinate systems using QGIS. This is also called changing the projections 'on the fly' and does not alter the underlying coordinates of the map layers.  
 
-The lab will also illustrate how to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.   
+The main goals of the lab are to help you:
 
-Finally, the lab will show how to change projections in ArcGIS Online.  We will touch on projections for world maps, US maps, and maps of Michigan. 
+   * learn how to change the projections of map layers on the fly so that the map makers can quickly and accurately create maps that maintain correct distances, area, and shape of places.
+
+   * learn how to permanently change the projections of map layers so that layers with different projections can overlay on each other. This also measurements and analysis performed on the layers can be correct  
+
 
 |
 
-**Data Requirements**
+
+Assignment
+------------
+
+In the first section of this lab, you will use QGIS to temporarily display map layers in different projections.  We will focus on projections of the world, US projections, and projections for Michigan. 
+
+
+In the second section of the lab, you will use QGIS to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.   
+
+In the final section of the lab, you will use ArcGIS Online to change projections.  
+
+|
+
+Data
+-------
 
 Download the MapProj_QGIS.zip file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_ .  Unzip it and save the files to a working directory on your computer.
 
 
 |
 
-Global Projections
----------------------
+Displaying World Maps in Different Projections
+------------------------------------------------
 
 
-
-**View the World in Geographic Coordinates or Plate-Carrée Projection**
+**Display the World in Geographic Coordinates or Plate-Carrée Projection**
 
 1. Open QGIS from the Start menu and create a new project.
 
@@ -69,7 +84,7 @@ Global Projections
 
 |
 
-**View the World Using Robinson’s Projection**
+**Display the World Using Robinson’s Projection**
 
 The Plate Carrée is the basic projection for rendering world maps in geographic coordinates, but most of the time we want to work with other projections that better capture relative size and shape of places and distance and directions between them. 
 
@@ -99,7 +114,7 @@ A popular projection for rendering the entire world to create thematic maps is t
 
 |
 
-**Experiment with Other Global Projections**
+**Display with Other Global Projections**
 
 1. Using the methods described above, display the world using the following projections:
 
@@ -115,7 +130,7 @@ A popular projection for rendering the entire world to create thematic maps is t
 
 |
 
-**Making a Single Layout of the Different Global Projections**
+**Make a Single Layout of the Different Global Projections**
 
 1. Now, let us make a layout of the world in the different projections.  First Reset your map to the EPSG: 4326 coordinate system  then Click on Project | New Print Layout.
 
@@ -165,6 +180,7 @@ A popular projection for rendering the entire world to create thematic maps is t
 4. Which of the projections used above do you think is best for making a world thematic map to show Corona Virus mortality cases by countries? Give reasons for your choice. 
  
 |
+
 
 
 
@@ -233,7 +249,7 @@ The Albers Equal Area projection is a frequently used projection for US maps. Th
 
 
 Projections of Michigan 
-------------------------
+-------------------------
 
 **a. View of Michigan in Geographic Coordinates**
 
@@ -286,8 +302,8 @@ To display a map of Michigan using the Michigan Georef Coordinate System, do the
 
 |
 
-Transforming Map Projections
------------------------------
+Permanently Transforming Map Projections
+------------------------------------------
 
 When you download map layers from different websites, there is a high likelihood that the map layers you download will be in different coordinates.
  
@@ -433,10 +449,8 @@ Now that we have defined all the map layers based on their original coordinate s
 
 |
 
-Map Projections in ArcGIS Online 
------------------------------------
-
-Increasingly, GIS professionals and businesses are using ArcGIS Online to share map files, so for correct depiction of size, shape, and directions of places relative to each other, it is important to be able to set projections correctly, particularly on maps that cover large areas. 
+Changing Map Projections in ArcGIS Online 
+-------------------------------------------
 
 By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to display map layers. However, this projection distorts the size of places in the far north and south.  See this link  for a brief discussion.   Making non-Web-Mercator maps is possible in ArcGIS Online. First, you have to search ArcGIS Online for basemap template in the desired projection of interests, then display the basemap projection, and then upload your maps into the projection.  Here are the steps.
  
@@ -487,15 +501,10 @@ By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to dis
 
 **Deliverables**
 
-1. The projected maps as described in Section 1.
+1. Rerojected maps of the World, the USA, and Michigan, as described in Section 1.
 2. Answers to the questions in Section 1.
 3. A professional quality map showing the six layers overlaid on each other.
 4.  The URL of your projected USA map in ArcGIS Online. 
 
 
 |
-
-References
------------
-
-Working with Projections -  Working with Projections

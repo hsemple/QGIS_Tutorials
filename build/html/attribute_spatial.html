@@ -41,7 +41,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
@@ -57,8 +57,11 @@
 <li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">11. Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">12. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
 </ul>
 
         </div>
@@ -88,7 +91,8 @@
   <section id="attribute-and-spatial-queries">
 <h1><span class="section-number">6. </span>Attribute and Spatial Queries<a class="headerlink" href="#attribute-and-spatial-queries" title="Permalink to this heading"></a></h1>
 <p>Within a GIS, data can be queried in two ways; attribute queries and spatial queries. For attribute queries, features are selected using attribute data. Results can be mapped or presented in conventional database form.</p>
-<p>Spatial query is used extract features based solely on their topological relationship to other features. Combined, attribute and spatial queries are a powerful way of exploring spatial patterns in the data.  In the next section, we explore attribute queries.</p>
+<p>Spatial query is used extract features based solely on their topological relationship to other features. Combined, attribute and spatial queries are a powerful way of exploring spatial patterns in the data.</p>
+<p>In this lab, we explore how to run attribute and spatial queries in QGIS.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -181,6 +185,10 @@
 <h2><span class="section-number">6.2. </span>Spatial Queries<a class="headerlink" href="#spatial-queries" title="Permalink to this heading"></a></h2>
 <p>In this section, we will practice spatial queries, which is querying map layers by location and spatial relationships to other layers, not by attribute values.</p>
 <p>The dataset for this exercise can be downloaded from Canvas.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>A. Selecting Cities within a Given State</strong></p>
 <ol class="arabic simple">
 <li><p>Select a state (except Michigan) from the states layer, as shown below.  Right click on the layer name, select Export | Save Features as ..  and export the layer to create a separate map layer of only the selected layer.  Note, I clicked on Project | Properties and changed the projection to Albers Equal Area Contiguous.  Also, when you are exporting make sure you select, “Save Only Selected Features”, See illustrations below:</p></li>
 </ol>
@@ -198,37 +206,41 @@
 <ol class="arabic simple" start="4">
 <li><p>Right click on the name of the cities.  Select Export | Save Features as and create a layer only of cities that fall within your state. You will need the exported layer for the next query.  (2 pt).</p></li>
 <li><p>Run an attribute query on the cities within the state you selected to find cities that have population greater than 25,000.  (Note: This is a Select by Attributes Query). To create a map of the selected cities, right click on the layer, then select Data | Export data).  (2 pt)</p></li>
-<li><p>Select one of the Great Lakes and create a separate layer of the lake.  For the lake you selected, create a buffer of 50 miles around the lake and identify all the cities within the buffered areas (Geoprocessing | Buffer).  (2 pts).</p></li>
 </ol>
-<p><strong>Procedure</strong></p>
-<ul class="simple">
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>B. Selecting Cities that are within 50 miles of a Great Lake</strong></p>
+<p>In this section of the lab, you will select one of the Great Lakes and create a separate layer of the lake.  For the lake you selected, create a buffer of 50 miles around the lake and identify all the cities within the buffered areas (Geoprocessing | Buffer).</p>
+<ol class="arabic simple">
 <li><p>To select a Great Lake of interest, first click on the Select Features tool, then click on a lake to select it.</p></li>
 <li><p>To make a layer only of the lake you selected, right click on the name of the lakes layer in the Table of Content, then select Export | Save Features as and fill out the dialog that appears. Click Run.</p></li>
-</ul>
+</ol>
 <img alt="Spatial Queries" src="_images/spatial_queries6.png" />
-<ul class="simple">
+<ol class="arabic simple" start="3">
 <li><p>Next, buffer the lake. To do so, select Analysis in the main menu, Tools | Buffer.   Fill out the dialog. Make sure the buffer distance is set to 50 miles. (Note: the map units are in degrees so the buffer distance will be computed in degrees. To avoid this issue, we should permanently convert the map to a projected coordinate. However, to avoid this, we will use a rough estimate of 0.72 of a degree as the buffer distance).</p></li>
 <li><p>Select all cities that fall with the buffer zone. To do this, click on the Select By Location dialog and fill out the dialog. Since you want to select cities, then the cities layers should be in the input features box. The spatial relationship is ‘ within’  the Buffer.  Click Run.</p></li>
 <li><p>Right click on the cities layer, go to Export and save the selected cities to make a map only of the selected cities.</p></li>
-</ul>
-<blockquote>
-<div><ol class="arabic simple" start="5">
-<li><p>Download this dataset that shows a tornado track across a residential area.  The tornado destroyed property within a 550 m swath, so the authorities need to assess the damage done.  Specifically, they would like to assess damages for:</p></li>
 </ol>
-<ul class="simple">
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>C. Selecting Properties within a Given Proximity of a Tornado Path</strong></p>
+<p>Download this dataset that shows a tornado track across a residential area.  The tornado destroyed property within a 550 m swath, so the authorities need to assess the damage done.  Specifically, they would like to assess damages for:</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>properties for which any part was in the storm’s path and</p></li>
 <li><p>properties that were completely within the storm’s path.</p></li>
 </ul>
 </div></blockquote>
-<p>As the GIS analyst, you are required to use ArcGIS Pro Spatial Queries functions to identify the two types of properties and calculate their total assessed values.
-* Let’s identify properties that were partially in the storm’s path.
-* First, load the tornado dataset into QGIS. Afterwards, use the Select by Location tool to select parcels that intersect the tornado path.</p>
+<p>As the GIS analyst, you are required to use ArcGIS Pro Spatial Queries functions to identify the two types of properties and calculate their total assessed values.</p>
+<ol class="arabic simple">
+<li><p>Let’s identify properties that were partially in the storm’s path. First, load the tornado dataset into QGIS. Afterwards, use the Select by Location tool to select parcels that intersect the tornado path.</p></li>
+</ol>
 <img alt="Spatial Queries" src="_images/spatial_queries7.png" />
-<ul class="simple">
+<ol class="arabic simple" start="2">
 <li><p>Export the selected parcels to make a separate map.</p></li>
 <li><p>To get the assessed value of the damaged properties, simply click View in the main menu, then select Panels | Statistics Panel. This will bring up a panel from which you can choose the field of interest. It will then show summary statistics for the field.</p></li>
-</ul>
-<ol class="arabic simple" start="8">
 <li><p>Identity the worst affected properties, i.e., those where the entire property was contained in the path of the storm.  Note. For this problem, you have to first make buffer of 550 m around the tornado path, then find all parcels within the buffer region.</p></li>
 </ol>
 <img alt="Spatial Queries" src="_images/spatial_queries8.png" />

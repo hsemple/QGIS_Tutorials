@@ -1,23 +1,82 @@
 
+Downloading Multiple Layers and Making Maps
+=================================================
 
-Loading Data into QGIS
-========================
 
-In GIS, spatial data refers to the points, lines, and area features that are drawn on maps to represent the geographic location of natural and human phenomena, such as mountains, rivers, roads, bridges, homicides, etc.  In general, spatial data is any data that can be mapped. 
+The main goals of the lab are to help you:
 
-In a computer, the points, lines and polygons that represent map features can be drawn using precise coordinates (vectors) or they can be represented by one or more contiguous cells on a grid (rasters).  
+   * develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as orthophotos, DEMs, satellite imagery, thematic rasters, and vector datasets. 
 
-Popular vector products include shapefiles and geodatabases. Popular raster products include digital elevation models, satellite imagery, thematic rasters, orthophotos, and digital topographic maps. 
+   * develop basic file management skills necessary to deal with the large number of files that are typically needed for a GIS project. 
 
-With QGIS, we can easily load the various types of spatial data into the software.  The method of loading data varies depending on the type of spatial data. The sections below describe how to load different types of spatial data into QGIS.
+   * become comfortable with smoothly loading and displaying multiple map layers in ArcGIS Pro or QGIS and rearranging the layers to suit your information needs. 
 
+   * become comfortable interpreting data on shapefiles and DEMs.
+
+   * develop cartographic skills needed for effective presentation of spatial data.
+
+
+
+
+
+Assignment
+------------
+
+A typical GIS project involves working with multiple map layers overlaid on each other. In this lab, you will download, display, arrange, and explore multiple forms of spatial data. You will also extend your cartographic skills by preparing professional quality layouts using different types of spatial data.
+
+
+For submission, you will create the following maps:
+
+    * A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, and urban areas.
+    * A showing the Digital Elevation Model you downloaded.
+    * Maps showing the satellite imagery you downloaded displayed in the following band combinations: 5-4-3; 5-6-4 and 7-6-4.
+    * A map showing either the orthophoto tile or tiles you downloaded. 
+    * A map showing mines in the USA based on web services data that you accessed.
+
+
+The data used for this lab can pertain to any county in Michigan, however, I have downloaded data for Wayne County and have made them available for those who do not as yet feel comfortable downloading data from govt websites. 
+
+Download at least 8 different layers. The layers should include at least 3 shapefiles, a DEM, a satellite imagery, an OGS web map map layer, an ArcGIS Server Rest Service layer, and an orthophoto (aerial photo).  The orthophoto will cover just a small part of your study area, not the entire county.
 
 
 
 |
 
-Loading Shapefiles
---------------------
+
+Download and Unzip Files
+--------------------------------
+
+
+**Download Files**
+
+1. Create a folder on your computer to store all the downloaded data.
+
+2. Decide on a Michigan county of your choice, then visit the `Michigan CGI archived GIS website <https://web.archive.org/web/20160201222536/http:/www.mcgi.state.mi.us/mgdl/?action=thm>`_ to download data.
+
+3. Inspect the different categories of data and download the layers for the county of your choice.  Note: You can find digital elevation models and satellite imagery color composites under the TOPOGRAPHY section. Orthophotos are no longer available at this site. 
+
+4.  If you are having trouble downloading from the CGI website, you can visit the new Michigan GIS Data website and search for appropriate data
+
+
+5. Alternatively, you can simply download layers for Wayne County which I have placed on CGithub. 
+
+
+
+
+**Unzipping Files**
+
+1. Unzip the layers to the single folder you created, as shown below.  When your project is completed, you can delete files you no longer need.
+
+.. image:: img/unzipping_data.png
+   :alt: Unzipping Data
+
+ 
+
+|
+
+
+Loading and Displaying Shapefiles
+------------------------------------
 
 1. ESRI's shapefile is one of the most common vector data file formats. One way of loading a shapefile into QGIS is to click on Layer | Add Layer | Add Vector Layer, as shown below.
 
@@ -35,14 +94,15 @@ Loading Shapefiles
 
 
 
+
 |
 
 
-Loading a Digital Elevation Model
------------------------------------
+Loading and Displaying the DEM 
+--------------------------------
 
 
-1 To display a DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/. 
+1 To display the DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/. 
 
 2. Select the file named w001001.adf. Make sure it is the adf file with the larger file size.
 
@@ -58,6 +118,8 @@ Loading a Digital Elevation Model
 
 6. Select a color ramp that suits your taste. Make sure the color ramp does justice in showing the subtle variations in elevation. 
 
+7. You can also click on the Classify button and experiment with the impact that different classifications methods have on the visual appearance of the DEM.
+
 
 .. image:: img/dem_symbology.png
    :alt: Digital Elevation Model
@@ -66,57 +128,27 @@ Loading a Digital Elevation Model
 
 |
 
-Loading an Aerial Photograph
------------------------------
+Loading and Displaying the Aerial Photograph
+-----------------------------------------------
 
-1. Download the orthophoto and unzip it to a folder that you can easily locate. 
-
-2. Display the orthophoto in QGIS by clicking on Layers | Add Raster Layer and navigating to the folder where the file is stored.  
+1. Click on Layers | Add Raster Layer and navigating to the folder where the file is stored.  
 
 
 .. image:: img/ann_arbor_east.png
    :alt: Loading Orthophoto
 
-
-|
-
-Adding Google Satellite Imagery
----------------------------------
-
-1. Click the Open Data Source Manager button in the toolbar
-
-.. image:: img/open_data_source_manage_xyz.png
-   :alt: Loading Orthophoto
-
-2. Right click on XYZ Tiles | New Connection…
-
-3. In the dialog that appears, type "Google" in the Name textbox.
-
-4. In the URL textbox, copy and paste the address the following URL then click OK: 
-   'http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}&s=Ga'
-
-.. image:: img/google_earth_connection.png
-   :alt: Loading Google Earth Imagery
-
-5. To view the imagery, drag the "Google Earth" button you created to the Table of Content.
-
-
-6. Additional Google Map Tiles Links
-
-  * Google Maps       -  https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}
-  * Google Satellite	 - https://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}
-  * Google Satellite Hybrid - https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}
-  * Google Terrain - https://mt1.google.com/vt/lyrs=t&x={x}&y={y}&z={z}
-  * Google Roads	- https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}
+2. There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc.
 
 
 
 
 |
 
-Loading Landsat Imagery
-------------------------
-1. Visit the Earth Explorer website (https://earthexplorer.usgs.gov/) and download Landsat 8 imagery for an area of interest.  If you are not familiar with the downloading process, click on this `link <https://guides.library.uwm.edu/c.php?g=567847&p=5338445>`_ for instructions on this process. 
+Loading and Displaying Landsat Imagery
+----------------------------------------
+
+1. Visit the Earth Explorer website (https://earthexplorer.usgs.gov/) and download Landsat 8 imagery for an area of interest.  If you are not familiar with the downloading process, click on this `link <https://guides.library.uwm.edu/c.php?g=567847&p=5338445>`_ for instructions on this process.  You can also download a Landsat imagery datset from Canvas.
+
 
 2. The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.
 
@@ -178,66 +210,8 @@ Loading Landsat Imagery
 
 |
 
-Importing CSV files
---------------------
-
-To add a csv file to QGIS, follow these steps:
-
-1. Click on Layer | Add Layer | Add Delimited Text Layer.
-
-2. Browse to the CSV file.
-
-3. Fill out the dialog. If the CSV files contains latitude/longittude data, ensure that you define the X field and Y field that contains Longitude and Latitude values.   
-
-.. image:: img/data_source_manager_csv.png
-   :alt: Data Source Manager CSV
-
-4. When you are done filling out the dialog, click Ok. QGIS will read and load the CSV file. Also, the points associated with the coordinates will appear on the screen.
-             
-
-|
-
-Loading GPS Data
-------------------
-1. Data downloaded from GPS receivers is often available in GPX (GPS eXchange) format.
-
-2. To load GPX data into QGIS, first click on the Data Source Manager button, then click on GPS.
-
-3. Navigate to the GPX file and load it into QGIS.
-
-.. image:: img/data_source_manager_gpx.png
-   :alt: Data Source Manager GPX. 
-
-4. Click Ok. QGIS will read and load the GPX file. It will also display the points on the screen as waypoints or routes, as shown below.
-          
-
-.. image:: img/gps_points.png
-   :alt: GPS Data Displayed as Route  
-
-
-
-|
-
-
-Loading PostgreSQL/PostGIS Layers
--------------------------------------
-
-To visualize datasets in PostgreSQl/PostGIS from within QGIS, follow the steps below:
-
-1. In QGIS, click on Layer | Add Layer | Add PostGIS Layers.
-
-2. In the dialog that appears, click "New". This opens the dialog to connect to the PostGIS server and database. Enter the connection information and click Ok.
-
-3. Back in the Connection dialog, click "Connect". If the connection is successful, you will be able to see all tables in the database. 
-
-4. Select any table of interest and click “Add”.  This will load the layer into QGIS.
-
- 
-
-|
-
-Loading WMS Layers
--------------------
+Loading and Displaying a WMS Layer
+-----------------------------------
 
 To Add a WMS Layer, do the following:
 
@@ -266,46 +240,12 @@ To Add a WMS Layer, do the following:
 
 |
 
-**Example WMS Servers**
-
-
-1. Georeferenced bathymetry map of the world's oceans (Add as OGC WMS Layer)
-https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?
-
-2. NASA Earth Observations.
-https://neo.sci.gsfc.nasa.gov/wms/wms
-
-3. Boundaries in effect for the 2022 American Community Survey
-https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer
-
-4. Global Poplation, Agriculture, Food Security, and other Themes
-https://sedac.ciesin.columbia.edu/geoserver/wms
-
-|
 
 
 
-Loading WFS Layers
--------------------
+Loading and Displaying an ArcGIS REST Service Layer 
+-----------------------------------------------------
 
-1. In QGIS, click on Layer | Add WFS Layer.
-
-2. Select New in the Data Source Manager dialog.
-   
-3. In the 'Create a new WFS connection' dialog box, enter a name for the connection and the appropriate URL. (e.g. https://services.ga.gov.au/gis/services/Foundation_Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&service=WFS)
-
-4. Select OK.
-
-5. In the Server Connection dialog box, select Connect and then Apply. NB - loading the WFS data may take a while.
-   
-6. Select Close.
-
-
-
-|
-
-Adding an ArcGIS REST Service to QGIS
---------------------------------------
 
 To Add an ArcGIS Server Layer, do the following:
 
@@ -341,47 +281,102 @@ To Add an ArcGIS Server Layer, do the following:
 
 
 
-**ArcGIS Rest Servers Links for Practice**
+Explore your Data
+----------------------
 
-1. NAIP Imagery (Add as OG WMS Layers)
-https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer?
+1. One of the requirements of this lab is for you to create professional quality maps using the layers you downloaded.  One important contributor to making attractive maps is that you should know your data, so let's explore the map layers we just displayed.  
 
-
-2. ESRI World Imagery Layers
-http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer
-
-3. Elevation imagery layer covering the Antarctic, providing slope for use in visualization.
-https://elevation2.arcgis.com/arcgis/rest/services/Polar/AntarcticDEM/ImageServer
+2. Locate the Identify Tool then click on each map layer to investigate the map attributes at particular locations. Study the results carefully. In the case of shapefiles, they represent the contents of the attribute table at that location.  For rasters such as DEMs or satellite imagery, they represent the contents of cell values at that location.  
 
 
-4. Comprehensive elevation map of the world. (Add as ArcGIS Server Web Service)
-https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer
+3. Using the Identify tool, click anywhere on the digital elevation model to get the elevation at different locations. 
 
+4.  Locate the Measure Tool as shown below.  Click it and then explore how to measure distances and areas on the map.
 
-5. TNM Blank US base map service from The National Map:
-https://basemap.nationalmap.gov/arcgis/rest/services/USGSTNMBlank/MapServer'
+5. Measure the length of the sides of the orthophoto. How much area does one of these photo cover?
+
+6.  Right click on the name of each shapefiles and open the attribute tables of the map layers. Try to understand the information they contain.
 
 
 
 |
 
 
-**Other Sources of GIS Data**
+Prepare Professional Maps of your Data
+----------------------------------------
 
-* `National Landcover dataset <https://www.usgs.gov/centers/eros/science/national-land-cover-database?qt-science_center_objects=0#qt-science_center_objects>`_
 
-* `National Hydrologic Dataset <https://www.usgs.gov/national-hydrography>`_ 
+**Prepare the Shapefiles**
 
-* `National Wetlands Inventory <https://www.fws.gov/program/national-wetlands-inventory>`_
+1. One of your goals is to create a professional quality map using only the shapefiles. It is easier if you decide on a theme. For example, I will use my layers try to show water wells in relation to urban areas in Wayne County.
 
-* `National Flood Hazard Layer <https://www.fema.gov/flood-maps/national-flood-hazard-layer>`_
+2.  Uncheck all the layers except the shapefile.
 
-* `Geologic Maps of the US <https://mrdata.usgs.gov/#geologic-data>`_
+3. Rearrange the order of the shapefiles to suit your preference by dragging them up and down in the Table of Contents. Check to see if some of the layers at the top of the list are hiding others below. If so, further re-arrange the layers. One rule we use is that point features should be at the top of the set, followed by layers that contain line features, then those that contain area features. 
 
-* `Cartographic Boundary Files <https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html>`_
-
-* `Mineral Resources Online Spatial Data <https://mrdata.usgs.gov/general/map-global.html>`_
-
-* etc
+4. Change the color of the layers. To do so, double click on the map icons of each layer, then go to Symbology and change the color to a color that you like. 
  
+
+5. Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You will may find yourself using Simple Fill more often.  
+
+.. image:: img/simple_fill.png
+   :alt: GPS Data  
+
+
+6  You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below. 
+
+
+7.  Change Stroke or line widths to show emphasis.
+
+
+8.  Double click on the name of the layer, then go to Source and from there you can change the layer name.
+
+.. image:: img/cities_lab2.png
+   :alt: GPS Data  
+
+
+
+9•  My final map appears as shown below.
+ 
+.. image:: img/final_shapefile_map.png
+   :alt: GPS Data  
+
+
+10. Go to the Composer and compose the final map.
+ 
+.. image:: img/final_shapefile_map2.png
+   :alt: GPS Data  
+
+
+11. Click on Layout | Export as Image.  Select a path and a name for the exported image.   Once you are satisfied with the map, you can export it PNG format. The image can be uploaded to Canvas Dropbox. 
+
+
+|
+
+
+**Prepare Other Professional Maps**
+
+Repeat the process described above regarding how to create layouts and create the other layouts from your data. Separate maps should be used for the satellite imagery, the DEM, the orthophoto, and eaach of the web services.  See Canvas for example maps.
+
+
+
+|
+
+Summary of Deliverables
+-------------------------
+
+* A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, and urban areas.
+* A map showing the Digital Elevation Model you downloaded.
+* Maps showing the satellite imagery you downloaded displayed in the following band combinations: 5-4-3; 5-6-4 and 7-6-4.
+* A short write up-of the usefulness of the different band combinations that you displayed.
+* A map showing either the orthophoto tile or tiles you downloaded. 
+* A map showing mines in the USA based on web services data that you accessed.
+
+
+ 
+
+
+
+
+
 
