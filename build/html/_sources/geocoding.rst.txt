@@ -5,6 +5,13 @@ Geocoding
 
 If you have a large number of street addresses and wish to turn them into points on a map, you can use QGIS to generate X,Y coordinates from the addresses. This process is called geocoding.  QGIS uses a plugin called MMQGIS for geocoding. 
 
+
+
+|
+
+Assignment
+-------------
+
 In this tutorial, we will geocode a list of addresses that represent McDonald's restaurants in the USA. The list is somewhat dated, but its contents meets our purpose. The addresses were downloaded from a Github site at https://github.com/gavinr/usa-mcdonalds-locations/blob/master/mcdonalds.geojson. The list is originally in geojson format and was converted to csv format for this exercise.
 
 
@@ -38,12 +45,24 @@ Basic Steps for Geocoding
 9. Click Apply. A new shapefile with the geocoded points will appear.
 
 
+|
 
 
-**References**
+Geocoding Resources
+----------------------
+
 
 1.  https://www.gislounge.com/how-to-geocode-addresses-using-qgis/
 
 2. https://guides.library.ucsc.edu/DS/Resources/QGIS
 
 3.  https://www.youtube.com/watch?v=FOAM0vfsSns
+
+
+|
+
+
+Deliverables
+-------------
+Submit a professional quality map showing the geocoded points.
+

@@ -436,6 +436,7 @@ Now that we have defined all the map layers based on their original coordinate s
 |
 
 **Display all the Projected Layers**
+
 1. Click on Project at the top left of the screen and select "NEW" to start a new project.  Do not save the project.   
 
 2. Add all six of the projected layers.  If everything was done correctly, all the layers should overlay exactly on each other.  
@@ -499,12 +500,13 @@ By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to dis
 
 |
 
-**Deliverables**
+Summary of Deliverables
+-------------------------
 
 1. Rerojected maps of the World, the USA, and Michigan, as described in Section 1.
 2. Answers to the questions in Section 1.
 3. A professional quality map showing the six layers overlaid on each other.
-4.  The URL of your projected USA map in ArcGIS Online. 
+4. The URL of your projected USA map in ArcGIS Online. 
 
 
 |

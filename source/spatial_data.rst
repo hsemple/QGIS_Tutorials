@@ -3,7 +3,7 @@ Downloading Multiple Layers and Making Maps
 =================================================
 
 
-The main goals of the lab are to help you:
+The main goals of this lab are to help you:
 
    * develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as orthophotos, DEMs, satellite imagery, thematic rasters, and vector datasets. 
 
@@ -16,16 +16,16 @@ The main goals of the lab are to help you:
    * develop cartographic skills needed for effective presentation of spatial data.
 
 
-
+|
 
 
 Assignment
 ------------
 
-A typical GIS project involves working with multiple map layers overlaid on each other. In this lab, you will download, display, arrange, and explore multiple forms of spatial data. You will also extend your cartographic skills by preparing professional quality layouts using different types of spatial data.
+A typical GIS project involves working with multiple map layers overlaid on each other. In this lab, you will firstly download, display, arrange, and explore multiple layers of spatial data. Secondly, you will also extend your cartographic skills by preparing professional quality layouts using different types of spatial data.
 
 
-For submission, you will create the following maps:
+For submission, create the following maps:
 
     * A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, and urban areas.
     * A showing the Digital Elevation Model you downloaded.
@@ -34,9 +34,9 @@ For submission, you will create the following maps:
     * A map showing mines in the USA based on web services data that you accessed.
 
 
-The data used for this lab can pertain to any county in Michigan, however, I have downloaded data for Wayne County and have made them available for those who do not as yet feel comfortable downloading data from govt websites. 
+The data used for this lab can pertain to any county in Michigan, however, I have downloaded data for Wayne County and have made them available on Canvas for those who do not as yet feel comfortable downloading data from government websites. 
 
-Download at least 8 different layers. The layers should include at least 3 shapefiles, a DEM, a satellite imagery, an OGS web map map layer, an ArcGIS Server Rest Service layer, and an orthophoto (aerial photo).  The orthophoto will cover just a small part of your study area, not the entire county.
+You should download at least 8 different layers. The layers should include at least 3 shapefiles, a DEM, a satellite imagery, an OGC web map layer, an ArcGIS Server Rest Service layer, and an orthophoto (aerial photo).  The orthophoto will cover just a small part of your study area, not the entire county.
 
 
 
@@ -55,7 +55,7 @@ Download and Unzip Files
 
 3. Inspect the different categories of data and download the layers for the county of your choice.  Note: You can find digital elevation models and satellite imagery color composites under the TOPOGRAPHY section. Orthophotos are no longer available at this site. 
 
-4.  If you are having trouble downloading from the CGI website, you can visit the new Michigan GIS Data website and search for appropriate data
+4. If you are having trouble downloading from the CGI website, you can visit the new Michigan GIS Data Portal website and search for appropriate data
 
 
 5. Alternatively, you can simply download layers for Wayne County which I have placed on CGithub. 
@@ -128,21 +128,23 @@ Loading and Displaying the DEM
 
 |
 
-Loading and Displaying the Aerial Photograph
+Loading and Displaying Orthophoto Tiles
 -----------------------------------------------
 
-1. Click on Layers | Add Raster Layer and navigating to the folder where the file is stored.  
+1. Click on Layers | Add Raster Layer and navigate to the folder where the file is stored.  
 
 
 .. image:: img/ann_arbor_east.png
    :alt: Loading Orthophoto
 
-2. There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc.
+2. There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc., and add it to the display.
 
 
 
 
 |
+
+
 
 Loading and Displaying Landsat Imagery
 ----------------------------------------

@@ -11,24 +11,24 @@ With a GIS software, the basic way to create a vector thematic map is to identif
 
 |
 
-Exercises
-----------
+Assignment
+------------
 
-1. Create a thematic choropleth map showing population distribution by states in the USA.  The dataset for this exercise can be found at  this `Github link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_.  Click on the *Download* button and download the USA states shapefile.  
+1. Create a thematic choropleth map showing population distribution by states in the USA.  The data for this exercise can be found at  this `Github link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_.  Click on the *Download* button and download the USA states shapefile.  
 
 
 2. Using the same data as above, create a proportional symbol map. 
 
 
-3. Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
+3. Health care policy makers would like to understand the distribution of Covid19 cases across the United States. As as GIS analyst, create for them a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
 
 
 
-Follow the instructions in this tutorial to complete Exercise 1 and 2. Complete Exercise 3 on your own.
+Follow the instructions below to complete Numbers 1 and 2 above. Complete Number 3 on your own.
 
 
 
-
+|
 
 
 Creating a Choropleth Thematic Map
@@ -55,7 +55,7 @@ Creating a Choropleth Thematic Map
    :alt: QGIS Symbology Dialog
 
 
-6 Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.
+6. Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.
 
 
 .. image:: img/mapping_attributes2b.png
@@ -115,8 +115,7 @@ Creating a Choropleth Thematic Map
 
 
  
-Preparing the Map for Printing
--------------------------------
+**Preparing the Choropleth Map for Printing**
 
 1. Now that you are familiar with the process of creating a thematic chropleth map, the final step is "compose" the map for printing.  This is phase where your artistic skill comes into play.  I strongly suggest that you look over the lecture notes on map design principles, as they provide important information on how to style your final map.  Key components of a professional map include:
    •  The map body
@@ -262,10 +261,10 @@ Creating proportional symbols maps in QGIS is relatively. The workflow entails o
    :alt: New Legend
 
 
-13. The final map should appear similar to the illustration shown below.
+13. Now go to Composer and set up the map for printing. In Composer, the final map should appear similar to the illustration shown below.
 
 .. image:: img/composing_map4b.png
-   :alt: New Legend
+   :alt: Final Proportional Symbol Map
 
 
 

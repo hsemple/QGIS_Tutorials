@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Loading Data into QGIS" href="spatial_data.html" />
+    <link rel="next" title="4. Downloading Multiple Layers and Making Maps" href="spatial_data.html" />
     <link rel="prev" title="2. Getting Started" href="launch_qgis.html" /> 
 </head>
 
@@ -44,16 +44,15 @@
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Thematic Mapping</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#exercises">3.1. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assignment">3.1. Assignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-a-choropleth-thematic-map">3.2. Creating a Choropleth Thematic Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#preparing-the-map-for-printing">3.3. Preparing the Map for Printing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-a-proportional-symbol-map">3.4. Creating a Proportional Symbol Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#on-your-own">3.5. On your Own</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#deliverables">3.6. Deliverables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">3.7. Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-proportional-symbol-map">3.3. Creating a Proportional Symbol Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#on-your-own">3.4. On your Own</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deliverables">3.5. Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">3.6. Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
 <li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
@@ -98,14 +97,17 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="exercises">
-<h2><span class="section-number">3.1. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading"></a></h2>
+<section id="assignment">
+<h2><span class="section-number">3.1. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Create a thematic choropleth map showing population distribution by states in the USA.  The dataset for this exercise can be found at  this <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/USA-2.zip">Github link</a>.  Click on the <em>Download</em> button and download the USA states shapefile.</p></li>
+<li><p>Create a thematic choropleth map showing population distribution by states in the USA.  The data for this exercise can be found at  this <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/USA-2.zip">Github link</a>.  Click on the <em>Download</em> button and download the USA states shapefile.</p></li>
 <li><p>Using the same data as above, create a proportional symbol map.</p></li>
-<li><p>Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip">here</a>.</p></li>
+<li><p>Health care policy makers would like to understand the distribution of Covid19 cases across the United States. As as GIS analyst, create for them a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip">here</a>.</p></li>
 </ol>
-<p>Follow the instructions in this tutorial to complete Exercise 1 and 2. Complete Exercise 3 on your own.</p>
+<p>Follow the instructions below to complete Numbers 1 and 2 above. Complete Number 3 on your own.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
 <section id="creating-a-choropleth-thematic-map">
 <h2><span class="section-number">3.2. </span>Creating a Choropleth Thematic Map<a class="headerlink" href="#creating-a-choropleth-thematic-map" title="Permalink to this heading"></a></h2>
@@ -120,7 +122,9 @@
 <li><p>When the layer properties dialog opens, select the “Symbology” tab to the left of the dialog.</p></li>
 </ol>
 <img alt="QGIS Symbology Dialog" src="_images/mapping_attributes2.png" />
-<p>6 Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.</p>
+<ol class="arabic simple" start="6">
+<li><p>Click on the drop-down button at the top right of the Symbology dialog and you will see several options, e.g., Single Symbol, Categorized, Graduated, Rule Based, etc.</p></li>
+</ol>
 <img alt="QGIS Symbology Dialog" src="_images/mapping_attributes2b.png" />
 <img alt="Mapping Attributes" src="_images/mapping_attributes3.png" />
 <ol class="arabic simple" start="7">
@@ -145,9 +149,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</section>
-<section id="preparing-the-map-for-printing">
-<h2><span class="section-number">3.3. </span>Preparing the Map for Printing<a class="headerlink" href="#preparing-the-map-for-printing" title="Permalink to this heading"></a></h2>
+<p><strong>Preparing the Choropleth Map for Printing</strong></p>
 <ol class="arabic simple">
 <li><p>Now that you are familiar with the process of creating a thematic chropleth map, the final step is “compose” the map for printing.  This is phase where your artistic skill comes into play.  I strongly suggest that you look over the lecture notes on map design principles, as they provide important information on how to style your final map.  Key components of a professional map include:
 •  The map body
@@ -188,7 +190,7 @@
 </div>
 </section>
 <section id="creating-a-proportional-symbol-map">
-<h2><span class="section-number">3.4. </span>Creating a Proportional Symbol Map<a class="headerlink" href="#creating-a-proportional-symbol-map" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.3. </span>Creating a Proportional Symbol Map<a class="headerlink" href="#creating-a-proportional-symbol-map" title="Permalink to this heading"></a></h2>
 <p>Creating proportional symbols maps in QGIS is relatively. The workflow entails obtaining a points layer of the dataset and then symbolizing the points layer. The points layer can be symbolized as proportional symbols or graduated proportional symbols.</p>
 <ol class="arabic simple">
 <li><p>In our situation, the data is available as a polygon layer, so we can convert the polygon layer into a points layer by clicking on Vector in the top menu, then selecting Geometry Tools | Centroids.</p></li>
@@ -230,15 +232,15 @@
 </ol>
 <img alt="New Legend" src="_images/thematic_maps_proportional_symbolmap9.png" />
 <ol class="arabic simple" start="13">
-<li><p>The final map should appear similar to the illustration shown below.</p></li>
+<li><p>Now go to Composer and set up the map for printing. In Composer, the final map should appear similar to the illustration shown below.</p></li>
 </ol>
-<img alt="New Legend" src="_images/composing_map4b.png" />
+<img alt="Final Proportional Symbol Map" src="_images/composing_map4b.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="on-your-own">
-<h2><span class="section-number">3.5. </span>On your Own<a class="headerlink" href="#on-your-own" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.4. </span>On your Own<a class="headerlink" href="#on-your-own" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 <a class="reference external" href="https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip">here</a>.</p></li>
 </ol>
@@ -247,7 +249,7 @@
 </div>
 </section>
 <section id="deliverables">
-<h2><span class="section-number">3.6. </span>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.5. </span>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Choropleth map showing distribution of population by states in the USA.</p></li>
 <li><p>Proportional Symbol map showing distribution of population by states in the USA.</p></li>
@@ -258,7 +260,7 @@
 </div>
 </section>
 <section id="resources">
-<h2><span class="section-number">3.7. </span>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.6. </span>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
 <p>Covid19 datasets (csv files). These files must be joined to the shapefile’s attribute table before creating the thematic map.
 <a class="reference external" href="https://github.com/nytimes/covid-19-data">https://github.com/nytimes/covid-19-data</a></p>
 <p>Create a Proportional Symbol Map and Legend Using QGIS 3.x (Youtube)
@@ -274,7 +276,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="launch_qgis.html" class="btn btn-neutral float-left" title="2. Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="spatial_data.html" class="btn btn-neutral float-right" title="4. Loading Data into QGIS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="spatial_data.html" class="btn btn-neutral float-right" title="4. Downloading Multiple Layers and Making Maps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
