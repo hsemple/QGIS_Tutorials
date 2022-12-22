@@ -2,10 +2,9 @@
 Downloading Multiple Layers and Making Maps
 =================================================
 
+A typical GIS project involves working with multiple map layers overlaid on each other through a common coordinarte system.   Some of the layers may be vectors while others may be vectors.  An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.  
 
-The main goals of this lab are to help you:
-
-   * develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as orthophotos, DEMs, satellite imagery, thematic rasters, and vector datasets. 
+Additionally, the lab seeks to help you do the following:
 
    * develop basic file management skills necessary to deal with the large number of files that are typically needed for a GIS project. 
 
@@ -22,21 +21,26 @@ The main goals of this lab are to help you:
 Assignment
 ------------
 
-A typical GIS project involves working with multiple map layers overlaid on each other. In this lab, you will firstly download, display, arrange, and explore multiple layers of spatial data. Secondly, you will also extend your cartographic skills by preparing professional quality layouts using different types of spatial data.
+In this lab, you will firstly download, display, arrange, and explore multiple layers of spatial data for a selected county in Michigan.  In this section of the lab, the emphasis is on unzipping multiple files and proper storage of downloaded data.
 
+
+In the second part of the lab, you will extend your cartographic skills by usign the downloaded data to prepare professional quality layouts.
+
+You should download at least 8 different layers. The layers should include at least 3 shapefiles, a DEM, satellite imagery covering any part of the county, an OGC web map layer, an ArcGIS Server Rest Service layer, and one or more orthophoto (aerial photo) tiles.  
+
+In some cases, the map layers may not match the extent of the county boundary.  For example, the orthophoto tile will cover just a small part of the county, not the entire county. Also, some layers may be Michigan-wide layers or a US-wide layers. In this lab, we wouldn't focus on clipping or merging layers.  We will just download layers and make pretty maps.
+
+
+NB: I have downloaded data for Wayne County and have made them available on Canvas for those who do not as yet feel comfortable downloading data from government websites. 
 
 For submission, create the following maps:
 
-    * A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, and urban areas.
-    * A showing the Digital Elevation Model you downloaded.
+    * A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, townshhips, and urban areas.
+    * A map showing the Digital Elevation Model you downloaded.
     * Maps showing the satellite imagery you downloaded displayed in the following band combinations: 5-4-3; 5-6-4 and 7-6-4.
     * A map showing either the orthophoto tile or tiles you downloaded. 
     * A map showing mines in the USA based on web services data that you accessed.
 
-
-The data used for this lab can pertain to any county in Michigan, however, I have downloaded data for Wayne County and have made them available on Canvas for those who do not as yet feel comfortable downloading data from government websites. 
-
-You should download at least 8 different layers. The layers should include at least 3 shapefiles, a DEM, a satellite imagery, an OGC web map layer, an ArcGIS Server Rest Service layer, and an orthophoto (aerial photo).  The orthophoto will cover just a small part of your study area, not the entire county.
 
 
 
@@ -44,7 +48,7 @@ You should download at least 8 different layers. The layers should include at le
 
 
 Download and Unzip Files
---------------------------------
+----------------------------
 
 
 **Download Files**
@@ -65,7 +69,7 @@ Download and Unzip Files
 
 **Unzipping Files**
 
-1. Unzip the layers to the single folder you created, as shown below.  When your project is completed, you can delete files you no longer need.
+1. Unzip the layers to the single folder you created, as shown below.  When your project is completed, you can delete the original zipped files you no longer need.
 
 .. image:: img/unzipping_data.png
    :alt: Unzipping Data
@@ -278,6 +282,10 @@ To Add an ArcGIS Server Layer, do the following:
 
 .. image:: img/arcgis_server_imagery.png
    :alt: GPS Data  
+
+
+https://www.youtube.com/watch?v=eW41DrPFquQ
+
 
 |
 

@@ -54,6 +54,10 @@ Download Data
 1. For this tutorial, please visit the Github page at this `link <https://github.com/hsemple/-Covid19/blob/master/USA-2.zip>`_. Click on the *Download* button and download the USA States shapefile.
 
 
+.. image:: img/github_download.png
+   :alt: Download file at Github
+
+
 2. After downloading the file, unzip or extract it to a location that you can remember.
 
 
@@ -215,7 +219,11 @@ Saving your Project
 
 
 
+In the next unit, we will do vector thematic mapping, which involves mapping the data in the fields of the attribute table of a vector layer. 
+
+
 |
+
 
 Deliverables
 -------------
@@ -223,5 +231,4 @@ Deliverables
 Write a blog commenting on your experience downloading, installing, and loading data into QGIS. 
  
 
-In the next unit, we will do vector thematic mapping, which involves mapping the data in the fields of the attribute table of a vector layer. 
 

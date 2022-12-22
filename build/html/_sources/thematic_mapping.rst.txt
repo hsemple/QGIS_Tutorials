@@ -5,7 +5,7 @@ Thematic Mapping
    
 A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The data may be quantitative (e.g., percentage population change, income distribution) or qualitative  (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas).
 
-With a GIS software, the basic way to create a vector thematic map is to identify and scrutinize the field in the attribute table of the map layer that will be used for mapping. Next, display the data using the software's thematic mapping engine.  Some amouht of thought is required here. If the data is quantitative, select one of the quantitative thematic mapping style, e.g., graduated color, proportional symbols, dot density, etc.  We also have to think about the color scheme for the map, the number of classes or bins into which the data will be placed, how the data will be classified, e.g., natural break, equal area, etc, and whether the data should be normalized.  If the data is qualitative, we create a qualitative thematic map, which may also vary in appearance depending on the details of the data.
+With a GIS software, the basic way to create a vector thematic map is to identify the field in the attribute table of the map layer that will be used for mapping. Next, scrutinize the data then display it using the software's thematic mapping engine.  Some amouht of thought is required when mapping the data. If the data is quantitative, select one of the quantitative thematic mapping style, e.g., graduated color, proportional symbols, dot density, etc.  We also have to think about the color scheme for the map, the number of classes or bins into which the data will be placed, how the data will be classified, e.g., natural break, equal area, etc, and whether the data should be normalized.  If the data is qualitative, we create a qualitative thematic map, which may also vary in appearance depending on the details of the data.
 
 
 
@@ -23,8 +23,10 @@ Assignment
 3. Health care policy makers would like to understand the distribution of Covid19 cases across the United States. As as GIS analyst, create for them a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
 
 
+4. Using this dataset, create a proportional symbol map showing the distribution of Covid19 cases for Michigan. Using the proportional symbol map that you just made, briefly describe Covid19 patterns you observe in the data.
 
-Follow the instructions below to complete Numbers 1 and 2 above. Complete Number 3 on your own.
+
+Follow the instructions below to complete Numbers 1 and 2 above. Complete Number 3 and 4 on your own.
 
 
 
@@ -274,7 +276,7 @@ Creating proportional symbols maps in QGIS is relatively. The workflow entails o
 On your Own
 ------------
 
-1. Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Download a USA County Shapefile with Covid19 data February 2022 `here <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
+1. Create a thematic choropleth map showing Covid19 cases for Counties in the USA for February 2022.  Data for this task can be downloaded from `Github <https://github.com/hsemple/-Covid19/blob/master/usa_counties_covid_Feb25_2021.zip>`_.
 
 
 |
@@ -284,11 +286,14 @@ On your Own
 Deliverables
 ------------
 
-1. Choropleth map showing distribution of population by states in the USA.
+1. A choropleth map showing distribution of population by states in the USA.
 
-2. Proportional Symbol map showing distribution of population by states in the USA.
+2. A proportional symbol map showing distribution of population by states in the USA.
 
-3. Chropleth map showing distribution of Covid19 cases by counties in the USA for January, 2022.
+3. A choropleth map showing distribution of Covid19 cases by counties in the USA for February, 2022.
+
+4. A proportional symbol map showing distribution of Covid19 cases in Michigan.
+
 
 
 

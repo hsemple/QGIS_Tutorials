@@ -3,7 +3,7 @@ Terrain Analysis
 
 |
 
-Obtain Basic Terrain Information from Elevation Maps
+Obtaining Basic Terrain Information from Elevation Maps
 ---------------------------------------------------------
 
 Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <https://apps.nationalmap.gov/viewer/>`_, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:
@@ -42,7 +42,7 @@ After generating the maps, briefly state two practical uses of each of the above
 
 |
 
-**Procedure for Generating Terrain Maps**
+**Load and Examine the Elevation**
 
 1. Download the DEM from the National Map then unzip the files to a folder whose path you can remember. I downloaded a DEM for the Stowe, Vermont area.
 

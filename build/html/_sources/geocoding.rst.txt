@@ -64,5 +64,5 @@ Geocoding Resources
 
 Deliverables
 -------------
-Submit a professional quality map showing the geocoded points.
+Submit a professional quality map showing the geocoded points. Include a streets layer as background.
 

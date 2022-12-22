@@ -44,13 +44,14 @@
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Loading Data into QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">6. Attribute and Spatial Queries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#attribute-queries">6.1. Attribute Queries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#spatial-queries">6.2. Spatial Queries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#joining-tables-arcgis-online">6.3. Joining Tables - ArcGIS Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">6.4. Summary of Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assignment">6.1. Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-attribute-data">6.2. Working with Attribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-queries">6.3. Spatial Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#joining-tables-arcgis-online">6.4. Joining Tables - ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">6.5. Summary of Deliverables</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
@@ -92,20 +93,26 @@
 <h1><span class="section-number">6. </span>Attribute and Spatial Queries<a class="headerlink" href="#attribute-and-spatial-queries" title="Permalink to this heading"></a></h1>
 <p>Within a GIS, data can be queried in two ways; attribute queries and spatial queries. For attribute queries, features are selected using attribute data. Results can be mapped or presented in conventional database form.</p>
 <p>Spatial query is used extract features based solely on their topological relationship to other features. Combined, attribute and spatial queries are a powerful way of exploring spatial patterns in the data.</p>
-<p>In this lab, we explore how to run attribute and spatial queries in QGIS.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="attribute-queries">
-<h2><span class="section-number">6.1. </span>Attribute Queries<a class="headerlink" href="#attribute-queries" title="Permalink to this heading"></a></h2>
-<p>This section of the lab is intended to strengthen your skills working with the attribute tables of shapefiles. Specifically, you will learn how to join external tables to the attribute table of a shapefile.  You will also experiment with querying and summarizing the attribute data to see numeric and geographic patterns associated with the data.</p>
+<section id="assignment">
+<h2><span class="section-number">6.1. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this heading"></a></h2>
+<p>In the first part of this lab, we explore how to join an Excel file containing attribute data to a shapefile’s attribute table.  After joining the tables, we will run some attribute queries to explore the data.   You will also experiment with summarizing the attribute data to see numeric and geographic patterns associated with the data.</p>
+<p>In the second part of the lab, we will explore how to perform spatial queries in QGIS using tornada and parcel data.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="working-with-attribute-data">
+<h2><span class="section-number">6.2. </span>Working with Attribute Data<a class="headerlink" href="#working-with-attribute-data" title="Permalink to this heading"></a></h2>
 <p>Recall that in Lab 2, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile’s attribute table?   The answer is through table joins.</p>
-<p>To illustrate the process, we will make a make of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile’s attribute data. Table joins are important in GIS as it saves us the need to manually enter data into the attribute table.</p>
+<p>To illustrate the process, we will make of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile’s attribute data. Table joins are important in GIS as it saves us the need to manually enter data into the attribute table.</p>
 <p>Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in “m’ below.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Procedures</strong></p>
+<p><strong>Downloading Data</strong></p>
 <ol class="arabic simple">
 <li><p>Download and unzip the  Michigan Counties shapefile in Canvas to a folder on your computer.</p></li>
 <li><p>Click on this <a class="reference external" href="https://www.michigan.gov/coronavirus/stats">link</a> to visit the Michigan State Govt website that carries data on Covid-19.</p></li>
@@ -127,17 +134,23 @@
 <li><p>Save the file to the same folder as the shapefiles.  Save as a CSV file.</p></li>
 </ol>
 <img alt="Covid19 Attribute Data" src="_images/save_as_csv.png" />
-<ol class="arabic simple" start="6">
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Joining the Excel File to the Shapefile’s Attribute Table</strong></p>
+<ol class="arabic simple">
 <li><p>Open QGIS, start a new project, and load the shapefile and CSV file into QGIS.</p></li>
 <li><p>Since we studied map coordinates in the last module, let’s determine the map coordinates of our project. Whichever map layer goes into the map area first, that layer sets up the coordinates of the Project. Since the Michigan layer was the first map layer opened in the map, then the project took on the coordinates of the Michigan layer.  So, click on Project on the main menu then select Properties. In the dialog, the selected coordinate system is the project’s coordinate system. It is called “NAD 83/ Michigan Oblique Mercator”.   When you are done inspecting the values, click OK and close the dialog.</p></li>
 </ol>
 <img alt="Covid19 Attribute Data" src="_images/attribute-query3.png" />
-<ol class="arabic simple" start="8">
+<ol class="arabic simple" start="3">
 <li><p>Now, right click on the name of the shapefile, select Attribute Table, and examine the contents of the attribute table.  There are a lot of demographic data in the table. Inspect the various categories of data.</p></li>
+</ol>
+<ol class="arabic simple" start="9">
 <li><p>Now, let us join the Covid-19 table to the shapefile’s attribute table.  To do so, right click on the name of the shapefile and select “Properties.  To the left of the dialog that appears, select Joins.</p></li>
 </ol>
 <img alt="Covid19 Attribute Data" src="_images/attribute-query4.png" />
-<ol class="arabic simple" start="10">
+<ol class="arabic simple" start="4">
 <li><p>Fill out the dialog with the appropriate information.  We will be doing a one-to one join.  The table join requires both tables to have a field that contains the same data to base the join. Since both tables have a field that contains the county names, we will use those two fields to join the table. The name of the fields does not matter, just the fact that they contain the same data.   In the illustration above, select the Covid19 standalone table as the join layer.  Select County as the field to base the join.  Select NAME_1 as the target field.  I selected NAME-1 as the field in the County layer because the county names in this field are lower case similar to the names in the County field in the CSV file. Click Ok.</p></li>
 <li><p>When the table join is completed, open the attribute table of the shapefile to make sure that the data from the CSV file is now present in the shapefile’s attribute table. If the process failed, repeat the steps paying close attention to any error message.</p></li>
 <li><p>Table joins are temporary procedures. This means that you can easily remove the joins between the two table. To make the join permanent, right click on the joined shapefile and select Export | Save Features as .. and export the shapefile to your data folder with a new name.</p></li>
@@ -182,8 +195,8 @@
 </div>
 </section>
 <section id="spatial-queries">
-<h2><span class="section-number">6.2. </span>Spatial Queries<a class="headerlink" href="#spatial-queries" title="Permalink to this heading"></a></h2>
-<p>In this section, we will practice spatial queries, which is querying map layers by location and spatial relationships to other layers, not by attribute values.</p>
+<h2><span class="section-number">6.3. </span>Spatial Queries<a class="headerlink" href="#spatial-queries" title="Permalink to this heading"></a></h2>
+<p>In this section, we will practice spatial queries, which is querying map features by location and spatial relationship to other map features.  The map features need not be in the same layer.</p>
 <p>The dataset for this exercise can be downloaded from Canvas.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -249,7 +262,7 @@
 </div>
 </section>
 <section id="joining-tables-arcgis-online">
-<h2><span class="section-number">6.3. </span>Joining Tables - ArcGIS Online<a class="headerlink" href="#joining-tables-arcgis-online" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.4. </span>Joining Tables - ArcGIS Online<a class="headerlink" href="#joining-tables-arcgis-online" title="Permalink to this heading"></a></h2>
 <p>ArcGIS Online has simplified the process of table joining for people using this platform for GIS. To join a table using ArcGIS Online, follow the steps below:</p>
 <ol class="arabic simple">
 <li><p>Upload both the shapefile and CSV to ArcGIS Online. When uploading the CSV file, upload as Table.</p></li>
@@ -273,7 +286,7 @@
 </div>
 </section>
 <section id="summary-of-deliverables">
-<h2><span class="section-number">6.4. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.5. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
 <p><strong>Section 1 (10 pts)</strong></p>
 <ul class="simple">
 <li><p>Answers to the questions in Section 1 under “Performing Attribute Queries to Answer the Questions …” and under “Rates Calculation”.</p></li>

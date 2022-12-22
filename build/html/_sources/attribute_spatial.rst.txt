@@ -5,24 +5,34 @@ Within a GIS, data can be queried in two ways; attribute queries and spatial que
 
 Spatial query is used extract features based solely on their topological relationship to other features. Combined, attribute and spatial queries are a powerful way of exploring spatial patterns in the data.  
 
-In this lab, we explore how to run attribute and spatial queries in QGIS.
+
+|
+
+
+Assignment
+-----------
+
+
+In the first part of this lab, we explore how to join an Excel file containing attribute data to a shapefile's attribute table.  After joining the tables, we will run some attribute queries to explore the data.   You will also experiment with summarizing the attribute data to see numeric and geographic patterns associated with the data.
+
+In the second part of the lab, we will explore how to perform spatial queries in QGIS using tornada and parcel data.  
+
 
 
 |
 
-Attribute Queries
-------------------
-This section of the lab is intended to strengthen your skills working with the attribute tables of shapefiles. Specifically, you will learn how to join external tables to the attribute table of a shapefile.  You will also experiment with querying and summarizing the attribute data to see numeric and geographic patterns associated with the data.   
 
+Working with Attribute Data
+-----------------------------
 Recall that in Lab 2, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile's attribute table?   The answer is through table joins.  
 
-To illustrate the process, we will make a make of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile's attribute data. Table joins are important in GIS as it saves us the need to manually enter data into the attribute table.
+To illustrate the process, we will make of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile's attribute data. Table joins are important in GIS as it saves us the need to manually enter data into the attribute table.
  
 Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in "m' below.
 
 |
 
-**Procedures**
+**Downloading Data**
 
 1.  Download and unzip the  Michigan Counties shapefile in Canvas to a folder on your computer.
  
@@ -50,15 +60,21 @@ Once we are done joining the tables, we will perform attribute queries to unders
    :alt: Covid19 Attribute Data
    
  
-6. Open QGIS, start a new project, and load the shapefile and CSV file into QGIS.
+
+|
+
+**Joining the Excel File to the Shapefile's Attribute Table**
+
+
+1. Open QGIS, start a new project, and load the shapefile and CSV file into QGIS.
  
-7. Since we studied map coordinates in the last module, let's determine the map coordinates of our project. Whichever map layer goes into the map area first, that layer sets up the coordinates of the Project. Since the Michigan layer was the first map layer opened in the map, then the project took on the coordinates of the Michigan layer.  So, click on Project on the main menu then select Properties. In the dialog, the selected coordinate system is the project's coordinate system. It is called "NAD 83/ Michigan Oblique Mercator".   When you are done inspecting the values, click OK and close the dialog.
+2. Since we studied map coordinates in the last module, let's determine the map coordinates of our project. Whichever map layer goes into the map area first, that layer sets up the coordinates of the Project. Since the Michigan layer was the first map layer opened in the map, then the project took on the coordinates of the Michigan layer.  So, click on Project on the main menu then select Properties. In the dialog, the selected coordinate system is the project's coordinate system. It is called "NAD 83/ Michigan Oblique Mercator".   When you are done inspecting the values, click OK and close the dialog.
 
 .. image:: img/attribute-query3.png
    :alt: Covid19 Attribute Data
 
  
-8. Now, right click on the name of the shapefile, select Attribute Table, and examine the contents of the attribute table.  There are a lot of demographic data in the table. Inspect the various categories of data. 
+3. Now, right click on the name of the shapefile, select Attribute Table, and examine the contents of the attribute table.  There are a lot of demographic data in the table. Inspect the various categories of data. 
 
 9. Now, let us join the Covid-19 table to the shapefile's attribute table.  To do so, right click on the name of the shapefile and select "Properties.  To the left of the dialog that appears, select Joins.  
  
@@ -68,11 +84,11 @@ Once we are done joining the tables, we will perform attribute queries to unders
    :alt: Covid19 Attribute Data
 
 
-10. Fill out the dialog with the appropriate information.  We will be doing a one-to one join.  The table join requires both tables to have a field that contains the same data to base the join. Since both tables have a field that contains the county names, we will use those two fields to join the table. The name of the fields does not matter, just the fact that they contain the same data.   In the illustration above, select the Covid19 standalone table as the join layer.  Select County as the field to base the join.  Select NAME_1 as the target field.  I selected NAME-1 as the field in the County layer because the county names in this field are lower case similar to the names in the County field in the CSV file. Click Ok. 
+4. Fill out the dialog with the appropriate information.  We will be doing a one-to one join.  The table join requires both tables to have a field that contains the same data to base the join. Since both tables have a field that contains the county names, we will use those two fields to join the table. The name of the fields does not matter, just the fact that they contain the same data.   In the illustration above, select the Covid19 standalone table as the join layer.  Select County as the field to base the join.  Select NAME_1 as the target field.  I selected NAME-1 as the field in the County layer because the county names in this field are lower case similar to the names in the County field in the CSV file. Click Ok. 
 
-11. When the table join is completed, open the attribute table of the shapefile to make sure that the data from the CSV file is now present in the shapefile's attribute table. If the process failed, repeat the steps paying close attention to any error message.
+5. When the table join is completed, open the attribute table of the shapefile to make sure that the data from the CSV file is now present in the shapefile's attribute table. If the process failed, repeat the steps paying close attention to any error message.
  
-12. Table joins are temporary procedures. This means that you can easily remove the joins between the two table. To make the join permanent, right click on the joined shapefile and select Export | Save Features as .. and export the shapefile to your data folder with a new name.
+6. Table joins are temporary procedures. This means that you can easily remove the joins between the two table. To make the join permanent, right click on the joined shapefile and select Export | Save Features as .. and export the shapefile to your data folder with a new name.
  
 
 |
@@ -133,7 +149,7 @@ We will now calculate rates of confirmed cases by county. Rates are usually a be
 
 Spatial Queries
 ------------------
-In this section, we will practice spatial queries, which is querying map layers by location and spatial relationships to other layers, not by attribute values. 
+In this section, we will practice spatial queries, which is querying map features by location and spatial relationship to other map features.  The map features need not be in the same layer. 
  
 The dataset for this exercise can be downloaded from Canvas.
 
