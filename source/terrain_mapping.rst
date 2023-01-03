@@ -22,27 +22,25 @@ Visit Stowe, VT using `Caltopo <https://caltopo.com/>`_, `the National Map <http
 Creating Basic Terrain Maps and Graphs
 ----------------------------------------
 
-Visit the `National Map data downloader <https://apps.nationalmap.gov/downloader/>`_ and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.
+1. Visit the `National Map data downloader <https://apps.nationalmap.gov/downloader/>`_ and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.
 
 * a hillshade map (hysometric tinting)
 * a slope map 
 * an aspect map  
 * a contour map
-* a profile curvature map
-* a profile graph
-* a line of sight graph and map
-* a visibility map
 
 
 
+2. Follow the steps below to create well organized hillshade, slope, aspect and contour for submission. Your maps should be attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design. 
 
-Create well organized hillshade, slope, aspect and contour for submission. Your maps should attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design. 
+3. After generating the maps, briefly state two practical uses of each of the above maps.
 
-After generating the maps, briefly state two practical uses of each of the above maps.
+
 
 |
 
-**Load and Examine the Elevation**
+**Download and Load the Elevation Layer**
+
 
 1. Download the DEM from the National Map then unzip the files to a folder whose path you can remember. I downloaded a DEM for the Stowe, Vermont area.
 
@@ -232,6 +230,7 @@ To create labels, do the following:
 |
 
 
+
 Profile Graph, Line-of-sight Graph, and Viewshed Maps
 ------------------------------------------------------
 
@@ -240,10 +239,7 @@ Using the two points mentioned in Section 1 (44.535252, -72.781882; 44.437931, -
 
 
 
-
-**Profile Graph**
-
-*QGIS*
+**Creating a Profile Graph**
 
 
 1. Create a new line layer snapping to your start and end points.
@@ -264,7 +260,7 @@ Using the two points mentioned in Section 1 (44.535252, -72.781882; 44.437931, -
 
 
 
-**Line-of-Sight Graph**
+**Creating a Line-of-Sight Graph**
 
 1. YouTube Video
 
@@ -282,7 +278,7 @@ Using the two points mentioned in Section 1 (44.535252, -72.781882; 44.437931, -
 
 
 
-**Viewshed Map**
+**Creating a Viewshed Map**
 
 In QGIS, to create a viewshed map, you must first create a viewpoint layer. After than, you use the view point layer to create the viewshed layer.  Click on the videos below for the detailed steps :
 
@@ -430,7 +426,7 @@ The basic logic in any habitat suitability analysis is to assemble map layers fo
 |
  
 
-**Map Design** 
+*Habitat Suitability Map Design*
 
 1. Initially, your final map will not look very attractive.  My final map appears as shown below, but I am not daunted. If you look at the legend, you will notice that the map consists of 1s and 0s. The 1s represent places where the query was satisfied, i.e., the white areas. The black areas are areas where the query was not satisfied.   Now, using the cartography skills you have learned so far, let us make the black areas transparent. 
  
@@ -449,6 +445,7 @@ The basic logic in any habitat suitability analysis is to assemble map layers fo
  
 
 
+
 |
 
 
@@ -460,7 +457,7 @@ Extracting stream channel network and delineating drainage basins or watersheds 
 
 |
 
-**Basic Steps**
+**Procedure**
 
 
 1. *Acquire the DEM of the study area and load it into QGIS.*
@@ -696,7 +693,7 @@ To generate a Digital Elevation Model from the points cloud, do the following:
 |
 
 
-**Generating DTM or TIN from Las Files**
+**Generating a TIN from the Las Files**
 
 To generate a Digital Terrain Model or a TIN surface from the points cloud, do the following:
 
@@ -717,23 +714,48 @@ Summary of Deliverables
 ------------------------
 
 
+**Section 1**
+
+Submit the following:
+
+  * the elevation of each of the two points.
+  * the straight line distance between the two points.
+  * the slope between the two points.
+  * the aspect between the two points.
+
+
+
+**Section 2**
+
 1. Submit the following maps:
 
-•  hillshade  
-•  slope  
-•  aspect  
-•  contour  
+  * hillshade  
+  * slope  
+  * aspect  
+  * contour  
  
 2. A brief statement explaining two practical uses of each of the above maps.
  
-3. A habitat location map. Submit either a layout or a link to the possible sites in ArcGIS Online.
- 
-4. A link to the watershed you delineated using ArcGIS Online.
 
-5. An elevation surface and a TIN surface from the Point Cloud 
+
+**Section 3**
+
+A habitat location map. Submit either a layout or a link to the possible sites in ArcGIS Online.
+ 
+
+
+**Section 4**
+
+A link to the web map showing the watershed you delineated using ArcGIS Online.
+
+
+**Section 5**
+
+An DEM map and a TIN surface map generated from the Lidar Point Cloud.
+
+
 
 |
-
 
 
 Resources

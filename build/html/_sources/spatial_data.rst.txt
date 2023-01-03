@@ -284,7 +284,9 @@ To Add an ArcGIS Server Layer, do the following:
    :alt: GPS Data  
 
 
-https://www.youtube.com/watch?v=eW41DrPFquQ
+
+For more information, please view this `YouTube Video <https://www.youtube.com/watch?v=eW41DrPFquQ>`_.
+
 
 
 |

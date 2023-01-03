@@ -112,23 +112,23 @@
 </section>
 <section id="creating-basic-terrain-maps-and-graphs">
 <h2><span class="section-number">7.2. </span>Creating Basic Terrain Maps and Graphs<a class="headerlink" href="#creating-basic-terrain-maps-and-graphs" title="Permalink to this heading"></a></h2>
-<p>Visit the <a class="reference external" href="https://apps.nationalmap.gov/downloader/">National Map data downloader</a> and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.</p>
+<ol class="arabic simple">
+<li><p>Visit the <a class="reference external" href="https://apps.nationalmap.gov/downloader/">National Map data downloader</a> and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.</p></li>
+</ol>
 <ul class="simple">
 <li><p>a hillshade map (hysometric tinting)</p></li>
 <li><p>a slope map</p></li>
 <li><p>an aspect map</p></li>
 <li><p>a contour map</p></li>
-<li><p>a profile curvature map</p></li>
-<li><p>a profile graph</p></li>
-<li><p>a line of sight graph and map</p></li>
-<li><p>a visibility map</p></li>
 </ul>
-<p>Create well organized hillshade, slope, aspect and contour for submission. Your maps should attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design.</p>
-<p>After generating the maps, briefly state two practical uses of each of the above maps.</p>
+<ol class="arabic simple" start="2">
+<li><p>Follow the steps below to create well organized hillshade, slope, aspect and contour for submission. Your maps should be attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design.</p></li>
+<li><p>After generating the maps, briefly state two practical uses of each of the above maps.</p></li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Load and Examine the Elevation</strong></p>
+<p><strong>Download and Load the Elevation Layer</strong></p>
 <ol class="arabic simple">
 <li><p>Download the DEM from the National Map then unzip the files to a folder whose path you can remember. I downloaded a DEM for the Stowe, Vermont area.</p></li>
 <li><p>Launch QGIS.</p></li>
@@ -259,8 +259,7 @@
 <section id="profile-graph-line-of-sight-graph-and-viewshed-maps">
 <h2><span class="section-number">7.3. </span>Profile Graph, Line-of-sight Graph, and Viewshed Maps<a class="headerlink" href="#profile-graph-line-of-sight-graph-and-viewshed-maps" title="Permalink to this heading"></a></h2>
 <p>Using the two points mentioned in Section 1 (44.535252, -72.781882; 44.437931, -72.761282), generate a  profile graph and a line of sight chart for the two points.  Also, generate a viewshed from point 44.535252, -72.781882. Use QGIS, Google Map, or any software of your choice to generate these products.</p>
-<p><strong>Profile Graph</strong></p>
-<p><em>QGIS</em></p>
+<p><strong>Creating a Profile Graph</strong></p>
 <ol class="arabic simple">
 <li><p>Create a new line layer snapping to your start and end points.</p></li>
 <li><p>Get the Profile tool from the Plugins menu, search for Profile.</p></li>
@@ -271,7 +270,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Line-of-Sight Graph</strong></p>
+<p><strong>Creating a Line-of-Sight Graph</strong></p>
 <ol class="arabic simple">
 <li><p>YouTube Video</p></li>
 </ol>
@@ -281,7 +280,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Viewshed Map</strong></p>
+<p><strong>Creating a Viewshed Map</strong></p>
 <p>In QGIS, to create a viewshed map, you must first create a viewpoint layer. After than, you use the view point layer to create the viewshed layer.  Click on the videos below for the detailed steps :</p>
 <ol class="arabic simple">
 <li><p>YouTube Video</p></li>
@@ -382,7 +381,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Map Design</strong></p>
+<p><em>Habitat Suitability Map Design</em></p>
 <ol class="arabic simple">
 <li><p>Initially, your final map will not look very attractive.  My final map appears as shown below, but I am not daunted. If you look at the legend, you will notice that the map consists of 1s and 0s. The 1s represent places where the query was satisfied, i.e., the white areas. The black areas are areas where the query was not satisfied.   Now, using the cartography skills you have learned so far, let us make the black areas transparent.</p></li>
 </ol>
@@ -404,7 +403,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Basic Steps</strong></p>
+<p><strong>Procedure</strong></p>
 <ol class="arabic simple">
 <li><p><em>Acquire the DEM of the study area and load it into QGIS.</em></p></li>
 <li><p><em>Fill Sinks.</em>  Click on Processing Toolbox → SAGA → Fill sinks.   Be sure to select Filled DEM as your only Output File.</p></li>
@@ -565,7 +564,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Generating DTM or TIN from Las Files</strong></p>
+<p><strong>Generating a TIN from the Las Files</strong></p>
 <p>To generate a Digital Terrain Model or a TIN surface from the points cloud, do the following:</p>
 <ol class="arabic simple">
 <li><p>Click on Processing | Toolbox | LAStools | file – vector derivatives | las2tin.</p></li>
@@ -580,21 +579,37 @@
 </section>
 <section id="summary-of-deliverables">
 <h2><span class="section-number">7.7. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<p><strong>Section 1</strong></p>
+<p>Submit the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the elevation of each of the two points.</p></li>
+<li><p>the straight line distance between the two points.</p></li>
+<li><p>the slope between the two points.</p></li>
+<li><p>the aspect between the two points.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Section 2</strong></p>
 <ol class="arabic simple">
 <li><p>Submit the following maps:</p></li>
 </ol>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>hillshade</p></li>
 <li><p>slope</p></li>
 <li><p>aspect</p></li>
 <li><p>contour</p></li>
 </ul>
+</div></blockquote>
 <ol class="arabic simple" start="2">
 <li><p>A brief statement explaining two practical uses of each of the above maps.</p></li>
-<li><p>A habitat location map. Submit either a layout or a link to the possible sites in ArcGIS Online.</p></li>
-<li><p>A link to the watershed you delineated using ArcGIS Online.</p></li>
-<li><p>An elevation surface and a TIN surface from the Point Cloud</p></li>
 </ol>
+<p><strong>Section 3</strong></p>
+<p>A habitat location map. Submit either a layout or a link to the possible sites in ArcGIS Online.</p>
+<p><strong>Section 4</strong></p>
+<p>A link to the web map showing the watershed you delineated using ArcGIS Online.</p>
+<p><strong>Section 5</strong></p>
+<p>An DEM map and a TIN surface map generated from the Lidar Point Cloud.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>

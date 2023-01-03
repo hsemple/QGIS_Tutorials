@@ -32,9 +32,9 @@ Once we are done joining the tables, we will perform attribute queries to unders
 
 |
 
-**Downloading Data**
+**Downloading and Processing Data**
 
-1.  Download and unzip the  Michigan Counties shapefile in Canvas to a folder on your computer.
+1. Download and unzip the  Michigan Counties shapefile in Canvas to a folder on your computer.
  
 2. Click on this `link <https://www.michigan.gov/coronavirus/stats>`_ to visit the Michigan State Govt website that carries data on Covid-19.
  
@@ -76,7 +76,7 @@ Once we are done joining the tables, we will perform attribute queries to unders
  
 3. Now, right click on the name of the shapefile, select Attribute Table, and examine the contents of the attribute table.  There are a lot of demographic data in the table. Inspect the various categories of data. 
 
-9. Now, let us join the Covid-19 table to the shapefile's attribute table.  To do so, right click on the name of the shapefile and select "Properties.  To the left of the dialog that appears, select Joins.  
+4. Now, let us join the Covid-19 table to the shapefile's attribute table.  To do so, right click on the name of the shapefile and select "Properties".  To the left of the dialog that appears, select Joins.  
  
 
 
@@ -84,11 +84,17 @@ Once we are done joining the tables, we will perform attribute queries to unders
    :alt: Covid19 Attribute Data
 
 
-4. Fill out the dialog with the appropriate information.  We will be doing a one-to one join.  The table join requires both tables to have a field that contains the same data to base the join. Since both tables have a field that contains the county names, we will use those two fields to join the table. The name of the fields does not matter, just the fact that they contain the same data.   In the illustration above, select the Covid19 standalone table as the join layer.  Select County as the field to base the join.  Select NAME_1 as the target field.  I selected NAME-1 as the field in the County layer because the county names in this field are lower case similar to the names in the County field in the CSV file. Click Ok. 
+5. Fill out the dialog with the appropriate information.  We will be doing a one-to one join. The table join requires both tables to have a field that contains the same data to base the join. In ou situation, both tables have a field that contains the county names, so we will use thee two fields to join the table. The names of the fields do not matter, just the fact that they contain the same data.   
 
-5. When the table join is completed, open the attribute table of the shapefile to make sure that the data from the CSV file is now present in the shapefile's attribute table. If the process failed, repeat the steps paying close attention to any error message.
+6. Based on the illustration above, we select the Covid19 standalone table as the join layer.  
+
+7. Select County as the field to base the join.  
+
+8. Select NAME_1 as the target field.  NAME-1 was selected as the field in the shapefile's layer because the county names in this field are lower case similar to the names in the County field in the CSV file. Click Ok. 
+
+9. When the table join is completed, open the attribute table of the shapefile to make sure that the data from the CSV file is now present in the shapefile's attribute table. If the process failed, repeat the steps paying close attention to any error message.
  
-6. Table joins are temporary procedures. This means that you can easily remove the joins between the two table. To make the join permanent, right click on the joined shapefile and select Export | Save Features as .. and export the shapefile to your data folder with a new name.
+10. Table joins are temporary procedures. This means that you can easily remove the joins between the two table. To make the join permanent, right click on the joined shapefile and select Export | Save Features as .. and export the shapefile to your data folder with a new name.
  
 
 |
@@ -107,15 +113,15 @@ Once we are done joining the tables, we will perform attribute queries to unders
    :alt: Covid19 Attribute Data
 
  
-4. Write a query to find counties with more than 8,000 cases?  Where in geographic terms are these counties located? (1 pts)
+4. Write a query to find counties with more than 8,000 cases?  Where in geographic terms are these counties located?
  
-5. How many counties have between 3,000 - 10,000 confined cases?  (2 pts)
+5. How many counties have between 3,000 - 10,000 confined cases?  
  
-6. Where in geographic terms are the counties located with less than 200 cases located?  Make a screenshot and show the counties on your map. (2pt).  
+6. Where in geographic terms are the counties located with less than 200 cases located?  Make a screenshot and show the counties on your map.
  
-7. How many counties have more than 3,000 confirmed cases and also more than 500 deaths? Which counties are they?  Show on a screenshot (2 pts)
+7. How many counties have more than 3,000 confirmed cases and also more than 500 deaths? Which counties are they?  Show on a screenshot.
  
-8. What is the average number of confirmed cases per counties? What is the standard deviation? What does the standard deviation tell you? To get this information, right click on the "Cases" field and select Statistics.  (3pts)
+8. What is the average number of confirmed cases per counties? What is the standard deviation? What does the standard deviation tell you? To get this information, right click on the "Cases" field and select Statistics.
  
 
 |
