@@ -8,11 +8,11 @@ Additionally, the lab seeks to help you do the following:
 
    * develop basic file management skills necessary to deal with the large number of files that are typically needed for a GIS project. 
 
-   * become comfortable with smoothly loading and displaying multiple map layers in ArcGIS Pro or QGIS and rearranging the layers to suit your information needs. 
+   * become comfortable with smoothly loading and displaying multiple map layers into QGIS and rearranging the layers to suit your information needs. 
 
-   * become comfortable interpreting data on shapefiles and DEMs.
+   * become comfortable interpreting details on various types of spatial data.
 
-   * develop cartographic skills needed for effective presentation of spatial data.
+   * develop cartographic skills needed for effective presentation of multiple map layers.
 
 
 |
