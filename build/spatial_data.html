@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. Downloading Multiple Layers and Making Maps &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+  <title>4. Downloading Different Types of Spatial Data and Making Maps &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -44,19 +44,16 @@
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Downloading Multiple Layers and Making Maps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#assignment">4.1. Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#download-and-unzip-files">4.2. Download and Unzip Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-shapefiles">4.3. Loading and Displaying Shapefiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-the-dem">4.4. Loading and Displaying the DEM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-orthophoto-tiles">4.5. Loading and Displaying Orthophoto Tiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-landsat-imagery">4.6. Loading and Displaying Landsat Imagery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-a-wms-layer">4.7. Loading and Displaying a WMS Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-an-arcgis-rest-service-layer">4.8. Loading and Displaying an ArcGIS REST Service Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#explore-your-data">4.9. Explore your Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#prepare-professional-maps-of-your-data">4.10. Prepare Professional Maps of your Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#section-4-landsat-explorer">4.11. Section 4 Landsat Explorer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">4.12. Summary of Deliverables</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Downloading Different Types of Spatial Data and Making Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-map-layers-and-uploading-to-arcgis-online">4.1. Downloading Map Layers and Uploading to ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-shapefiles-and-making-a-multiple-layer-map">4.2. Displaying Shapefiles and making a Multiple Layer Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-the-dem">4.3. Loading and Displaying the DEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-orthophoto-tiles">4.4. Loading and Displaying Orthophoto Tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-landsat-imagery">4.5. Loading and Displaying Landsat Imagery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-a-wms-layer">4.6. Loading and Displaying a WMS Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-an-arcgis-rest-service-layer">4.7. Loading and Displaying an ArcGIS REST Service Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#landsat-explorer">4.8. Landsat Explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">4.9. Summary of Deliverables</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
@@ -86,7 +83,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4. </span>Downloading Multiple Layers and Making Maps</li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Downloading Different Types of Spatial Data and Making Maps</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/spatial_data.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -96,9 +93,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="downloading-multiple-layers-and-making-maps">
-<h1><span class="section-number">4. </span>Downloading Multiple Layers and Making Maps<a class="headerlink" href="#downloading-multiple-layers-and-making-maps" title="Permalink to this heading"></a></h1>
-<p>A typical GIS project involves working with multiple map layers overlaid on each other through a common coordinarte system.   Some of the layers may be vectors while others may be vectors.  An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.</p>
+  <section id="downloading-different-types-of-spatial-data-and-making-maps">
+<h1><span class="section-number">4. </span>Downloading Different Types of Spatial Data and Making Maps<a class="headerlink" href="#downloading-different-types-of-spatial-data-and-making-maps" title="Permalink to this heading"></a></h1>
+<p>A typical GIS project involves working with multiple types of spatial layers overlaid on each other through a common coordinate system.  Some of the layers may be vectors while others may be rasters. An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.</p>
 <p>Additionally, the lab seeks to help you do the following:</p>
 <blockquote>
 <div><ul class="simple">
@@ -108,66 +105,92 @@
 <li><p>develop cartographic skills needed for effective presentation of multiple map layers.</p></li>
 </ul>
 </div></blockquote>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<section id="assignment">
-<h2><span class="section-number">4.1. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this heading"></a></h2>
-<p>In this lab, you will firstly download, display, arrange, and explore multiple layers of spatial data for a selected county in Michigan.  In this section of the lab, the emphasis is on unzipping multiple files and proper storage of downloaded data.</p>
-<p>In the second part of the lab, you will extend your cartographic skills by usign the downloaded data to prepare professional quality layouts.</p>
-<p>You should download at least 8 different layers. The layers should include at least 3 shapefiles, a DEM, satellite imagery covering any part of the county, an OGC web map layer, an ArcGIS Server Rest Service layer, and one or more orthophoto (aerial photo) tiles.</p>
-<p>In some cases, the map layers may not match the extent of the county boundary.  For example, the orthophoto tile will cover just a small part of the county, not the entire county. Also, some layers may be Michigan-wide layers or a US-wide layers. In this lab, we wouldn’t focus on clipping or merging layers.  We will just download layers and make pretty maps.</p>
-<p>NB: I have downloaded data for Wayne County and have made them available on Canvas for those who do not as yet feel comfortable downloading data from government websites.</p>
-<p>For submission, create the following maps:</p>
+<p>The lab is divided into six sections:</p>
+<p>In Section 1 of the lab, you will download files then upload them to ArcGIS Online for sharing with your colleagues.</p>
+<p>In Section 2 of the lab, you will download, unzip, and display shapefiles and create a professional quality involving multiple layers.</p>
+<p>In Section 3, you will download and display a digital elevation model and create a professional quality map.</p>
+<p>In Section 4, you will download and display an orthophoto and create a professional quality map.</p>
+<p>In Section 5, you will load multiple bands of satellite imagery into ArcGIS Pro and then create maps using different band combinations.</p>
+<p>In Section 6, you will load multiple web map layers into QGIS.</p>
+<p>In Section 7, you will display different band combinations of Landsat 8 satellite imagery using a free Online Platform called Landsat Explorer. Landsat Explorer assembles the satellite imagery, so that users only have to concentrate on manipulating the data.</p>
+<section id="downloading-map-layers-and-uploading-to-arcgis-online">
+<h2><span class="section-number">4.1. </span>Downloading Map Layers and Uploading to ArcGIS Online<a class="headerlink" href="#downloading-map-layers-and-uploading-to-arcgis-online" title="Permalink to this heading"></a></h2>
+<p>You work for an environmental monitoring company conducting a project in Wayne County, Southeast Michigan. As the GIS expert on the project, you are asked to assemble several vector and raster map layers pertaining to the geographic extent of the study area. Download the map layers and display them in upload them to ArcGIS Online so they can be viewed by all members of the project. Follow the steps below to complete this section of the lab.</p>
+<p>Download at least 6 different layers then  The layers should include at least 5 shapefiles and a DEM.</p>
+<p><strong>Download Data</strong></p>
+<ol class="arabic">
+<li><p>Create a folder on your computer to store all the downloaded files.</p></li>
+<li><p>Visit the Michigan CGI archived GIS website and download the following datasets for a county of your choice.:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, townshhips, and urban areas.</p></li>
-<li><p>A map showing the Digital Elevation Model you downloaded.</p></li>
-<li><p>Maps showing the satellite imagery you downloaded displayed in the following band combinations: 5-4-3; 5-6-4 and 7-6-4.</p></li>
-<li><p>A map showing either the orthophoto tile or tiles you downloaded.</p></li>
-<li><p>A map showing mines in the USA based on web services data that you accessed.</p></li>
+<li><p>Census Tracts</p></li>
+<li><p>Drinking Wells</p></li>
+<li><p>Wetlands</p></li>
+<li><p>SSURGO Soils</p></li>
+<li><p>Town/Range</p></li>
+<li><p>Political Framework</p></li>
+<li><p>Digital Elevation Model</p></li>
 </ul>
 </div></blockquote>
+</li>
+<li><p>If you encounter problems downloading from the Michigan CGI site, you can download layers for Wayne County, Michigan that I pre-assembled for this tutorial. The layers can be downloaded from my Github site.</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>After downloading the zipped files to your desktop, follow these <a class="reference external" href="https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit">instructions</a> to upload the layers to ArcGIS Online. (Note: You can also upload to QGIS Cloud). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.</p></li>
+<li><p>After uploading, save your web map in ArcGIS Online. Copy the URL and submit it as proof that you completed this section of the assignment.</p></li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="download-and-unzip-files">
-<h2><span class="section-number">4.2. </span>Download and Unzip Files<a class="headerlink" href="#download-and-unzip-files" title="Permalink to this heading"></a></h2>
-<p><strong>Download Files</strong></p>
+<section id="displaying-shapefiles-and-making-a-multiple-layer-map">
+<h2><span class="section-number">4.2. </span>Displaying Shapefiles and making a Multiple Layer Map<a class="headerlink" href="#displaying-shapefiles-and-making-a-multiple-layer-map" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Create a folder on your computer to store all the downloaded data.</p></li>
-<li><p>Decide on a Michigan county of your choice, then visit the <a class="reference external" href="https://web.archive.org/web/20160201222536/http:/www.mcgi.state.mi.us/mgdl/?action=thm">Michigan CGI archived GIS website</a> to download data.</p></li>
-<li><p>Inspect the different categories of data and download the layers for the county of your choice.  Note: You can find digital elevation models and satellite imagery color composites under the TOPOGRAPHY section. Orthophotos are no longer available at this site.</p></li>
-<li><p>If you are having trouble downloading from the CGI website, you can visit the new Michigan GIS Data Portal website and search for appropriate data</p></li>
-<li><p>Alternatively, you can simply download layers for Wayne County which I have placed on CGithub.</p></li>
-</ol>
-<p><strong>Unzipping Files</strong></p>
-<ol class="arabic simple">
-<li><p>Unzip the layers to the single folder you created, as shown below.  When your project is completed, you can delete the original zipped files you no longer need.</p></li>
+<li><p>Return to the folder when you download the original files.</p></li>
+<li><p>Create a folder within the orignal and unzip the layers to that single folder, as shown below.</p></li>
 </ol>
 <img alt="Unzipping Data" src="_images/unzipping_data.png" />
+<ol class="arabic simple" start="3">
+<li><p>To load the the shapefiles into QGIS, click on Layer | Add Layer | Add Vector Layer, as shown below.</p></li>
+</ol>
+<img alt="Loading Vector Layer into QGIS" src="_images/load_vectorlayer.png" />
+<ol class="arabic simple" start="4">
+<li><p>Right click on the name of each shapefiles and open the attribute tables of the map layers. Try to understand the information they contain.</p></li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</section>
-<section id="loading-and-displaying-shapefiles">
-<h2><span class="section-number">4.3. </span>Loading and Displaying Shapefiles<a class="headerlink" href="#loading-and-displaying-shapefiles" title="Permalink to this heading"></a></h2>
+<p><strong>Make a Professional Quality Layout</strong></p>
 <ol class="arabic simple">
-<li><p>ESRI’s shapefile is one of the most common vector data file formats. One way of loading a shapefile into QGIS is to click on Layer | Add Layer | Add Vector Layer, as shown below.</p></li>
+<li><p>The deliverables for this section of the lab is a professional quality layout using only shapefiles. It is easier if you decide on a theme when creating the layout.  For example, I will use my layers try to show water wells in relation to urban areas in Wayne County.</p></li>
+<li><p>Uncheck all the layers except the shapefile.</p></li>
+<li><p>Rearrange the order of the shapefiles to suit your preference by dragging them up and down in the Table of Contents. Check to see if some of the layers at the top of the list are hiding others below. If so, further re-arrange the layers. One rule we use is that point features should be at the top of the set, followed by layers that contain line features, then those that contain area features.</p></li>
+<li><p>Change the color of the layers. To do so, double click on the map icons of each layer, then go to Symbology and change the color to a color that you like.</p></li>
+<li><p>Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You will may find yourself using Simple Fill more often.</p></li>
 </ol>
-<img alt="Loading Vector Layer into QGIS" src="_images/load_vectorlayer.png" />
-<ol class="arabic simple" start="2">
-<li><p>A second method is to click on the Data Source Manager button (or press the Ctrl + Shift + V keyboard shortcut) to bring up the Data Source Manager dialog, which can be used to open different types of Layers.</p></li>
+<img alt="GPS Data" src="_images/simple_fill.png" />
+<p>6  You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below.</p>
+<ol class="arabic simple" start="7">
+<li><p>Change Stroke or line widths to show emphasis.</p></li>
+<li><p>Double click on the name of the layer, then go to Source and from there you can change the layer name.</p></li>
 </ol>
-<img alt="Data Source Manager" src="_images/accessing_data_source_manager.png" />
+<img alt="GPS Data" src="_images/cities_lab2.png" />
+<p>9•  My final map appears as shown below.</p>
+<img alt="GPS Data" src="_images/final_shapefile_map.png" />
+<ol class="arabic simple" start="10">
+<li><p>Go to the Composer and compose the final map.</p></li>
+</ol>
+<img alt="GPS Data" src="_images/final_shapefile_map2.png" />
+<ol class="arabic simple" start="11">
+<li><p>Click on Layout | Export as Image.  Select a path and a name for the exported image.   Once you are satisfied with the map, you can export it PNG format. The image can be uploaded to Canvas Dropbox.</p></li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="loading-and-displaying-the-dem">
-<h2><span class="section-number">4.4. </span>Loading and Displaying the DEM<a class="headerlink" href="#loading-and-displaying-the-dem" title="Permalink to this heading"></a></h2>
-<p>1 To display the DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/.</p>
+<h2><span class="section-number">4.3. </span>Loading and Displaying the DEM<a class="headerlink" href="#loading-and-displaying-the-dem" title="Permalink to this heading"></a></h2>
+<p>1 Start a new instance of QGIS then click on Layers | Add Raster Layer.  Navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/.</p>
 <ol class="arabic simple" start="2">
 <li><p>Select the file named w001001.adf. Make sure it is the adf file with the larger file size.</p></li>
 <li><p>If the DEM is loaded and doesn’t show up, simply right click on it and select Zoom to Layer.</p></li>
@@ -185,20 +208,21 @@
 </div>
 </section>
 <section id="loading-and-displaying-orthophoto-tiles">
-<h2><span class="section-number">4.5. </span>Loading and Displaying Orthophoto Tiles<a class="headerlink" href="#loading-and-displaying-orthophoto-tiles" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4. </span>Loading and Displaying Orthophoto Tiles<a class="headerlink" href="#loading-and-displaying-orthophoto-tiles" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Click on Layers | Add Raster Layer and navigate to the folder where the file is stored.</p></li>
 </ol>
 <img alt="Loading Orthophoto" src="_images/ann_arbor_east.png" />
 <ol class="arabic simple" start="2">
 <li><p>There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc., and add it to the display.</p></li>
+<li><p>Create a layout of the orthophoto.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="loading-and-displaying-landsat-imagery">
-<h2><span class="section-number">4.6. </span>Loading and Displaying Landsat Imagery<a class="headerlink" href="#loading-and-displaying-landsat-imagery" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.5. </span>Loading and Displaying Landsat Imagery<a class="headerlink" href="#loading-and-displaying-landsat-imagery" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Visit the Earth Explorer website (<a class="reference external" href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a>) and download Landsat 8 imagery for an area of interest.  If you are not familiar with the downloading process, click on this <a class="reference external" href="https://guides.library.uwm.edu/c.php?g=567847&amp;p=5338445">link</a> for instructions on this process.  You can also download a Landsat imagery datset from Canvas.</p></li>
 <li><p>The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.</p></li>
@@ -235,14 +259,14 @@
 <li><p>As you may be aware, the Landsat 8 5-4-3 band combination is the traditional False Color Infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shade.</p></li>
 <li><p>Now, display an image using a 5-6-4 band combination. This is also a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green.</p></li>
 <li><p>In the 5-6-4 band combination, land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.</p></li>
+<li><p>Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue.</p></li>
 </ol>
-<p>13 Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="loading-and-displaying-a-wms-layer">
-<h2><span class="section-number">4.7. </span>Loading and Displaying a WMS Layer<a class="headerlink" href="#loading-and-displaying-a-wms-layer" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.6. </span>Loading and Displaying a WMS Layer<a class="headerlink" href="#loading-and-displaying-a-wms-layer" title="Permalink to this heading"></a></h2>
 <p>To Add a WMS Layer, do the following:</p>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Layer | Add WMS/WMTS Layer.</p></li>
@@ -266,7 +290,7 @@
 </div>
 </section>
 <section id="loading-and-displaying-an-arcgis-rest-service-layer">
-<h2><span class="section-number">4.8. </span>Loading and Displaying an ArcGIS REST Service Layer<a class="headerlink" href="#loading-and-displaying-an-arcgis-rest-service-layer" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.7. </span>Loading and Displaying an ArcGIS REST Service Layer<a class="headerlink" href="#loading-and-displaying-an-arcgis-rest-service-layer" title="Permalink to this heading"></a></h2>
 <p>To Add an ArcGIS Server Layer, do the following:</p>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Layer | Add ArcGIS Rest Server Layer.</p></li>
@@ -289,52 +313,8 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="explore-your-data">
-<h2><span class="section-number">4.9. </span>Explore your Data<a class="headerlink" href="#explore-your-data" title="Permalink to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>One of the requirements of this lab is for you to create professional quality maps using the layers you downloaded.  One important contributor to making attractive maps is that you should know your data, so let’s explore the map layers we just displayed.</p></li>
-<li><p>Locate the Identify Tool then click on each map layer to investigate the map attributes at particular locations. Study the results carefully. In the case of shapefiles, they represent the contents of the attribute table at that location.  For rasters such as DEMs or satellite imagery, they represent the contents of cell values at that location.</p></li>
-<li><p>Using the Identify tool, click anywhere on the digital elevation model to get the elevation at different locations.</p></li>
-<li><p>Locate the Measure Tool as shown below.  Click it and then explore how to measure distances and areas on the map.</p></li>
-<li><p>Measure the length of the sides of the orthophoto. How much area does one of these photo cover?</p></li>
-<li><p>Right click on the name of each shapefiles and open the attribute tables of the map layers. Try to understand the information they contain.</p></li>
-</ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="prepare-professional-maps-of-your-data">
-<h2><span class="section-number">4.10. </span>Prepare Professional Maps of your Data<a class="headerlink" href="#prepare-professional-maps-of-your-data" title="Permalink to this heading"></a></h2>
-<p><strong>Prepare the Shapefiles</strong></p>
-<ol class="arabic simple">
-<li><p>One of your goals is to create a professional quality map using only the shapefiles. It is easier if you decide on a theme. For example, I will use my layers try to show water wells in relation to urban areas in Wayne County.</p></li>
-<li><p>Uncheck all the layers except the shapefile.</p></li>
-<li><p>Rearrange the order of the shapefiles to suit your preference by dragging them up and down in the Table of Contents. Check to see if some of the layers at the top of the list are hiding others below. If so, further re-arrange the layers. One rule we use is that point features should be at the top of the set, followed by layers that contain line features, then those that contain area features.</p></li>
-<li><p>Change the color of the layers. To do so, double click on the map icons of each layer, then go to Symbology and change the color to a color that you like.</p></li>
-<li><p>Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You will may find yourself using Simple Fill more often.</p></li>
-</ol>
-<img alt="GPS Data" src="_images/simple_fill.png" />
-<p>6  You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below.</p>
-<ol class="arabic simple" start="7">
-<li><p>Change Stroke or line widths to show emphasis.</p></li>
-<li><p>Double click on the name of the layer, then go to Source and from there you can change the layer name.</p></li>
-</ol>
-<img alt="GPS Data" src="_images/cities_lab2.png" />
-<p>9•  My final map appears as shown below.</p>
-<img alt="GPS Data" src="_images/final_shapefile_map.png" />
-<ol class="arabic simple" start="10">
-<li><p>Go to the Composer and compose the final map.</p></li>
-</ol>
-<img alt="GPS Data" src="_images/final_shapefile_map2.png" />
-<ol class="arabic simple" start="11">
-<li><p>Click on Layout | Export as Image.  Select a path and a name for the exported image.   Once you are satisfied with the map, you can export it PNG format. The image can be uploaded to Canvas Dropbox.</p></li>
-</ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="section-4-landsat-explorer">
-<h2><span class="section-number">4.11. </span>Section 4 Landsat Explorer<a class="headerlink" href="#section-4-landsat-explorer" title="Permalink to this heading"></a></h2>
+<section id="landsat-explorer">
+<h2><span class="section-number">4.8. </span>Landsat Explorer<a class="headerlink" href="#landsat-explorer" title="Permalink to this heading"></a></h2>
 <p>ESRI has a web mapping application called <a class="reference external" href="https://livingatlas2.arcgis.com/landsatexplorer/">Landsat Explorer</a> that can be used to quickly create Color Composites. With this application all the bands are preloaded, so there is no need to download data.</p>
 <ol class="arabic simple">
 <li><p>Open Landsat Explorer and locate San Francisco.</p></li>
@@ -347,18 +327,14 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Example Maps</strong></p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Digital Elevation Model</p>
+<p><strong>Example Map</strong></p>
 <img alt="DEM map" src="_images/oakland_dem.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="summary-of-deliverables">
-<h2><span class="section-number">4.12. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.9. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>A professional quality map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, and urban areas.</p></li>
 <li><p>A professional quality map showing the Digital Elevation Model you downloaded.</p></li>

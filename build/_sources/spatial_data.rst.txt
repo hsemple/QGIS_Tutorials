@@ -1,8 +1,8 @@
 
-Downloading Multiple Layers and Making Maps
-=================================================
+Downloading Different Types of Spatial Data and Making Maps
+==============================================================================
 
-A typical GIS project involves working with multiple map layers overlaid on each other through a common coordinarte system.   Some of the layers may be vectors while others may be vectors.  An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.  
+A typical GIS project involves working with multiple types of spatial layers overlaid on each other through a common coordinate system.  Some of the layers may be vectors while others may be rasters. An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.  
 
 Additionally, the lab seeks to help you do the following:
 
@@ -15,98 +15,143 @@ Additionally, the lab seeks to help you do the following:
    * develop cartographic skills needed for effective presentation of multiple map layers.
 
 
+The lab is divided into six sections:
+
+In Section 1 of the lab, you will download files then upload them to ArcGIS Online for sharing with your colleagues.
+
+In Section 2 of the lab, you will download, unzip, and display shapefiles and create a professional quality involving multiple layers.
+
+In Section 3, you will download and display a digital elevation model and create a professional quality map.
+
+In Section 4, you will download and display an orthophoto and create a professional quality map.
+
+In Section 5, you will load multiple bands of satellite imagery into ArcGIS Pro and then create maps using different band combinations.
+
+In Section 6, you will load multiple web map layers into QGIS.
+
+In Section 7, you will display different band combinations of Landsat 8 satellite imagery using a free Online Platform called Landsat Explorer. Landsat Explorer assembles the satellite imagery, so that users only have to concentrate on manipulating the data.
+
+
+
+
+Downloading Map Layers and Uploading to ArcGIS Online
+-----------------------------------------------------------------
+
+You work for an environmental monitoring company conducting a project in Wayne County, Southeast Michigan. As the GIS expert on the project, you are asked to assemble several vector and raster map layers pertaining to the geographic extent of the study area. Download the map layers and display them in upload them to ArcGIS Online so they can be viewed by all members of the project. Follow the steps below to complete this section of the lab.
+
+Download at least 6 different layers then  The layers should include at least 5 shapefiles and a DEM.
+
+
+**Download Data**
+
+1. Create a folder on your computer to store all the downloaded files.
+
+2. Visit the Michigan CGI archived GIS website and download the following datasets for a county of your choice.:
+
+    * Census Tracts
+    * Drinking Wells
+    * Wetlands
+    * SSURGO Soils
+    * Town/Range
+    * Political Framework
+    * Digital Elevation Model 
+
+
+3. If you encounter problems downloading from the Michigan CGI site, you can download layers for Wayne County, Michigan that I pre-assembled for this tutorial. The layers can be downloaded from my Github site.  
+
+
+3. After downloading the zipped files to your desktop, follow these `instructions <https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit>`_ to upload the layers to ArcGIS Online. (Note: You can also upload to QGIS Cloud). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.
+
+
+4. After uploading, save your web map in ArcGIS Online. Copy the URL and submit it as proof that you completed this section of the assignment.
+
+
+
+
 |
 
+Displaying Shapefiles and making a Multiple Layer Map 
+--------------------------------------------------------
 
-Assignment
-------------
-
-In this lab, you will firstly download, display, arrange, and explore multiple layers of spatial data for a selected county in Michigan.  In this section of the lab, the emphasis is on unzipping multiple files and proper storage of downloaded data.
-
-
-In the second part of the lab, you will extend your cartographic skills by usign the downloaded data to prepare professional quality layouts.
-
-You should download at least 8 different layers. The layers should include at least 3 shapefiles, a DEM, satellite imagery covering any part of the county, an OGC web map layer, an ArcGIS Server Rest Service layer, and one or more orthophoto (aerial photo) tiles.  
-
-In some cases, the map layers may not match the extent of the county boundary.  For example, the orthophoto tile will cover just a small part of the county, not the entire county. Also, some layers may be Michigan-wide layers or a US-wide layers. In this lab, we wouldn't focus on clipping or merging layers.  We will just download layers and make pretty maps.
+1. Return to the folder when you download the original files.
 
 
-NB: I have downloaded data for Wayne County and have made them available on Canvas for those who do not as yet feel comfortable downloading data from government websites. 
-
-For submission, create the following maps:
-
-    * A map consisting of three or four vector layers showing the relationship between bedrock geology, water wells, townshhips, and urban areas.
-    * A map showing the Digital Elevation Model you downloaded.
-    * Maps showing the satellite imagery you downloaded displayed in the following band combinations: 5-4-3; 5-6-4 and 7-6-4.
-    * A map showing either the orthophoto tile or tiles you downloaded. 
-    * A map showing mines in the USA based on web services data that you accessed.
-
-
-
-
-|
-
-
-Download and Unzip Files
-----------------------------
-
-
-**Download Files**
-
-1. Create a folder on your computer to store all the downloaded data.
-
-2. Decide on a Michigan county of your choice, then visit the `Michigan CGI archived GIS website <https://web.archive.org/web/20160201222536/http:/www.mcgi.state.mi.us/mgdl/?action=thm>`_ to download data.
-
-3. Inspect the different categories of data and download the layers for the county of your choice.  Note: You can find digital elevation models and satellite imagery color composites under the TOPOGRAPHY section. Orthophotos are no longer available at this site. 
-
-4. If you are having trouble downloading from the CGI website, you can visit the new Michigan GIS Data Portal website and search for appropriate data
-
-
-5. Alternatively, you can simply download layers for Wayne County which I have placed on CGithub. 
-
-
-
-
-**Unzipping Files**
-
-1. Unzip the layers to the single folder you created, as shown below.  When your project is completed, you can delete the original zipped files you no longer need.
+2. Create a folder within the orignal and unzip the layers to that single folder, as shown below.  
 
 .. image:: img/unzipping_data.png
    :alt: Unzipping Data
 
  
 
-|
-
-
-Loading and Displaying Shapefiles
-------------------------------------
-
-1. ESRI's shapefile is one of the most common vector data file formats. One way of loading a shapefile into QGIS is to click on Layer | Add Layer | Add Vector Layer, as shown below.
-
-
+3. To load the the shapefiles into QGIS, click on Layer | Add Layer | Add Vector Layer, as shown below.
 
 .. image:: img/load_vectorlayer.png
    :alt: Loading Vector Layer into QGIS
 
 
-
-2. A second method is to click on the Data Source Manager button (or press the Ctrl + Shift + V keyboard shortcut) to bring up the Data Source Manager dialog, which can be used to open different types of Layers.  
-
-.. image:: img/accessing_data_source_manager.png
-   :alt: Data Source Manager
+4.  Right click on the name of each shapefiles and open the attribute tables of the map layers. Try to understand the information they contain.
 
 
 
 
 |
+
+
+**Make a Professional Quality Layout**
+
+1. The deliverables for this section of the lab is a professional quality layout using only shapefiles. It is easier if you decide on a theme when creating the layout.  For example, I will use my layers try to show water wells in relation to urban areas in Wayne County.
+
+2.  Uncheck all the layers except the shapefile.
+
+3. Rearrange the order of the shapefiles to suit your preference by dragging them up and down in the Table of Contents. Check to see if some of the layers at the top of the list are hiding others below. If so, further re-arrange the layers. One rule we use is that point features should be at the top of the set, followed by layers that contain line features, then those that contain area features. 
+
+4. Change the color of the layers. To do so, double click on the map icons of each layer, then go to Symbology and change the color to a color that you like. 
+ 
+
+5. Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You will may find yourself using Simple Fill more often.  
+
+.. image:: img/simple_fill.png
+   :alt: GPS Data  
+
+
+6  You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below. 
+
+
+7.  Change Stroke or line widths to show emphasis.
+
+
+8.  Double click on the name of the layer, then go to Source and from there you can change the layer name.
+
+.. image:: img/cities_lab2.png
+   :alt: GPS Data  
+
+
+
+9•  My final map appears as shown below.
+ 
+.. image:: img/final_shapefile_map.png
+   :alt: GPS Data  
+
+
+10. Go to the Composer and compose the final map.
+ 
+.. image:: img/final_shapefile_map2.png
+   :alt: GPS Data  
+
+
+11. Click on Layout | Export as Image.  Select a path and a name for the exported image.   Once you are satisfied with the map, you can export it PNG format. The image can be uploaded to Canvas Dropbox. 
+
+
+|
+
+
 
 
 Loading and Displaying the DEM 
 --------------------------------
 
 
-1 To display the DEM in QGIS, click on Layers | Add Raster Layer, then navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/. 
+1 Start a new instance of QGIS then click on Layers | Add Raster Layer.  Navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/. 
 
 2. Select the file named w001001.adf. Make sure it is the adf file with the larger file size.
 
@@ -130,6 +175,7 @@ Loading and Displaying the DEM
 
 
 
+
 |
 
 Loading and Displaying Orthophoto Tiles
@@ -142,6 +188,8 @@ Loading and Displaying Orthophoto Tiles
    :alt: Loading Orthophoto
 
 2. There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc., and add it to the display.
+
+3. Create a layout of the orthophoto.
 
 
 
@@ -209,8 +257,7 @@ Loading and Displaying Landsat Imagery
 
 12. In the 5-6-4 band combination, land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.
 
-13 Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue. 
-
+13. Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue. 
 
 
 
@@ -293,81 +340,7 @@ For more information, please view this `YouTube Video <https://www.youtube.com/w
 
 
 
-Explore your Data
-----------------------
-
-1. One of the requirements of this lab is for you to create professional quality maps using the layers you downloaded.  One important contributor to making attractive maps is that you should know your data, so let's explore the map layers we just displayed.  
-
-2. Locate the Identify Tool then click on each map layer to investigate the map attributes at particular locations. Study the results carefully. In the case of shapefiles, they represent the contents of the attribute table at that location.  For rasters such as DEMs or satellite imagery, they represent the contents of cell values at that location.  
-
-
-3. Using the Identify tool, click anywhere on the digital elevation model to get the elevation at different locations. 
-
-4.  Locate the Measure Tool as shown below.  Click it and then explore how to measure distances and areas on the map.
-
-5. Measure the length of the sides of the orthophoto. How much area does one of these photo cover?
-
-6.  Right click on the name of each shapefiles and open the attribute tables of the map layers. Try to understand the information they contain.
-
-
-
-|
-
-
-Prepare Professional Maps of your Data
-----------------------------------------
-
-
-**Prepare the Shapefiles**
-
-1. One of your goals is to create a professional quality map using only the shapefiles. It is easier if you decide on a theme. For example, I will use my layers try to show water wells in relation to urban areas in Wayne County.
-
-2.  Uncheck all the layers except the shapefile.
-
-3. Rearrange the order of the shapefiles to suit your preference by dragging them up and down in the Table of Contents. Check to see if some of the layers at the top of the list are hiding others below. If so, further re-arrange the layers. One rule we use is that point features should be at the top of the set, followed by layers that contain line features, then those that contain area features. 
-
-4. Change the color of the layers. To do so, double click on the map icons of each layer, then go to Symbology and change the color to a color that you like. 
- 
-
-5. Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You will may find yourself using Simple Fill more often.  
-
-.. image:: img/simple_fill.png
-   :alt: GPS Data  
-
-
-6  You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below. 
-
-
-7.  Change Stroke or line widths to show emphasis.
-
-
-8.  Double click on the name of the layer, then go to Source and from there you can change the layer name.
-
-.. image:: img/cities_lab2.png
-   :alt: GPS Data  
-
-
-
-9•  My final map appears as shown below.
- 
-.. image:: img/final_shapefile_map.png
-   :alt: GPS Data  
-
-
-10. Go to the Composer and compose the final map.
- 
-.. image:: img/final_shapefile_map2.png
-   :alt: GPS Data  
-
-
-11. Click on Layout | Export as Image.  Select a path and a name for the exported image.   Once you are satisfied with the map, you can export it PNG format. The image can be uploaded to Canvas Dropbox. 
-
-
-|
-
-
-
-Section 4 Landsat Explorer
+Landsat Explorer
 ---------------------------
 
 ESRI has a web mapping application called `Landsat Explorer <https://livingatlas2.arcgis.com/landsatexplorer/>`_ that can be used to quickly create Color Composites. With this application all the bands are preloaded, so there is no need to download data.
@@ -390,11 +363,8 @@ ESRI has a web mapping application called `Landsat Explorer <https://livingatlas
 
 
 
-**Example Maps**
+**Example Map**
 
-|
-
-Digital Elevation Model
 
 .. image:: img/oakland_dem.png
    :alt: DEM map 
@@ -416,9 +386,3 @@ Summary of Deliverables
 
 
  
-
-
-
-
-
-
