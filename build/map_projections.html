@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Map Projections &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Attribute and Spatial Queries" href="attribute_spatial.html" />
+    <link rel="prev" title="4. Downloading Multiple Layers and Making Maps" href="spatial_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Map Projections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#assignment">5.1. Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data">5.2. Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-world-maps-in-different-projections">5.3. Displaying World Maps in Different Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#projections-of-the-united-states">5.4. Projections of the United States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#projections-of-michigan">5.5. Projections of Michigan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#permanently-transforming-map-projections">5.6. Permanently Transforming Map Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changing-map-projections-in-arcgis-online">5.7. Changing Map Projections in ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">5.8. Summary of Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Map Projections</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/map_projections.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="map-projections">
+<h1><span class="section-number">5. </span>Map Projections<a class="headerlink" href="#map-projections" title="Permalink to this heading"></a></h1>
+<p>The main goals of the lab are to help you:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>learn how to change the projections of map layers on the fly so that the map makers can quickly and accurately create maps that maintain correct distances, area, and shape of places.</p></li>
+<li><p>learn how to permanently change the projections of map layers so that layers with different projections can overlay on each other. This also measurements and analysis performed on the layers can be correct</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="assignment">
+<h2><span class="section-number">5.1. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this heading"></a></h2>
+<p>In the first section of this lab, you will use QGIS to temporarily display map layers in different projections.  We will focus on projections of the world, US projections, and projections for Michigan.</p>
+<p>In the second section of the lab, you will use QGIS to permanently change the underlying projection and coordinate systems of the map layers, and how to convert maps with different coordinates into a common coordinate system.</p>
+<p>In the final section of the lab, you will use ArcGIS Online to change projections.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="data">
+<h2><span class="section-number">5.2. </span>Data<a class="headerlink" href="#data" title="Permalink to this heading"></a></h2>
+<p>Download the MapProj_QGIS.zip file from this <a class="reference external" href="https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip">Github page</a> .  Unzip it and save the files to a working directory on your computer.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="displaying-world-maps-in-different-projections">
+<h2><span class="section-number">5.3. </span>Displaying World Maps in Different Projections<a class="headerlink" href="#displaying-world-maps-in-different-projections" title="Permalink to this heading"></a></h2>
+<p><strong>Display the World in Geographic Coordinates or Plate-Carrée Projection</strong></p>
+<ol class="arabic simple">
+<li><p>Open QGIS from the Start menu and create a new project.</p></li>
+<li><p>Click on Layer | Add Layer | Add Vector Layer and browse to the downloaded data folder.</p></li>
+<li><p>Open the world subdirectory. Select ESRI shapefiles as the file type to display, and load the .shp files into QGIS.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/world_countries.png" />
+<ol class="arabic simple" start="4">
+<li><p>The layers should appear as shown below. The colors on the map will vary.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/world_geographic_coordinates.png" />
+<ol class="arabic simple" start="5">
+<li><p>Study the shape and relative sizes of continents. Compare the size of Greenland with that of Africa and South America. Notice how small Greenland is on this projection. On some projections, you will notice major differences in the size of Greenland relative to Africa or South America.</p></li>
+<li><p>Look at the different circles on the map (also called Tissot’s indicatrix after the French mathematician who devised them in 1859). Notice that close to the equator, the circles show little distortion, but as one moves north and south of the equator, the circles show increasing distortion. The circles give an indication of how much the shape of places are being distorted on the map as one goes north and south.</p></li>
+<li><p>Examine the coordinates of the map. They are circled red on the map. (See illustration above).  As you move the cursor over the map the coordinates change. These coordinates are latitude longitude. They range from 0 to 90 degrees north and south of the equator and 0 to 180 degrees east and west of the Prime Meridian, which is represented by zero degrees longitude.</p></li>
+<li><p>At the bottom-right corner of QGIS you will see EPSG:4326. This is the code for the current CRS (Coordinate Referencing System) for the project.</p></li>
+<li><p>In GIS, latitude longitude coordinates are also called Geographic Coordinates. This important to remember.  When they appear on a physical three-dimensional globe, we also refer to the latitudes and longitudes as unprojected coordinates because the coordinates have not been projected to a flat plane.</p></li>
+<li><p>In the Contents browser in QGIS, uncheck the latlong grid.</p></li>
+<li><p>To determine the projection of your entire project, we can look at the project’s metadata. Click on Project and the top left of QGIS and select Properties.</p></li>
+<li><p>On the dialog that appears, click on CRS (Coordinate Referencing System). The coordinate system information shows under Geometry and Coordinate Referencing System.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/spatial_reference_properties.png" />
+<ol class="arabic simple" start="13">
+<li><p>EPSG 4326 is the code for a widely used global spherical geographic coordinate system. It is based on the WGS84 datum and uses longitude and latitude in decimal degrees. For the most part, when you describe a long/lat coordinate location, those coordinates are based on the EPSG:4326 coordinate system.</p></li>
+<li><p>There is no way to visualize the EPSG: 4326 coordinate system on a two-dimensional plane (map), so most software programs project these coordinates to an equirectangular projection named Plate-Carrée.  The world map above is thus in the Plate-Carrée projection.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Display the World Using Robinson’s Projection</strong></p>
+<p>The Plate Carrée is the basic projection for rendering world maps in geographic coordinates, but most of the time we want to work with other projections that better capture relative size and shape of places and distance and directions between them.</p>
+<p>A popular projection for rendering the entire world to create thematic maps is the Robinson’s projection. If you do not know about the Robinson’s projection, you should do a quick review of the lecture notes. To render our world map in Robinson’s projection, do the following:</p>
+<ol class="arabic simple">
+<li><p>Click on Project and properties and the dialog below will appear. Enter Robinson next to Filter.  Select either World Robinson or Sphere Robinson as the Coordinate System.</p></li>
+</ol>
+<img alt="CRS Properties" src="_images/crs_properties.png" />
+<ol class="arabic simple" start="2">
+<li><p>The map will change the arrangements of the angles of the coordinates relative to each other and consequently, the shape of the landmasses. The map will appear as shown below.</p></li>
+</ol>
+<img alt="Robinson Projection" src="_images/robinson_projection.png" />
+<ol class="arabic simple" start="3">
+<li><p>What do you notice about the distortion in the circles compared to the geographic coordinates?   Are there more distortions, less distortion, or is the amount of distortion roughly similar?</p></li>
+<li><p>The Robinson projection is a global map projection designed to present the whole earth with a minimum of distortion at any location, except for regions in the far north and far south.</p></li>
+<li><p>The unit of measurement for projected are typically in feet or meters. That is because we are projecting the lat/long, which are in degrees, to a plane coordinate system, which are feet or meters.</p></li>
+<li><p>If you look at the coordinates at the bottom of the map, you see that the map coordinates are now in meters.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Display with Other Global Projections</strong></p>
+<ol class="arabic simple">
+<li><p>Using the methods described above, display the world using the following projections:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Winkel Tripel (World-Winkel_1 EPSG: 54018)</p></li>
+<li><p>Mercator (WGS_1984_Web_Mercator_Auxiliary_Sphere)</p></li>
+<li><p>Sinudoidal (World_Sinusoidal)</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Arrange the projections in the layout as you did in the previous section, then submit a screenshot of your layout.</p></li>
+<li><p>Write short statements on the characteristics of each projection and what mapping tasks each is best suited for.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Make a Single Layout of the Different Global Projections</strong></p>
+<ol class="arabic simple">
+<li><p>Now, let us make a layout of the world in the different projections.  First Reset your map to the EPSG: 4326 coordinate system  then Click on Project | New Print Layout.</p></li>
+</ol>
+<img alt="New Layout" src="_images/new_layout1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Give the new composer a name. When the canvas appears, Click on Add Items | Add Map.</p></li>
+<li><p>Deliberately draw a small rectangle to hold the map so that map frames you create later will be able to fit besides it (See illustration below).  Name the map “The World in Geographic or Unprojected Coordinates” or any suitable title.</p></li>
+</ol>
+<img alt="New Layout" src="_images/composer_layout1.png" />
+<ol class="arabic simple" start="4">
+<li><p>Now, right click on the map, select copy and paste several copies on the map on the canvas, each to represent a different projection.  We will change the projections from within this area.</p></li>
+</ol>
+<img alt="New Layout" src="_images/composer_layout2.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click on the second map to select it, then to the right next to CRS, select Robinson as the projection for this map.</p></li>
+</ol>
+<img alt="New Layout" src="_images/composer_layout3.png" />
+<ol class="arabic simple" start="6">
+<li><p>Repeat the process and set projections for the other maps. The results should appear as shown below.   Add scale bar, titles, etc, to your map.</p></li>
+</ol>
+<img alt="New Layout" src="_images/composer_layout4.png" />
+<ol class="arabic simple" start="7">
+<li><p>Export your map for submission.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Answer the Qestions Below</strong></p>
+<ol class="arabic simple">
+<li><p>How well is Antarctica represented on a Mercator Projection? What do you notice about the size of places as you go farther north and south?</p></li>
+<li><p>How does the size of Alaska compare with the contiguous states?</p></li>
+<li><p>Is a Mercator Projection great for making world thematic maps?</p></li>
+<li><p>Which of the projections used above do you think is best for making a world thematic map to show Corona Virus mortality cases by countries? Give reasons for your choice.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="projections-of-the-united-states">
+<h2><span class="section-number">5.4. </span>Projections of the United States<a class="headerlink" href="#projections-of-the-united-states" title="Permalink to this heading"></a></h2>
+<p><strong>Display the United States in the Geographic Coordinates</strong></p>
+<p>Similar to global datasets, when working with US map layers, it is important that you set the map projection based on the purpose of the map. In this section, we will focus on how to set map projections for US data.</p>
+<ol class="arabic simple">
+<li><p>In QGIS, click on Project | New and start a new project. Navigate to the US subdirectory in the dataset you downloaded and load the US Cities and USA layers.</p></li>
+</ol>
+<img alt="New Layout" src="_images/usa_projection1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click on the Zoom In tool and zoom into the conterminous United States. If necessary, use the Pan tool to move the map to the center of the window.</p></li>
+<li><p>Notice how wider the US map looks in geographic coordinates. Also, the 49th parallel along the US-Canada appears as a straight line. This effect occurs because, in unprojected coordinates, the meridians are drawn as parallel lines instead of converging lines. Drawing the meridians in this manner distorts the regions between them because as the poles are approached, the meridians are maintained as parallel lines, however. in reality they converge towards the poles.</p></li>
+<li><p>As a general rule, you should avoid creating US maps using geographic coordinates.</p></li>
+</ol>
+<img alt="New Layout" src="_images/usa_projection2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>The United States in Albers Equal Area Projection</strong></p>
+<p>The Albers Equal Area projection is a frequently used projection for US maps. This projection preserves the correct area of places, although it somewhat distorts the direction, distance and shape. To display a US map in geographic coordinates, do the following:</p>
+<ol class="arabic simple">
+<li><p>Click on Project | Properties and search USA_Contiguous_Albers_Equal_Area_Conic. Clcik Apply.  The map should appear as shown below:</p></li>
+</ol>
+<img alt="New Layout" src="_images/usa_projection3.png" />
+<ol class="arabic simple" start="2">
+<li><p>Compare the shape of the United States in geographic coordinates and in Albers projection. In Albers Equal-Area Projection, the meridians converge toward one another while the successive parallels remain parallel to one another. When you reach the North Pole, the meridians converge completely.</p></li>
+<li><p>Notice also that in Albers projection, square boxes of latitude - longitude appear as elongated quadrilaterals with the bottom edges longer than their top edges. In geographic coordinates, the effect of the real convergence of the meridians is lost because the latitude and longitude grid form a set of perpendicular lines, which is what makes the United States seem wider and flatter in geographic coordinates.</p></li>
+<li><p>Another popular projection used in the US is the Lambert Equal Area. You can search for USA_Contiguous_Lambert_Conformal_Conic. Display the map in this projection. It appears as shown below.</p></li>
+</ol>
+<img alt="USA Projection" src="_images/usa_projection4.png" />
+<ol class="arabic simple" start="5">
+<li><p>Now, set up layouts for the US projections.</p></li>
+</ol>
+<img alt="USA Projection" src="_images/usa_projection5.png" />
+<ol class="arabic simple" start="6">
+<li><p>In the next section, we look at projections for Michigan Layers.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="projections-of-michigan">
+<h2><span class="section-number">5.5. </span>Projections of Michigan<a class="headerlink" href="#projections-of-michigan" title="Permalink to this heading"></a></h2>
+<p><strong>a. View of Michigan in Geographic Coordinates</strong></p>
+<ol class="arabic simple">
+<li><p>In QGIS, click on Project | New and start a new project. Navigate to the Michigan subdirectory in the dataset you downloaded and load the Michigan and lat/long dataset.</p></li>
+<li><p>Notice how unnatural, Michigan looks when displayed in geographic coordinates.</p></li>
+</ol>
+<img alt="Michigan Projection" src="_images/michigan_projection1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>b. Display the Michigan Layer Using the Michigan GeoRef Coordinate Systems</strong></p>
+<p>In order to present a pleasing map of Michigan, and to minimize distortion of distance in
+statewide maps, we can use a state-wide coordinate system for Michigan called the Michigan GeoRef coordinate system to display Michigan layer. This coordinate system is based on a projection called the Hotine Oblique Mercator Azimuth projection.</p>
+<p>To display a map of Michigan using the Michigan Georef Coordinate System, do the following:</p>
+<ol class="arabic simple">
+<li><p>Click on Project |  Properties  and search for NAD_1983_Michigan_GeoRef_Meters. Select this coordinate system and click OK.</p></li>
+<li><p>In what way is this map different from Michigan in geographic coordinates?</p></li>
+<li><p>Create single layout showing both Michigan in geographic coordinates and Michigan in the Michigan GeoRef projection. Submit the layout.</p></li>
+</ol>
+<img alt="Michigan Projection" src="_images/michigan_projection2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Summary of Deliverables</strong></p>
+<ol class="arabic simple">
+<li><p>Create a Single Layout showing the world in the following coordinate systems or projections:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Geographic Coordinates</p></li>
+<li><p>Robinson Projection</p></li>
+<li><p>Winkel Tripel (NGS - world)</p></li>
+<li><p>Mercator (world)</p></li>
+<li><p>Sinudoidal (world)</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Write short statements on the characteristics of each projection and what mapping tasks each is best suited for.</p></li>
+<li><p>A layout showing the USA in Geographic Coordinates and Albers Equal Area Conic projection.</p></li>
+<li><p>A layout showing both Michigan in geographic coordinates and Michigan in the Michigan GeoRef projection.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="permanently-transforming-map-projections">
+<h2><span class="section-number">5.6. </span>Permanently Transforming Map Projections<a class="headerlink" href="#permanently-transforming-map-projections" title="Permalink to this heading"></a></h2>
+<p>When you download map layers from different websites, there is a high likelihood that the map layers you download will be in different coordinates.</p>
+<p>Map layers that have different coordinates will not overlay on top of each other. In order to make the maps overlay, you have to first define their projection tool, i.e., tell the software the name of the coordinate system of each of the map layer. Secondly, you have to transform the different coordinates into a common coordinate system.</p>
+<p>In this section of the lab, we use QGIS software to practice converting map layers from one coordinate system to another.  You are given six shapefiles pertaining to Washtenaw County. Three of the files are in Geographic Coordinates or latlong (WGS 84). They are:</p>
+<ul class="simple">
+<li><p>Streets</p></li>
+<li><p>School districts, and</p></li>
+<li><p>Census tracts</p></li>
+</ul>
+<p>The other three files are in Michigan GeoRef Coordinate System. The datum is NAD 83. They are:</p>
+<ul class="simple">
+<li><p>Drinking water wells</p></li>
+<li><p>Cities and</p></li>
+<li><p>County boundaries</p></li>
+</ul>
+<p>Your task is to change the coordinate systems of the map layers Michigan State Plane, South Zone, NAD 83 Feet), so that all the map layers can correctly overlay on each other.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Procedure</strong></p>
+<ol class="arabic simple">
+<li><p>Click on Project | New and start a New Project.</p></li>
+<li><p>Load the following layers into QGIS: Streets, Census Tract, and School Districts.  All three of these layers have their coordinates in latitude / longitude or Geographic Coordinate System. The datum is WGS 84.</p></li>
+<li><p>Let us check the Coordinate Reference System (CRS) of the street layer.  Right click on the name of the streets layer, then select properties.</p></li>
+</ol>
+<img alt="CRS Street Layer" src="_images/street_layer_crs.png" />
+<ol class="arabic simple" start="4">
+<li><p>Under “Geometry and Coordinate System”, notice it says Invalid Projection. This means that the projection has not been set or defined. Close the dialog.</p></li>
+</ol>
+<img alt="CRS Street Layer" src="_images/street_layer_crs2.png" />
+<ol class="arabic simple" start="5">
+<li><p>Prior to downloading the street layer, we were told that its coordinates were Geographic Coordinates, WGS 84.  Recall that Geographic Coordinates is another name for latitude longitude. If you look at the bottom of the screen you can see the latitude longitude values.  Although QGIS recognizes those values as latitude longitude, it does not know which datum the latitude longitudes are based on.   Let us provide this information to QGIS by defining the coordinate system of the map of the layer.  To do so, close the current dialog, then right click on the name of the street layer and select Set CRS | Set Layer CRS…</p></li>
+</ol>
+<img alt="CRS Street Layer" src="_images/street_layer_crs3.png" />
+<ol class="arabic simple" start="6">
+<li><p>When the CRS Selector dialog appears, enter ‘WGS 84’ next to ‘Filter’ and search for this coordinate system.  WGS 84 is the name of the datum.  Select WGS 84 (EPSG: 4326) as the Coordinate Reference System for the new map layer.  Click Ok.</p></li>
+</ol>
+<img alt="CRS Street Layer" src="_images/street_layer_crs4.png" />
+<ol class="arabic simple" start="7">
+<li><p>When you click Ok, the software will update the shapefile’s  .prj file by adding this projection information. For this particular projection, you won’t see any changes to the shape of the map.</p></li>
+<li><p>Now, on your own, define the coordinate system for the two layers below as WGS 84:</p></li>
+</ol>
+<ul class="simple">
+<li><p>School districts</p></li>
+<li><p>Census tracts</p></li>
+</ul>
+<img alt="Define Coordinates" src="_images/define_coordinates2.png" />
+<ol class="arabic simple" start="9">
+<li><p>Now add the other three files below.  The coordinate system of these layers is Michigan GeoRef (NAD 83):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Wells</p></li>
+<li><p>Cities</p></li>
+<li><p>County boundary</p></li>
+</ul>
+<ol class="arabic simple" start="10">
+<li><p>The coordinate system of the last three files you added is Michigan Oblique Mercator.  Since this is a projected coordinate system, it is not in latitude longitude. Thus, when you add the layers to QGIS, they may not display because the software can only display layers in one coordinate system at a time.</p></li>
+</ol>
+<img alt="Define Coordinates" src="_images/define_coordinares_georef.png" />
+<ol class="arabic simple" start="11">
+<li><p>To better work with the last set of files you loaded, I suggest that you click on Project at the top left of the screen and select “New” to start a new project.  Do not save the project. Re-add only the Wells, Cities, and Country Boundary layers.  If you look at the coordinates at the bottom of the screen, you will see coordinates values in the Michigan Oblique Mercator Coordinate System.</p></li>
+</ol>
+<img alt="Define Coordinates" src="_images/layers_michigan_georef.png" />
+<ol class="arabic simple" start="12">
+<li><p>Notice the question marks next to the layer names in the Table of Content?  That means the coordinate system of the layers has not yet been defined or set as yet.  To define the coordinate system of these layers in QGIS, right click on the name of the first layer  and select Set CRS | Set Layer CRS…   When the CRS Selector dialog appears, enter Michigan GeoRef into the filter and search for this coordinate system.  Select NAD83/  Michigan Oblique Mercator as the projection for the layer.  Click Ok.</p></li>
+<li><p>Make sure that all the layers have been defined as NAD 83/ Michigan Oblique Mercator.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Convert All Map Layers to Michigan State Plane, NAD 83</strong></p>
+<p>Now that we have defined all the map layers based on their original coordinate system, we will convert all the map layers to a common coordinate system, i.e., Michigan State Plane, NAD 83 (feet).</p>
+<ol class="arabic simple">
+<li><p>Click on Project at the top left of the screen and select “New” to start a new project.  Do not save the project.  Add only the Wells, Cities, and County Boundary layers.</p></li>
+<li><p>Right click on the first layer, e.g., Wells then select Export | Save Feature as..</p></li>
+</ol>
+<img alt="project Coordinates" src="_images/michigan_state_plane1.png" />
+<ol class="arabic simple" start="3">
+<li><p>Fill out the dialog that appears, fill it out as shown below, i.e., set a path and a name for the output file.  Don’t just enter a file name, click on the triple dots icon and set the path. In the example below, I appended the word ‘projected’ to the original fine name.</p></li>
+</ol>
+<img alt="project Coordinates" src="_images/michigan_state_plane2.png" />
+<ol class="arabic simple" start="4">
+<li><p>For CRS, click on the globe icon and enter State Plane in the filter textbox.  When the various options appear, select NAD 83, State Plane Michigan, South Zone, as shown below.   Click Ok. This will save the layer with a new name and a new coordinate system.</p></li>
+</ol>
+<img alt="Project Coordinates" src="_images/michigan_state_plane3.png" />
+<ol class="arabic simple" start="5">
+<li><p>Since you wish to convert all the layers to the Michigan State Plane Coordinate System, South Zone projection, repeat this process for all map layers.</p></li>
+<li><p>The projected layers now appears in QGIS Table of Content. However, if you click on one of them, they may not draw. This is because the original layers in in different coordinate system compared to those that have been projected.   I suggest you save and close the current project, then open a brand new project and display only the projected layers.  If everything was done correctly, all the layers should overlay exactly on each other.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Convert the GCS Layers to Michigan State Plane, NAD 83</strong></p>
+<ol class="arabic simple">
+<li><p>Click on Project at the top left of the screen and select “NEW” to start a new project.  Do not save the project.   Add only the streets, census tracts, and school district layers.</p></li>
+<li><p>Repeat the process described above to convert these layers to Michigan State Plane, NAD 83.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Display all the Projected Layers</strong></p>
+<ol class="arabic simple">
+<li><p>Click on Project at the top left of the screen and select “NEW” to start a new project.  Do not save the project.</p></li>
+<li><p>Add all six of the projected layers.  If everything was done correctly, all the layers should overlay exactly on each other.</p></li>
+<li><p>Use map design principles and create a map that shows all six of the layers at the same time.  To accomplish this, for some of the layers, instead of using a “Fill” color which hides layers underneath, using just the outline of the features. For different layers, use different color outlines.  Here is an example map that was previously submitted by a student.</p></li>
+</ol>
+<img alt="Final Map" src="_images/michigan_state_plane4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="changing-map-projections-in-arcgis-online">
+<h2><span class="section-number">5.7. </span>Changing Map Projections in ArcGIS Online<a class="headerlink" href="#changing-map-projections-in-arcgis-online" title="Permalink to this heading"></a></h2>
+<p>By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to display map layers. However, this projection distorts the size of places in the far north and south.  See this link  for a brief discussion.   Making non-Web-Mercator maps is possible in ArcGIS Online. First, you have to search ArcGIS Online for basemap template in the desired projection of interests, then display the basemap projection, and then upload your maps into the projection.  Here are the steps.</p>
+<ol class="arabic simple">
+<li><p>Download the Covid-19 Mortality by US states map we used in Lab 1.</p></li>
+<li><p>Visit arcgisonline.com and sign in.</p></li>
+<li><p>Click on Add | Search for Layers</p></li>
+</ol>
+<img alt="ArcGIS Online Map Projections" src="_images/arcgisonline_projections1.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click on My Content | ArcGIS Online.</p></li>
+</ol>
+<img alt="ArcGIS Online Map Projections" src="_images/arcgisonline_projections2.png" />
+<ol class="arabic simple" start="5">
+<li><p>Search for “Albers Equal Area”.   Select and load one of the Albers Equal Area Basemaps.</p></li>
+</ol>
+<img alt="ArcGIS Online Map Projections" src="_images/arcgisonline_projections3.png" />
+<ol class="arabic simple" start="6">
+<li><p>After loading the basemap, notice its shape. Observe how different it is from the Web Mercator Auxiliary projection shown above.  I strongly suggest that you use this or similar projections for plotting US wide datasets.</p></li>
+</ol>
+<img alt="ArcGIS Online Map Projections" src="_images/arcgisonline_projections4.png" />
+<ol class="arabic simple" start="7">
+<li><p>If you are making global thematic maps, you can also search for something like “Equal Area Projections world basemaps” and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.   You can even make your own projection. If you are sharing datasets such as global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps.</p></li>
+</ol>
+<blockquote>
+<div><img alt="ArcGIS Online Map Projections" src="_images/arcgisonline_projections5.png" />
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><p>Return to the Albers Equal Area USA projection and click on Add | Add Layers from file and load the USA Covid-19 Shapefile.</p></li>
+</ol>
+<blockquote>
+<div><img alt="ArcGIS Online Map Projections" src="_images/arcgisonline_projections5.png" />
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li><p>Using instructions from last last week’s lab plus your own fiddling, plot the Covid 19 mortality cases.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="summary-of-deliverables">
+<h2><span class="section-number">5.8. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Rerojected maps of the World, the USA, and Michigan, as described in Section 1.</p></li>
+<li><p>Answers to the questions in Section 1.</p></li>
+<li><p>A professional quality map showing the six layers overlaid on each other.</p></li>
+<li><p>The URL of your projected USA map in ArcGIS Online.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="spatial_data.html" class="btn btn-neutral float-left" title="4. Downloading Multiple Layers and Making Maps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="attribute_spatial.html" class="btn btn-neutral float-right" title="6. Attribute and Spatial Queries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

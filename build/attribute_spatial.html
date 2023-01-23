@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Attribute and Spatial Queries &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Terrain Analysis" href="terrain_mapping.html" />
+    <link rel="prev" title="5. Map Projections" href="map_projections.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Attribute and Spatial Queries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#assignment">6.1. Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-attribute-data">6.2. Working with Attribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-queries">6.3. Spatial Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#joining-tables-arcgis-online">6.4. Joining Tables - ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">6.5. Summary of Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Attribute and Spatial Queries</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/attribute_spatial.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="attribute-and-spatial-queries">
+<h1><span class="section-number">6. </span>Attribute and Spatial Queries<a class="headerlink" href="#attribute-and-spatial-queries" title="Permalink to this heading"></a></h1>
+<p>Within a GIS, data can be queried in two ways; attribute queries and spatial queries. For attribute queries, features are selected using attribute data. Results can be mapped or presented in conventional database form.</p>
+<p>Spatial query is used extract features based solely on their topological relationship to other features. Combined, attribute and spatial queries are a powerful way of exploring spatial patterns in the data.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="assignment">
+<h2><span class="section-number">6.1. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this heading"></a></h2>
+<p>In the first part of this lab, we explore how to join an Excel file containing attribute data to a shapefile’s attribute table.  After joining the tables, we will run some attribute queries to explore the data.   You will also experiment with summarizing the attribute data to see numeric and geographic patterns associated with the data.</p>
+<p>In the second part of the lab, we will explore how to perform spatial queries in QGIS using tornada and parcel data.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="working-with-attribute-data">
+<h2><span class="section-number">6.2. </span>Working with Attribute Data<a class="headerlink" href="#working-with-attribute-data" title="Permalink to this heading"></a></h2>
+<p>Recall that in Lab 2, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile’s attribute table?   The answer is through table joins.</p>
+<p>To illustrate the process, we will make of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile’s attribute data. Table joins are important in GIS as it saves us the need to manually enter data into the attribute table.</p>
+<p>Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in “m’ below.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Downloading and Processing Data</strong></p>
+<ol class="arabic simple">
+<li><p>Download and unzip the  Michigan Counties shapefile in Canvas to a folder on your computer.</p></li>
+<li><p>Click on this <a class="reference external" href="https://www.michigan.gov/coronavirus/stats">link</a> to visit the Michigan State Govt website that carries data on Covid-19.</p></li>
+<li><p>Copy the data in the table named “Confirmed COVID-19 Cases by Jurisdiction (Counties)” and paste the values into Excel.</p></li>
+<li><p>Edit the Excel file in the following ways:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Enter zero as the value for those counties that didn’t report any deaths.</p></li>
+<li><p>Reduce the length of the field names. For example, instead of “Confirmed Cases”, simply reduce it to “Cases”.</p></li>
+<li><p>For “Reported Deaths”, change it to “Deaths”. In QGIS, field names can’t have more than 11 characters.</p></li>
+<li><p>In the shapefile’s attribute table, St. Clair and St. Joseph have periods in their names following “St”. However, there are no periods in these names in the data you downloaded. Include the periods in St. Clair and St. Joseph in the Excel table so that they match the shapefile’s county names exactly. Otherwise, these two records will not be joined.</p></li>
+<li><p>Include an entry in the Excel table for Alger County. This county’s name is present in the shapefile’s attribute table, but not in the Excel file.</p></li>
+<li><p>The edited table should appear similar to the example below.</p></li>
+</ul>
+</div></blockquote>
+<img alt="Covid19 Attribute Data" src="_images/covid19_attribute_data.png" />
+<ol class="arabic simple" start="5">
+<li><p>Save the file to the same folder as the shapefiles.  Save as a CSV file.</p></li>
+</ol>
+<img alt="Covid19 Attribute Data" src="_images/save_as_csv.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Joining the Excel File to the Shapefile’s Attribute Table</strong></p>
+<ol class="arabic simple">
+<li><p>Open QGIS, start a new project, and load the shapefile and CSV file into QGIS.</p></li>
+<li><p>Since we studied map coordinates in the last module, let’s determine the map coordinates of our project. Whichever map layer goes into the map area first, that layer sets up the coordinates of the Project. Since the Michigan layer was the first map layer opened in the map, then the project took on the coordinates of the Michigan layer.  So, click on Project on the main menu then select Properties. In the dialog, the selected coordinate system is the project’s coordinate system. It is called “NAD 83/ Michigan Oblique Mercator”.   When you are done inspecting the values, click OK and close the dialog.</p></li>
+</ol>
+<img alt="Covid19 Attribute Data" src="_images/attribute-query3.png" />
+<ol class="arabic simple" start="3">
+<li><p>Now, right click on the name of the shapefile, select Attribute Table, and examine the contents of the attribute table.  There are a lot of demographic data in the table. Inspect the various categories of data.</p></li>
+<li><p>Now, let us join the Covid-19 table to the shapefile’s attribute table.  To do so, right click on the name of the shapefile and select “Properties”.  To the left of the dialog that appears, select Joins.</p></li>
+</ol>
+<img alt="Covid19 Attribute Data" src="_images/attribute-query4.png" />
+<ol class="arabic simple" start="5">
+<li><p>Fill out the dialog with the appropriate information.  We will be doing a one-to one join. The table join requires both tables to have a field that contains the same data to base the join. In ou situation, both tables have a field that contains the county names, so we will use thee two fields to join the table. The names of the fields do not matter, just the fact that they contain the same data.</p></li>
+<li><p>Based on the illustration above, we select the Covid19 standalone table as the join layer.</p></li>
+<li><p>Select County as the field to base the join.</p></li>
+<li><p>Select NAME_1 as the target field.  NAME-1 was selected as the field in the shapefile’s layer because the county names in this field are lower case similar to the names in the County field in the CSV file. Click Ok.</p></li>
+<li><p>When the table join is completed, open the attribute table of the shapefile to make sure that the data from the CSV file is now present in the shapefile’s attribute table. If the process failed, repeat the steps paying close attention to any error message.</p></li>
+<li><p>Table joins are temporary procedures. This means that you can easily remove the joins between the two table. To make the join permanent, right click on the joined shapefile and select Export | Save Features as .. and export the shapefile to your data folder with a new name.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Performing Attribute Queries to Answer the Questions Below:</strong></p>
+<ol class="arabic simple">
+<li><p>Which county has the fifth highest number of confirmed cases? (1 pt). (Tip: This question requires that you sort the table field. To do this, right click on the field that contains the confirmed cases and select “Sort Descending”).</p></li>
+<li><p>How many counties have more than 3,000 confirmed cases. Which counties are they?  (2 pts). Although you can look at the table to get this information, let’s write an attribute query to get the answer. On the main menu, click on the Select Features dropdown and choose “Select Features by Expression”. A dialog will appear similar to the one in the illustration below. Click on “Fields and Values”. This will show the list of field names in the attribute table. Scroll down and double click on the confirmed cases field. The field will appear to the right in the editor. Complete the expression by so that it reads “Cases &gt; 30000” where Cases is the field name. Note, your field name will be different.</p></li>
+<li><p>Now click on “Select Features at the bottom right of the screen. This will select the counties on the map that meet the query criteria.  Open the attribute table. The results are shown on both the table and the map.</p></li>
+</ol>
+<img alt="Covid19 Attribute Data" src="_images/attribute-query5.png" />
+<ol class="arabic simple" start="4">
+<li><p>Write a query to find counties with more than 8,000 cases?  Where in geographic terms are these counties located?</p></li>
+<li><p>How many counties have between 3,000 - 10,000 confined cases?</p></li>
+<li><p>Where in geographic terms are the counties located with less than 200 cases located?  Make a screenshot and show the counties on your map.</p></li>
+<li><p>How many counties have more than 3,000 confirmed cases and also more than 500 deaths? Which counties are they?  Show on a screenshot.</p></li>
+<li><p>What is the average number of confirmed cases per counties? What is the standard deviation? What does the standard deviation tell you? To get this information, right click on the “Cases” field and select Statistics.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Rates Calculation</strong></p>
+<p>We will now calculate rates of confirmed cases by county. Rates are usually a better way of comparing disease events than counts because it allows us to take population size into account.</p>
+<ol class="arabic simple">
+<li><p>First, we need to create a new field in the attribute table to hold the rates.  To create the new field, open the attribute table, then click on the Toggle button to the far left. Next, click on the New Field button, then fill out the dialog as shown below. I entered Rates as the field name and decimals for the data type.</p></li>
+</ol>
+<img alt="Covid19 Attribute Data" src="_images/attribute-query6.png" />
+<ol class="arabic simple" start="2">
+<li><p>To calculate rates, first click on the Field Calculator button in. This will bring up the Field Calculator.</p></li>
+</ol>
+<img alt="Covid19 Attribute Data" src="_images/attribute-query7.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the Field Calculator dialog, first click on update an existing field, then select Rates as the field to update. Now create an expression as shown below, i.e., (Confirmed Cases / Population) * 10000.  Your field names will differ. Substitute the correct field names.</p></li>
+<li><p>Once the rates are calculated, create a thematic map of the values. Create a screenshot to show your rates map. (Note: To make the thematic map, click on Appearance on the main menu, then select Symbology | Graduated Color.</p></li>
+</ol>
+<img alt="Covid19 Attribute Data" src="_images/attribute-query8.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="spatial-queries">
+<h2><span class="section-number">6.3. </span>Spatial Queries<a class="headerlink" href="#spatial-queries" title="Permalink to this heading"></a></h2>
+<p>In this section, we will practice spatial queries, which is querying map features by location and spatial relationship to other map features.  The map features need not be in the same layer.</p>
+<p>The dataset for this exercise can be downloaded from Canvas.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>A. Selecting Cities within a Given State</strong></p>
+<ol class="arabic simple">
+<li><p>Select a state (except Michigan) from the states layer, as shown below.  Right click on the layer name, select Export | Save Features as ..  and export the layer to create a separate map layer of only the selected layer.  Note, I clicked on Project | Properties and changed the projection to Albers Equal Area Contiguous.  Also, when you are exporting make sure you select, “Save Only Selected Features”, See illustrations below:</p></li>
+</ol>
+<img alt="Spatial Queries" src="_images/spatial_queries1.png" />
+<img alt="Spatial Queries" src="_images/spatial_queries2.png" />
+<ol class="arabic simple" start="2">
+<li><p>Write a query to select all cities that are “completely within” the state you selected.</p></li>
+</ol>
+<img alt="Spatial Queries" src="_images/spatial_queries3.png" />
+<ol class="arabic simple" start="3">
+<li><p>To select the cities that fall only within Michigan, we will use a Select by Location tool. Click on Vector in the main menu, then select Research Tools | Select by Location.    In the dialog that opens, set the city layer as  the layer to select features from. The spatial operation is “are within”. Select Michigan as the layer that will be compared with. Click Run.  The selected cities should be highlighted.</p></li>
+</ol>
+<img alt="Spatial Queries" src="_images/spatial_queries4.png" />
+<img alt="Spatial Queries" src="_images/spatial_queries5.png" />
+<ol class="arabic simple" start="4">
+<li><p>Right click on the name of the cities.  Select Export | Save Features as and create a layer only of cities that fall within your state. You will need the exported layer for the next query.  (2 pt).</p></li>
+<li><p>Run an attribute query on the cities within the state you selected to find cities that have population greater than 25,000.  (Note: This is a Select by Attributes Query). To create a map of the selected cities, right click on the layer, then select Data | Export data).  (2 pt)</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>B. Selecting Cities that are within 50 miles of a Great Lake</strong></p>
+<p>In this section of the lab, you will select one of the Great Lakes and create a separate layer of the lake.  For the lake you selected, create a buffer of 50 miles around the lake and identify all the cities within the buffered areas (Geoprocessing | Buffer).</p>
+<ol class="arabic simple">
+<li><p>To select a Great Lake of interest, first click on the Select Features tool, then click on a lake to select it.</p></li>
+<li><p>To make a layer only of the lake you selected, right click on the name of the lakes layer in the Table of Content, then select Export | Save Features as and fill out the dialog that appears. Click Run.</p></li>
+</ol>
+<img alt="Spatial Queries" src="_images/spatial_queries6.png" />
+<ol class="arabic simple" start="3">
+<li><p>Next, buffer the lake. To do so, select Analysis in the main menu, Tools | Buffer.   Fill out the dialog. Make sure the buffer distance is set to 50 miles. (Note: the map units are in degrees so the buffer distance will be computed in degrees. To avoid this issue, we should permanently convert the map to a projected coordinate. However, to avoid this, we will use a rough estimate of 0.72 of a degree as the buffer distance).</p></li>
+<li><p>Select all cities that fall with the buffer zone. To do this, click on the Select By Location dialog and fill out the dialog. Since you want to select cities, then the cities layers should be in the input features box. The spatial relationship is ‘ within’  the Buffer.  Click Run.</p></li>
+<li><p>Right click on the cities layer, go to Export and save the selected cities to make a map only of the selected cities.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>C. Selecting Properties within a Given Proximity of a Tornado Path</strong></p>
+<p>Download this dataset that shows a tornado track across a residential area.  The tornado destroyed property within a 550 m swath, so the authorities need to assess the damage done.  Specifically, they would like to assess damages for:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>properties for which any part was in the storm’s path and</p></li>
+<li><p>properties that were completely within the storm’s path.</p></li>
+</ul>
+</div></blockquote>
+<p>As the GIS analyst, you are required to use ArcGIS Pro Spatial Queries functions to identify the two types of properties and calculate their total assessed values.</p>
+<ol class="arabic simple">
+<li><p>Let’s identify properties that were partially in the storm’s path. First, load the tornado dataset into QGIS. Afterwards, use the Select by Location tool to select parcels that intersect the tornado path.</p></li>
+</ol>
+<img alt="Spatial Queries" src="_images/spatial_queries7.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the selected parcels to make a separate map.</p></li>
+<li><p>To get the assessed value of the damaged properties, simply click View in the main menu, then select Panels | Statistics Panel. This will bring up a panel from which you can choose the field of interest. It will then show summary statistics for the field.</p></li>
+<li><p>Identity the worst affected properties, i.e., those where the entire property was contained in the path of the storm.  Note. For this problem, you have to first make buffer of 550 m around the tornado path, then find all parcels within the buffer region.</p></li>
+</ol>
+<img alt="Spatial Queries" src="_images/spatial_queries8.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="joining-tables-arcgis-online">
+<h2><span class="section-number">6.4. </span>Joining Tables - ArcGIS Online<a class="headerlink" href="#joining-tables-arcgis-online" title="Permalink to this heading"></a></h2>
+<p>ArcGIS Online has simplified the process of table joining for people using this platform for GIS. To join a table using ArcGIS Online, follow the steps below:</p>
+<ol class="arabic simple">
+<li><p>Upload both the shapefile and CSV to ArcGIS Online. When uploading the CSV file, upload as Table.</p></li>
+</ol>
+<img alt="Table Join ArcGIS Online" src="_images/table_join1_arcgisonline.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click on Analysis | Summarize | Join Features.</p></li>
+</ol>
+<img alt="Table Join ArcGIS Online" src="_images/table_join2_arcgisonline.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the dialog that appears, select the Michigan County shapefile as your target. This means that the table associated with this shapefile will receive data from the CSV table. The CSV table is the table that will be be joined to the target layer.</p></li>
+</ol>
+<img alt="Table Join ArcGIS Online" src="_images/table_join3_arcgisonline.png" />
+<ol class="arabic simple" start="4">
+<li><p>The type of joins will be fields to match.  Note that you can also do spatial queries in ArcGIS Online. In that case, you would click on “Choose a spatial relationship”.  Select the fields to use to base the join. Select also the type of join. As before, the join is a one to one join, i.e., one record in one table will be joined to one and only one record in the other table.</p></li>
+<li><p>Click OK.</p></li>
+<li><p>Create a thematic map using either the Confirmed Cases field or the Rates field.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="summary-of-deliverables">
+<h2><span class="section-number">6.5. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<p><strong>Section 1 (10 pts)</strong></p>
+<ul class="simple">
+<li><p>Answers to the questions in Section 1 under “Performing Attribute Queries to Answer the Questions …” and under “Rates Calculation”.</p></li>
+</ul>
+<p><strong>Section 2 (10 pts)</strong></p>
+<ul class="simple">
+<li><p>A screenshot of the map of the state you selected showing all cities with the state.</p></li>
+<li><p>A screenshot of the map of the state you selected showing cities that have population greater than 25,000.</p></li>
+<li><p>A map showing a 50-mile buffer drawn around one of the Great Lakes and cities with the buffered zone.</p></li>
+<li><p>Screenshot of a map showing properties for which any part was in the storm’s path. Submit also a statement of the total and average assessed properties damages.</p></li>
+<li><p>Screenshot of a map showing properties that were entirely in the storm’s path.  A statement of the total and average assessed properties damages.</p></li>
+<li><p>Submit also a statement of the total and average assessed properties damages.</p></li>
+</ul>
+<p><strong>Section C (5 pts)</strong></p>
+<ul class="simple">
+<li><p>The URL of an ArcGIS Online map showing the Covid 19 rates or confirmed cases by counties for Michigan</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="map_projections.html" class="btn btn-neutral float-left" title="5. Map Projections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="terrain_mapping.html" class="btn btn-neutral float-right" title="7. Terrain Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Terrain Analysis &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8. Collecting Points Data Using GPS" href="points_data.html" />
+    <link rel="prev" title="6. Attribute and Spatial Queries" href="attribute_spatial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Terrain Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#obtaining-basic-terrain-information-from-elevation-maps">7.1. Obtaining Basic Terrain Information from Elevation Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-basic-terrain-maps-and-graphs">7.2. Creating Basic Terrain Maps and Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profile-graph-line-of-sight-graph-and-viewshed-maps">7.3. Profile Graph, Line-of-sight Graph, and Viewshed Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#habitat-suitability-analysis">7.4. Habitat Suitability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#channel-extraction-and-watershed-delineation">7.5. Channel Extraction and Watershed Delineation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-lidar-data-in-qgis">7.6. Working with LiDAR Data in QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-deliverables">7.7. Summary of Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">7.8. Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Terrain Analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/terrain_mapping.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="terrain-analysis">
+<h1><span class="section-number">7. </span>Terrain Analysis<a class="headerlink" href="#terrain-analysis" title="Permalink to this heading"></a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="obtaining-basic-terrain-information-from-elevation-maps">
+<h2><span class="section-number">7.1. </span>Obtaining Basic Terrain Information from Elevation Maps<a class="headerlink" href="#obtaining-basic-terrain-information-from-elevation-maps" title="Permalink to this heading"></a></h2>
+<p>Visit Stowe, VT using <a class="reference external" href="https://caltopo.com/">Caltopo</a>, <a class="reference external" href="https://apps.nationalmap.gov/viewer/">the National Map</a>, Google Earth Pro, QGIS, or ArcGIS Pro. Locate the following two points (44.535252, -72.781882; 44.437931, -72.761282) then determine the following:</p>
+<ol class="arabic simple">
+<li><p>the elevation of each of the two points.</p></li>
+<li><p>the straight line distance between the two points.</p></li>
+<li><p>the slope between the two points.</p></li>
+<li><p>the aspect between the two points.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="creating-basic-terrain-maps-and-graphs">
+<h2><span class="section-number">7.2. </span>Creating Basic Terrain Maps and Graphs<a class="headerlink" href="#creating-basic-terrain-maps-and-graphs" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Visit the <a class="reference external" href="https://apps.nationalmap.gov/downloader/">National Map data downloader</a> and download a DEM for a small area in a mountainous region in the USA. Load the DEM into the QGIS, then generate and submit the following professional quality maps of the area.</p></li>
+</ol>
+<ul class="simple">
+<li><p>a hillshade map (hysometric tinting)</p></li>
+<li><p>a slope map</p></li>
+<li><p>an aspect map</p></li>
+<li><p>a contour map</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Follow the steps below to create well organized hillshade, slope, aspect and contour for submission. Your maps should be attractive and professionally created.  Pay keen attention to map colors, and legend, scale bar design, and title design.</p></li>
+<li><p>After generating the maps, briefly state two practical uses of each of the above maps.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Download and Load the Elevation Layer</strong></p>
+<ol class="arabic simple">
+<li><p>Download the DEM from the National Map then unzip the files to a folder whose path you can remember. I downloaded a DEM for the Stowe, Vermont area.</p></li>
+<li><p>Launch QGIS.</p></li>
+<li><p>Click on Layer | Add Layer | Add Raster Layer</p></li>
+<li><p>Navigate to the folder where the DEM is loaded and select the .adf file that has the larger file size.</p></li>
+</ol>
+<img alt="Select adf file" src="_images/terrain_analysis1_adf.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Add and Close. The DEM will be added to QGIS.</p></li>
+</ol>
+<img alt="Select adf file" src="_images/terrain_analysis2_loaddem.png" />
+<ol class="arabic simple" start="6">
+<li><p>Now, let’s explore the DEM. At first glance, the DEM looks a bit weird, but you can see outlines of stream channels and ridges.  Click <a class="reference external" href="https://www.google.com/maps/place/Stowe,+VT+05672/&#64;44.4593029,-72.8832422,11z/data=!4m5!3m4!1s0x4cb591352b365ed5:0x26c5ba3745132901!8m2!3d44.4654332!4d-72.6874023!5m1!1e4">here</a> to view the area on Google Map.</p></li>
+<li><p>To explore the elevation of the area, click on the Identify button (see illustration below) and then click anywhere on the DEM. QGIS will return the elevation value at that location.</p></li>
+</ol>
+<img alt="Select adf file" src="_images/terrain_anaysis3_identify.png" />
+<ol class="arabic simple" start="8">
+<li><p>Now, let us inspect the properties of the DEM. Right click on the layer’s name in the Table of Content, then select properties.  Click on Source. Here, you can see the DEM’s coordinate system information. To learn more about the coordinate system, click on the icon to the right of the screen. The dialog to the left of the screen will appear.</p></li>
+</ol>
+<img alt="Select adf file" src="_images/terain_analysis3_properties.png" />
+<ol class="arabic simple" start="9">
+<li><p>In the dialog that contains the coordinate system information, inspect the information under “Selected CRS”.  You can see that it includes ‘Extent’, which are the longitude / latitude values of the geographic area occupied by the map layer. The four coordinates are the long/lat for the lower left position and upper right position of the bounding area.</p></li>
+<li><p>Proj4 provides details about the coordinate system. Proj = tmerc means that the projection is Transverse Mercator. The lat/long give the central meridian of the coordinates on the map. You can also see that the ellipsoid is GRS 1980. The towgs84 parameter gives values for translating this coordinate system into WGS 1980.  The zeroes mean that the two systems have the same dimension. Map units is meters. False Easting (+x_0) is 500000 and false northing (+y_0) is 0.</p></li>
+<li><p>Try to answer the questions below regarding the DEM’s coordinate system:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>What is the coordinate system of the DEM?</p></li>
+<li><p>What is the map units of the coordinate system?</p></li>
+<li><p>What are the minimum and maximum elevations in the DEM?</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Create a Hillshade Map</strong></p>
+<ol class="arabic simple">
+<li><p>To create a hillshade map, click on Raster | Analysis | Hillshade.</p></li>
+</ol>
+<img alt="Hillshade" src="_images/terrain_analysis_hillshade1.png" />
+<ol class="arabic simple" start="2">
+<li><p>In the hillshade dialog that appears, make sure that you select the elevation model as your input (see illustration below). Inspect the other values, but do not change them. Take note of the default Azimuth of the light source (compass direction of the light source) and altitude of the light source.  These are all textbook recommended values for hillshade creation. Try to visualize what they mean.</p></li>
+</ol>
+<img alt="Hillshade" src="_images/terrain_analysis_hillshade2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Do not provide an output name in “Save to temporary file” as you may get an error. Click Run.</p></li>
+<li><p>The hillshade map appears as shown below. Notice how easy it is to visualize the ridges and valleys compared to the original DEM.</p></li>
+</ol>
+<img alt="Hillshade" src="_images/terrain_analysis_hillshade3.png" />
+<ol class="arabic simple" start="5">
+<li><p>Visualizing terrain is one of the most common uses of hillshades.  To enhance visualization, we often drape rasters and shapefiles over hillshades to give the area a more realistic look.  We will now drape our DEM over the hillshade.</p></li>
+<li><p>Drag the DEM and place it above the hillshade in the Table of Contents.  Now, double click on the name of the DEM and select the Transparency tab. Select the Global Opacity Slider and set it to about 50% transparent. Click Apply.  Now, it is possible to better visualize the DEM.</p></li>
+</ol>
+<img alt="Hillshade" src="_images/terrain_analysis_hillshade4.png" />
+<ol class="arabic simple" start="7">
+<li><p>For even greater visual effect, you can change the color scheme of the DEM.  Select the Symbology tab that is above the Transparency tab. Change the Render type to psuedoband single color, then play with the color schemes. Select one that pleases you and that displays terrain data well.</p></li>
+<li><p>When you are done, click Ok. The results should appear as shown below.  Appearance may vary slightly depending on the color you selected.  You can also compare your hillshade with Google Map’s hillshade of Stowe. Click here  to view it.</p></li>
+<li><p>To see some interesting work done on the design of hillshades, check this link: <a class="reference external" href="https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/steal-this-imhof-like-topography-style-please/">https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/steal-this-imhof-like-topography-style-please/</a>.</p></li>
+</ol>
+<img alt="Hillshade" src="_images/terrain_analysis_hillshade5.png" />
+<ol class="arabic simple" start="10">
+<li><p>Make a professional layout of this map for submission.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Create a Slope Map</strong></p>
+<ol class="arabic simple">
+<li><p>To create a slope map of the Stowe, Vermont area, click on Analysis | Tools | Toolboxes | Surface | Slope.</p></li>
+</ol>
+<img alt="Slope" src="_images/terrain_analysis_slope1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Fill out the Slope dialog. Make sure that you selected the Stowe digital elevation model as your input, not the previous hillshade. No other change is required. Use default settings. Click Run.</p></li>
+<li><p>The resultant map is shown below.</p></li>
+</ol>
+<img alt="Slope" src="_images/terrain_analysis_slope2.png" />
+<ol class="arabic simple" start="4">
+<li><p>Change the color scheme.</p></li>
+</ol>
+<img alt="Slope" src="_images/terrain_analysis_slope3.png" />
+<ol class="arabic simple" start="5">
+<li><p>For improved visualization, you can drape the slope map over the hillshade.</p></li>
+<li><p>Make a professional layout of this map for submission. To aid with your cartography, here is an example of a nicely drawn slope map  - <a class="reference external" href="https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/">https://kingsgeocomputation.org/2016/03/16/aspect-slope-maps-in-qgis/</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Create an Aspect Map</strong></p>
+<ol class="arabic simple">
+<li><p>As discussed in this Module, aspect maps provide information on the direction that each slope faces. Some slopes are northward facing slopes, others face the south, east, east north east, west, etc.    Aspect is measured in terms of angles.</p></li>
+<li><p>To create an aspect map in ArcGIS Pro, click again on Toolboxes | Spatial Analyst Tools | Surface | Aspect, then fill out the dialog.  Make sure that you select the Stowe digital elevation model as your input.</p></li>
+<li><p>Select an appropriate color scheme and drape it over the hillshade.</p></li>
+</ol>
+<img alt="Aspect" src="_images/terrain_analysis_aspect1.png" />
+<ol class="arabic simple" start="4">
+<li><p>Make a professional layout of this map for submission.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Create a Contour Map</strong></p>
+<ol class="arabic simple">
+<li><p>Click on Raster | Extraction then select Contours.</p></li>
+</ol>
+<img alt="Contours" src="_images/terrain_analysis_contours1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Make sure you select the elevation layer as the input raster.  Set a contour interval of 50ft, then click Ok. If you do not like the results, you can try different contours intervals.</p></li>
+</ol>
+<img alt="Contours" src="_images/terrain_analysis_contours2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><em>Labeling the Contour Map</em></p>
+<p>The first image below shows basic contour labeling with the contour placed on the lines.  The halo hides the lines where the numbers intersect the lines. Your task is to generate these cartographically pleasing labels.</p>
+<img alt="Contours Labels" src="_images/terrain_analysis_contours3.png" />
+<p>To create labels, do the following:</p>
+<ol class="arabic simple">
+<li><p>Right click on the contour shapefile, select Properties, then  select ‘Label’. Select Elev as the field in the attribute table to use for labeling. This will add labels to your contours.  However, the labels are placed above the contour lines, and hence, need editing.  On contour labels are placed on the lines, “breaking” the lines in the process, as shown in the illustration above.</p></li>
+<li><p>Select “Placement”, then select all three options. Note their effect on the lines. Select the one that best works for you.</p></li>
+<li><p>Click on Background to set halo effect. Fiddle with the color settings. I think setting the opacity values improves the background effect considerably.  Ideally, the halo colors should merge seamlessly with the background color of the contours.</p></li>
+<li><p>Click Apply.</p></li>
+</ol>
+<img alt="Contours" src="_images/terrain_analysis_contours4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="profile-graph-line-of-sight-graph-and-viewshed-maps">
+<h2><span class="section-number">7.3. </span>Profile Graph, Line-of-sight Graph, and Viewshed Maps<a class="headerlink" href="#profile-graph-line-of-sight-graph-and-viewshed-maps" title="Permalink to this heading"></a></h2>
+<p>Using the two points mentioned in Section 1 (44.535252, -72.781882; 44.437931, -72.761282), generate a  profile graph and a line of sight chart for the two points.  Also, generate a viewshed from point 44.535252, -72.781882. Use QGIS, Google Map, or any software of your choice to generate these products.</p>
+<p><strong>Creating a Profile Graph</strong></p>
+<ol class="arabic simple">
+<li><p>Create a new line layer snapping to your start and end points.</p></li>
+<li><p>Get the Profile tool from the Plugins menu, search for Profile.</p></li>
+<li><p>Open the profile tool.</p></li>
+<li><p>In the profile tool there is a drop down box called “Selection” by default it has a value of “Temporary polyline” change that to “Selected Polyline”.</p></li>
+<li><p>Your cursor when in the map will change to a pointer finger, click on your polyline with the cursor and your profile will draw.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Creating a Line-of-Sight Graph</strong></p>
+<ol class="arabic simple">
+<li><p>YouTube Video</p></li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0NTw7hujRCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <p> <br> </p><ol class="arabic simple" start="2">
+<li><p>See also this tutorial - <a class="reference external" href="https://analyticalgraphics.force.com/faqs/articles/Knowledge/Line-of-sight-analysis-from-shapefile-building-data">https://analyticalgraphics.force.com/faqs/articles/Knowledge/Line-of-sight-analysis-from-shapefile-building-data</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Creating a Viewshed Map</strong></p>
+<p>In QGIS, to create a viewshed map, you must first create a viewpoint layer. After than, you use the view point layer to create the viewshed layer.  Click on the videos below for the detailed steps :</p>
+<ol class="arabic simple">
+<li><p>YouTube Video</p></li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fGKgvg0QoXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p> <br> </p><ol class="arabic simple" start="2">
+<li><p>YouTube Video</p></li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kC1ApQLcEhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    <p> <br> </p><ol class="arabic simple" start="3">
+<li><p>See also this tutorial- <a class="reference external" href="https://landscapearchaeology.org/2020/visibility-index/">https://landscapearchaeology.org/2020/visibility-index/</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="habitat-suitability-analysis">
+<h2><span class="section-number">7.4. </span>Habitat Suitability Analysis<a class="headerlink" href="#habitat-suitability-analysis" title="Permalink to this heading"></a></h2>
+<p>The habitat for a certain animal in Stowe, Vermont must be protected.  Preliminary studies show that the habitat for the animal is generally associated with the following very broad geographic conditions:</p>
+<ol class="loweralpha simple">
+<li><p>elevation greater than 800 ft</p></li>
+<li><p>slope between 20 to 30 degrees</p></li>
+<li><p>southward facing aspect, i.e., between 90 and 270 degrees</p></li>
+<li><p>more than 1 km from roads</p></li>
+<li><p>forested areas</p></li>
+</ol>
+<p>Use QGIS to identify locations that meet all of the above conditions.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Procedure</strong></p>
+<p>The basic logic in any habitat suitability analysis is to assemble map layers for each of the project criteria and then query the map layers to find locations that meet all of the criteria.  In this example, you have to assemble the following maps:</p>
+<ul class="simple">
+<li><p>an elevation map. In this case, we already have the Stowe DEM.</p></li>
+<li><p>a slope map, which, as you noted above, can be generated from the DEM</p></li>
+<li><p>an aspect map, which, as you noted above, can also be generated from the DEM</p></li>
+<li><p>a map showing distance from roads, which we will generate using GIS</p></li>
+<li><p>a map showing forested areas, which will extract from the land use map that was provided.</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Assembling Map Layers</strong></p>
+<ol class="arabic simple">
+<li><p>The first layer needed is the elevation layer.  Since this layer is provided, no further processing is required. Simply load it into QGIS.</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability1.png" />
+<ol class="arabic simple" start="2">
+<li><p>The second layer needed is a slope layer.  This layer is also available from the previous section, so we can reuse it.</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Our aspect map is also available for reuse.</p></li>
+<li><p>Now we need to create a map showing distance from roads. This will be a distance surface map.  As discussed in Module 4.4, distance surface maps are used to show distances from a given point or line on the map. By clicking anywhere on the map, you can tell how far you are from a given point or line.  Let’s create one.</p></li>
+<li><p>Click on Layer | Add Layer | Add Vector Layer. Navigate to the Stowe dataset and load the roads.shp file.</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability3.png" />
+<ol class="arabic simple" start="6">
+<li><p>Unlike ArcGIS Pro, the distance surface function in QGIS works only with input files that are in raster format.  Since our source is in vector format, we need to convert it to a raster file. To do so, click on Raster | Conversion | Rasterize (Vector to Raster).</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability4.png" />
+<ol class="arabic simple" start="7">
+<li><p>When the dialog opens, enter road as the input layer. Under ‘Fixed value to burn[optional]), set the value to 1.  This means that every road cell will be assigned a value of 1.  Under Output raster size units, select Georeferenced units. Enter 10 for the height and width resolution of the output cells. For Output Extent, click on the dropdown and set output extent to that of the elevation layer. Set No data to -1.  (See dialog below).</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability5.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click Run.</p></li>
+<li><p>Results will appear as show below.  The vector lines have been converted to raster lines. Zoom in to see then clearly.</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability6.png" />
+<ol class="arabic simple" start="10">
+<li><p>To create the distance surface map, click on Raster | Analysis | Proximity (Raster Dataset)</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability7.png" />
+<ol class="arabic simple" start="11">
+<li><p>When the dialog appears, set the input layer as the Rasterized layer. Set the list of pixel values in the source image to 1. Distance unit is georeferenced units and set no data to -1. Click Run.</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability8.png" />
+<ol class="arabic simple" start="12">
+<li><p>The resultant map should appear as shown below. It shows the distance in meters from each road segment in the raster. If you click anywhere on the map, it will give the distance to the closest road.   We can now write a query to show all places that are within a given distance of a road, e.g. 3km (3000 meters). For example, we can write: (“Proximity Map” &lt; 3000).</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability9.png" />
+<ol class="arabic simple" start="13">
+<li><p>The final layer we need to assemble is one that shows forested areas. Fortunately, the land use layer contains data about forested areas. Open the attribute table of the land use layer and inspect it. You will notice that the code for forested areas is 6.  We will use this code in our final query to extract forested areas.  The query will be written as land use == 6 (Notice the double equal sign).</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Querying the Layers</strong></p>
+<ol class="arabic simple">
+<li><p>Now that we have assembled all the layers, let’s write a single query to extract places that meet all the criteria for the project.  We will use the Raster Calculator to write this query. Click on Raster | Raster Calculator.</p></li>
+<li><p>When the Raster Calculator opens, you will see listed all the rasters you created so far in this project. Your task is to double click on the required raster names and build the query using the operators on the right.</p></li>
+<li><p>The query should look similar to the one below. The basic format of the query is name of the layer followed by a logical operator and some value. ( “elevation&#64;1” &gt; 800 ) AND (“Slope&#64;1” &gt;= 20) AND ( “Slope&#64;1” &lt;= 30 ) AND (“Aspect&#64;1” &gt;= 90) AND (“Aspect&#64;1” &lt;= 270) AND (“Proximity map&#64;1” &gt; 1000) AND “landuse&#64;1” = 6</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability10.png" />
+<ol class="arabic simple" start="4">
+<li><p>Note: the names of the layers may differ in your project but the logic remains the same.   Be careful when writing the query. If errors exist in the syntax, it would not run.  This part of the project could be the most challenging.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><em>Habitat Suitability Map Design</em></p>
+<ol class="arabic simple">
+<li><p>Initially, your final map will not look very attractive.  My final map appears as shown below, but I am not daunted. If you look at the legend, you will notice that the map consists of 1s and 0s. The 1s represent places where the query was satisfied, i.e., the white areas. The black areas are areas where the query was not satisfied.   Now, using the cartography skills you have learned so far, let us make the black areas transparent.</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability11.png" />
+<ol class="arabic simple" start="2">
+<li><p>Right click on the Final Raster and select Properties. Select Symbology.  How about using Palleted / Unique Values as the Render Type, as shown in the dialog below to achieve a good color effect?</p></li>
+</ol>
+<img alt="Habitat Suitability Analysis" src="_images/terrain_analysis_suitability12.png" />
+<ol class="arabic simple" start="3">
+<li><p>Drape the final map over the hillshade.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="channel-extraction-and-watershed-delineation">
+<h2><span class="section-number">7.5. </span>Channel Extraction and Watershed Delineation<a class="headerlink" href="#channel-extraction-and-watershed-delineation" title="Permalink to this heading"></a></h2>
+<p>Extracting stream channel network and delineating drainage basins or watersheds have long been an important aspect of terrain analysis.  Watersheds are frequently delineated for use as the basic unit for environmental management in different communities.  They are also used for identifying areas upstream of a point on a river that could be contributing contaminant to the stream. In this section of the lab, you will use QGIS or ArcGIS Online to quickly identify a watershed.  Unlike QGIS, ArcGIS Online significantly hides the details of watershed delineation from the user.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Procedure</strong></p>
+<ol class="arabic simple">
+<li><p><em>Acquire the DEM of the study area and load it into QGIS.</em></p></li>
+<li><p><em>Fill Sinks.</em>  Click on Processing Toolbox → SAGA → Fill sinks.   Be sure to select Filled DEM as your only Output File.</p></li>
+<li><p><em>Generate the Stream network.</em>  Click on Processing Toolbox → SAGA → Terrain Analysis – Channels → Strahler Order.</p></li>
+<li><p><em>Generate a polyline of the Stream Network.</em>  To do so, click on Processing Toolbox → SAGA → Terrain Analysis – Channels → Channel Network and Drainage Basins.  Using the Channel Network and Drainage Basins tool, set the Threshold as the strahler number you will to use to isolate streams that possess a number greater than or equal to it (in this case our threshold was 5). Be sure to select Channels as your only Output File.</p></li>
+<li><p><em>Digitize a Pour Point</em> - Layer → Create Layer → New Shapefile Layer. Enter a File Name, and be sure to select the appropriate Projected Coordinate System.</p></li>
+<li><p><em>Extract Coordinates of Outlet Point</em>. Now that we have projected our outlet point, we will extract the coordinates. To do so, click on Outlet → Open Attribute Table → Open Field Calculator</p></li>
+<li><p>Open the attribute table of your outlet shapefile and access the Open Field Calculator. Select Geometry, and select $x in order to extract the value for your x-coordinates. Name the Output field name as you see fit (in our case ‘X-coord’), and set the Output field type to Decimal number (real). Repeat this process for your y-coordinates, but instead of selecting $x, select $y. The result will be two additional cells that provide the x &amp; y-coordinates of your outlet point respectively.</p></li>
+<li><p><em>Raster to Vector Conversion</em>.  If you desire your watershed in a polygon format, this step outlines the process of converting your raster to a polygon using the Polygonize tool.  Click on Raster → Conversion → Polygonize (Raster to Vector. Set your Input Layer to be your watershed layer. Once you run the tool, it should generate something similar to the one below:</p></li>
+<li><p>Finally, we can generate our Watershed. With the x &amp; y-coordinates of our outlet point, we will use the Upslope area tool to generate the Watershed. Click on Processing Toolbox → SAGA → Terrain Analysis – Hydrology → Upslope Area</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><em>Reference</em></p>
+<p><a class="reference external" href="https://equatorstudios.com/how-to-delineate-a-watershed-in-qgis">https://equatorstudios.com/how-to-delineate-a-watershed-in-qgis</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Watershed Delineation Using ArcGIS Online</strong></p>
+<ol class="arabic simple">
+<li><p>Log into ArcGIS Online, then search for the Corvallis Area.</p></li>
+</ol>
+<img alt="Watershed Delineation ArcGIS Online" src="_images/terrain_analysis_arcgisonline1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click on Analysis | Create Watershed</p></li>
+</ol>
+<img alt="Watershed Delineation ArcGIS Online" src="_images/terrain_analysis_arcgisonline2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click on the Draw tool, then digitize a point that will form the pour point. The software will identify all areas of that point that contribute flow that passes through that point. In the example below, I chose a point along Oak Creek.</p></li>
+<li><p>Since you cannot be completely sure that the point you digitized is exactly on the line that forms the creek, enter a radius within which you think the line lines. I entered 50 ft.  Enter a name for the output and click Run.  Wait for a while.  Unlike, QGIS, the process can take a few minutes to complete.</p></li>
+</ol>
+<img alt="Watershed Delineation ArcGIS Online" src="_images/terrain_analysis_arcgisonline3.png" />
+<ol class="arabic simple" start="5">
+<li><p>The resultant watershed appears as shown below.  You can now submit a delineated watershed for the Corvallis area or any area that you may be interested in.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="working-with-lidar-data-in-qgis">
+<h2><span class="section-number">7.6. </span>Working with LiDAR Data in QGIS<a class="headerlink" href="#working-with-lidar-data-in-qgis" title="Permalink to this heading"></a></h2>
+<p>LiDAR data is becoming more available and is quickly becoming a fundamental source for detailed elevation data. This tutorial shows how to work with LiDAR data in QGIS. In QGIS, the Point Cloud tool and LazTools are two popular tools for working with Lidar data. The Point Cloud tool enables QGIS to rapidly read Lidar data while LazTools are used to process the Lidar data, e.g., generate elevation surface, get height of buildings or vegetation, etc.</p>
+<p>In this lab, you are required to download a laz dataset, display it in QGIS, then generate an elevation surface and a DTM or TIN surface from the point cloud.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Downloading Lidar Data</strong></p>
+<p>Visit <a class="reference external" href="https://apps.nationalmap.gov/downloader/">the National Map Viewer</a> . Click on  Elevation Source Data (3DEP) - Lidar, IfSAR and search for Lidar Data for an area of interest. Download the data to your local computer.</p>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Accessing the Point Cloud Tool to Convert LAZ Files to LAS Files</strong></p>
+<p>When downloading Lidar data, frequently the data appears in LAZ format, which is a compressed format.  To use the data in QGIS, it should be in LAS format. To convert from LAZ to LAS format, follow the steps.</p>
+<ol class="arabic simple">
+<li><p>Open a new project in QGIS</p></li>
+<li><p>Click on Data Source Manager</p></li>
+</ol>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select the Point Cloud tab.  (Note: The Point Cloud tab is only available on recent versions of QGIS. If it is not present on your in your QGIS, then download the most recent version of GIS).</p></li>
+</ol>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar3.png" />
+<ol class="arabic simple" start="4">
+<li><p>Navigate to the LAZ file location and add the file to the map view. You can add multiple files at the same time.</p></li>
+</ol>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Check CRS</strong></p>
+<p>A Point Cloud should have a Coordinate Reference System (CRS) assigned but this is not always the case, so we have to specify the projection manually. To accomplish this, do the following:</p>
+<ol class="arabic simple">
+<li><p>Right-click on the question mark next to the filename</p></li>
+</ol>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar6.png" />
+<ol class="arabic simple" start="2">
+<li><p>Now, specify the CRS for the layer</p></li>
+</ol>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar7.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Investigate Attributes</strong></p>
+<p>Once the Laz/las files are loaded, QGIS will at the attributes stored in the point cloud to apply appropriate coloring. In our example, the points are visualized based on the classification of Ground, High Vegetation, and Unclassified.</p>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar8.png" />
+<p>The Identify Map Tool can be used to investigate further information about specific point attributes e.g., XYZ or Intensity.</p>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar9.png" />
+<p>The Layer Styling Panel allows changing the point visualization using the additional attributes.
+•       in the panel change the rendering from Classification to Attribute by Ramp
+•       select the Z value to shade the points based on their height</p>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar10.png" />
+<p>The summary statistics of the attributes can be accessed in the layer properties.
+•       right-click on the file in the Table of Contents (TOC)
+•       select Properties and click on the Statistics tab</p>
+<blockquote>
+<div><img alt="Lidar Data" src="_images/terrain_analysis_lidar11.png" />
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Configuring LazTools</strong></p>
+<ol class="arabic simple">
+<li><p>To begin using LasTools in QGIS, you have to first add it as a Plugin. This is a onetime set up.</p></li>
+<li><p>Add the plugin by clicking on “Plugin” at the top menu, then clicking on “Manage and Install Plugin”.  When the dialog opens, look for LasTool and install it (See illustration below.</p></li>
+</ol>
+<blockquote>
+<div><img alt="Lidar Data" src="_images/terrain_analysis_lidar12.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Now that the plugin is installed, we will download and add the LAStools software. Both the plugin and software are required for LasTools to work.</p></li>
+<li><p>To download the LAStools software, go to  <a class="reference external" href="http://rapidlasso.com/LAStools/">http://rapidlasso.com/LAStools/</a> and download the appropriate zip file.</p></li>
+<li><p>Extract the contents of the zip file to an appropriate location on your computer, e.g., C:/LAStools/.</p></li>
+<li><p>Now, ensure that the software has the correct path to the plugin. To do click on Processing on the top menu then select Toolbox (See illustration below).  Click on the Option link on the Processing Toolbox.</p></li>
+</ol>
+<blockquote>
+<div><img alt="Lidar Data" src="_images/terrain_analysis_lidar13.png" />
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li><p>The Option Processing dialog will open (See illustration below).  Click on Providers | LASTools | LAStools folder. Ensure that the path to the Lastools software is correct.  Click Ok.</p></li>
+</ol>
+<blockquote>
+<div><img alt="Lidar Data" src="_images/terrain_analysis_lidar14.png" />
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><p>You are now ready to use the Lastools.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Merging LasFiles using LASTools</strong></p>
+<ol class="arabic simple">
+<li><p>Up until now, you have to manipulate the two las files as individual layers, which can be cumbersome. To avoid having to do this, you can merge the las files.</p></li>
+<li><p>To merge the las files, click on Processing | Toolbox | LAStools | lasmerge.  Fill out the dialog and merge the files.</p></li>
+</ol>
+<blockquote>
+<div><img alt="Lidar Data" src="_images/terrain_analysis_lidar15.png" />
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Generating an Elevation Surface from Las Files</strong></p>
+<p>To generate a Digital Elevation Model from the points cloud, do the following:</p>
+<ol class="arabic simple">
+<li><p>Click on Processing | Toolbox | LAStools | file – vector derivatives | las2dem.   (See illustration below).</p></li>
+</ol>
+<blockquote>
+<div><img alt="Lidar Data" src="_images/terrain_analysis_lidar16.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Fill out the dialog.  When filling out the dialog, ensure that the “Filter” is set to “keep last”. Also, the attribute should be elevation. When specifying the file name, add the .tif to the file name, otherwise, it might not work.</p></li>
+</ol>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar17.png" />
+<ol class="arabic simple" start="3">
+<li><p>To view the output, click on Layers | Add layers | Add Raster Layer and navigate to the folder where you saved the file. Add the file to the canvas.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Generating a TIN from the Las Files</strong></p>
+<p>To generate a Digital Terrain Model or a TIN surface from the points cloud, do the following:</p>
+<ol class="arabic simple">
+<li><p>Click on Processing | Toolbox | LAStools | file – vector derivatives | las2tin.</p></li>
+</ol>
+<img alt="Lidar Data" src="_images/terrain_analysis_lidar19.png" />
+<ol class="arabic simple" start="2">
+<li><p>When filling out the dialog, ensure that the “Filter” is set to “keep last”. Also, the attribute should be elevation. When specifying the file name, add the .shp to the file name, otherwise, it might not work.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="summary-of-deliverables">
+<h2><span class="section-number">7.7. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
+<p><strong>Section 1</strong></p>
+<p>Submit the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the elevation of each of the two points.</p></li>
+<li><p>the straight line distance between the two points.</p></li>
+<li><p>the slope between the two points.</p></li>
+<li><p>the aspect between the two points.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Section 2</strong></p>
+<ol class="arabic simple">
+<li><p>Submit the following maps:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>hillshade</p></li>
+<li><p>slope</p></li>
+<li><p>aspect</p></li>
+<li><p>contour</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>A brief statement explaining two practical uses of each of the above maps.</p></li>
+</ol>
+<p><strong>Section 3</strong></p>
+<p>A habitat location map. Submit either a layout or a link to the possible sites in ArcGIS Online.</p>
+<p><strong>Section 4</strong></p>
+<p>A link to the web map showing the watershed you delineated using ArcGIS Online.</p>
+<p><strong>Section 5</strong></p>
+<p>An DEM map and a TIN surface map generated from the Lidar Point Cloud.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="resources">
+<h2><span class="section-number">7.8. </span>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://sagatutorials.wordpress.com/basic-terrain-analysis/">https://sagatutorials.wordpress.com/basic-terrain-analysis/</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="attribute_spatial.html" class="btn btn-neutral float-left" title="6. Attribute and Spatial Queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="points_data.html" class="btn btn-neutral float-right" title="8. Collecting Points Data Using GPS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

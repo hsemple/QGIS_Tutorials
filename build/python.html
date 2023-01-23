@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14. Automating Processes with Python &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="15. Web Mapping" href="web_mapping.html" />
+    <link rel="prev" title="13. Geoprocessing Spatial Data" href="geoprocessing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Automating Processes with Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-editor-window">14.1. The Editor Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter-notebook">14.2. Jupyter notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">14.3. Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">14. </span>Automating Processes with Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/python.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="automating-processes-with-python">
+<h1><span class="section-number">14. </span>Automating Processes with Python<a class="headerlink" href="#automating-processes-with-python" title="Permalink to this heading"></a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Getting Started</strong></p>
+<ol class="arabic simple">
+<li><p>Add this WFS layer to QGIS. To do so, click on Add Layer | Add WFS Layer…, then select New and provide this URL: <a class="reference external" href="https://maps.gns.cri.nz/geology/wfs">https://maps.gns.cri.nz/geology/wfs</a></p></li>
+<li><p>Highlight the layer called NZL_GNS_250K_faults and select Add Layer to Project.</p></li>
+</ol>
+<img alt="The NZL_GNS_250K_faults layer" src="_images/python_wfsLayer.png" />
+<ol class="arabic simple" start="3">
+<li><p>From the main menu in QGIS, select Plugins | Python Console.  This will cause the Python Console to appear. It may open up towards the bottom of the application, however, if you wish, you can detach it from the main window and place it whereever you wish.</p></li>
+<li><p>The lower part of the Console display with the &gt;&gt;&gt; prompt. This is is where you type commands. T</p></li>
+<li><p>The Python commands can be pure Python commands that have nothing to do with GIS or QGIS, or they can be Python commands ained at manipulating QGIS commands or user data.</p></li>
+<li><p>The iface class is used to access most graphical QGIS components. For example, to get a reference to the active layer, we can write:</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">activeLayer</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic" start="7">
+<li><p>Once you get a reference to the active layer object, you can access methods and properties associated with this object. For example, to get the name of the active layer, we write:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">layer</span><span class="o">.</span><span class="n">sourceName</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>You should get the response in the upper half of the console</p>
+<blockquote>
+<div><p>‘NZL_GNS_250K_faults’</p>
+</div></blockquote>
+</li>
+<li><p>Now, let us get a count of the number of features in the layer:</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">layer</span><span class="o">.</span><span class="n">featureCount</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>The console is great for entering simple Python commands. To enter Python scripts consisting of many lines, it is better to use the Editor Window. Let’s use the Editor Window to enter a slighly longer script.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="the-editor-window">
+<h2><span class="section-number">14.1. </span>The Editor Window<a class="headerlink" href="#the-editor-window" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>The editor is accessed by right-clicking Show Editor in the upper part of the console.</p></li>
+<li><p>We will write a simple script to print the names of the fields in the attribute table of the WFC layer</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">activeLayer</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">fld</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">fields</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fld</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<img alt="Python Script Print Name of Attribute Fields" src="_images/python_script1.png" />
+<ol class="arabic" start="3">
+<li><p>The script below get the length of each fault segment and maintains keeps a running total of the lengths</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">activeLayer</span><span class="p">()</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">fault</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">():</span>
+    <span class="n">lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fault</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s2">&quot;shape_len&quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">lengths</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="jupyter-notebook">
+<h2><span class="section-number">14.2. </span>Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>If you are familiar with Jupyter notebook, then you can use it with QGIS.  First, you must install the pyqgis modules into an environment. After than, you can with QGIS outside of the application itself.</p></li>
+<li><p>Create a Python GIS environment  - <a class="reference external" href="https://autogis-site.readthedocs.io/en/latest/course-info/create-python-gis-environment.html">https://autogis-site.readthedocs.io/en/latest/course-info/create-python-gis-environment.html</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="resources">
+<h2><span class="section-number">14.3. </span>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
+<p>Getting Started With Python Programming (QGIS3) - <a class="reference external" href="https://www.qgistutorials.com/en/docs/3/getting_started_with_pyqgis.html">https://www.qgistutorials.com/en/docs/3/getting_started_with_pyqgis.html</a></p>
+<p>Customizing QGIS with Python (Full Course Material) - <a class="reference external" href="https://courses.spatialthoughts.com/pyqgis-in-a-day.html">https://courses.spatialthoughts.com/pyqgis-in-a-day.html</a></p>
+<p>Free and Open Source GIS Ramblings - <a class="reference external" href="https://anitagraser.com/pyqgis-101-introduction-to-qgis-python-programming-for-non-programmers/">https://anitagraser.com/pyqgis-101-introduction-to-qgis-python-programming-for-non-programmers/</a></p>
+<p>GIS Python API documentation - <a class="reference external" href="https://qgis.org/pyqgis/master/">https://qgis.org/pyqgis/master/</a></p>
+<p>PyQGIS Developer Cookbook - <a class="reference external" href="https://docs.qgis.org/3.16/en/docs/pyqgis_developer_cookbook/index.html">https://docs.qgis.org/3.16/en/docs/pyqgis_developer_cookbook/index.html</a></p>
+<p>Streamlining GIS with Automation - <a class="reference external" href="https://www.geospatialworld.net/prime/technology-and-innovation/streamlining-gis-with-automation/">https://www.geospatialworld.net/prime/technology-and-innovation/streamlining-gis-with-automation/</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="geoprocessing.html" class="btn btn-neutral float-left" title="13. Geoprocessing Spatial Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="web_mapping.html" class="btn btn-neutral float-right" title="15. Web Mapping" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

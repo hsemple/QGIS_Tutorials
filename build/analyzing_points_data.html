@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10. Analyzing Points Data &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="11. Spatial Analysis Using R" href="spatial_analysis_using_R.html" />
+    <link rel="prev" title="9. Geocoding" href="geocoding.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points_data.html">8. Collecting Points Data Using GPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Analyzing Points Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#measures-of-spatial-central-tendency">10.1. Measures of Spatial Central Tendency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#point-pattern-analysis">10.2. Point Pattern Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#density-mapping">10.3. Density Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-interpolation">10.4. Spatial Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-analysis">10.5. Cluster Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#regression-analysis">10.6. Regression Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10. </span>Analyzing Points Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/analyzing_points_data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="analyzing-points-data">
+<h1><span class="section-number">10. </span>Analyzing Points Data<a class="headerlink" href="#analyzing-points-data" title="Permalink to this heading"></a></h1>
+<p>GIS software has numerous functions for statistically analyzing GPS points or points data obtained from other sources.   Below is a list of a few statistical operations that can be performed on points data:</p>
+<ul class="simple">
+<li><p>Calculate mean center of a set of points or lines</p></li>
+<li><p>Calculate weighted mean center of a set of points or lines</p></li>
+<li><p>Calculate all points that are within one or more standard distance circles of the mean center</p></li>
+<li><p>Calculate all points that are within one or more standard deviation ellipse of the mean</p></li>
+<li><p>Calculate a point density surface to show areas where the points are concentrated and where they are not concentrated.</p></li>
+<li><p>Interpolate a statistical surface from a set of points</p></li>
+<li><p>Cluster Analysis. Detecting whether points are randomly distributed, clustered, or dispersed.</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="measures-of-spatial-central-tendency">
+<h2><span class="section-number">10.1. </span>Measures of Spatial Central Tendency<a class="headerlink" href="#measures-of-spatial-central-tendency" title="Permalink to this heading"></a></h2>
+<p><strong>Mean Center</strong></p>
+<ol class="arabic simple">
+<li><p>The mean center of a set of points is a point calculated by taking the average of the x coordinates and the average of the y coordinates and then plotting a point with the two averages.</p></li>
+<li><p>In QGIS, mean center is calculated, as shown below, by clicking on Vector, Analysis Tools, Mean Coordinates.</p></li>
+<li><p>When the dialog opens, make sure the input file is correct and click Run in Background.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Weighted Mean Center</strong></p>
+<ol class="arabic simple">
+<li><p>Weighted mean center recognizes that in some situations all points do not have equal significance.  For example, if you conduct bird sightings at various locations. Each location may have different number of birds sighted. To take this variation in consideration, we calculate the weighted average.</p></li>
+<li><p>In QGIS, weighted mean center is calculated using the same dialog as mean center. However, for you to calculate weighted mean center, one of the fields must contain data to serve as the weight.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Standard Distance Circle</strong></p>
+<p>When studying central tendencies, we are interested not just in the average or mean center of a distribution, but also in the degree to which the values are dispersed around the mean.  To understand this, we calculate the standard deviation of the dataset.  In GIS, we calculate standard deviations from the X and Y coordinates and then use this value as a radius to draw a circle around the mean center of the distribution.  This circle is called a standard distance circle.   If the circle is small, it means that the points are clustered closely around the mean. If the circle is large, the points are highly dispersed around the mean. To calculate standard distance circles in QGIS, do the following:</p>
+<ol class="arabic simple">
+<li><p>Click on the Processing Toolbox in the main menu, then search for the tool Spatial Point Pattern Analysis tool.</p></li>
+<li><p>Double click on the tool to open its dialog. This shown below.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Standard Distance Ellipse</strong></p>
+<p>This is similar to the standard distance circle except that the formula is modified to detect the main linear trend in the dataset. The Y-axis (and the X axis) are rotated to show the trend.  To calculate standard distance ellipse, do the following:</p>
+<ol class="arabic simple">
+<li><p>Click on the Processing Toolbox in the main menu, then search for the tool Spatial Point Pattern Analysis tool.</p></li>
+<li><p>Double click on the tool to open its dialog. This shown below.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="point-pattern-analysis">
+<h2><span class="section-number">10.2. </span>Point Pattern Analysis<a class="headerlink" href="#point-pattern-analysis" title="Permalink to this heading"></a></h2>
+<p>Point Pattern analysis techniques compare observed point patterns to ones generated by an independent random process to determine whether points are randomly distributed, or whether some pattern exists in the data.  Popular point pattern techniques include:</p>
+<ol class="arabic simple">
+<li><p>Quadrat Analysis</p></li>
+<li><p><a class="reference external" href="https://www.qgistutorials.com/en/docs/nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></p></li>
+<li><p>Ripley K Statistic</p></li>
+<li><p>Global and Local Moran’s I</p></li>
+<li><p>Global and Local G* Statistic</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Quadrat Analysis</strong></p>
+<p>I am still looking for any easy way to do this in QGIS. In the meantime, I suggest using the quadrat analysis functions in R to accomplish this
+<a class="reference external" href="https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html">https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Nearest Neighbor Analysis</strong></p>
+<ul class="simple">
+<li><p>Click on the menu item Vector ‣ Analysis Tools ‣ Nearest neighbor analysis. Click <a class="reference external" href="https://docs.qgis.org/2.8/en/docs/training_manualvector_analysis/spatial_statistics.html">here</a> for more information</p></li>
+<li><p>You can also click on this <a class="reference external" href="https://www.qgistutorials.com/en/docs/nearest_neighbor_analysis.html">link</a> for more information on Nearest Neighbor Analysis.</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Ripley K</strong></p>
+<p><a class="reference external" href="https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html">https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Global and Local Moran’s I</strong></p>
+<p>The SAGA GIS toolkit provides many functions for spatial statistis including Moran’s I calculation. You can access these functions by clicking on Processing on the main menu then selecting Toolbox | SAGA GIS.</p>
+<img alt="Lidar Data" src="_images/analyzing_points_sagagis.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>In many situations, it might be more convenient to complete the point pattern analysis using the R Software</p>
+<p>The links below provide information on how to conduct point pattern analysis in QGIS.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gistbok.ucgis.org/bok-topics/point-pattern-analysis">https://gistbok.ucgis.org/bok-topics/point-pattern-analysis</a></p></li>
+<li><p><a class="reference external" href="https://mgimond.github.io/Spatial/hypothesis-testing.html">https://mgimond.github.io/Spatial/hypothesis-testing.html</a></p></li>
+<li><p><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/spatial_statistics.html">https://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/spatial_statistics.html</a></p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="density-mapping">
+<h2><span class="section-number">10.3. </span>Density Mapping<a class="headerlink" href="#density-mapping" title="Permalink to this heading"></a></h2>
+<p>Density maps shows the number of points per unit area. Conceptually, there are created by placing a grid over the study area and for each cell in the grid, the software sets up a search radius and counts the number of points within that radius. This gives the simple density of points within that vicinity.  This type of analysis is good for creating hotspot maps.
+In the illustration below, the density map shows the number of asthma cases per unit area. The hotspots are areas where lots of asthma cases per unit area (e.g., per sq. mile) are found.</p>
+<p>In QGIS, we create point density maps using a tool called Heatmap.   In earlier versions of QGIS, Heatmap was a plugin. In the version that I am using (Version 3.2.3), the tool can be accessed from the Processing Toolbox. Let’s perform an analysis.</p>
+<ol class="arabic simple">
+<li><p>Make sure that the points layer is displayed.</p></li>
+<li><p>Click on the Processing Toolbox in the main menu, then look for Interpolation. It is located within the Interpolation Toolset.  Alternatively, just search for HeatMap in the Processing Toolbox.</p></li>
+<li><p>Click on Heatmap to bring up the Heatmap dialog. Select the points layer as the input layer.</p></li>
+<li><p>Accept the default radius.  Radius will determine the size of the area around the points used to calculate density. Radius is calculated in map units. In our case, we are using a projected coordinate reference System (CRS) with a base unit of meters (m).</p></li>
+<li><p>Accept the default Quartic (biweight) kernel as the particular method for the kernel density computation. This for it defines the direct distance to the point itself.</p></li>
+<li><p>Accept the default rows and columns and cell sizes.  The rows and columns as well as the cell sizes determine the spatial resolution of the target raster. The finer the raster the longer it takes to compute the raster. Keep this in mind. There are also more parameters to adjust but you may want to press the help button to get some insight in the functionality of the plugin itself.</p></li>
+<li><p>Provide a name for the kernel density map.</p></li>
+<li><p>Click “Run in Background” to create the kernel density map.  The resulting map is a black and white image.</p></li>
+<li><p>For better visualization, we will change this to a more informative color scheme.  Double click on the name of the density map and change the Render Type to Singleband pseudocolor.</p></li>
+<li><p>Click on the drop-down next to Color Ramp, select All Color Ramps, and choose RyYlGm as the color scheme to use.</p></li>
+<li><p>Click on Invert Color Ramp.</p></li>
+<li><p>Click Ok when you are done.   The resultant map appears as shown below</p></li>
+<li><p>Let’s investigate these results further.  First, open the properties of the raster go to the histogram tab and compute the histogram. You will see that the curves reach approximately 8 on the x-axis which means that the highest values are about 8 points per km²:</p></li>
+<li><p>Click on the identify results button and check the value at each location. You may ask, why aren’t the values integers?  According to the filter we have used, points near a certain location have bigger influence than points far away a given location. So, the points are weighted in their influence. This is useful as we might have an underlying uncertainty in the location of points. But if we have several points near each other it should be more certain that the point locations are reliable.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="spatial-interpolation">
+<h2><span class="section-number">10.4. </span>Spatial Interpolation<a class="headerlink" href="#spatial-interpolation" title="Permalink to this heading"></a></h2>
+<p>Spatial Interpolation is the process of creating raster maps from discrete vector points.  The concept is shown in the illustration below where we start with a set of well distributed sample points and end up with a map that has values for every location in the study area.</p>
+<p>Interpolated maps are different from density maps in that density maps are a count of the number of points per unit y area. On the other hand, interpolated maps are an estimate of the values of some phenomena based on sample location values.
+Interpolated maps are important because rarely in environmental and other areas of study do we have time or other resources to visit every location in a study area and gather data values.   To still get data values for every location, we resort to spatial interpolation, which is a process of estimating values for unknown locations using data values from a set of known locations.</p>
+<p>There are many different methods of interpolation but the basic principle is to place a grid over the sample points, and then for each cell in the grid, we set up a search area and  count all the points that are within the vicinity of the grid cell. We then take a weighted average of the set of points and use that as the estimate for that cell.  Once a value is calculated for one cell, the software moves to the next cell and repeats the process.  The way we calculate the weighted average varies considerably, but the basic idea is the same.</p>
+<p>Two popular techniques are Inverse Distance Weighting (IDW) and Spline interpolation.   We will use IDW with QGIS to create out interpolated map.</p>
+<ol class="arabic simple">
+<li><p>Click on the Processing Toolbox in the main menu, then look for Interpolation. Select the IDW tool.</p></li>
+<li><p>Use this dataset as input.</p></li>
+<li><p>Click Run in Background.</p></li>
+<li><p>Examine the data values in the legend.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="cluster-analysis">
+<h2><span class="section-number">10.5. </span>Cluster Analysis<a class="headerlink" href="#cluster-analysis" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Global and Local Moran’s I</p></li>
+<li><p>Global and Local G* Statistics</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="regression-analysis">
+<h2><span class="section-number">10.6. </span>Regression Analysis<a class="headerlink" href="#regression-analysis" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Spatial Statistics References</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.qgis.org/3.22/en/docs/training_manual/vector_analysis/spatial_statistics.html">https://docs.qgis.org/3.22/en/docs/training_manual/vector_analysis/spatial_statistics.html</a></p></li>
+<li><p>Exploring Standard Statistics in QGIS  - <a class="reference external" href="https://dges.carleton.ca/CUOSGwiki/index.php/Exploring_Standard_Statistics_in_QGIS">https://dges.carleton.ca/CUOSGwiki/index.php/Exploring_Standard_Statistics_in_QGIS</a></p></li>
+<li><p>Performing Spatial Queries (QGIS3) - <a class="reference external" href="https://www.qgistutorials.com/en/docs/3/performing_spatial_queries.html">https://www.qgistutorials.com/en/docs/3/performing_spatial_queries.html</a></p></li>
+<li><p><a class="reference external" href="https://courses.spatialthoughts.com/spatial-data-viz.html">https://courses.spatialthoughts.com/spatial-data-viz.html</a></p></li>
+<li><p>Simple Geospatial Analysis with QGIS - <a class="reference external" href="https://eamena.org/sites/default/files/eamena/documents/media/gis_3_simple_geospatial_analysis_with_qgis_final.pdf">https://eamena.org/sites/default/files/eamena/documents/media/gis_3_simple_geospatial_analysis_with_qgis_final.pdf</a></p></li>
+<li><p>Spatial Density Analysis in QGIS - <a class="reference external" href="https://www.youtube.com/watch?v=WPwGW9BG3DI">https://www.youtube.com/watch?v=WPwGW9BG3DI</a></p></li>
+<li><p>Spatial Analyses - <a class="reference external" href="https://docs.sigro.org/qgis-basic-training/en/analyses.html">https://docs.sigro.org/qgis-basic-training/en/analyses.html</a></p></li>
+<li><p>Point Pattern Analysis with R - <a class="reference external" href="https://rpubs.com/corey_sparks/579466">https://rpubs.com/corey_sparks/579466</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="geocoding.html" class="btn btn-neutral float-left" title="9. Geocoding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="spatial_analysis_using_R.html" class="btn btn-neutral float-right" title="11. Spatial Analysis Using R" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

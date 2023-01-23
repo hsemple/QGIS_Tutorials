@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. Collecting Points Data Using GPS &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Geocoding" href="geocoding.html" />
+    <link rel="prev" title="7. Terrain Analysis" href="terrain_mapping.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_spatial.html">6. Attribute and Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrain_mapping.html">7. Terrain Analysis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Collecting Points Data Using GPS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-the-survey123-form">8.1. Creating the Survey123 Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#collecting-data-using-the-form-in-a-web-browser">8.2. Collecting Data using the Form in a Web Browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#collecting-data-using-the-survey123-web-app">8.3. Collecting Data using the Survey123 Web App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-the-questionnaire-data-in-survey123">8.4. Viewing the Questionnaire Data in Survey123</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visualizing-the-data-in-arcgis-online">8.5. Visualizing the Data in ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deliverables">8.6. Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geocoding.html">9. Geocoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_points_data.html">10. Analyzing Points Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_analysis_using_R.html">11. Spatial Analysis Using R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digitizing.html">12. Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geoprocessing.html">13. Geoprocessing Spatial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">14. Automating Processes with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_mapping.html">15. Web Mapping</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QGIS Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>Collecting Points Data Using GPS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/points_data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="collecting-points-data-using-gps">
+<h1><span class="section-number">8. </span>Collecting Points Data Using GPS<a class="headerlink" href="#collecting-points-data-using-gps" title="Permalink to this heading"></a></h1>
+<p>In this lab, you will use your smart phone to collect coordinates for at least twenty similar features in your neighborhood.  I suggest fire hydrants, but you can record the location of anything that is of interest to you including trees, churches, restaurants, bus stops, etc.</p>
+<p>For each feature of interest, you will record its coordinates and its physical condition. You can also consider taking photographs of the features.  Afterwards, we will display and analyze the data using geospatial software.</p>
+<p>Please note that to successfully carry out a GPS data collection project, some amount of pre-planning is necessary.  Please read the section on Pre-Planning a GIS Project before getting stared.</p>
+<p>Also, please note that While there are many apps that are available free of charge for ield data collection, I strongly encourage you to complete this project using Survey123.  This platform smoothly integrates data collection with data vsisualization and data analysis apps on the ArcGIS Platform. Data collected by Survey123 can be immediately passed to ArcGIS Online and other software within the ESRI suite.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="creating-the-survey123-form">
+<h2><span class="section-number">8.1. </span>Creating the Survey123 Form<a class="headerlink" href="#creating-the-survey123-form" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Most surveys use data entry forms for conveniently entering data into the survey’s spreadsheet or database.  So, instead of entering data directly into a survey’s spread sheet or database table, users enter data into the form which, in turn, passes the data to the spreadsheet or database table.</p></li>
+</ol>
+<p>While preparing this lab, I came across a fire hydrant data entry form from the Atlanta Fire Department that can be used as a guide for a fire hydrant survey (See illustration below).  The form seems easy to recreate, so I will use it as my example for this project. You can do a background reviews of form designs suitable to your data collection project.</p>
+<img alt="Fire Hydrant Form" src="_images/collecting_points_firehydrant_form.png" />
+<ol class="arabic simple" start="2">
+<li><p>In Survey123, forms are created at the Survey123 website, so visit <a class="reference external" href="https://survey123.arcgis.com">https://survey123.arcgis.com</a> and sign in using your ArcGIS Online organizational account.</p></li>
+</ol>
+<img alt="Survey123 Sign-in Form" src="_images/collecting_points_survey123_signin.png" />
+<ol class="arabic simple" start="3">
+<li><p>After signing in, click on “Create a New Survey”.</p></li>
+</ol>
+<img alt="Trimble GPS Tracking Software" src="_images/collecting_points_survey123_1.png" />
+<ol class="arabic simple" start="4">
+<li><p>You will be presented with the option to use Web Designer or Survey123 Connect. I suggest you start with Web Designer as it is much easier to use compared with Survey123 Connect, which is used for advanced form design. After publishing a survey created by web designer, if you wish, you can edit/modify it using Survey123 Connect, however, the reverse is not true.</p></li>
+</ol>
+<img alt="Trimble GPS Tracking Software" src="_images/collecting_points_web_designer.png" />
+<ol class="arabic simple" start="5">
+<li><p>Enter a name for the Survey as well as some key words, for example, enter “Fire Hydrant Survey” as the name. You can re-enter “fire hydrant survey” as the tags. Click Create.</p></li>
+<li><p>The page that appears lets you design the data entry form. Start designing the form by dragging items from the panel to the right to the form on your left. You can also double click on the panel items to add them to the form. Also, note that the form should have all the fields as the source, but the appearance doesn’t have to be exact. You can change things around to make to make the form easy to create in Survey123.</p></li>
+</ol>
+<img alt="Survey123 Web Designer" src="_images/collecting_points_form_builder.png" />
+<ol class="arabic simple" start="7">
+<li><p>The illustration below shows the beginning of the form. Noticed that I placed a map object unto the form. After placing the map object on the form, I configured it so that it defaults to a location and zoom level of interest. Users will use this map to enter the coordinates of the location of the hydrants. Users can either tap on the location of the hydrant on the map to records the coordinates or they can enter a street address. The points that are entered on this map will eventually be displayed in ArcGIS Online.</p></li>
+</ol>
+<img alt="Survey123 Form" src="_images/collecting_points_survey123_form.png" />
+<ol class="arabic simple" start="8">
+<li><p>After creating and publishing the form, the software generates a URL that can be used to bring up the survey on your cell phone or computer. You can view the form’s URL by clicking on Collaborate in the main menu.  The URL for this form is: <a class="reference external" href="https://arcg.is/0DuHW00">https://arcg.is/0DuHW00</a>.</p></li>
+</ol>
+<img alt="Survey123 Form URL" src="_images/collecting_points_survey123_url.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="collecting-data-using-the-form-in-a-web-browser">
+<h2><span class="section-number">8.2. </span>Collecting Data using the Form in a Web Browser<a class="headerlink" href="#collecting-data-using-the-form-in-a-web-browser" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>One way to use the form is to simply copy the URL for the form and enter it into a browser to access it. Thereafter, you can perform data entry.</p></li>
+<li><p>If multiple persons will perform data entry, then you can email each person a copy of the URL of the form for them to access it online and perform data entry.</p></li>
+<li><p>If the form will be open to the general public, then the form’s URL can even be embedded into a website for people to access and fill out.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="collecting-data-using-the-survey123-web-app">
+<h2><span class="section-number">8.3. </span>Collecting Data using the Survey123 Web App<a class="headerlink" href="#collecting-data-using-the-survey123-web-app" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Another way that users can interact with your form is for them to download and install the Survey 123 app on their smart phone and use the app to access the form. This approach is useful if the form is to be reused repeatedly, as in a fire hydrant survey where data about hydrants must be repeatedly entered into the form by the same user. To obtain the Survey123 field app, visit one of the stores below and download the app to your phone.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>iOS devices - iTunes App Store</p></li>
+<li><p>Android devices - Google Play</p></li>
+<li><p>Windows devices - Windows Store</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>After downloading and installing the app, open the application using the application icon. When the app starts, log in using your ArcGIS Online organization account.</p></li>
+<li><p>After signing in, the app opens the My Surveys gallery. If this is the first time you are using the app, the gallery appears empty with the message, No surveys on device.</p></li>
+<li><p>Select Get Surveys. The Survey123 app connects to your ArcGIS organization and searches for surveys to which you have access. Select and download the fire hydrant survey you created.</p></li>
+<li><p>When the survey download is completed, a notification appears. Select OK then select Back to return to the My Surveys gallery page.</p></li>
+</ol>
+<p>6 The Fire Hydrant Survey now appears in the gallery. Click on “Collect” to open the survey and administer it for a particular hydrant.</p>
+<ol class="arabic simple" start="7">
+<li><p>Data that is collected by these forms are stored on ESRI’s cloud server from where it can be accessed by ArcGIS Online.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="viewing-the-questionnaire-data-in-survey123">
+<h2><span class="section-number">8.4. </span>Viewing the Questionnaire Data in Survey123<a class="headerlink" href="#viewing-the-questionnaire-data-in-survey123" title="Permalink to this heading"></a></h2>
+<p>Once a form has been filled up, you can view the data at the Survey 123 website. The steps below show how to view the survey data:</p>
+<ol class="arabic simple">
+<li><p>Sign in to the Survey 123 website using your ArcGIS organizational account.</p></li>
+<li><p>Click the thumbnail to open the Overview page for your survey. The survey’s overview page displays information about the survey results.</p></li>
+<li><p>Click the Analyze tab and explore the results of each question of the survey. Explore the word cloud if you entered more than 20 records.</p></li>
+</ol>
+<img alt="Analyze Survey123 data" src="_images/collecting_points_analyze_survey.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Data tab and visualize the location of survey items. The submitted survey features are shown on the interactive map that appears while the responses are shown in the attribute table. You may have to zoom in to see the features clearly.</p></li>
+<li><p>To share the results of your survey, you click either on “Open in Map Viewer” to share it via ArcGIS Online or you can click on Export and save it as CSV, KML, etc. If you choose CSV, KML, etc, these formats can then be imported into ArcGIS Pro or ArcGIS Online.</p></li>
+</ol>
+<img alt="Analyze Survey123 data" src="_images/collecting_points_analyze_data2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="visualizing-the-data-in-arcgis-online">
+<h2><span class="section-number">8.5. </span>Visualizing the Data in ArcGIS Online<a class="headerlink" href="#visualizing-the-data-in-arcgis-online" title="Permalink to this heading"></a></h2>
+<p>ArcGIS Online has powerful tools for visualizing and analyzing data collected by Survey123.  To view the Survey data in ArcGIS Online, simply sign in to ArcGIS Online, click on Content, and look for the layer that contains your Survey123 data.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="deliverables">
+<h2><span class="section-number">8.6. </span>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Submit the URl of the Survey123 form that you created.</p></li>
+<li><p>Submit the URL of the ArcGIS Online Web map that contains your survey data.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="terrain_mapping.html" class="btn btn-neutral float-left" title="7. Terrain Analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="geocoding.html" class="btn btn-neutral float-right" title="9. Geocoding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hugh Semple.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
