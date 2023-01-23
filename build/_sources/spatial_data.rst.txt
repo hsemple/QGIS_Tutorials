@@ -370,7 +370,7 @@ Prepare Professional Maps of your Data
 Section 4 Landsat Explorer
 ---------------------------
 
-ESRI has a web mapping application called `Landsat Explorer <https://livingatlas2.arcgis.com/landsatexplorer/>`_that can be used to quickly create Color Composites. With this application all the bands are preloaded, so there is no need to download data.
+ESRI has a web mapping application called `Landsat Explorer <https://livingatlas2.arcgis.com/landsatexplorer/>`_ that can be used to quickly create Color Composites. With this application all the bands are preloaded, so there is no need to download data.
 
 1. Open Landsat Explorer and locate San Francisco.
 
