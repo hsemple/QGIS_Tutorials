@@ -95,8 +95,8 @@
              
   <section id="downloading-different-types-of-spatial-data-and-making-maps">
 <h1><span class="section-number">4. </span>Downloading Different Types of Spatial Data and Making Maps<a class="headerlink" href="#downloading-different-types-of-spatial-data-and-making-maps" title="Permalink to this heading"></a></h1>
-<p>A typical GIS project involves working with multiple types of spatial layers overlaid on each other through a common coordinate system.  Some of the layers may be vectors while others may be rasters. An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.</p>
-<p>Additionally, the lab seeks to help you do the following:</p>
+<p>A typical GIS project involves working with multiple types of spatial layers overlaid on each other using a common coordinate system.  Some of the layers may be vectors while others may be rasters.</p>
+<p>An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.  Additionally, the lab seeks to help you do the following:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>develop basic file management skills necessary to deal with the large number of files that are typically needed for a GIS project.</p></li>
@@ -105,18 +105,19 @@
 <li><p>develop cartographic skills needed for effective presentation of multiple map layers.</p></li>
 </ul>
 </div></blockquote>
-<p>The lab is divided into six sections:</p>
-<p>In Section 1 of the lab, you will download files then upload them to ArcGIS Online for sharing with your colleagues.</p>
-<p>In Section 2 of the lab, you will download, unzip, and display shapefiles and create a professional quality involving multiple layers.</p>
-<p>In Section 3, you will download and display a digital elevation model and create a professional quality map.</p>
-<p>In Section 4, you will download and display an orthophoto and create a professional quality map.</p>
-<p>In Section 5, you will load multiple bands of satellite imagery into ArcGIS Pro and then create maps using different band combinations.</p>
+<p>The lab is divided into six sections. In Section 1 of the lab, you will download map layers then upload them to ArcGIS Online or QGIS Cloud for sharing with your colleagues.</p>
+<p>In Section 2 of the lab, you will download, unzip, and display shapefiles in QGIS and create a professional quality involving multiple layers.</p>
+<p>In Section 3, you will download and display a digital elevation model in QGIS and create a professional quality map.</p>
+<p>In Section 4, you will download and display an orthophoto and create a professional quality map using QGIS.</p>
+<p>In Section 5, you will load multiple bands of satellite imagery into QGIS and then create maps using different band combinations.</p>
 <p>In Section 6, you will load multiple web map layers into QGIS.</p>
-<p>In Section 7, you will display different band combinations of Landsat 8 satellite imagery using a free Online Platform called Landsat Explorer. Landsat Explorer assembles the satellite imagery, so that users only have to concentrate on manipulating the data.</p>
+<p>In Section 7, you will display different band combinations of Landsat 8 satellite imagery using a free online platform called Landsat Explorer. Landsat Explorer manages the satellite imagery, so users only have to concentrate on manipulating the data.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <section id="downloading-map-layers-and-uploading-to-arcgis-online">
 <h2><span class="section-number">4.1. </span>Downloading Map Layers and Uploading to ArcGIS Online<a class="headerlink" href="#downloading-map-layers-and-uploading-to-arcgis-online" title="Permalink to this heading"></a></h2>
-<p>You work for an environmental monitoring company conducting a project in Wayne County, Southeast Michigan. As the GIS expert on the project, you are asked to assemble several vector and raster map layers pertaining to the geographic extent of the study area. Download the map layers and display them in upload them to ArcGIS Online so they can be viewed by all members of the project. Follow the steps below to complete this section of the lab.</p>
-<p>Download at least 6 different layers then  The layers should include at least 5 shapefiles and a DEM.</p>
+<p>You work for an environmental monitoring company conducting a project in Wayne County, Southeast Michigan. As the GIS expert on the project, you are asked to assemble several vector and a digital elevation model pertaining to the geographic extent of the study area. Download the map layers and display them in upload them to ArcGIS Online so they can be viewed by all members of the project. Follow the steps below to complete this section of the lab.</p>
 <p><strong>Download Data</strong></p>
 <ol class="arabic">
 <li><p>Create a folder on your computer to store all the downloaded files.</p></li>
@@ -133,9 +134,7 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p>If you encounter problems downloading from the Michigan CGI site, you can download layers for Wayne County, Michigan that I pre-assembled for this tutorial. The layers can be downloaded from my Github site.</p></li>
-</ol>
-<ol class="arabic simple" start="3">
+<li><p>If you encounter problems downloading from the Michigan CGI site, you can download layers for Wayne County, Michigan that I pre-assembled for this tutorial. The layers can be downloaded from my Github site or from Canvas.</p></li>
 <li><p>After downloading the zipped files to your desktop, follow these <a class="reference external" href="https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit">instructions</a> to upload the layers to ArcGIS Online. (Note: You can also upload to QGIS Cloud). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.</p></li>
 <li><p>After uploading, save your web map in ArcGIS Online. Copy the URL and submit it as proof that you completed this section of the assignment.</p></li>
 </ol>
@@ -147,15 +146,15 @@
 <h2><span class="section-number">4.2. </span>Displaying Shapefiles and making a Multiple Layer Map<a class="headerlink" href="#displaying-shapefiles-and-making-a-multiple-layer-map" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Return to the folder when you download the original files.</p></li>
-<li><p>Create a folder within the orignal and unzip the layers to that single folder, as shown below.</p></li>
+<li><p>Unzip the layers to that folder, as shown below.</p></li>
 </ol>
 <img alt="Unzipping Data" src="_images/unzipping_data.png" />
 <ol class="arabic simple" start="3">
-<li><p>To load the the shapefiles into QGIS, click on Layer | Add Layer | Add Vector Layer, as shown below.</p></li>
+<li><p>To load the shapefiles into QGIS, click on Layer | Add Layer | Add Vector Layer, as shown below.</p></li>
 </ol>
 <img alt="Loading Vector Layer into QGIS" src="_images/load_vectorlayer.png" />
 <ol class="arabic simple" start="4">
-<li><p>Right click on the name of each shapefiles and open the attribute tables of the map layers. Try to understand the information they contain.</p></li>
+<li><p>After the layers are loaded, right click on the name of each shapefiles and open the attribute tables of the map layers. Try to understand the data they contain.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
