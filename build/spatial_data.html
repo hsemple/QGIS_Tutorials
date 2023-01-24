@@ -45,9 +45,9 @@
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Downloading Different Types of Spatial Data and Making Maps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#downloading-map-layers-and-uploading-to-arcgis-online">4.1. Downloading Map Layers and Uploading to ArcGIS Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#displaying-shapefiles-and-making-a-multiple-layer-map">4.2. Displaying Shapefiles and making a Multiple Layer Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-the-dem">4.3. Loading and Displaying the DEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assembling-shapefile-uploading-to-arcgis-online">4.1. Assembling Shapefile &amp; Uploading to ArcGIS Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-multiple-shapefiles-in-qgis-making-a-map">4.2. Displaying Multiple Shapefiles in QGIS &amp; Making a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-a-dem">4.3. Loading and Displaying a DEM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-orthophoto-tiles">4.4. Loading and Displaying Orthophoto Tiles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-landsat-imagery">4.5. Loading and Displaying Landsat Imagery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-and-displaying-a-wms-layer">4.6. Loading and Displaying a WMS Layer</a></li>
@@ -100,7 +100,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>develop basic file management skills necessary to deal with the large number of files that are typically needed for a GIS project.</p></li>
-<li><p>become comfortable with smoothly loading and displaying multiple map layers into QGIS and rearranging the layers to suit your information needs.</p></li>
+<li><p>become comfortable with loading multiple map layers into QGIS and rearranging the layers to suit your information needs.</p></li>
 <li><p>become comfortable interpreting details on various types of spatial data.</p></li>
 <li><p>develop cartographic skills needed for effective presentation of multiple map layers.</p></li>
 </ul>
@@ -115,13 +115,13 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="downloading-map-layers-and-uploading-to-arcgis-online">
-<h2><span class="section-number">4.1. </span>Downloading Map Layers and Uploading to ArcGIS Online<a class="headerlink" href="#downloading-map-layers-and-uploading-to-arcgis-online" title="Permalink to this heading"></a></h2>
-<p>You work for an environmental monitoring company conducting a project in Wayne County, Southeast Michigan. As the GIS expert on the project, you are asked to assemble several vector and a digital elevation model pertaining to the geographic extent of the study area. Download the map layers and display them in upload them to ArcGIS Online so they can be viewed by all members of the project. Follow the steps below to complete this section of the lab.</p>
+<section id="assembling-shapefile-uploading-to-arcgis-online">
+<h2><span class="section-number">4.1. </span>Assembling Shapefile &amp; Uploading to ArcGIS Online<a class="headerlink" href="#assembling-shapefile-uploading-to-arcgis-online" title="Permalink to this heading"></a></h2>
+<p>You work for an environmental monitoring company conducting a project in Michigan. As the GIS expert on the project, you are asked to assemble several shapefiles pertaining to the geographic extent of the study area. Download the map layers from the Michigan CGI archived GIS and then upload them to ArcGIS Online so they can be viewed by all members of the project. Follow the steps below to complete this section of the lab.</p>
 <p><strong>Download Data</strong></p>
 <ol class="arabic">
-<li><p>Create a folder on your computer to store all the downloaded files.</p></li>
-<li><p>Visit the Michigan CGI archived GIS website and download the following datasets for a county of your choice.:</p>
+<li><p>Create a folder on your computer to store all the files that you plan to download.</p></li>
+<li><p>Visit the <a class="reference external" href="https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm">Michigan CGI archived GIS website</a> and download the following datasets for a county of your choice.:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Census Tracts</p></li>
@@ -130,27 +130,26 @@
 <li><p>SSURGO Soils</p></li>
 <li><p>Town/Range</p></li>
 <li><p>Political Framework</p></li>
-<li><p>Digital Elevation Model</p></li>
 </ul>
 </div></blockquote>
 </li>
 <li><p>If you encounter problems downloading from the Michigan CGI site, you can download layers for Wayne County, Michigan that I pre-assembled for this tutorial. The layers can be downloaded from my Github site or from Canvas.</p></li>
-<li><p>After downloading the zipped files to your desktop, follow these <a class="reference external" href="https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit">instructions</a> to upload the layers to ArcGIS Online. (Note: You can also upload to QGIS Cloud). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.</p></li>
-<li><p>After uploading, save your web map in ArcGIS Online. Copy the URL and submit it as proof that you completed this section of the assignment.</p></li>
+<li><p>After downloading the zipped files to your local computer, follow these <a class="reference external" href="https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit">instructions</a> to upload the layers to ArcGIS Online. (Note: You can also upload to QGIS Cloud). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.</p></li>
+<li><p>After uploading the shapefiles, save your web map in ArcGIS Online. Also, click on the Share button and share the web map with the public.  Copy the URL of the web map and submit it as proof that you completed this section of the assignment.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="displaying-shapefiles-and-making-a-multiple-layer-map">
-<h2><span class="section-number">4.2. </span>Displaying Shapefiles and making a Multiple Layer Map<a class="headerlink" href="#displaying-shapefiles-and-making-a-multiple-layer-map" title="Permalink to this heading"></a></h2>
+<section id="displaying-multiple-shapefiles-in-qgis-making-a-map">
+<h2><span class="section-number">4.2. </span>Displaying Multiple Shapefiles in QGIS &amp; Making a Map<a class="headerlink" href="#displaying-multiple-shapefiles-in-qgis-making-a-map" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Return to the folder when you download the original files.</p></li>
+<li><p>Return to the folder where you download the original files.</p></li>
 <li><p>Unzip the layers to that folder, as shown below.</p></li>
 </ol>
 <img alt="Unzipping Data" src="_images/unzipping_data.png" />
 <ol class="arabic simple" start="3">
-<li><p>To load the shapefiles into QGIS, click on Layer | Add Layer | Add Vector Layer, as shown below.</p></li>
+<li><p>Load the shapefiles into QGIS by clicking on Layer | Add Layer | Add Vector Layer, as shown below.</p></li>
 </ol>
 <img alt="Loading Vector Layer into QGIS" src="_images/load_vectorlayer.png" />
 <ol class="arabic simple" start="4">
@@ -168,13 +167,15 @@
 <li><p>Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You will may find yourself using Simple Fill more often.</p></li>
 </ol>
 <img alt="GPS Data" src="_images/simple_fill.png" />
-<p>6  You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below.</p>
-<ol class="arabic simple" start="7">
+<ol class="arabic simple" start="6">
+<li><p>You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below.</p></li>
 <li><p>Change Stroke or line widths to show emphasis.</p></li>
 <li><p>Double click on the name of the layer, then go to Source and from there you can change the layer name.</p></li>
 </ol>
 <img alt="GPS Data" src="_images/cities_lab2.png" />
-<p>9•  My final map appears as shown below.</p>
+<ol class="arabic simple" start="9">
+<li><p>My final map appears as shown below.</p></li>
+</ol>
 <img alt="GPS Data" src="_images/final_shapefile_map.png" />
 <ol class="arabic simple" start="10">
 <li><p>Go to the Composer and compose the final map.</p></li>
@@ -187,15 +188,17 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="loading-and-displaying-the-dem">
-<h2><span class="section-number">4.3. </span>Loading and Displaying the DEM<a class="headerlink" href="#loading-and-displaying-the-dem" title="Permalink to this heading"></a></h2>
-<p>1 Start a new instance of QGIS then click on Layers | Add Raster Layer.  Navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/.</p>
-<ol class="arabic simple" start="2">
+<section id="loading-and-displaying-a-dem">
+<h2><span class="section-number">4.3. </span>Loading and Displaying a DEM<a class="headerlink" href="#loading-and-displaying-a-dem" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Visit the <a class="reference external" href="https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm">Michigan CGI archived GIS website</a> and download a Digital Elevation Model for the county of your choice.</p></li>
+<li><p>Unzip the file you downloaded.</p></li>
+<li><p>Start a new instance of QGIS then click on Layers | Add Raster Layer.  Navigate to the folder where the DEM is stored, e.g, C:/Wayne_dem24_30m/Wayne/Topography/dem/.</p></li>
 <li><p>Select the file named w001001.adf. Make sure it is the adf file with the larger file size.</p></li>
 <li><p>If the DEM is loaded and doesn’t show up, simply right click on it and select Zoom to Layer.</p></li>
 </ol>
 <img alt="Digital Elevation Model" src="_images/wayne_dem.png" />
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="6">
 <li><p>The numbers below the name of the DEM in the Table of Content refer to elevation in ft.  If you click on the Identify button then click anywhere on the map, it will return the elevation at that location.</p></li>
 <li><p>To change the color of the DEM, double click on its name in the Table of Content and select Symbology. Change the Render Type from SingleBand Gray to SingleBand Psuedocolor.</p></li>
 <li><p>Select a color ramp that suits your taste. Make sure the color ramp does justice in showing the subtle variations in elevation.</p></li>
@@ -290,7 +293,7 @@
 </section>
 <section id="loading-and-displaying-an-arcgis-rest-service-layer">
 <h2><span class="section-number">4.7. </span>Loading and Displaying an ArcGIS REST Service Layer<a class="headerlink" href="#loading-and-displaying-an-arcgis-rest-service-layer" title="Permalink to this heading"></a></h2>
-<p>To Add an ArcGIS Server Layer, do the following:</p>
+<p>To Add an ArcGIS Server Layer to QGIS, do the following:</p>
 <ol class="arabic simple">
 <li><p>In QGIS, click on Layer | Add ArcGIS Rest Server Layer.</p></li>
 <li><p>Select “New” in the Data Source Manager dialog box.</p></li>
