@@ -15,9 +15,9 @@ An important objective of this lab is to help you develop the ability to visuall
    * develop cartographic skills needed for effective presentation of multiple map layers.
 
 
-The lab is divided into six sections. In Section 1 of the lab, you will download map layers then upload them to ArcGIS Online or QGIS Cloud for sharing with your colleagues.
+The lab is divided into six sections. In Section 1 of the lab, you will download shapefile from the Internet and then upload them to ArcGIS Online or QGIS Cloud for sharing with your colleagues.
 
-In Section 2 of the lab, you will download, unzip, and display shapefiles in QGIS and create a professional quality involving multiple layers.
+In Section 2 of the lab, you will display shapefiles in QGIS and create a professional quality involving multiple layers.
 
 In Section 3, you will download and display a digital elevation model in QGIS and create a professional quality map.
 
@@ -43,7 +43,7 @@ You work for an environmental monitoring company conducting a project in Michiga
 
 1. Create a folder on your computer to store all the files that you plan to download.
 
-2. Visit the `Michigan CGI archived GIS website <https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm>`_ and download the following datasets for a county of your choice.:
+2. Visit the `Michigan CGI archived GIS website <https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm>`_ and download the following datasets for a county of your choice:
 
     * Census Tracts
     * Drinking Wells
@@ -55,7 +55,7 @@ You work for an environmental monitoring company conducting a project in Michiga
 
 3. If you encounter problems downloading from the Michigan CGI site, you can download layers for Wayne County, Michigan that I pre-assembled for this tutorial. The layers can be downloaded from my Github site or from Canvas.  
 
-4. After downloading the zipped files to your local computer, follow these `instructions <https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit>`_ to upload the layers to ArcGIS Online. (Note: You can also upload to QGIS Cloud). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.
+4. After downloading the zipped files to your local computer, follow these `instructions <https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit>`_ to upload the layers to ArcGIS Online. (Note: You can also upload to `QGIS Cloud <https://qgiscloud.com/>`_). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.
 
 5. After uploading the shapefiles, save your web map in ArcGIS Online. Also, click on the Share button and share the web map with the public.  Copy the URL of the web map and submit it as proof that you completed this section of the assignment.
 
@@ -248,11 +248,11 @@ Loading and Displaying Landsat Imagery
 
 9. When you are done, click Apply to view the image. Afterwards, click Ok.
 
-10. As you may be aware, the Landsat 8 5-4-3 band combination is the traditional False Color Infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shade.
+10. As you may be aware, the Landsat 8 5-4-3 band combination is the traditional false color infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shades.
     
 11. Now, display an image using a 5-6-4 band combination. This is also a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green. 
 
-12. In the 5-6-4 band combination, land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.
+12. In the 5-6-4 band combination, land/water interface is also very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.
 
 13. Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue. 
 
@@ -281,7 +281,7 @@ To Add a WMS Layer, do the following:
 
 4. Select OK.
 
-5. In the Sever Connection dialog, select "Connect" and then "Add". THe WMS layer should now be added.
+5. In the Server Connection dialog, select "Connect" and then "Add". THe WMS layer should now be added.
 
 .. image:: img/wms_connection_dialog.png
    :alt: GPS Data  
@@ -313,7 +313,7 @@ To Add an ArcGIS Server Layer to QGIS, do the following:
 4. Select OK.
 
 
-5. In the Sever Connection dialog, select "Connect". 
+5. In the Server Connection dialog, select "Connect". 
 
 
 6. When the NAIP Imagery connection appears, expand it then select the web map layer. Click "Add". The NAIP imagery layer should now be added.  Select Close.
@@ -360,15 +360,6 @@ ESRI has a web mapping application called `Landsat Explorer <https://livingatlas
 
 
 
-**Example Map**
-
-
-.. image:: img/oakland_dem.png
-   :alt: DEM map 
-
-
-|
-
 
 Summary of Deliverables
 -------------------------
@@ -383,3 +374,14 @@ Summary of Deliverables
 
 
  
+|
+
+
+**Example Map**
+
+
+.. image:: img/oakland_dem.png
+   :alt: DEM map 
+
+
+|

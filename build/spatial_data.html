@@ -105,8 +105,8 @@
 <li><p>develop cartographic skills needed for effective presentation of multiple map layers.</p></li>
 </ul>
 </div></blockquote>
-<p>The lab is divided into six sections. In Section 1 of the lab, you will download map layers then upload them to ArcGIS Online or QGIS Cloud for sharing with your colleagues.</p>
-<p>In Section 2 of the lab, you will download, unzip, and display shapefiles in QGIS and create a professional quality involving multiple layers.</p>
+<p>The lab is divided into six sections. In Section 1 of the lab, you will download shapefile from the Internet and then upload them to ArcGIS Online or QGIS Cloud for sharing with your colleagues.</p>
+<p>In Section 2 of the lab, you will display shapefiles in QGIS and create a professional quality involving multiple layers.</p>
 <p>In Section 3, you will download and display a digital elevation model in QGIS and create a professional quality map.</p>
 <p>In Section 4, you will download and display an orthophoto and create a professional quality map using QGIS.</p>
 <p>In Section 5, you will load multiple bands of satellite imagery into QGIS and then create maps using different band combinations.</p>
@@ -121,7 +121,7 @@
 <p><strong>Download Data</strong></p>
 <ol class="arabic">
 <li><p>Create a folder on your computer to store all the files that you plan to download.</p></li>
-<li><p>Visit the <a class="reference external" href="https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm">Michigan CGI archived GIS website</a> and download the following datasets for a county of your choice.:</p>
+<li><p>Visit the <a class="reference external" href="https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm">Michigan CGI archived GIS website</a> and download the following datasets for a county of your choice:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Census Tracts</p></li>
@@ -134,7 +134,7 @@
 </div></blockquote>
 </li>
 <li><p>If you encounter problems downloading from the Michigan CGI site, you can download layers for Wayne County, Michigan that I pre-assembled for this tutorial. The layers can be downloaded from my Github site or from Canvas.</p></li>
-<li><p>After downloading the zipped files to your local computer, follow these <a class="reference external" href="https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit">instructions</a> to upload the layers to ArcGIS Online. (Note: You can also upload to QGIS Cloud). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.</p></li>
+<li><p>After downloading the zipped files to your local computer, follow these <a class="reference external" href="https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit">instructions</a> to upload the layers to ArcGIS Online. (Note: You can also upload to <a class="reference external" href="https://qgiscloud.com/">QGIS Cloud</a>). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.</p></li>
 <li><p>After uploading the shapefiles, save your web map in ArcGIS Online. Also, click on the Share button and share the web map with the public.  Copy the URL of the web map and submit it as proof that you completed this section of the assignment.</p></li>
 </ol>
 <div class="line-block">
@@ -258,9 +258,9 @@
 <img alt="Symbolizing Virtual Rasters" src="_images/symbolizing_virtual_raster.png" />
 <ol class="arabic simple" start="9">
 <li><p>When you are done, click Apply to view the image. Afterwards, click Ok.</p></li>
-<li><p>As you may be aware, the Landsat 8 5-4-3 band combination is the traditional False Color Infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shade.</p></li>
+<li><p>As you may be aware, the Landsat 8 5-4-3 band combination is the traditional false color infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shades.</p></li>
 <li><p>Now, display an image using a 5-6-4 band combination. This is also a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green.</p></li>
-<li><p>In the 5-6-4 band combination, land/water interface is very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.</p></li>
+<li><p>In the 5-6-4 band combination, land/water interface is also very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.</p></li>
 <li><p>Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue.</p></li>
 </ol>
 <div class="line-block">
@@ -281,7 +281,7 @@
 <img alt="GPS Data" src="_images/new_wms_connection.png" />
 <ol class="arabic simple" start="4">
 <li><p>Select OK.</p></li>
-<li><p>In the Sever Connection dialog, select “Connect” and then “Add”. THe WMS layer should now be added.</p></li>
+<li><p>In the Server Connection dialog, select “Connect” and then “Add”. THe WMS layer should now be added.</p></li>
 </ol>
 <img alt="GPS Data" src="_images/wms_connection_dialog.png" />
 <ol class="arabic simple" start="6">
@@ -302,7 +302,7 @@
 <ol class="arabic simple" start="3">
 <li><p>In the ‘Create a new ArcGIS Rest Server connection’ dialog, enter a name for the conection (e.g., NAIP Imagery), and the appropriate URL (e.g. <a class="reference external" href="https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer">https://gis.apfo.usda.gov/arcgis/rest/services/NAIP/USDA_CONUS_PRIME/ImageServer</a>?)</p></li>
 <li><p>Select OK.</p></li>
-<li><p>In the Sever Connection dialog, select “Connect”.</p></li>
+<li><p>In the Server Connection dialog, select “Connect”.</p></li>
 <li><p>When the NAIP Imagery connection appears, expand it then select the web map layer. Click “Add”. The NAIP imagery layer should now be added.  Select Close.</p></li>
 </ol>
 <img alt="GPS Data" src="_images/arcgis_server_imagery_connection.png" />
@@ -329,11 +329,6 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Example Map</strong></p>
-<img alt="DEM map" src="_images/oakland_dem.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </section>
 <section id="summary-of-deliverables">
 <h2><span class="section-number">4.9. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
@@ -346,6 +341,14 @@
 <li><p>A professional quality map showing mines in the USA based on web services data that you accessed.</p></li>
 <li><p>Screenshots of satellite imagery band combinations that you generated using Landsat Pro and associated comments.</p></li>
 </ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Example Map</strong></p>
+<img alt="DEM map" src="_images/oakland_dem.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
 </section>
 
