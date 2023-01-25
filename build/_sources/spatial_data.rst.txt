@@ -171,6 +171,11 @@ Loading and Displaying a DEM
    :alt: Digital Elevation Model
 
 
+10. Below is an example of a DEM map that I created for Oakland County.
+
+.. image:: img/oakland_dem.png
+   :alt: DEM map 
+
 
 
 |
@@ -178,15 +183,33 @@ Loading and Displaying a DEM
 Loading and Displaying Orthophoto Tiles
 -----------------------------------------------
 
-1. Click on Layers | Add Raster Layer and navigate to the folder where the file is stored.  
+In this section of the lab, you will download one or more orthophoto tiles for any part of the county you selected and make a professional quality layout of the tiles. You will also investigate basic information about the orthophoto. Follow the steps below to complete this task.
 
+
+1. Visit this `website <https://midnr.maps.arcgis.com/apps/webappviewer/index.html?id=393b23c3da1f460f9129527305fd15e0>`_ and download at least two adjacent 1998 orthophoto tiles for any location in the county that you selected.  Note: Each tile only covers a small part of the county.  You can also click `here <https://aerialimagery.semcog.org/>`_ to access more recent orthophotos for Southeast Michigan, but these files are really large. I suggest that you use the 1998 images.
+
+
+2. In QGIS, click on Layers | Add Raster Layer and navigate to the folder where the file is stored.  
 
 .. image:: img/ann_arbor_east.png
    :alt: Loading Orthophoto
 
-2. There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc., and add it to the display.
+3. There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc., and add it to the display.
 
-3. Create a layout of the orthophoto.
+4. Right click on the orthophoto, go to properties and explore it similar to how you explored the DEM in the previous exercise. After exploring the data, write down the following:
+
+   - the horizontal map units of the orthophoto.
+
+   - the name of the coordinate system of the map layer.
+
+   - the length and width of the area covered by the orthophoto.
+
+   - the number of raster bands in the imagery.
+
+
+5. Create a professional quality layout of the tile(s). Include north arrows, scalebar and title. No legend is required.  Note: you are not required to merge the orthotophotos to get rid of the black collars. However, if you insist on getting rid of the collars, please follow this `tutorial <https://umar-yusuf.blogspot.com/2019/08/qgis-remove-black-background-boarder.html>`_
+
+
 
 
 
@@ -377,11 +400,4 @@ Summary of Deliverables
 |
 
 
-**Example Map**
 
-
-.. image:: img/oakland_dem.png
-   :alt: DEM map 
-
-
-|
