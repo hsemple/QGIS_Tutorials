@@ -1,41 +1,31 @@
 
 Downloading Different Types of Spatial Data and Making Maps
-==============================================================================
+===================================================================
 
-A typical GIS project involves working with multiple types of spatial layers overlaid on each other using a common coordinate system.  Some of the layers may be vectors while others may be rasters. 
-
-An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.  Additionally, the lab seeks to help you do the following:
+A typical GIS project involves working with multiple types of spatial layers overlaid on each other using a common coordinate system.  Some of the layers may be vectors while others may be rasters.  An important objective of this lab is to help you develop the ability to visually recognize and distinguish between popular GIS raster and vector data products such as shapefiles, orthophotos, DEMs, satellite imagery, and WMS and WFC layers.  Additionally, the lab seeks to help you do the following:
 
    * develop basic file management skills necessary to deal with the large number of files that are typically needed for a GIS project. 
-
    * become comfortable with loading multiple map layers into QGIS and rearranging the layers to suit your information needs. 
-
    * become comfortable interpreting details on various types of spatial data.
-
    * develop cartographic skills needed for effective presentation of multiple map layers.
 
 
-The lab is divided into six sections. In Section 1 of the lab, you will download shapefile from the Internet and then upload them to ArcGIS Online or QGIS Cloud for sharing with your colleagues.
+The lab is divided into seven sections.  
 
-In Section 2 of the lab, you will display shapefiles in QGIS and create a professional quality involving multiple layers.
-
-In Section 3, you will download and display a digital elevation model in QGIS and create a professional quality map.
-
-In Section 4, you will download and display an orthophoto and create a professional quality map using QGIS.
-
-In Section 5, you will load multiple bands of satellite imagery into QGIS and then create maps using different band combinations.
-
-In Section 6, you will load multiple web map layers into QGIS.
-
-In Section 7, you will display different band combinations of Landsat 8 satellite imagery using a free online platform called Landsat Explorer. Landsat Explorer manages the satellite imagery, so users only have to concentrate on manipulating the data.
+ * In Section 1 of the lab, you will download shapefile from the Internet and then upload them to ArcGIS Online or  `QGIS Cloud <https://qgiscloud.com/>`_  for sharing with your colleagues who have access to browsers, but not to GIS software.
+ * In Section 2 of the lab, you will display shapefiles in QGIS and create a professional quality involving multiple layers.
+ * In Section 4, you will download and display an orthophoto and create a professional quality map using QGIS.
+ * In Section 5, you will load multiple bands of satellite imagery into QGIS and then create maps using different band combinations.
+ * In Section 6, you will load multiple web map layers into QGIS.
+ * In Section 7, you will display different band combinations of Landsat 8 satellite imagery using a free online platform called Landsat Explorer. Landsat Explorer manages the satellite imagery, so users only have to concentrate on manipulating the data.
 
 
 |
 
-Assembling Shapefile & Uploading to ArcGIS Online
+Assembling Shapefiles & Uploading to ArcGIS Online
 ---------------------------------------------------------
 
-You work for an environmental monitoring company conducting a project in Michigan. As the GIS expert on the project, you are asked to assemble several shapefiles pertaining to the geographic extent of the study area. Download the map layers from the Michigan CGI archived GIS and then upload them to ArcGIS Online so they can be viewed by all members of the project. Follow the steps below to complete this section of the lab.
+You work for an environmental monitoring company conducting a project in Wayne County, Michigan. As the GIS expert on the project, you are asked to assemble several shapefiles pertaining to the geographic extent of the study area. Download the shapefiles from the Michigan CGI archived GIS and then upload them to ArcGIS Online so they can be viewed by all members of the project team using a browser. Follow the steps below to complete this section of the lab.
 
 
 
@@ -43,25 +33,54 @@ You work for an environmental monitoring company conducting a project in Michiga
 
 1. Create a folder on your computer to store all the files that you plan to download.
 
-2. Visit the `Michigan CGI archived GIS website <https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm>`_ and download the following datasets for a county of your choice:
+2. Click on the links below and download datasets from the archived Michigan CGI website for Wayne County (Note: If you wish, you can choose to work with a different county).  Although the Michigan CGI website is an archived site, I use it because of the ease in downloading county level data. The State of Michigan has a newer open data portal for downloading GIS data. You can visit it at this link 
 
-    * Census Tracts
-    * Drinking Wells
-    * Wetlands
-    * SSURGO Soils
-    * Town/Range
-    * Political Framework
+    * `2010 Census Tracts from MI Geographic Framework <https://web.archive.org/web/20160316092944/http://www.mcgi.state.mi.us/mgdl/?rel=thext&action=thmname&cid=16&cat=2010+Tracts+from+MI+Geographic+Framework+%28v14a%29>`_
+    * `Drinking Wells <https://web.archive.org/web/20160316091340/http://www.mcgi.state.mi.us/mgdl/?rel=thext&action=thmname&cid=2&cat=Drinking+Water+Wells>`_
+    * `Wetlands <http://www.mcgi.state.mi.us/mgdl/?action=thm>`_ (Scroll down to National Wetlands Inventory)
+    * `SSURGO Soils <https://web.archive.org/web/20160316093520/http://www.mcgi.state.mi.us/mgdl/?rel=thext&action=thmname&cid=12&cat=SSURGO+Soils>`_
+    * `Public Land Survey Town Range <https://web.archive.org/web/20160316085157/http://www.mcgi.state.mi.us/mgdl/?rel=thext&action=thmname&cid=10&cat=Public+Land+Survey+Town%2FRange>`_
+    * `Political Framework including school districts and urban areas <https://web.archive.org/web/20160316091453/http://www.mcgi.state.mi.us/mgdl/?rel=thext&action=thmname&cid=9&cat=MI+Geographic+Framework+Political+%28v14a%29>`_
 
-
-3. If you encounter problems downloading from the Michigan CGI site, you can download layers for Wayne County, Michigan that I pre-assembled for this tutorial. The layers can be downloaded from my Github site or from Canvas.  
-
-4. After downloading the zipped files to your local computer, follow these `instructions <https://docs.google.com/document/d/147gzsdNa_ftIsVoWLqeOlOy73D80mPx4/edit>`_ to upload the layers to ArcGIS Online. (Note: You can also upload to `QGIS Cloud <https://qgiscloud.com/>`_). This is an important skill to master as often we wish to share out datasets with colleagues or others who may not have access to GIS software.  ArcGIS Online or QGIS Cloud allow users to view the map layers using their browsers.
-
-5. After uploading the shapefiles, save your web map in ArcGIS Online. Also, click on the Share button and share the web map with the public.  Copy the URL of the web map and submit it as proof that you completed this section of the assignment.
+    * Bedrock Geology
 
 
+    (Note 1: A bedrock geology layer is not available for each county. However, you can clip the Michigan-wide bedrock layer to the extent of the county you selected. The clip tool is found by clicking on Analysis | Tools | Toolboxes| Analysis Tools | Extract | Clip. To use it, first download the Michigan bedrock geology layer. Next, download a layer of the county you selected.  Unzip both layers and note their path.  In the Clip tool dialog, the Input layer is the Michigan-wide bedrock geology layer while the Clip Features layer is the county layer.
+
+
+
+    Note 2. Some of the layers that you download are .exe files. To uncompress these files in Windows, double click the file.   This will open a dialog similar to the one below. Click on More Info then click on Run Anyway since you know the source of these files. When the dialog opens, click on browse and set a path for the downloaded files. A new folder will be created with the downloaded files. 
+
+   .. image:: img/window_moreinfo.png
+      :alt: Loading Vector Layer into QGIS
+
+
+3. After unzipping the files, you will need to zip them before loading to ArcGIS Online. To zip these click, right click on the folder name and select Send To | Compressed.
+
+
+
+4. If you encounter problems downloading from the Michigan CGI site, you can download layers below for Wayne County, Michigan that I assembled for this tutorial. 
+
+    * `Wayne Census Tracts <https://drive.google.com/drive/folders/1WT3i7jsqOgFJfEGL4o0lBpyw6B_2wt5R?usp=sharing>`_  
+    * `Wayne Drinking Wells  <https://drive.google.com/drive/folders/18vAE7Kn4dmF-Kn7mE8_XOjFrAQFTAzb4?usp=sharing>`_  
+    * `Wayne Wetlands <https://drive.google.com/drive/folders/1F-nzZhhf8v3yCdp7DNOHubmk-BGovLo5?usp=sharing>`_  
+    * `Wayne SSURGO Soils <https://drive.google.com/drive/folders/1TFBrrLmLtjHfZQh89sFuRtZYnzJdSGZU?usp=sharing>`_  
+    * `Wayne Town and Range <https://drive.google.com/drive/folders/1wLOmCjWgqlSr2a7gcj3rbNOWABu8pD3s?usp=sharing>`_  
+    * `Wayne Political Framework <https://drive.google.com/drive/folders/1NQpYXOXaeCka-pr_qrVVK0RhcKsF4ul5?usp=sharing>`_  
+    * `Wayne Bedrock Geology <https://drive.google.com/drive/folders/1_W24yyjTTtHlSimwaFMq9pxGv2Npv95_?usp=sharing>`_  
+    * `Wayne Parcels Congressional Districts etc <https://www.waynecounty.com/departments/technology/gis-data.aspx>`_
+
+
+
+5. After downloading the zipped files to your desktop, follow these instructions to upload the shapefiles to ArcGIS Online.  This is an important skill to master as often we have to share out datasets with colleagues or others who may not have access to GIS desktop software.  ArcGIS Online and QGIS Cloud allow users to view the map layers using their browsers.
+
+6. After uploading the shapefiles, save your web map in ArcGIS Online.  Next, edit the names of the layers to make them more user friendly to the readers.  When you are done, save the map again.  Next, click on the Share button and share the web map with the public.  Copy the URL of the web map and submit it as proof that you completed this section of the assignment.
 
 |
+
+
+
+
 
 
 Displaying Multiple Shapefiles in QGIS & Making a Map  
@@ -87,7 +106,6 @@ Displaying Multiple Shapefiles in QGIS & Making a Map
 
 
 
-
 |
 
 
@@ -102,10 +120,10 @@ Displaying Multiple Shapefiles in QGIS & Making a Map
 4. Change the color of the layers. To do so, double click on the map icons of each layer, then go to Symbology and change the color to a color that you like. 
  
 
-5. Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You will may find yourself using Simple Fill more often.  
+5. Experiment with happens when you click on “Fill” versus when you click on “Simple Fill”.  You may find yourself using Simple Fill more often.  
 
 .. image:: img/simple_fill.png
-   :alt: GPS Data  
+   :alt: Simple Fill 
 
 
 6. You may want to use no fill color for some of the layers, relying on the outline to provide the color. This will allow you to see right through the layer to other layers below. 
@@ -117,17 +135,17 @@ Displaying Multiple Shapefiles in QGIS & Making a Map
 8.  Double click on the name of the layer, then go to Source and from there you can change the layer name.
 
 .. image:: img/cities_lab2.png
-   :alt: GPS Data  
+   :alt: GQGIS Change Layer Name  
 
 
 
 9. My final map appears as shown below.
  
 .. image:: img/final_shapefile_map.png
-   :alt: GPS Data  
+   :alt: Final Shapefile Map  
 
 
-10. Go to the Composer and compose the final map.
+10. Go to the Composer and create the final map.
  
 .. image:: img/final_shapefile_map2.png
    :alt: GPS Data  
@@ -141,10 +159,10 @@ Displaying Multiple Shapefiles in QGIS & Making a Map
 
 
 
-Loading and Displaying a DEM 
---------------------------------
+Display a DEM in QGIS and Create a Map
+----------------------------------------
 
-1. Visit the `Michigan CGI archived GIS website <https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm>`_ and download a Digital Elevation Model for the county of your choice. 
+1. Visit the `Michigan CGI archived GIS website <https://web.archive.org/web/20160201222536/http://www.mcgi.state.mi.us/mgdl/?action=thm>`_ and download a Digital Elevation Model for the county of your choice.  If you are downloading data for Wayne County, you can download the DEM `at this link <https://drive.google.com/drive/folders/14VoqBg0ZvJIQAg6q72Uq-Dhxl-_VLgap?usp=sharing>`_.
 
 2. Unzip the file you downloaded.
 
@@ -180,36 +198,48 @@ Loading and Displaying a DEM
 
 |
 
-Loading and Displaying Orthophoto Tiles
------------------------------------------------
+Display and Map PFAS Sample Points for Wayne County
+------------------------------------------------------
 
-In this section of the lab, you will download one or more orthophoto tiles for any part of the county you selected and make a professional quality layout of the tiles. You will also investigate basic information about the orthophoto. Follow the steps below to complete this task.
+In this section of the lab, you will download a csv file that contains PFAS sample points for the State of Michigan. PFAS are man-made chemicals that do not break down, so they persist in the environment and may be found in the blood of people.
 
+After downloading the csv file, you will display the points in shapefile format. Next, you will clip the Michigan-wide PFAS layer to the extent of Wayne County and create a map showing PFAS points only for Wayne County.  Follow the steps below to create this map.
 
-1. Visit this `website <https://midnr.maps.arcgis.com/apps/webappviewer/index.html?id=393b23c3da1f460f9129527305fd15e0>`_ and download at least two adjacent 1998 orthophoto tiles for any location in the county that you selected.  Note: Each tile only covers a small part of the county.  You can also click `here <https://aerialimagery.semcog.org/>`_ to access more recent orthophotos for Southeast Michigan, but these files are really large. I suggest that you use the 1998 images.
+1. Download the `dataset here <https://drive.google.com/drive/folders/16x4TipCQ_mdt3HKcEVCeuPNU8HB9xjyM?usp=sharing>`_ and unzip it.  After unzipping the file, you will notice that it contains a shapefile for Wayne County and a CSV file with the PFAS sample data including the coordinates where the samples were taken.
 
+2. Open QGIS and load both the Wayne County shapefile into the software.
 
-2. In QGIS, click on Layers | Add Raster Layer and navigate to the folder where the file is stored.  
-
-.. image:: img/ann_arbor_east.png
-   :alt: Loading Orthophoto
-
-3. There may be more than one files associated with the orthophoto. Select the file that has a raster format ending, e.g., .tif, .ing, .sid, .png, etc., and add it to the display.
-
-4. Right click on the orthophoto, go to properties and explore it similar to how you explored the DEM in the previous exercise. After exploring the data, write down the following:
-
-   - the horizontal map units of the orthophoto.
-
-   - the name of the coordinate system of the map layer.
-
-   - the length and width of the area covered by the orthophoto.
-
-   - the number of raster bands in the imagery.
+.. image:: img/wayne_county_boundary1.png
+   :alt: Wayne County Boundary
 
 
-5. Create a professional quality layout of the tile(s). Include north arrows, scalebar and title. No legend is required.  Note: you are not required to merge the orthotophotos to get rid of the black collars. However, if you insist on getting rid of the collars, please follow this `tutorial <https://umar-yusuf.blogspot.com/2019/08/qgis-remove-black-background-boarder.html>`_
+3. Now, add the PFAS shapefile. To do so, in QGIS, click on Layer | Add Layer | Add Delimited Layer | then navigate to where the PFAS csv file is located. After you load the file, the dialog will fill out automatically, as shown below.  Take a moment and study the dialog. Note that the longitude field in your csv file is mapped as longititue and the latitude field named X in the csv file is mapped as latitude in QGIS. Click Add and Close when you are done.
+
+.. image:: img/add_delimited_layer_pfas.png
+   :alt: Add Delimited Layer
 
 
+4. The PFAS points will now be displayed in QGIS, as shown below.
+
+.. image:: img/pfas_points_displayed.png
+   :alt: PFAS data Displayed
+
+
+5. Let's clip the Michigan-wide PFAS layer to the extent of Wayne County. The clip tool is found by clicking on Vector | Geoprocessing Tools | Clip |   Fill out the Clip tool dialog as shown below. The Input layer is the Michigan-wide PFAS layer while the Clip Features layer is the county layer. Click Run.
+
+
+.. image:: img/pfas_points_clipped.png
+   :alt: PFAS data Displayed
+
+
+7. Create a professional quality layout of the tile. Include north arrows, scalebar and title.
+
+
+
+8. Although not required for this lab, you should be aware that once the location of the sample points are mapped, then PFAS values in the attribute table of the shapefile can be used to create continuous surface maps for different types of PFAS for the entire study area. The mapping process is called spatial interpolation.  An example of an interpolated map is shown below.
+
+.. image:: img/wayne_pfas_interpolatedmap.png
+   :alt: PFAS Interpolated Map
 
 
 
@@ -268,10 +298,9 @@ Loading and Displaying Landsat Imagery
    :alt: Symbolizing Virtual Rasters
 
 
-
 9. When you are done, click Apply to view the image. Afterwards, click Ok.
 
-10. As you may be aware, the Landsat 8 5-4-3 band combination is the traditional false color infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shades.
+10. As you may be aware, the Landsat-8 5-4-3 band combination is the traditional false color infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shades.
     
 11. Now, display an image using a 5-6-4 band combination. This is also a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green. 
 
