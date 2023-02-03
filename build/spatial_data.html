@@ -257,7 +257,8 @@
 <img alt="PFAS data Displayed" src="_images/pfas_points_clipped.png" />
 <ol class="arabic simple" start="7">
 <li><p>Create a professional quality layout of the tile. Include north arrows, scalebar and title.</p></li>
-<li><p>Although not required for this lab, you should be aware that once the location of the sample points are mapped, then PFAS values in the attribute table of the shapefile can be used to create continuous surface maps for different types of PFAS for the entire study area. The mapping process is called spatial interpolation.  An example of an interpolated map is shown below.</p></li>
+<li><p>Although not required for this lab, you should be aware that once the location of the sample points are mapped, then PFAS values in the attribute table of the shapefile can be used to create continuous surface maps for different types of PFAS for the entire study area.</p></li>
+<li><p>The mapping process is called spatial interpolation.  An example of an interpolated map is shown below.  We will study interpolation later on in this course, but if you are interested in investigating interpolation at this stage, please take a look at this <a class="reference external" href="https://dges.carleton.ca/CUOSGwiki/index.php/Creating_IDW_and_Spline_Interpolation_Maps_Using_QGIS">tutorial</a></p></li>
 </ol>
 <img alt="PFAS Interpolated Map" src="_images/wayne_pfas_interpolatedmap.png" />
 <div class="line-block">
@@ -266,43 +267,55 @@
 </section>
 <section id="loading-and-displaying-landsat-imagery">
 <h2><span class="section-number">4.5. </span>Loading and Displaying Landsat Imagery<a class="headerlink" href="#loading-and-displaying-landsat-imagery" title="Permalink to this heading"></a></h2>
+<p>In this section of the lab, you will learn how to load Landsat-8 satellite imagery into QGIS.  After loading the imagery, you will briefly experiment with the data by creating false color composites based on different band combinations and then noting the uses of these composites. Follow the instructions below to complete this section.</p>
 <ol class="arabic simple">
-<li><p>Visit the Earth Explorer website (<a class="reference external" href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a>) and download Landsat 8 imagery for an area of interest.  If you are not familiar with the downloading process, click on this <a class="reference external" href="https://guides.library.uwm.edu/c.php?g=567847&amp;p=5338445">link</a> for instructions on this process.  You can also download a Landsat imagery datset from Canvas.</p></li>
-<li><p>The Landsat imagery that you download will contains several layers or bands all of which pertain to the same area.  After unzipping the data, load the files into QGIS by selecting the desired layers, as shown below.</p></li>
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1Oz6aWFbFyb5YYThxwmuk-GRunNwNNt4R/view?usp=sharing">Download Landsat8 imagery</a> for the Wayne/Monroe area for June 21, 2022. Note: This is a large dataset (918MB).  After downloading, unzip the files.</p></li>
+<li><p>The Landsat imagery that you download contains several layers or bands all of which pertain to the same area.  Unzipped the data then load the files into QGIS by clicking on Layer | Add Layer | Add Raster Layer.</p></li>
 </ol>
-<img alt="Landsat Imagery" src="_images/landsat_imagery1.png" />
+<img alt="Landsat Imagery" src="_images/add_satellite_imagery.png" />
 <ol class="arabic simple" start="3">
 <li><p>After the files are loaded, they should appear as shown below. You can uncheck and then recheck each layer to observe it in detail. You can also zoom in and inspect different parts of the imagery.</p></li>
 </ol>
-<img alt="Landsat Imagery in QGIS" src="_images/imagery_in_qgis.png" />
+<img alt="Landsat Imagery" src="_images/landsat_imagery1.png" />
 <ol class="arabic simple" start="4">
-<li><p>Click on Raster in the main menu, then select Miscellaneous | Build Virtual Raster.  This step will combine the rasters into a single layer.  Fill out the dialog that appears.</p></li>
+<li><p>Click on Raster in the main menu, then select Miscellaneous | Build Virtual Raster.  This step will combine the rasters into a single layer.</p></li>
 </ol>
 <img alt="Landsat Imagery in QGIS" src="_images/virtual_raster.png" />
 <ol class="arabic simple" start="5">
-<li><p>Select the layers you want to use. I selected bands 1 through 8.  Click OK when you are done.</p></li>
+<li><p>In the dialog that appears, click on the three dots to the far right of the input layers textbox so that you can select the bands you want to use.</p></li>
 </ol>
-<img alt="Selecting Landsat Bands for Display in QGIS" src="_images/multiple_selected_rasters.png" />
+<img alt="Selecting Landsat Bands for Display in QGIS" src="_images/build_virtual_raster1.png" />
 <ol class="arabic simple" start="6">
-<li><p>In the main menu, click Run in Background. A new layer called “Virtual” will be created.</p></li>
+<li><p>Select all the available bands. Next click on the left-pointing arrow at the top of the dialog to return to the main dialog.</p></li>
 </ol>
-<img alt="Building a Virtual Raster in QGIS" src="_images/build_virtual_raster1.png" />
+<img alt="Building a Virtual Raster in QGIS" src="_images/build_virtual_raster2.png" />
 <ol class="arabic simple" start="7">
+<li><p>In the main dialog, place a check in front of “Place each input file into a separate band”, then click run. This will create a new layer naned “Virtual”.</p></li>
+</ol>
+<img alt="Landsat Imagery in QGIS" src="_images/build_virtual_raster3.png" />
+<ol class="arabic simple" start="8">
 <li><p>Right click on the layer named “Virtual” and select Properties.</p></li>
 </ol>
 <img alt="Landsat Imagery in QGIS" src="_images/virtual_raster2.png" />
-<p>8.  To generate an image that represents a 5-4-3 band combination, fill out the dialog similar to the illustration below. The key selections are as follows:
-* Render Type: Multiband Color
-* Red Band – 5
-* Green Band – 4
-* Blue Band - 3.</p>
-<img alt="Symbolizing Virtual Rasters" src="_images/symbolizing_virtual_raster.png" />
 <ol class="arabic simple" start="9">
-<li><p>When you are done, click Apply to view the image. Afterwards, click Ok.</p></li>
-<li><p>As you may be aware, the Landsat-8 5-4-3 band combination is the traditional false color infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shades.</p></li>
-<li><p>Now, display an image using a 5-6-4 band combination. This is also a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green.</p></li>
-<li><p>In the 5-6-4 band combination, land/water interface is also very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color.</p></li>
-<li><p>Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue.</p></li>
+<li><p>To generate an image that represents a 5-4-3 band combination, fill out the dialog similar to the illustration below. The key selections are as follows:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Render Type: Multiband Color</p></li>
+<li><p>Red Band – 5</p></li>
+<li><p>Green Band – 4</p></li>
+<li><p>Blue Band - 3</p></li>
+</ul>
+<img alt="Symbolizing Virtual Rasters" src="_images/virtual_layer_properties.png" />
+<ol class="arabic simple" start="10">
+<li><p>When you are done, click Apply to view the image. Afterwards, click Ok. Zoom in to see the details.</p></li>
+</ol>
+<img alt="Virtual Rasters" src="_images/5_4_3_combination.png" />
+<ol class="arabic simple" start="11">
+<li><p>As you may be aware, the Landsat-8 5-4-3 band combination is the traditional false color infrared image. It is good for identifying different types of vegetation as well as their health. Healthy vegetation appears bright red. Each shade of red represents a different type of vegetation. From visual inspection, we can detect many shades of red, however, the computer can detect lots more shades. Make a screensot of the image for submission.</p></li>
+<li><p>Now, display an image using a 5-6-4 band combination. This is also a popular band combination for looking at vegetation cover. It contains two infrared bands (bands 5 and 6). Different vegetation types can be clearly defined, appearing as shades of orange and green.  Make a screensot of the image for submission.</p></li>
+<li><p>In the 5-6-4 band combination, land/water interface is also very clear and for this reason, this is probably the most common band combination in Landsat 8 for differentiating between land and water.  Lakes and ponds of varying sizes can be easily identified. Water appears in shades of dark blue to black.  Ice, if present, stands out as a vibrant magenta color. Make a screensot of the image for submission.</p></li>
+<li><p>Display an image using a 7-6-4 band combination. This combination is useful for visualizing urban environments, particularly in situations where haze is an issue.  Make a screensot of the image for submission.</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
