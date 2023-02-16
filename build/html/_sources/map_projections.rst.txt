@@ -466,9 +466,9 @@ Now that we have defined all the map layers based on their original coordinate s
 Changing Map Projections in ArcGIS Online 
 -------------------------------------------
 
-By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to display map layers. However, this projection distorts the size of places in the far north and south.  See this link  for a brief discussion.   Making non-Web-Mercator maps is possible in ArcGIS Online. First, you have to search ArcGIS Online for basemap template in the desired projection of interests, then display the basemap projection, and then upload your maps into the projection.  Here are the steps.
+By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to display map layers. However, this projection distorts the size of places in the far north and south.  See this link  for a brief discussion.  Making non-Web-Mercator maps is possible in ArcGIS Online. First, you have to search ArcGIS Online for basemap template in the desired projection of interests, then display the basemap projection, and then upload your maps into the projection.  Here are the steps.
  
-1. Download the Covid-19 Mortality by US states map we used in Lab 1. 
+1. Download the `states shapefile <https://github.com/hsemple/qgis_tutorials/blob/qgis_tutorials/US_States-1.zip>`_ we used in Lab 1.  This file is also stored on GitHub. To download the file from GitHub, click on the "Go To File" button at the top right of the page and look for a file named "US_States-1.zip".  Do Not Unzip this file. It will will be uploaded to ArcGIS Online in zipped format.
 
 2. Visit arcgisonline.com and sign in.
 
