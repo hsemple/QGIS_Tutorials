@@ -496,20 +496,23 @@ By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to dis
    :alt: ArcGIS Online Map Projections
 
 
-7.  If you are making global thematic maps, you can also search for something like "Equal Area Projections world basemaps" and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.  You can even make your own projection. If you are sharing datasets such as global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps. 
+7. Return to the Albers Equal Area USA projection and click on Add | Add Layers from file and load the USA Covid-19 Shapefile.  
+ 
+
+8. The attribute table for the shapefile contains Covid-19 confirmed cases for August 31, 2020.  Plot these values on the web map.
+ 
+
+
+**A Note about World Maps**
+
+As an aside, if you are making global thematic maps, you can also search for something like "Equal Area Projections world basemaps" and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.  You can even make your own projection. If you are sharing datasets such as global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps. 
  
 
  .. image:: img/arcgisonline_projections5.png
    :alt: ArcGIS Online Map Projections
 
  
-8. Return to the Albers Equal Area USA projection and click on Add | Add Layers from file and load the USA Covid-19 Shapefile.  
 
- .. image:: img/arcgisonline_projections5.png
-   :alt: ArcGIS Online Map Projections
- 
-9.  Using instructions from last last week's lab plus your own fiddling, plot the Covid 19 mortality cases.
- 
 
 |
 
