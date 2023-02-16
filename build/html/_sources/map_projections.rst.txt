@@ -28,7 +28,7 @@ In the final section of the lab, you will use ArcGIS Online to change projection
 Data
 -------
 
-Download the MapProj_QGIS.zip file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_ .  Unzip it and save the files to a working directory on your computer.
+Download the MapProj_QGIS.zip file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_ .  To download the file from GitHub, click on the "Go To File" button at the top right of the page and look for a file named "Washtenaw_Shapefiles"  Unzip it and save the files to a working directory on your computer.
 
 
 |

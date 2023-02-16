@@ -87,14 +87,15 @@ Point Pattern analysis techniques compare observed point patterns to ones genera
 
 **Quadrat Analysis**
 
-I am still looking for any easy way to do this in QGIS. In the meantime, I suggest using the `quadrat analysis functions in R <https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html>`_to accomplish this.
+I am still looking for any easy way to do this in QGIS. In the meantime, I suggest using the quadrat analysis functions in R to accomplish this
+https://pages.cms.hu-berlin.de/EOL/gcg_quantitative-methods/Lab13_PointPatterns.html 
 
-!
+|
 
 
 **Nearest Neighbor Analysis**
 
-* Click on the menu item Vector ‣ Analysis Tools ‣ Nearest neighbor analysis. Click `here <https://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/spatial_statistics.html>`_ for more information
+* Click on the menu item Vector ‣ Analysis Tools ‣ Nearest neighbor analysis. Click `here <https://docs.qgis.org/2.8/en/docs/training_manualvector_analysis/spatial_statistics.html>`_ for more information
 
 * You can also click on this `link <https://www.qgistutorials.com/en/docs/nearest_neighbor_analysis.html>`_ for more information on Nearest Neighbor Analysis.
 
