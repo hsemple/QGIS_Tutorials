@@ -28,7 +28,7 @@ In the final section of the lab, you will use ArcGIS Online to change projection
 Data
 -------
 
-Download the MapProj_QGIS.zip file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_ .  To download the file from GitHub, click on the "Go To File" button at the top right of the page and look for a file named "Washtenaw_Shapefiles"  Unzip it and save the files to a working directory on your computer.
+Download the *MapProj_QGIS.zip* file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_.  To download the file from GitHub, click on the "Go To File" button at the top right of the page and look for a file named "Washtenaw_Shapefiles"  Unzip it and save the files to a working directory on your computer.
 
 
 |
@@ -43,7 +43,7 @@ Displaying World Maps in Different Projections
 
 2. Click on Layer | Add Layer | Add Vector Layer and browse to the downloaded data folder. 
 
-3. Open the world subdirectory. Select ESRI shapefiles as the file type to display, and load the .shp files into QGIS. 
+3. Open the world subdirectory. Select ESRI shapefiles as the file type to display then load the .shp files into QGIS. 
 
 .. image:: img/world_countries.png
    :alt: Landsat Imagery in QGIS
@@ -114,7 +114,7 @@ A popular projection for rendering the entire world to create thematic maps is t
 
 |
 
-**Display with Other Global Projections**
+**Display the World Map with Other Global Projections**
 
 1. Using the methods described above, display the world using the following projections:
 
@@ -169,11 +169,13 @@ A popular projection for rendering the entire world to create thematic maps is t
  
 |
 
-**Answer the Qestions Below**
+**Answer the Qestions Below and Submit with the World Maps**
 
-1. How well is Antarctica represented on a Mercator Projection? What do you notice about the size of places as you go farther north and south?
+1. On the Mercator projection, what do you notice about the size of places as you go farther north and south?
 
-2. How does the size of Alaska compare with the contiguous states?
+2. How well is Antarctica represented on Robinson projection compared to the Mercator projection?
+
+2. How does the size of Alaska compare with the contiguous states on a Mercator Projection?
 
 3. Is a Mercator Projection great for making world thematic maps?
 
@@ -302,6 +304,9 @@ To display a map of Michigan using the Michigan Georef Coordinate System, do the
 
 |
 
+
+
+
 Permanently Transforming Map Projections
 ------------------------------------------
 
@@ -324,6 +329,14 @@ The other three files are in Michigan GeoRef Coordinate System. The datum is NAD
 Your task is to change the coordinate systems of the map layers Michigan State Plane, South Zone, NAD 83 Feet), so that all the map layers can correctly overlay on each other.
  
 |
+
+**Data**
+
+Download the "Washtenaw_Shapefiles.zip file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_.  To download the file from GitHub, click on the "Go To File" button at the top right of the page and look for a file named "Washtenaw_Shapefiles.zip".  Unzip it and save the files to a working directory on your computer.
+
+
+|
+
 
 **Procedure**
 
