@@ -310,9 +310,9 @@ To display a map of Michigan using the Michigan Georef Coordinate System, do the
 Permanently Transforming Map Projections
 ------------------------------------------
 
-When you download map layers from different websites, there is a high likelihood that the map layers you download will be in different coordinates.
+When you download map layers from different websites, there is a high likelihood that the map layers you download will be in different coordinate systems.
  
-Map layers that have different coordinates will not overlay on top of each other. In order to make the maps overlay, you have to first define their projection tool, i.e., tell the software the name of the coordinate system of each of the map layer. Secondly, you have to transform the different coordinates into a common coordinate system.  
+Map layers that are in different coordinate systems will not overlay on top of each other and may not draw on your screen. In order to make the maps overlay, you have to first define their projection, i.e., tell the software the name of the coordinate system of each of the map layer. Secondly, you have to transform the different coordinates into a common coordinate system.  
  
 In this section of the lab, we use QGIS software to practice converting map layers from one coordinate system to another.  You are given six shapefiles pertaining to Washtenaw County. Three of the files are in Geographic Coordinates or lat\long (WGS 84). They are: 
 
@@ -496,7 +496,7 @@ By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to dis
    :alt: ArcGIS Online Map Projections
 
 
-7.  If you are making global thematic maps, you can also search for something like "Equal Area Projections world basemaps" and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.   You can even make your own projection. If you are sharing datasets such as global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps. 
+7.  If you are making global thematic maps, you can also search for something like "Equal Area Projections world basemaps" and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.  You can even make your own projection. If you are sharing datasets such as global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps. 
  
 
  .. image:: img/arcgisonline_projections5.png
