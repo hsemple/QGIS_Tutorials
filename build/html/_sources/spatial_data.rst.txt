@@ -405,7 +405,7 @@ For more information, please view this `YouTube Video <https://www.youtube.com/w
 
 
 Landsat Explorer
----------------------------
+----------------------
 
 ESRI has a web mapping application called `Landsat Explorer <https://livingatlas2.arcgis.com/landsatexplorer/>`_ that can be used to quickly create Color Composites. With this application all the bands are preloaded, so there is no need to download data.
 

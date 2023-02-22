@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>6. Attribute and Spatial Queries &mdash; QGIS Tutorials 0.0.0.1 documentation</title>
@@ -16,7 +16,6 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> QGIS Tutorials
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            QGIS Tutorials
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -44,7 +47,7 @@
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch_qgis.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematic_mapping.html">3. Thematic Mapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Multiple Layers and Making Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data.html">4. Downloading Different Types of Spatial Data and Making Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="map_projections.html">5. Map Projections</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">6. Attribute and Spatial Queries</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#assignment">6.1. Assignment</a></li>
@@ -78,7 +81,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">6. </span>Attribute and Spatial Queries</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/attribute_spatial.rst.txt" rel="nofollow"> View page source</a>
@@ -99,22 +102,22 @@
 <section id="assignment">
 <h2><span class="section-number">6.1. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this heading"></a></h2>
 <p>In the first part of this lab, we explore how to join an Excel file containing attribute data to a shapefile’s attribute table.  After joining the tables, we will run some attribute queries to explore the data.   You will also experiment with summarizing the attribute data to see numeric and geographic patterns associated with the data.</p>
-<p>In the second part of the lab, we will explore how to perform spatial queries in QGIS using tornada and parcel data.</p>
+<p>In the second part of the lab, we will explore how to perform spatial queries in QGIS using tornado and parcel data.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="working-with-attribute-data">
 <h2><span class="section-number">6.2. </span>Working with Attribute Data<a class="headerlink" href="#working-with-attribute-data" title="Permalink to this heading"></a></h2>
-<p>Recall that in Lab 2, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile’s attribute table?   The answer is through table joins.</p>
-<p>To illustrate the process, we will make of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile’s attribute data. Table joins are important in GIS as it saves us the need to manually enter data into the attribute table.</p>
+<p>Recall that in Lab 1, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile’s attribute table?   The answer is through table joins.</p>
+<p>To help you become proficient with table joins, we will make a map of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile’s attribute table. Table joins are very important in GIS as they save us the task of manually entering data into the attribute table.</p>
 <p>Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in “m’ below.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p><strong>Downloading and Processing Data</strong></p>
 <ol class="arabic simple">
-<li><p>Download and unzip the  Michigan Counties shapefile in Canvas to a folder on your computer.</p></li>
+<li><p>Download and unzip the Michigan Counties shapefile on <a class="reference external" href="https://gis-michigan.opendata.arcgis.com/datasets/Michigan::counties-v17a/explore?location=44.847247%2C-86.594000%2C7.18">this website</a> to a folder on your computer.</p></li>
 <li><p>Click on this <a class="reference external" href="https://www.michigan.gov/coronavirus/stats">link</a> to visit the Michigan State Govt website that carries data on Covid-19.</p></li>
 <li><p>Copy the data in the table named “Confirmed COVID-19 Cases by Jurisdiction (Counties)” and paste the values into Excel.</p></li>
 <li><p>Edit the Excel file in the following ways:</p></li>

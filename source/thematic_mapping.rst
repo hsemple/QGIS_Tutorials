@@ -5,9 +5,9 @@ Thematic Mapping
    
 A popular way of presenting information about spatial patterns is to use a thematic map. A thematic map shows the spatial distribution of one or more specific data themes for selected geographic areas. The data may be quantitative (e.g., percentage population change, income distribution) or qualitative  (e.g., predominant farm types, mineral distribution in the USA, mountain systems in the Americas).
 
-With a GIS software, the basic way to create a vector thematic map is to identify the field in the attribute table of the map layer that will be used for mapping. Next, scrutinize the data then display it using the software's thematic mapping engine.  
+With a GIS software, the basic way to create a vector thematic map is to identify the field in the attribute table of the map layer that will be used for mapping. Next, scrutinize the data to learn about its statistical distribution, then display it using the software's thematic mapping engine.  
 
-Some amount of thought is required when mapping the data. If the data is quantitative, select one of the quantitative thematic mapping style, e.g., graduated color, proportional symbols, dot density, etc.  We also have to think about the color scheme for the map, the number of classes or bins into which the data will be placed, how the data will be classified, e.g., natural break, equal area, etc, and whether the data should be normalized.  If the data is qualitative, we create a qualitative thematic map, which may also vary in appearance depending on the details of the data.
+Some amount of thought is required when mapping the data. If the data is quantitative, select one of the quantitative thematic mapping style, e.g., graduated color, proportional symbols, dot density, etc.   We also have to think about the color scheme for the map, the number of classes or bins into which the data will be placed, how the data will be classified, e.g., natural break, equal area, etc, and whether the data should be normalized.  If the data is qualitative, we create a qualitative thematic map, which may also vary in appearance depending on the details of the data.
 
 
 

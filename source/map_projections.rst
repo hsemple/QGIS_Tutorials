@@ -454,14 +454,14 @@ Now that we have defined all the map layers based on their original coordinate s
 
 2. Add all six of the projected layers.  If everything was done correctly, all the layers should overlay exactly on each other.  
 
-3. Use map design principles and create a map that shows all six of the layers at the same time.  To accomplish this, for some of the layers, instead of using a "Fill" color which hides layers underneath, using just the outline of the features. For different layers, use different color outlines.  Here is an example map that was previously submitted by a student.
-  
+3. Use map design principles and create a map that shows all six of the layers at the same time.  To accomplish this, for some of the layers, instead of using a "Fill" color which hides layers underneath, using just the outline of the features. For different layers, use different color outlines.  
 
-.. image:: img/michigan_state_plane4.png
-   :alt: Final Map
+
 
 
 |
+
+
 
 Changing Map Projections in ArcGIS Online 
 -------------------------------------------

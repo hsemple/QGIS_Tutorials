@@ -1,5 +1,6 @@
+
 Attribute and Spatial Queries
-============================== 
+================================ 
 
 Within a GIS, data can be queried in two ways; attribute queries and spatial queries. For attribute queries, features are selected using attribute data. Results can be mapped or presented in conventional database form. 
 
@@ -15,7 +16,7 @@ Assignment
 
 In the first part of this lab, we explore how to join an Excel file containing attribute data to a shapefile's attribute table.  After joining the tables, we will run some attribute queries to explore the data.   You will also experiment with summarizing the attribute data to see numeric and geographic patterns associated with the data.
 
-In the second part of the lab, we will explore how to perform spatial queries in QGIS using tornada and parcel data.  
+In the second part of the lab, we will explore how to perform spatial queries in QGIS using tornado and parcel data.  
 
 
 
@@ -24,9 +25,9 @@ In the second part of the lab, we will explore how to perform spatial queries in
 
 Working with Attribute Data
 -----------------------------
-Recall that in Lab 2, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile's attribute table?   The answer is through table joins.  
+Recall that in Lab 1, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile's attribute table?   The answer is through table joins.  
 
-To illustrate the process, we will make of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile's attribute data. Table joins are important in GIS as it saves us the need to manually enter data into the attribute table.
+To help you become proficient with table joins, we will make a map of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile's attribute table. Table joins are very important in GIS as they save us the task of manually entering data into the attribute table.
  
 Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in "m' below.
 
@@ -34,7 +35,7 @@ Once we are done joining the tables, we will perform attribute queries to unders
 
 **Downloading and Processing Data**
 
-1. Download and unzip the  Michigan Counties shapefile in Canvas to a folder on your computer.
+1. Download and unzip the Michigan Counties shapefile on `this website <https://gis-michigan.opendata.arcgis.com/datasets/Michigan::counties-v17a/explore?location=44.847247%2C-86.594000%2C7.18>`_ to a folder on your computer.
  
 2. Click on this `link <https://www.michigan.gov/coronavirus/stats>`_ to visit the Michigan State Govt website that carries data on Covid-19.
  
