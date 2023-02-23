@@ -302,7 +302,7 @@ Joining Tables - ArcGIS Online
 
 ArcGIS Online has simplified the process of table joining for people using this platform for GIS. To join a table using ArcGIS Online, follow the steps below:
  
-1. Upload both the Michigan shapefile and the Covid19 datsset saved as a CSV to ArcGIS Online. When uploading the CSV file, upload as Table.
+1. Upload both the Michigan county shapefile and the Covid19 datsaset that you used earlier to ArcGIS Online. When uploading the CSV file, upload as Table.
 
 
 .. image:: img/table_join1_arcgisonline.png
@@ -317,7 +317,6 @@ ArcGIS Online has simplified the process of table joining for people using this 
  
 3. In the dialog that appears, select the Michigan County shapefile as your target. This means that the table associated with this shapefile will receive data from the CSV table. The CSV table is the table that will be be joined to the target layer.
  
-
 .. image:: img/table_join3_arcgisonline.png
    :alt: Table Join ArcGIS Online
 
@@ -334,7 +333,7 @@ ArcGIS Online has simplified the process of table joining for people using this 
 Summary of Deliverables
 ------------------------
 
-**Section 1 (10 pts)**
+**Section 1 (15 pts)**
 
 * Answers to the questions in the section named "Performing Attribute Queries".
 * The Covid19 Rates map for Michigan.
@@ -352,7 +351,7 @@ Summary of Deliverables
 
 **Section C (5 pts)**
 
-* The URL of an ArcGIS Online map showing the Covid19 rates or confirmed cases by counties for Michigan.
+* The URL of your ArcGIS Online map showing the Covid19 rates or confirmed cases by counties for Michigan.
  
 
 
