@@ -28,7 +28,7 @@ In the final section of the lab, you will use ArcGIS Online to change projection
 Data
 -------
 
-Download the MapProj_QGIS.zip file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_ .  Unzip it and save the files to a working directory on your computer.
+Download the *MapProj_QGIS.zip* file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_.  To download the file from GitHub, click on the "Go To File" button at the top right of the page and look for a file named "Washtenaw_Shapefiles"  Unzip it and save the files to a working directory on your computer.
 
 
 |
@@ -43,7 +43,7 @@ Displaying World Maps in Different Projections
 
 2. Click on Layer | Add Layer | Add Vector Layer and browse to the downloaded data folder. 
 
-3. Open the world subdirectory. Select ESRI shapefiles as the file type to display, and load the .shp files into QGIS. 
+3. Open the world subdirectory. Select ESRI shapefiles as the file type to display then load the .shp files into QGIS. 
 
 .. image:: img/world_countries.png
    :alt: Landsat Imagery in QGIS
@@ -114,7 +114,7 @@ A popular projection for rendering the entire world to create thematic maps is t
 
 |
 
-**Display with Other Global Projections**
+**Display the World Map with Other Global Projections**
 
 1. Using the methods described above, display the world using the following projections:
 
@@ -169,11 +169,13 @@ A popular projection for rendering the entire world to create thematic maps is t
  
 |
 
-**Answer the Qestions Below**
+**Answer the Qestions Below and Submit with the World Maps**
 
-1. How well is Antarctica represented on a Mercator Projection? What do you notice about the size of places as you go farther north and south?
+1. On the Mercator projection, what do you notice about the size of places as you go farther north and south?
 
-2. How does the size of Alaska compare with the contiguous states?
+2. How well is Antarctica represented on Robinson projection compared to the Mercator projection?
+
+2. How does the size of Alaska compare with the contiguous states on a Mercator Projection?
 
 3. Is a Mercator Projection great for making world thematic maps?
 
@@ -302,12 +304,15 @@ To display a map of Michigan using the Michigan Georef Coordinate System, do the
 
 |
 
+
+
+
 Permanently Transforming Map Projections
 ------------------------------------------
 
-When you download map layers from different websites, there is a high likelihood that the map layers you download will be in different coordinates.
+When you download map layers from different websites, there is a high likelihood that the map layers you download will be in different coordinate systems.
  
-Map layers that have different coordinates will not overlay on top of each other. In order to make the maps overlay, you have to first define their projection tool, i.e., tell the software the name of the coordinate system of each of the map layer. Secondly, you have to transform the different coordinates into a common coordinate system.  
+Map layers that are in different coordinate systems will not overlay on top of each other and may not draw on your screen. In order to make the maps overlay, you have to first define their projection, i.e., tell the software the name of the coordinate system of each of the map layer. Secondly, you have to transform the different coordinates into a common coordinate system.  
  
 In this section of the lab, we use QGIS software to practice converting map layers from one coordinate system to another.  You are given six shapefiles pertaining to Washtenaw County. Three of the files are in Geographic Coordinates or lat\long (WGS 84). They are: 
 
@@ -324,6 +329,14 @@ The other three files are in Michigan GeoRef Coordinate System. The datum is NAD
 Your task is to change the coordinate systems of the map layers Michigan State Plane, South Zone, NAD 83 Feet), so that all the map layers can correctly overlay on each other.
  
 |
+
+**Data**
+
+Download the "Washtenaw_Shapefiles.zip file from this `Github page <https://github.com/hsemple/gistutorials_datasets/blob/main/MapProj_QGIS-1.zip>`_.  To download the file from GitHub, click on the "Go To File" button at the top right of the page and look for a file named "Washtenaw_Shapefiles.zip".  Unzip it and save the files to a working directory on your computer.
+
+
+|
+
 
 **Procedure**
 
@@ -441,21 +454,21 @@ Now that we have defined all the map layers based on their original coordinate s
 
 2. Add all six of the projected layers.  If everything was done correctly, all the layers should overlay exactly on each other.  
 
-3. Use map design principles and create a map that shows all six of the layers at the same time.  To accomplish this, for some of the layers, instead of using a "Fill" color which hides layers underneath, using just the outline of the features. For different layers, use different color outlines.  Here is an example map that was previously submitted by a student.
-  
+3. Use map design principles and create a map that shows all six of the layers at the same time.  To accomplish this, for some of the layers, instead of using a "Fill" color which hides layers underneath, using just the outline of the features. For different layers, use different color outlines.  
 
-.. image:: img/michigan_state_plane4.png
-   :alt: Final Map
+
 
 
 |
 
+
+
 Changing Map Projections in ArcGIS Online 
 -------------------------------------------
 
-By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to display map layers. However, this projection distorts the size of places in the far north and south.  See this link  for a brief discussion.   Making non-Web-Mercator maps is possible in ArcGIS Online. First, you have to search ArcGIS Online for basemap template in the desired projection of interests, then display the basemap projection, and then upload your maps into the projection.  Here are the steps.
+By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to display map layers. However, this projection distorts the size of places in the far north and south.  See this link  for a brief discussion.  Making non-Web-Mercator maps is possible in ArcGIS Online. First, you have to search ArcGIS Online for basemap template in the desired projection of interests, then display the basemap projection, and then upload your maps into the projection.  Here are the steps.
  
-1. Download the Covid-19 Mortality by US states map we used in Lab 1. 
+1. Download the `states shapefile <https://github.com/hsemple/qgis_tutorials/blob/qgis_tutorials/US_States-1.zip>`_ we used in Lab 1.  This file is also stored on GitHub. To download the file from GitHub, click on the "Go To File" button at the top right of the page and look for a file named "US_States-1.zip".  Do Not Unzip this file. It will will be uploaded to ArcGIS Online in zipped format.
 
 2. Visit arcgisonline.com and sign in.
 
@@ -483,20 +496,23 @@ By default, ArcGIS Online uses a projection called Web Mercator Auxiliary to dis
    :alt: ArcGIS Online Map Projections
 
 
-7.  If you are making global thematic maps, you can also search for something like "Equal Area Projections world basemaps" and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.   You can even make your own projection. If you are sharing datasets such as global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps. 
+7. Return to the Albers Equal Area USA projection and click on Add | Add Layers from file and load the USA Covid-19 Shapefile.  
+ 
+
+8. The attribute table for the shapefile contains Covid-19 confirmed cases for August 31, 2020.  Plot these values on the web map.
+ 
+
+
+**A Note about World Maps**
+
+As an aside, if you are making global thematic maps, you can also search for something like "Equal Area Projections world basemaps" and you will be presented with different projection templates for the entire planet. Select and add them as basemaps and note the effect.  You can even make your own projection. If you are sharing datasets such as global temperatures, atmospheric pressure, income levels, Covid-19 cases, etc using ArcGIS Online, these global projections are good choices for your maps. 
  
 
  .. image:: img/arcgisonline_projections5.png
    :alt: ArcGIS Online Map Projections
 
  
-8. Return to the Albers Equal Area USA projection and click on Add | Add Layers from file and load the USA Covid-19 Shapefile.  
 
- .. image:: img/arcgisonline_projections5.png
-   :alt: ArcGIS Online Map Projections
- 
-9.  Using instructions from last last week's lab plus your own fiddling, plot the Covid 19 mortality cases.
- 
 
 |
 

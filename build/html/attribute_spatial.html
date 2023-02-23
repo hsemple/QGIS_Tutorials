@@ -111,7 +111,7 @@
 <h2><span class="section-number">6.2. </span>Working with Attribute Data<a class="headerlink" href="#working-with-attribute-data" title="Permalink to this heading"></a></h2>
 <p>Recall that in Lab 1, we made a map of Covid-19 cases by counties in the USA using data that were already available in the attribute table of the shapefile.  How did so much data get into the shapefile’s attribute table?   The answer is through table joins.</p>
 <p>To help you become proficient with table joins, we will make a map of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile’s attribute table. Table joins are very important in GIS as they save us the task of manually entering data into the attribute table.</p>
-<p>Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in “m’ below.</p>
+<p>Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in the section below named “Performing Attribute Queries”.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -127,8 +127,7 @@
 <li><p>Enter zero as the value for those counties that didn’t report any deaths.</p></li>
 <li><p>Reduce the length of the field names. For example, instead of “Confirmed Cases”, simply reduce it to “Cases”.</p></li>
 <li><p>For “Reported Deaths”, change it to “Deaths”. In QGIS, field names can’t have more than 11 characters.</p></li>
-<li><p>In the shapefile’s attribute table, St. Clair and St. Joseph have periods in their names following “St”. However, there are no periods in these names in the data you downloaded. Include the periods in St. Clair and St. Joseph in the Excel table so that they match the shapefile’s county names exactly. Otherwise, these two records will not be joined.</p></li>
-<li><p>Include an entry in the Excel table for Alger County. This county’s name is present in the shapefile’s attribute table, but not in the Excel file.</p></li>
+<li><p>In the shapefile’s attribute table, St. Clair and St. Joseph have periods in their names following “St”. However, there are no periods in these names in the Covid19 dataset you downloaded. Include the periods in St. Clair and St. Joseph in the Excel table so that they match the shapefile’s county names exactly. Otherwise, these two records will not be joined.</p></li>
 <li><p>The edited table should appear similar to the example below.</p></li>
 </ul>
 </div></blockquote>
@@ -152,7 +151,7 @@
 </ol>
 <img alt="Covid19 Attribute Data" src="_images/attribute-query4.png" />
 <ol class="arabic simple" start="5">
-<li><p>Fill out the dialog with the appropriate information.  We will be doing a one-to one join. The table join requires both tables to have a field that contains the same data to base the join. In ou situation, both tables have a field that contains the county names, so we will use thee two fields to join the table. The names of the fields do not matter, just the fact that they contain the same data.</p></li>
+<li><p>Fill out the dialog with the appropriate information.  We will be doing a one-to one join. The table join requires both tables to have a field that contains the same data to base the join. In our situation, both tables have a field that contains the county names, so we will use these two fields to join the table. The names of the fields do not matter, just the fact that they contain the same data.</p></li>
 <li><p>Based on the illustration above, we select the Covid19 standalone table as the join layer.</p></li>
 <li><p>Select County as the field to base the join.</p></li>
 <li><p>Select NAME_1 as the target field.  NAME-1 was selected as the field in the shapefile’s layer because the county names in this field are lower case similar to the names in the County field in the CSV file. Click Ok.</p></li>
@@ -162,10 +161,10 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Performing Attribute Queries to Answer the Questions Below:</strong></p>
+<p><strong>Performing Attribute Queries</strong></p>
 <ol class="arabic simple">
-<li><p>Which county has the fifth highest number of confirmed cases? (1 pt). (Tip: This question requires that you sort the table field. To do this, right click on the field that contains the confirmed cases and select “Sort Descending”).</p></li>
-<li><p>How many counties have more than 3,000 confirmed cases. Which counties are they?  (2 pts). Although you can look at the table to get this information, let’s write an attribute query to get the answer. On the main menu, click on the Select Features dropdown and choose “Select Features by Expression”. A dialog will appear similar to the one in the illustration below. Click on “Fields and Values”. This will show the list of field names in the attribute table. Scroll down and double click on the confirmed cases field. The field will appear to the right in the editor. Complete the expression by so that it reads “Cases &gt; 30000” where Cases is the field name. Note, your field name will be different.</p></li>
+<li><p>Which county has the fifth highest number of confirmed cases?. (Tip: This question requires that you sort the table field. To do this, right click on the field that contains the confirmed cases and select “Sort Descending”).</p></li>
+<li><p>How many counties have more than 3,000 confirmed cases. Which counties are they? Although you can look at the table to get this information, let’s write an attribute query to get the answer. On the main menu, click on the Select Features dropdown and choose “Select Features by Expression”. A dialog will appear similar to the one in the illustration below. Click on “Fields and Values”. This will show the list of field names in the attribute table. Scroll down and double click on the confirmed cases field. The field will appear to the right in the editor. Complete the expression by so that it reads “Cases &gt; 30000” where Cases is the field name. Note, your field name will be different.</p></li>
 <li><p>Now click on “Select Features at the bottom right of the screen. This will select the counties on the map that meet the query criteria.  Open the attribute table. The results are shown on both the table and the map.</p></li>
 </ol>
 <img alt="Covid19 Attribute Data" src="_images/attribute-query5.png" />
@@ -216,7 +215,7 @@
 </ol>
 <img alt="Spatial Queries" src="_images/spatial_queries3.png" />
 <ol class="arabic simple" start="3">
-<li><p>To select the cities that fall only within Michigan, we will use a Select by Location tool. Click on Vector in the main menu, then select Research Tools | Select by Location.    In the dialog that opens, set the city layer as  the layer to select features from. The spatial operation is “are within”. Select Michigan as the layer that will be compared with. Click Run.  The selected cities should be highlighted.</p></li>
+<li><p>To select the cities that fall only within Michigan, we will use a Select by Location tool. Click on Vector in the main menu, then select Research Tools | Select by Location.  In the dialog that opens, set the city layer as  the layer to select features from. The spatial operation is “are within”. Select Michigan as the layer that will be compared with. Click Run.  The selected cities should be highlighted.</p></li>
 </ol>
 <img alt="Spatial Queries" src="_images/spatial_queries4.png" />
 <img alt="Spatial Queries" src="_images/spatial_queries5.png" />
@@ -258,7 +257,7 @@
 <ol class="arabic simple" start="2">
 <li><p>Export the selected parcels to make a separate map.</p></li>
 <li><p>To get the assessed value of the damaged properties, simply click View in the main menu, then select Panels | Statistics Panel. This will bring up a panel from which you can choose the field of interest. It will then show summary statistics for the field.</p></li>
-<li><p>Identity the worst affected properties, i.e., those where the entire property was contained in the path of the storm.  Note. For this problem, you have to first make buffer of 550 m around the tornado path, then find all parcels within the buffer region.</p></li>
+<li><p>Identity the worst affected properties, i.e., those where the entire property was contained in the path of the storm.  Note. To solve this problem, you have to first make buffer of 550m around the tornado’s path, then find all parcels within the buffer region.</p></li>
 </ol>
 <img alt="Spatial Queries" src="_images/spatial_queries8.png" />
 <div class="line-block">

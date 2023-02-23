@@ -29,7 +29,7 @@ Recall that in Lab 1, we made a map of Covid-19 cases by counties in the USA usi
 
 To help you become proficient with table joins, we will make a map of Michigan showing current Covid-19 cases by counties. The Covid-19 data are available as Microsoft Excel files on the Michigan.gov website, so we will download the data, process it a bit, and then join it to the shapefile's attribute table. Table joins are very important in GIS as they save us the task of manually entering data into the attribute table.
  
-Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in "m' below.
+Once we are done joining the tables, we will perform attribute queries to understand the spatial pattern of the disease in Michigan.  The output for submission for this section is a set of questions that appears in the section below named "Performing Attribute Queries".
 
 |
 
@@ -46,8 +46,7 @@ Once we are done joining the tables, we will perform attribute queries to unders
  *	Enter zero as the value for those counties that didn't report any deaths.  
  *	Reduce the length of the field names. For example, instead of "Confirmed Cases", simply reduce it to "Cases".  
  * For "Reported Deaths", change it to "Deaths". In QGIS, field names can't have more than 11 characters. 
- *	In the shapefile's attribute table, St. Clair and St. Joseph have periods in their names following "St". However, there are no periods in these names in the data you downloaded. Include the periods in St. Clair and St. Joseph in the Excel table so that they match the shapefile's county names exactly. Otherwise, these two records will not be joined. 
- * Include an entry in the Excel table for Alger County. This county's name is present in the shapefile's attribute table, but not in the Excel file.
+ *	In the shapefile's attribute table, St. Clair and St. Joseph have periods in their names following "St". However, there are no periods in these names in the Covid19 dataset you downloaded. Include the periods in St. Clair and St. Joseph in the Excel table so that they match the shapefile's county names exactly. Otherwise, these two records will not be joined. 
  *	The edited table should appear similar to the example below.
 
 
@@ -80,12 +79,11 @@ Once we are done joining the tables, we will perform attribute queries to unders
 4. Now, let us join the Covid-19 table to the shapefile's attribute table.  To do so, right click on the name of the shapefile and select "Properties".  To the left of the dialog that appears, select Joins.  
  
 
-
 .. image:: img/attribute-query4.png
    :alt: Covid19 Attribute Data
 
 
-5. Fill out the dialog with the appropriate information.  We will be doing a one-to one join. The table join requires both tables to have a field that contains the same data to base the join. In ou situation, both tables have a field that contains the county names, so we will use thee two fields to join the table. The names of the fields do not matter, just the fact that they contain the same data.   
+5. Fill out the dialog with the appropriate information.  We will be doing a one-to one join. The table join requires both tables to have a field that contains the same data to base the join. In our situation, both tables have a field that contains the county names, so we will use these two fields to join the table. The names of the fields do not matter, just the fact that they contain the same data.   
 
 6. Based on the illustration above, we select the Covid19 standalone table as the join layer.  
 
@@ -100,12 +98,11 @@ Once we are done joining the tables, we will perform attribute queries to unders
 
 |
 
-**Performing Attribute Queries to Answer the Questions Below:**
+**Performing Attribute Queries**
  
-1. Which county has the fifth highest number of confirmed cases? (1 pt). (Tip: This question requires that you sort the table field. To do this, right click on the field that contains the confirmed cases and select "Sort Descending").
+1. Which county has the fifth highest number of confirmed cases?. (Tip: This question requires that you sort the table field. To do this, right click on the field that contains the confirmed cases and select "Sort Descending").
  
-2. How many counties have more than 3,000 confirmed cases. Which counties are they?  (2 pts). Although you can look at the table to get this information, let's write an attribute query to get the answer. On the main menu, click on the Select Features dropdown and choose "Select Features by Expression". A dialog will appear similar to the one in the illustration below. Click on "Fields and Values". This will show the list of field names in the attribute table. Scroll down and double click on the confirmed cases field. The field will appear to the right in the editor. Complete the expression by so that it reads "Cases > 30000" where Cases is the field name. Note, your field name will be different.
-
+2. How many counties have more than 3,000 confirmed cases. Which counties are they? Although you can look at the table to get this information, let's write an attribute query to get the answer. On the main menu, click on the Select Features dropdown and choose "Select Features by Expression". A dialog will appear similar to the one in the illustration below. Click on "Fields and Values". This will show the list of field names in the attribute table. Scroll down and double click on the confirmed cases field. The field will appear to the right in the editor. Complete the expression by so that it reads "Cases > 30000" where Cases is the field name. Note, your field name will be different.
 
 3. Now click on "Select Features at the bottom right of the screen. This will select the counties on the map that meet the query criteria.  Open the attribute table. The results are shown on both the table and the map.
 
@@ -186,7 +183,7 @@ The dataset for this exercise can be downloaded from Canvas.
 
 
 
-3. To select the cities that fall only within Michigan, we will use a Select by Location tool. Click on Vector in the main menu, then select Research Tools | Select by Location.    In the dialog that opens, set the city layer as  the layer to select features from. The spatial operation is "are within". Select Michigan as the layer that will be compared with. Click Run.  The selected cities should be highlighted.
+3. To select the cities that fall only within Michigan, we will use a Select by Location tool. Click on Vector in the main menu, then select Research Tools | Select by Location.  In the dialog that opens, set the city layer as  the layer to select features from. The spatial operation is "are within". Select Michigan as the layer that will be compared with. Click Run.  The selected cities should be highlighted.
 
 
 .. image:: img/spatial_queries4.png
@@ -204,6 +201,8 @@ The dataset for this exercise can be downloaded from Canvas.
 
 
 |
+
+
 
 **B. Selecting Cities that are within 50 miles of a Great Lake**
 
@@ -252,15 +251,12 @@ As the GIS analyst, you are required to use ArcGIS Pro Spatial Queries functions
 
 2. Export the selected parcels to make a separate map.
 
-
 3. To get the assessed value of the damaged properties, simply click View in the main menu, then select Panels | Statistics Panel. This will bring up a panel from which you can choose the field of interest. It will then show summary statistics for the field. 
   
-4. Identity the worst affected properties, i.e., those where the entire property was contained in the path of the storm.  Note. For this problem, you have to first make buffer of 550 m around the tornado path, then find all parcels within the buffer region.
-
+4. Identity the worst affected properties, i.e., those where the entire property was contained in the path of the storm.  Note. To solve this problem, you have to first make buffer of 550m around the tornado's path, then find all parcels within the buffer region.
 
 .. image:: img/spatial_queries8.png
    :alt: Spatial Queries
-
 
 
 
