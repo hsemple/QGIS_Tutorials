@@ -128,18 +128,37 @@
 <li><p>Reduce the length of the field names. For example, instead of “Confirmed Cases”, simply reduce it to “Cases”.</p></li>
 <li><p>For “Reported Deaths”, change it to “Deaths”. In QGIS, field names can’t have more than 11 characters.</p></li>
 <li><p>In the shapefile’s attribute table, St. Clair and St. Joseph have periods in their names following “St”. However, there are no periods in these names in the Covid19 dataset you downloaded. Include the periods in St. Clair and St. Joseph in the Excel table so that they match the shapefile’s county names exactly. Otherwise, these two records will not be joined.</p></li>
-<li><p>The edited table should appear similar to the example below.</p></li>
 </ul>
 </div></blockquote>
-<img alt="Covid19 Attribute Data" src="_images/covid19_attribute_data.png" />
-<ol class="arabic simple" start="5">
-<li><p>Save the file to the same folder as the shapefiles.  Save as a CSV file.</p></li>
-</ol>
-<img alt="Covid19 Attribute Data" src="_images/save_as_csv.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Joining the Excel File to the Shapefile’s Attribute Table</strong></p>
+<p><strong>Summarizing the Excel Table</strong></p>
+<p>When working with attribute data, we often have to summarize data before we can join them to our shapefiles. For example, you may be given a table showing 1500 restaurants within Michigan. The restaurant table may have the name of each restaurant, its county of location, and other data. If you now want to get a count of the number of restaurants by counties, then the function to use is summarize. In the context of this lab, there are more than one counts that we wish to include for each county, therefore, we will summarize the counts by counties.</p>
+<p>ArcGIS Pro has a function to summarize tables, but we can also use Excel’s pivot table to summarize data. The instructions below show how to summarize data using Excel.</p>
+<ol class="arabic simple">
+<li><p>The data to be summarized is Covid19 data for Michigan by counties that you downloaded.</p></li>
+<li><p>The data is shown in the illustration below. Notice that each county is repeated twice in the table.</p></li>
+</ol>
+<img alt="Unsummarized Covid19 Cases" src="_images/unsummarized_covid19_cases.png" />
+<p>3 Select a single cell in the Excel table, then select Insert, Pivot Table.</p>
+<img alt="Pivot table" src="_images/pivot_table1.png" />
+<ol class="arabic simple" start="4">
+<li><p>Excel’s IntelliSense will guess the range of your data. Ensure the range is correct, then click OK in the dialog that appears.</p></li>
+</ol>
+<img alt="Pivot table" src="_images/pivot_table2.png" />
+<ol class="arabic simple" start="5">
+<li><p>In the dialog that appears to the right of the screen, select the fields that you want to appear in the table. The default settings are enough to summarize the table by counties. Click on the ‘x’ to close the Pivot Table fields.</p></li>
+</ol>
+<img alt="Pivot table" src="_images/pivot_table3.png" />
+<ol class="arabic simple" start="6">
+<li><p>Save the Pivot Table as a csv file.</p></li>
+<li><p>Reopen the csv file and rename the columns.  Save the csv file once more.  The summarized csv table can now be joined to a table containing counties for Michigan.   After joining the summarized table to the Michigan layer, it could be used to create thematic maps.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Joining the Summarized CSV File to the Shapefile’s Attribute Table</strong></p>
 <ol class="arabic simple">
 <li><p>Open QGIS, start a new project, and load the shapefile and CSV file into QGIS.</p></li>
 <li><p>Since we studied map coordinates in the last module, let’s determine the map coordinates of our project. Whichever map layer goes into the map area first, that layer sets up the coordinates of the Project. Since the Michigan layer was the first map layer opened in the map, then the project took on the coordinates of the Michigan layer.  So, click on Project on the main menu then select Properties. In the dialog, the selected coordinate system is the project’s coordinate system. It is called “NAD 83/ Michigan Oblique Mercator”.   When you are done inspecting the values, click OK and close the dialog.</p></li>
@@ -268,7 +287,7 @@
 <h2><span class="section-number">6.4. </span>Joining Tables - ArcGIS Online<a class="headerlink" href="#joining-tables-arcgis-online" title="Permalink to this heading"></a></h2>
 <p>ArcGIS Online has simplified the process of table joining for people using this platform for GIS. To join a table using ArcGIS Online, follow the steps below:</p>
 <ol class="arabic simple">
-<li><p>Upload both the shapefile and CSV to ArcGIS Online. When uploading the CSV file, upload as Table.</p></li>
+<li><p>Upload both the Michigan shapefile and the Covid19 datsset saved as a CSV to ArcGIS Online. When uploading the CSV file, upload as Table.</p></li>
 </ol>
 <img alt="Table Join ArcGIS Online" src="_images/table_join1_arcgisonline.png" />
 <ol class="arabic simple" start="2">
@@ -292,7 +311,8 @@
 <h2><span class="section-number">6.5. </span>Summary of Deliverables<a class="headerlink" href="#summary-of-deliverables" title="Permalink to this heading"></a></h2>
 <p><strong>Section 1 (10 pts)</strong></p>
 <ul class="simple">
-<li><p>Answers to the questions in Section 1 under “Performing Attribute Queries to Answer the Questions …” and under “Rates Calculation”.</p></li>
+<li><p>Answers to the questions in the section named “Performing Attribute Queries”.</p></li>
+<li><p>The Covid19 Rates map for Michigan.</p></li>
 </ul>
 <p><strong>Section 2 (10 pts)</strong></p>
 <ul class="simple">
@@ -305,7 +325,7 @@
 </ul>
 <p><strong>Section C (5 pts)</strong></p>
 <ul class="simple">
-<li><p>The URL of an ArcGIS Online map showing the Covid 19 rates or confirmed cases by counties for Michigan</p></li>
+<li><p>The URL of an ArcGIS Online map showing the Covid19 rates or confirmed cases by counties for Michigan.</p></li>
 </ul>
 </section>
 </section>

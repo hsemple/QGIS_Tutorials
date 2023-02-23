@@ -47,23 +47,57 @@ Once we are done joining the tables, we will perform attribute queries to unders
  *	Reduce the length of the field names. For example, instead of "Confirmed Cases", simply reduce it to "Cases".  
  * For "Reported Deaths", change it to "Deaths". In QGIS, field names can't have more than 11 characters. 
  *	In the shapefile's attribute table, St. Clair and St. Joseph have periods in their names following "St". However, there are no periods in these names in the Covid19 dataset you downloaded. Include the periods in St. Clair and St. Joseph in the Excel table so that they match the shapefile's county names exactly. Otherwise, these two records will not be joined. 
- *	The edited table should appear similar to the example below.
+
+|
 
 
-.. image:: img/covid19_attribute_data.png
-   :alt: Covid19 Attribute Data
-   
+**Summarizing the Excel Table**
 
-5. Save the file to the same folder as the shapefiles.  Save as a CSV file.
+When working with attribute data, we often have to summarize data before we can join them to our shapefiles. For example, you may be given a table showing 1500 restaurants within Michigan. The restaurant table may have the name of each restaurant, its county of location, and other data. If you now want to get a count of the number of restaurants by counties, then the function to use is summarize. In the context of this lab, there are more than one counts that we wish to include for each county, therefore, we will summarize the counts by counties.
 
-.. image:: img/save_as_csv.png
-   :alt: Covid19 Attribute Data
-   
+
+ArcGIS Pro has a function to summarize tables, but we can also use Excel's pivot table to summarize data. The instructions below show how to summarize data using Excel.
+
+
+1. The data to be summarized is Covid19 data for Michigan by counties that you downloaded.
+
+2.  The data is shown in the illustration below. Notice that each county is repeated twice in the table.  
+ 
+.. image:: img/unsummarized_covid19_cases.png
+   :alt: Unsummarized Covid19 Cases
+
+ 
+3 Select a single cell in the Excel table, then select Insert, Pivot Table.
+
+.. image:: img/pivot_table1.png
+   :alt: Pivot table
+ 
+
+4. Excel's IntelliSense will guess the range of your data. Ensure the range is correct, then click OK in the dialog that appears.
+
+.. image:: img/pivot_table2.png
+   :alt: Pivot table
+
+
+5. In the dialog that appears to the right of the screen, select the fields that you want to appear in the table. The default settings are enough to summarize the table by counties. Click on the 'x' to close the Pivot Table fields.
+
+
+.. image:: img/pivot_table3.png
+   :alt: Pivot table
+
+
+
+6. Save the Pivot Table as a csv file.
+
+
+
+7. Reopen the csv file and rename the columns.  Save the csv file once more.  The summarized csv table can now be joined to a table containing counties for Michigan.   After joining the summarized table to the Michigan layer, it could be used to create thematic maps.
+
  
 
 |
 
-**Joining the Excel File to the Shapefile's Attribute Table**
+**Joining the Summarized CSV File to the Shapefile's Attribute Table**
 
 
 1. Open QGIS, start a new project, and load the shapefile and CSV file into QGIS.
@@ -97,6 +131,7 @@ Once we are done joining the tables, we will perform attribute queries to unders
  
 
 |
+
 
 **Performing Attribute Queries**
  
@@ -267,7 +302,7 @@ Joining Tables - ArcGIS Online
 
 ArcGIS Online has simplified the process of table joining for people using this platform for GIS. To join a table using ArcGIS Online, follow the steps below:
  
-1. Upload both the shapefile and CSV to ArcGIS Online. When uploading the CSV file, upload as Table.
+1. Upload both the Michigan shapefile and the Covid19 datsset saved as a CSV to ArcGIS Online. When uploading the CSV file, upload as Table.
 
 
 .. image:: img/table_join1_arcgisonline.png
@@ -301,7 +336,8 @@ Summary of Deliverables
 
 **Section 1 (10 pts)**
 
-* Answers to the questions in Section 1 under "Performing Attribute Queries to Answer the Questions ..." and under "Rates Calculation".
+* Answers to the questions in the section named "Performing Attribute Queries".
+* The Covid19 Rates map for Michigan.
 
  
 **Section 2 (10 pts)**
@@ -316,7 +352,7 @@ Summary of Deliverables
 
 **Section C (5 pts)**
 
-* The URL of an ArcGIS Online map showing the Covid 19 rates or confirmed cases by counties for Michigan
+* The URL of an ArcGIS Online map showing the Covid19 rates or confirmed cases by counties for Michigan.
  
 
 
